@@ -1,0 +1,38 @@
+slogan: ""
+
+menu:
+  - title: 归档
+    url: archives
+    intro: "全部文章"
+    icon: "fa fa-archive"
+  - title: 分类
+    url: categories
+    intro: "所有分类"
+    icon: "fa fa-folder"
+  - title: 标签
+    url: tags
+    intro: "所有标签"
+    icon: "fa fa-tags"
+  - title: 关于
+    url: about/
+    intro: "关于我"
+    icon: "fa fa-user"
+
+links:
+  - title: "My Github"
+    url: http://www.github.com/cocobear
+    intro: "My Github account."
+    icon: "fa fa-github"
+
+widgets:
+- search
+- category
+- tagcloud
+- recent_posts  
+- links
+
+rss: 
+fancybox: true
+favicon: favicon.png
+duoshuo_shortname: cocobear
+google_analytics:
