@@ -94,7 +94,7 @@ exclude_generator:
 #  branch: master
 
 deploy:
-    type: github
+    type: git
     repo: https://github.com/cocobear/cocobear.github.io.git
     branch: master
 
