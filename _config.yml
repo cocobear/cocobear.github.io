@@ -8,7 +8,7 @@ subtitle: Keep it simple, stupid
 description: cocobear's blog | Linux | Python | Web | C 
 author: cocobear
 email: cocobear.cn@gmail.com
-language: zh-CN
+language: zh-Hans
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
@@ -83,7 +83,7 @@ duoshuo_shortname: cocobear
 ## Plugins: https://github.com/hexojs/hexo/wiki/Plugins
 ## Themes: https://github.com/hexojs/hexo/wiki/Themes
 #theme: landscape
-theme: freemind
+theme: next
 exclude_generator:
 
 # Deployment
@@ -96,8 +96,5 @@ exclude_generator:
 deploy:
     type: github
     repo: https://github.com/cocobear/cocobear.github.io.git
-    branch: gh-pages
-    type: github
-    repo: https://gitcafe.com/cocobear/cocobear.git
-    branch: gitcafe-pages
+    branch: master
 
