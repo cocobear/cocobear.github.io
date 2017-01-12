@@ -24,6 +24,7 @@ date: 2013-06-19 14:53:33
      [root@HJY-SERVER html]# source ../venv/django/bin/activate
 
 新建一个工程：
+
 	(django)[root@HJY-SERVER html]# django-admin.py startproject mcard
 	(django)[root@HJY-SERVER html]# tree mcard/
 	mcard
@@ -35,6 +36,7 @@ date: 2013-06-19 14:53:33
 	 └── wsgi.py
 	1 directory, 5 files
 
+<!--more-->
 最外面这个目录mcard可以任意修改，只要保证nginx指向这个目录就可以了，下一层目录中的mcard存放的是该工程的核心配置文件，settings.py为数据库、语言、链接库等配置，urls.py指定了转发规则，wsgi.py则是入口程序，需要在uwsgi的配置文件中指定该文件，下面我们配置uwsgi：
 
 	(django)[root@HJY-SERVER html]# cat /opt/uwsgi/conf/mcard.ini

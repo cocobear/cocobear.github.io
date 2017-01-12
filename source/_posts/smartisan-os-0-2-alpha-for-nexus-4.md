@@ -14,7 +14,7 @@ date: 2013-07-24 13:52:04
 [![截屏20130724133050](http://7sbxmt.com1.z0.glb.clouddn.com/b8cc3b379b3872b7921ba5fb85a0020b-180x300.png)](http://c.kensou.me/blog/smartisan-os-0-2-alpha-for-nexus-4/%e6%88%aa%e5%b1%8f20130724133050/)
 
 [![截屏20130724133111](http://7sbxmt.com1.z0.glb.clouddn.com/fd41d7152e3f1654b5c83716f3c6d614-180x300.png)](http://c.kensou.me/blog/smartisan-os-0-2-alpha-for-nexus-4/%e6%88%aa%e5%b1%8f20130724133111/)
-
+<!-- more -->　　
 [![截屏20130724133117](http://7sbxmt.com1.z0.glb.clouddn.com/654f2099e8a227475a1b2783486796c7-180x300.png)](http://c.kensou.me/blog/smartisan-os-0-2-alpha-for-nexus-4/%e6%88%aa%e5%b1%8f20130724133117/)
 
 [![截屏20130724133135](http://7sbxmt.com1.z0.glb.clouddn.com/596e1cd7f8acb5bdef82e6edd62a324f-180x300.png)](http://c.kensou.me/blog/smartisan-os-0-2-alpha-for-nexus-4/%e6%88%aa%e5%b1%8f20130724133135/)

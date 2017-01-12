@@ -17,6 +17,7 @@ date: 2013-06-26 14:01:59
      python manage.py syncdb
 
 * 如何使用South管理Django数据库（model)：
+<!--more-->
 
 使用Django做开发的，有时候一个app运行了一段时间，有新的需求要在数据库表项增加一个字段，这时候South就可以帮到大忙了。
 
