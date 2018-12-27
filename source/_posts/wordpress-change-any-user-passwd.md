@@ -30,7 +30,7 @@ import sys
 import poplib
 
 #all you need to do is change this two lines:
-base_url = "http://c.kensou.me/blog/"
+base_url = "http://cocobear.github.io/"
 hack_user= "cocobear"
 
 def init():

@@ -13,7 +13,7 @@ categories:
 date: 2013-06-19 14:53:33
 ---
 
-[![django-nginx-uwsgi](http://7sbxmt.com1.z0.glb.clouddn.com/django-nginx-uwsgi-610x284.jpg)](http://c.kensou.me/blog/centos-deploy-nginx-uwsgi-django/django-nginx-uwsgi/)
+![django-nginx-uwsgi](https://asset-1258390188.cos.ap-shanghai.myqcloud.com/django-nginx-uwsgi.jpg)
 
 创建单独的django环境：
 

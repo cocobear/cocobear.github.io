@@ -8,7 +8,7 @@ categories:
 date: 2009-02-01 10:49:45
 ---
 
-上次[写到读E680联系人](http://c.kensou.me/blog/2009/01/13/data-of-e680-native-db/)，后来又增加了读短信，并且做了一些代码上的修改，代码放在了google code里，使用的方法是需要读数据库（native.db）中的什么内容就在databases这个list中添加相应的数据库名，获取数据库名的方法也在代码的首部给出了。
+上次[写到读E680联系人](http://cocobear.github.io/2009/01/13/data-of-e680-native-db/)，后来又增加了读短信，并且做了一些代码上的修改，代码放在了google code里，使用的方法是需要读数据库（native.db）中的什么内容就在databases这个list中添加相应的数据库名，获取数据库名的方法也在代码的首部给出了。
 
 [地址](http://code.google.com/p/pytool/source/browse/trunk/read_e680_db.py)
 

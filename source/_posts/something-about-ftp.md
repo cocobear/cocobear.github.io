@@ -12,8 +12,10 @@ tags:
 
 但是在服务器的具体socket处理方面还是不太清楚，今天下午和王聪讨论的时候逐渐把整个FTP socket一块的东西弄的清楚了很多，也有了今天晚上黑板上讲的一些东西，觉得两个人在一块讨论确实能够解决很多问题，而且能学到很多东西。
 
+
 [PPT下载](http://cocobear.github.io/download/ppt.odp)
-[点击查看](http://cocobear.github.io/download/control.png)
+![点击查看](https://asset-1258390188.cos.ap-shanghai.myqcloud.com/control.png)
+
 ## Comments
 
 **[cocobear](#5 "2007-04-18 13:42:20"):** 改正错误： 当客户机连接服务器的时候只使用socket()与connect()，并不使用bind()。 bind()参数中没有IP地址 由于图片没有dia原文件，不好做改动，只好这样放着了！

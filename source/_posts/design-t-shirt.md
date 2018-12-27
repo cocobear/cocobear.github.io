@@ -8,7 +8,7 @@ categories:
 date: 2007-10-01 23:08:12
 ---
 
-![t-shirt](http://cocobear.github.io/download/pictures/shirt.jpg)
+![t-shirt](https://asset-1258390188.cos.ap-shanghai.myqcloud.com/shirt.jpg)
 ## Comments
 
 **[wind](#1873 "2007-10-02 11:14:43"):** 不错阿 帮我也设计一个吧

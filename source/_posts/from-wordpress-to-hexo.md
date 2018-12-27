@@ -73,7 +73,7 @@ Elapsed time: 1.998 s
 ### 图片迁移
 　　接下来就是迁移以前博客里面的图片了，看了下wordpress里面的图库，发现没有多少图片，直接放在hexo的source目录下面也是可以的，不过为了让hexo更简洁一些，还是把图片放在别的地方，看到好多用hexo的用户都推荐使用七牛这个图床，我也试了一下，但是觉得不太好用，官方提供的Linux下的同步工具老是失败，而且提供的外链域名是个不能修改的域名(如果要个性化域名好像是要实名认证的:-( 。最后直接用web页面上传了以前的图片，然后替换了markdown文件中的链接。先这样用一用吧，如果有更好的图床，再折腾吧。
 > 
-sed -e 's/c.kensou.me\/blog\/wp-content\/uploads\/[0-9]\{4\}\/[0-9]\{2\}/7sbxmt.com1.z0.glb.clouddn.com/'
+sed -e 's/cocobear.github.io\/blog\/wp-content\/uploads\/[0-9]\{4\}\/[0-9]\{2\}/7sbxmt.com1.z0.glb.clouddn.com/'
 
 
 ## hexo优化

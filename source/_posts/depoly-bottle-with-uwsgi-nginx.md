@@ -12,7 +12,7 @@ categories:
 date: 2013-06-08 17:53:25
 ---
 
-[![bottle_uwsgi](http://7sbxmt.com1.z0.glb.clouddn.com/bottle_uwsgi.jpg)](http://c.kensou.me/blog/depoly-bottle-with-uwsgi-nginx/bottle_uwsgi/)
+![bottle_uwsgi](https://asset-1258390188.cos.ap-shanghai.myqcloud.com/bottle_uwsgi.jpg)
 
 安装virtualenv
 看到别人布署bottle都是配合virtualenv来的，看了一下[virtualenv的介绍](http://www.virtualenv.org/en/latest/ "virtualenv")，确实比较有用，它可以为你的应用创建一个独立的Python环境，这样如果你布署了几个Python应用，就不需要担心它们各自需要的依赖文件版本不同，甚至它们需要的Python版本也不同。

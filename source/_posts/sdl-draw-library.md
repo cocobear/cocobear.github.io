@@ -11,7 +11,7 @@ SDL本身并没有提供绘图的函数，不过已经有第三方的实现，�
 只好自己去实现这些基本的绘图函数，目前已经可以实现点，线段，矩形，圆，椭圆的函数。这些基本上已经够用了，不过里面有个斜线的实现使用了别人的代码，没看懂他的实现方法，有时间再想想吧。
 
 给个截图：
-[![screenshot.png](http://7sbxmt.com1.z0.glb.clouddn.com/screenshot.thumbnail.png)](http://7sbxmt.com1.z0.glb.clouddn.com10/screenshot.png "screenshot.png")
+![screenshot.png](https://asset-1258390188.cos.ap-shanghai.myqcloud.com/sdl-draw-library-screenshot.png)](https://asset-1258390188.cos.ap-shanghai.myqcloud.com10/screenshot.png "screenshot.png")
 
 BTW：SDL还是算比较底层的吧，这些很基本的东西也得自己写函数实现:-)
 

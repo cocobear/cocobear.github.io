@@ -14,7 +14,7 @@ date: 2007-12-19 15:06:09
 
 先首说一下整个通信过程，pppoe拨号连接上去后打开drcom客户端，通过wireshark抓包可以看到，drcom首先给1.1.1.1与202.1.1.1这两个ip同时（Windows上抓包的时间戳是相同的）发送一次UDP包，数据长度为8字节，接着服务器（221.11.20.10）会返回两次UDP包，内容是相同的，数据长度为16字节。接下来drcom会发送96字节的UDP包到服务器，服务器返回16字节UDP包。然后重复这一过程一次，不过这一次通信中第一次发送的UDP包的目的变为221.11.20.10并且只发一次，服务器也只给一次响应。首次通信结束后每隔18秒会重复上面通信过程一次。如下图：
 
-[![first.png](http://7sbxmt.com1.z0.glb.clouddn.com/first.png)](http://7sbxmt.com1.z0.glb.clouddn.com12/first.png "first.png")
+![first.png](https://asset-1258390188.cos.ap-shanghai.myqcloud.com/first.png)](https://asset-1258390188.cos.ap-shanghai.myqcloud.com12/first.png "first.png")
 
 下面对每次发送的UDP包中的数据进行分析：
 客户端---->服务器：

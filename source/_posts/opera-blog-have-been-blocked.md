@@ -9,7 +9,7 @@ categories:
 date: 2007-05-15 15:24:38
 ---
 
-从前几天[opera的blog无法正常访问](http://c.kensou.me/blog/?p=93)到今天，已经有一周的时间，刚开始opera官方发布的消息似乎是遇到了技术上的问题，我没有看到这样的页面，是听同学说的，但现在看来不是这样的，opera的blog已经被中国大陆的GFW封了，我不太清楚以前opera的blog有没有被封过，根据eric在我上篇文章中的[留言](http://c.kensou.me/blog/?p=93#comment-230)，以及最近几天我的测试，这次是彻底的被封了，我在dreamhost的主机上使用w3m可以正常访问，通过在线代理网站也可以访问。
+从前几天[opera的blog无法正常访问](http://cocobear.github.io/?p=93)到今天，已经有一周的时间，刚开始opera官方发布的消息似乎是遇到了技术上的问题，我没有看到这样的页面，是听同学说的，但现在看来不是这样的，opera的blog已经被中国大陆的GFW封了，我不太清楚以前opera的blog有没有被封过，根据eric在我上篇文章中的[留言](http://cocobear.github.io/?p=93#comment-230)，以及最近几天我的测试，这次是彻底的被封了，我在dreamhost的主机上使用w3m可以正常访问，通过在线代理网站也可以访问。
 
 看来这次借扫黄打非的名义又和谐了不少网站，前一段时间的Bluehost就被和谐掉了，哪天不会我的Dreamhost也被和谐掉吧？
 ## Comments

@@ -11,7 +11,7 @@ categories:
 date: 2013-06-07 16:53:58
 ---
 
-[![Linux Nginx MySQL PHP](http://7sbxmt.com1.z0.glb.clouddn.com/lnmp-450x300.jpg)](http://c.kensou.me/blog/lnmp-on-centos/lnmp/)
+![Linux Nginx MySQL PHP](https://asset-1258390188.cos.ap-shanghai.myqcloud.com/lnmp.jpg)
 
 由于SELinux经常会使PHP FTP等常用的WEB服务产生一些奇怪的错误,所以我们在安装LNMP环境前先关闭SELinux:
 

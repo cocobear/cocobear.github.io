@@ -8,7 +8,7 @@ categories:
 date: 2013-06-26 14:01:59
 ---
 
-[![django](http://7sbxmt.com1.z0.glb.clouddn.com/django-610x246.png)](http://c.kensou.me/blog/django-note/django/)
+![django](https://asset-1258390188.cos.ap-shanghai.myqcloud.com/django.png)
 
 * 如何清空app对应的数据库表项并重建数据库表 
 

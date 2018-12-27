@@ -9,7 +9,7 @@ categories:
 date: 2008-12-31 11:09:50
 ---
 
-本来想着继续完善后再放出来，不过看到[别人已经有做出来的](http://blog.donews.com/gradetwo/archive/2008/12/26/1412882.aspx?Pending=true)，俺就不重复劳动了，[前篇文章](http://c.kensou.me/blog/2008/12/03/write-fetion-with-python-pyfetion/)已经提到了基本的功能，这里也就不重复了。
+本来想着继续完善后再放出来，不过看到[别人已经有做出来的](http://blog.donews.com/gradetwo/archive/2008/12/26/1412882.aspx?Pending=true)，俺就不重复劳动了，[前篇文章](http://cocobear.github.io/2008/12/03/write-fetion-with-python-pyfetion/)已经提到了基本的功能，这里也就不重复了。
 
 我需要的功能差不多了，最近事多也就不改了，各位需要使用飞信聊天的的话建议用官方的，或者期待我第一个链接提到的。做开发的话俺还是用自己的比较清楚，当然别人的如果开放的话也可以参考一下。
 

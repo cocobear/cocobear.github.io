@@ -8,7 +8,7 @@ categories:
 date: 2013-06-18 09:59:17
 ---
 
-[![android-logo](http://7sbxmt.com1.z0.glb.clouddn.com/android-logo.jpg)](http://c.kensou.me/blog/compile-android4-2-2/android-logo/)
+![android-logo](https://asset-1258390188.cos.ap-shanghai.myqcloud.com/android-logo.jpg)
 
 Android4.2.2源码编译
 

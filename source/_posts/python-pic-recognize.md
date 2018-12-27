@@ -13,173 +13,179 @@ date: 2008-08-04 16:59:16
 以前没用Python处理过图像，不太了解PIL(Python Image Library)的用法，这几天看了看PIL，发现它太强大了，简直和ImageMagic，PS可以相比了。([这里](http://www.pythonware.com/library/pil/handbook/index.htm)有PIL不错的文档)
 由于上面的验证码是24位的jpeg图像，并且包含了噪点，所以我们要做的就是去噪和去色，我拿PS找了张验证码试了试，使用PS滤镜中的去噪效果还行，但是没有在PIL找到去噪的函数，后来发现中值过滤后可以去掉大部分的噪点，而且PIL里有现成的函数，接下来我试着直接把图像转换为单色，结果发现还是会有不过的噪点留了下来，因为中值过滤时把不少噪点淡化了，但转换为音色时这些噪点又被强化显示了，于是在中值过滤后对图像亮度进行加强处理，然后再转换为单色，这样验证码图片就变得比较容易识别了:
 
-![pic](http://7sbxmt.com1.z0.glb.clouddn.com/22.jpeg)
-![pic1](http://7sbxmt.com1.z0.glb.clouddn.com/tmp.jpeg)
+![pic](https://asset-1258390188.cos.ap-shanghai.myqcloud.com/22.jpeg)
+![pic1](https://asset-1258390188.cos.ap-shanghai.myqcloud.com/tmp.jpeg)
 
 上面这些处理使用Python才几行：
 
+```python
+im = Image.open(image_name)
+im = im.filter(ImageFilter.MedianFilter())
+enhancer = ImageEnhance.Contrast(im)
+im = enhancer.enhance(2)
+im = im.convert('1')
+im.show()
+```
+
+
+接下来就是提取这些数字的字模，使用shell脚本下载100幅图片，抽出三张图片获取字模：
+
+```python
+#!/usr/bin/env python
+#encoding=utf-8
+
+import Image,ImageEnhance,ImageFilter
+import sys
+
+image_name = "./images/81.jpeg"
+im = Image.open(image_name)
+im = im.filter(ImageFilter.MedianFilter())
+enhancer = ImageEnhance.Contrast(im)
+im = enhancer.enhance(2)
+im = im.convert('1')
+#im.show()
+                #all by pixel
+s = 12          #start postion of first number
+w = 10          #width of each number
+h = 15          #end postion from top
+t = 2           #start postion of top
+
+im_new = []
+#split four numbers in the picture
+for i in range(4):
+    im1 = im.crop((s+w*i+i*2,t,s+w*(i+1)+i*2,h))
+    im_new.append(im1)
+
+f = file("data.txt","a")
+for k in range(4):
+    l = []
+    #im_new[k].show()
+    for i in range(13):
+        for j in range(10):
+            if (im_new[k].getpixel((j,i)) == 255):
+                l.append(0)
+            else:
+                l.append(1)
+
+    f.write("l=[")
+
+    n = 0
+    for i in l:
+        if (n%10==0):
+            f.write("\n")
+        f.write(str(i)+",")
+        n+=1
+    f.write("]\n")
+```
+
+把字模保存为list，用于接下来的匹配；
+
+提取完字模后剩下来的就是对需要处理的图片进行与数据库中的字模进行匹配了，基本的思路就是看相应点的重合率，但是由于噪点的影响在对(6,8)(8,3)(5,9)的匹配时容易出错，俺自己针对已有的100幅图片数据采集进行分析，采用了双向匹配(图片与字模分别作为基点)，做了半天的测试终于可以实现100%的识别率。
+
+```python
+#!/usr/bin/env python
+#encoding=utf-8
+
+import Image,ImageEnhance,ImageFilter
+import Data
+
+DEBUG = False
+
+def d_print(*msg):
+    global DEBUG
+    if DEBUG:
+        for i in msg:
+            print i,
+        print
+    else:
+        pass
+
+def Get_Num(l=[]):
+    min1 = []
+    min2 = []
+    for n in Data.N:
+        count1=count2=count3=count4=0
+        if (len(l) != len(n)):
+            print "Wrong pic"
+            exit()
+        for i in range(len(l)):
+            if (l[i] == 1):
+                count1+=1
+                if (n[i] == 1):
+                    count2+=1
+        for i in range(len(l)):
+            if (n[i] == 1):
+                count3+=1
+                if (l[i] == 1):
+                    count4+=1
+        d_print(count1,count2,count3,count4)
+
+        min1.append(count1-count2)
+        min2.append(count3-count4)
+    d_print(min1,"\n",min2)
+    for i in range(10):
+        if (min1[i] < = 2 or min2[i] <= 2):
+            if ((abs(min1[i] - min2[i])) < 10):
+                return i
+    for i in range(10):            
+        if (min1[i] <= 4 or min2[i] <= 4):
+            if (abs(min1[i] - min2[i]) <= 2):
+                return i
+
+    for i in range(10):
+        flag = False
+        if (min1[i] <= 3 or min2[i] <= 3):
+            for j in range(10):
+                if (j != i and (min1[j] < 5 or min2[j] &lt;5)):
+                    flag = True
+                else:
+                    pass
+            if (not flag):
+                return i
+    for i in range(10):            
+        if (min1[i] <= 5 or min2[i] <= 5):
+            if (abs(min1[i] - min2[i]) <= 10):
+                return i
+    for i in range(10):
+        if (min1[i] <= 10 or min2[i] <= 10):
+            if (abs(min1[i] - min2[i]) <= 3):
+                return i
+
+#end of function Get_Num
+
+def Pic_Reg(image_name=None):
     im = Image.open(image_name)
     im = im.filter(ImageFilter.MedianFilter())
     enhancer = ImageEnhance.Contrast(im)
     im = enhancer.enhance(2)
     im = im.convert('1')
     im.show()
+                    #all by pixel
+    s = 12          #start postion of first number
+    w = 10          #width of each number
+    h = 15          #end postion from top
+    t = 2           #start postion of top
+    im_new = []
+    #split four numbers in the picture
+    for i in range(4):
+        im1 = im.crop((s+w*i+i*2,t,s+w*(i+1)+i*2,h))
+        im_new.append(im1)
 
+    s = ""
+    for k in range(4):
+        l = []
+        #im_new[k].show()
+        for i in range(13):
+            for j in range(10):
+                if (im_new[k].getpixel((j,i)) == 255):
+                    l.append(0)
+                else:
+                    l.append(1)
 
-接下来就是提取这些数字的字模，使用shell脚本下载100幅图片，抽出三张图片获取字模：
-
-	#!/usr/bin/env python
-	#encoding=utf-8
-
-	import Image,ImageEnhance,ImageFilter
-	import sys
-
-	image_name = "./images/81.jpeg"
-	im = Image.open(image_name)
-	im = im.filter(ImageFilter.MedianFilter())
-	enhancer = ImageEnhance.Contrast(im)
-	im = enhancer.enhance(2)
-	im = im.convert('1')
-	#im.show()
-	                #all by pixel
-	s = 12          #start postion of first number
-	w = 10          #width of each number
-	h = 15          #end postion from top
-	t = 2           #start postion of top
-
-	im_new = []
-	#split four numbers in the picture
-	for i in range(4):
-	    im1 = im.crop((s+w*i+i*2,t,s+w*(i+1)+i*2,h))
-	    im_new.append(im1)
-
-	f = file("data.txt","a")
-	for k in range(4):
-	    l = []
-	    #im_new[k].show()
-	    for i in range(13):
-	        for j in range(10):
-	            if (im_new[k].getpixel((j,i)) == 255):
-	                l.append(0)
-	            else:
-	                l.append(1)
-
-	    f.write("l=[")
-
-	    n = 0
-	    for i in l:
-	        if (n%10==0):
-	            f.write("\n")
-	        f.write(str(i)+",")
-	        n+=1
-	    f.write("]\n")
-
-把字模保存为list，用于接下来的匹配；
-
-提取完字模后剩下来的就是对需要处理的图片进行与数据库中的字模进行匹配了，基本的思路就是看相应点的重合率，但是由于噪点的影响在对(6,8)(8,3)(5,9)的匹配时容易出错，俺自己针对已有的100幅图片数据采集进行分析，采用了双向匹配(图片与字模分别作为基点)，做了半天的测试终于可以实现100%的识别率。
-
-	#!/usr/bin/env python
-	#encoding=utf-8
-
-	import Image,ImageEnhance,ImageFilter
-	import Data
-
-	DEBUG = False
-
-	def d_print(*msg):
-	    global DEBUG
-	    if DEBUG:
-	        for i in msg:
-	            print i,
-	        print
-	    else:
-	        pass
-
-	def Get_Num(l=[]):
-	    min1 = []
-	    min2 = []
-	    for n in Data.N:
-	        count1=count2=count3=count4=0
-	        if (len(l) != len(n)):
-	            print "Wrong pic"
-	            exit()
-	        for i in range(len(l)):
-	            if (l[i] == 1):
-	                count1+=1
-	                if (n[i] == 1):
-	                    count2+=1
-	        for i in range(len(l)):
-	            if (n[i] == 1):
-	                count3+=1
-	                if (l[i] == 1):
-	                    count4+=1
-	        d_print(count1,count2,count3,count4)
-
-	        min1.append(count1-count2)
-	        min2.append(count3-count4)
-	    d_print(min1,"\n",min2)
-	    for i in range(10):
-	        if (min1[i] < = 2 or min2[i] <= 2):
-	            if ((abs(min1[i] - min2[i])) < 10):
-	                return i
-	    for i in range(10):            
-	        if (min1[i] <= 4 or min2[i] <= 4):
-	            if (abs(min1[i] - min2[i]) <= 2):
-	                return i
-
-	    for i in range(10):
-	        flag = False
-	        if (min1[i] <= 3 or min2[i] <= 3):
-	            for j in range(10):
-	                if (j != i and (min1[j] < 5 or min2[j] &lt;5)):
-	                    flag = True
-	                else:
-	                    pass
-	            if (not flag):
-	                return i
-	    for i in range(10):            
-	        if (min1[i] <= 5 or min2[i] <= 5):
-	            if (abs(min1[i] - min2[i]) <= 10):
-	                return i
-	    for i in range(10):
-	        if (min1[i] <= 10 or min2[i] <= 10):
-	            if (abs(min1[i] - min2[i]) <= 3):
-	                return i
-
-	#end of function Get_Num
-
-	def Pic_Reg(image_name=None):
-	    im = Image.open(image_name)
-	    im = im.filter(ImageFilter.MedianFilter())
-	    enhancer = ImageEnhance.Contrast(im)
-	    im = enhancer.enhance(2)
-	    im = im.convert('1')
-	    im.show()
-	                    #all by pixel
-	    s = 12          #start postion of first number
-	    w = 10          #width of each number
-	    h = 15          #end postion from top
-	    t = 2           #start postion of top
-	    im_new = []
-	    #split four numbers in the picture
-	    for i in range(4):
-	        im1 = im.crop((s+w*i+i*2,t,s+w*(i+1)+i*2,h))
-	        im_new.append(im1)
-
-	    s = ""
-	    for k in range(4):
-	        l = []
-	        #im_new[k].show()
-	        for i in range(13):
-	            for j in range(10):
-	                if (im_new[k].getpixel((j,i)) == 255):
-	                    l.append(0)
-	                else:
-	                    l.append(1)
-
-	        s+=str(Get_Num(l))
-	    return s
-	print Pic_Reg("./images/22.jpeg")
+        s+=str(Get_Num(l))
+    return s
+print Pic_Reg("./images/22.jpeg")
+```
 
 
 这里再提一下验证码识别的基本方法：截图，二值化、中值滤波去噪、分割、紧缩重排（让高矮统一）、字库特征匹配识别。

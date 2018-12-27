@@ -8,7 +8,7 @@ categories:
 date: 2013-06-06 14:25:13
 ---
 
-[![centos6](http://7sbxmt.com1.z0.glb.clouddn.com/centos61-610x230.jpg)](http://c.kensou.me/blog/centos-6-4-install-and-config/centos6-2/)
+![centos6](https://asset-1258390188.cos.ap-shanghai.myqcloud.com/centos61.jpg)
 前期准备:
      * IOS文件 : CentOS-6.4-x86_64-minima.iso 
      * U盘 : 因为使用最小化的安装, 所以1G的U盘就够用了 

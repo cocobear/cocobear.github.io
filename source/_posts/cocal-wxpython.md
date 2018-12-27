@@ -12,7 +12,7 @@ wxPython写了个计算器，练习wxPython界面布局，功能很强大，支�
 wxPython写界面挺顺手的，另外推荐一个不错的wxPython的教程：
 [http://www.zetcode.com/wxpython](http://www.zetcode.com/wxpython)
 
-[![CoCal ](http://7sbxmt.com1.z0.glb.clouddn.com/cocal-300x129.png "cocal")](http://7sbxmt.com1.z0.glb.clouddn.com08/cocal.png)
+![CoCal ](https://asset-1258390188.cos.ap-shanghai.myqcloud.com/cocal.png "cocal")](https://asset-1258390188.cos.ap-shanghai.myqcloud.com08/cocal.png)
 
 [代码下载](http://cocobear.github.io/code/CoCal.py)
 ## Comments

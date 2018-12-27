@@ -65,7 +65,7 @@ yum install eva		//如果你觉得QQ对你来说还是必须的话。
 
 http://www.linuxsir.org/bbs/showthread.php?t=304624
 
-或者参考我以前写的[加快Linux的启动速度](http://c.kensou.me/blog/?p=89)一文。
+或者参考我以前写的[加快Linux的启动速度](http://cocobear.github.io/?p=89)一文。
 
 关于字体我觉得F7已经做得非常好了，可以不做任何修改，可能只有在opera下面字体不是很好，可以通过安装新的字体来解决。笔记本推荐使用雅黑字体。
 

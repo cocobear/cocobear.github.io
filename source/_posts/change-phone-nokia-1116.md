@@ -16,7 +16,7 @@ date: 2007-09-22 18:15:35
 
 本来在网上查的是赛博有那款1116价格也不错，配电脑时听那里的伙计说赛格负一层也有手机卖场，就趁着他们装机时下去买手机去了。那里的手机还挺便宜的，1116只花了280块钱，顺便又买了块电池（25RMB ｜800mA），挺划算的吧。
 
-[![俺的新手机](http://7sbxmt.com1.z0.glb.clouddn.com/nokia1116.jpg)](http://7sbxmt.com1.z0.glb.clouddn.com09/nokia1116.bmp "俺的新手机")
+![俺的新手机](https://asset-1258390188.cos.ap-shanghai.myqcloud.com/nokia1116.jpg)](https://asset-1258390188.cos.ap-shanghai.myqcloud.com09/nokia1116.bmp "俺的新手机")
 ## Comments
 
 **[wind](#1802 "2007-09-25 11:01:17"):** 终于换手机 终于可以听见你说话了

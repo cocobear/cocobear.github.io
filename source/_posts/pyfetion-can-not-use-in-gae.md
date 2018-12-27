@@ -9,7 +9,7 @@ categories:
 date: 2009-04-25 17:56:36
 ---
 
-最近[有同学反映](http://c.kensou.me/blog/2009/02/20/upgrade-pyfetion/)PyFetion不能在[GAE](http://code.google.com/appengine/)上使用，我看了下别人给出的错误，问题不出在PyFetion上，无论是TCP方式还是HTTP方式，使用本机测试都可以正常工作。
+最近[有同学反映](http://cocobear.github.io/2009/02/20/upgrade-pyfetion/)PyFetion不能在[GAE](http://code.google.com/appengine/)上使用，我看了下别人给出的错误，问题不出在PyFetion上，无论是TCP方式还是HTTP方式，使用本机测试都可以正常工作。
 应该是移动的飞信服务器屏蔽了GAE的出口IP地址（某同学反应GAE的urlopen使用的是同一IP）。
 
 原因大概是广大GAE的爱好者众多，玩PyFetion的又比较多，所以移动不爽了，就封掉你。

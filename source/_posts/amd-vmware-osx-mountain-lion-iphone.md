@@ -36,7 +36,7 @@ date: 2013-05-11 18:36:16
 　　Mountain Lion有一点很不错，刚才重起了一次，重起前打开的东西都完整的显示在屏幕上面了，之前打的的Terminal被我最大化了，重起后这个Terminal是先显示出来，然后完成了一次类似我点最大化时出现的效果，赞一个感觉工作台是跳到我面前了，而不是象Windows的休眠一样，死寂沉沉的。
 
 　　放个截图吧，都讲究图文并茂么：
-[![desktop](http://7sbxmt.com1.z0.glb.clouddn.com/desktop-610x487.jpg)](http://c.kensou.me/blog/amd-vmware-osx-mountain-lion-iphone/desktop/)
+![desktop](https://asset-1258390188.cos.ap-shanghai.myqcloud.com/desktop.jpg)
 Update: 
 [Xcode 4.6.2开发免99美金证书真机调试](http://blog.csdn.net/fightingbull/article/details/8059651)
 ## Comments

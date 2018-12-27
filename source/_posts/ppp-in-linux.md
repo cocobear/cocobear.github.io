@@ -8,7 +8,7 @@ categories:
 date: 2007-05-18 13:39:17
 ---
 
-前段时间写那个adsl拨号脚本的时候修改了/etc/sysconfig/network-scripts/ifcfg-cnc，结果就出现问题了，具体可查看[这篇文章](http://c.kensou.me/blog/?p=68)。当时按照前面文章的修改后已经有好长一段时间拨号都正常，但是今天早上拨号的时候突然发现又出现问题了，而且情况似乎与前一次差不多，以下是拨号的日志：
+前段时间写那个adsl拨号脚本的时候修改了/etc/sysconfig/network-scripts/ifcfg-cnc，结果就出现问题了，具体可查看[这篇文章](http://cocobear.github.io/?p=68)。当时按照前面文章的修改后已经有好长一段时间拨号都正常，但是今天早上拨号的时候突然发现又出现问题了，而且情况似乎与前一次差不多，以下是拨号的日志：
 
      May 18 09:26:04 cocobear pppd[1630]: pppd 2.4.3 started by root, uid 0
      May 18 09:26:04 cocobear pppd[1630]: Using interface ppp0

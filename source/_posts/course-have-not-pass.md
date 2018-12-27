@@ -8,7 +8,7 @@ categories:
 date: 2007-07-02 13:37:32
 ---
 
-[![screenshot.png](http://7sbxmt.com1.z0.glb.clouddn.com/screenshot.png)](http://7sbxmt.com1.z0.glb.clouddn.com07/screenshot.png "screenshot.png")
+![screenshot.png](https://asset-1258390188.cos.ap-shanghai.myqcloud.com/screenshot.png)](https://asset-1258390188.cos.ap-shanghai.myqcloud.com07/screenshot.png "screenshot.png")
 
 今天又多了一门系统结构。
 
