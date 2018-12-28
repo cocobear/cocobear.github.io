@@ -89,5 +89,5 @@ sitemap:
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
     type: git
-    repo: https://github.com/cocobear/cocobear.github.io.git
+    repo: git@github.com:cocobear/cocobear.github.io.git
     branch: master

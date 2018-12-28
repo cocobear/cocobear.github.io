@@ -331,7 +331,7 @@ codeblock:
 reward:
   enable: true
   comment: 坚持原创技术分享，您的支持将鼓励我继续创作！
-  wechatpay: https://leaferx.online/images/wechat-pay.jpg
+  wechatpay: https://asset-1258390188.cos.ap-shanghai.myqcloud.com/WechatPay.jpeg
   #alipay: /images/alipay.jpg
   #bitcoin: /images/bitcoin.png
 
