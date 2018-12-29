@@ -18,12 +18,12 @@ sidebar:
   overview: 站点概览
   toc: 文章目录
 post:
-  posted: 发表于
-  edited: 更新于
+  posted: 发表
+  edited: 更新
   created: 创建时间
   modified: 修改时间
   edit: 编辑
-  in: 分类于
+  in: 分类
   more: 更多
   read_more: 阅读全文
   untitled: 未命名
@@ -92,8 +92,8 @@ accessibility:
   prev_page: 上一页
   next_page: 下一页
 symbols_count_time:
-  count: 本文字数
+  count: 字数
   count_total: 站点总字数
-  time: 阅读时长
+  time: 阅读
   time_total: 站点阅读时长
   time_minutes: 分钟
