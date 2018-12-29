@@ -1,4 +1,11 @@
 // Custom styles.
+
+// 选中文字部分的样式
+::selection {
+    background-color: rgb(255, 241, 89);
+    color: #555;
+}
+
 // 文章内链接文本样式
 .post-body p a{
   color: #0593d3;
@@ -15,4 +22,72 @@
 .posts-expand .post-body img {
     border: none;
     padding: 0px;
+}
+.post-gallery .post-gallery-img img {
+    padding: 3px;
+}
+// 文章``代码块的自定义样式
+code {
+    margin: 0px 4px;
+}
+// 返回顶部按钮样式
+.back-to-top {
+    line-height: 1.5;
+    right: 10px;
+    padding-right: 5px;
+    padding-left: 5px;
+    padding-top: 2.5px;
+    padding-bottom: 2.5px;
+    background-color: rgba(247, 149, 51, 0.75);
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.35);
+}
+.back-to-top.back-to-top-on {
+    bottom: 10px;
+}
+
+// 侧栏站点作者名
+.site-author-name {
+    display: none;
+}
+
+// 侧栏头像（圆形以及旋转效果）
+.site-author-image {
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 100%;
+    transition: transform 1.0s ease-out;
+}
+img:hover {
+    transform: rotateZ(360deg);
+}
+// 侧栏社交链接
+.links-of-author {
+    margin-top: 0px;
+}
+
+// 文章底部tag样式
+.posts-expand .post-tags a {
+    border-bottom: none;
+    margin-right: 0px;
+    font-size: 15px;
+    padding: 0px 5px;
+    border-radius: 3px;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0s;
+}
+.posts-expand .post-tags a:hover {
+    background: #eee;
+}
+
+//底部页面跳转
+.post-nav-item a {
+  color: #0593d3;
+  border-bottom: none;
+  border-bottom: 1px solid #0593d3;
+  &:hover {
+    color: #fc6423;
+    border-bottom: none;
+    border-bottom: 1px solid #fc6423;
+  }
 }
