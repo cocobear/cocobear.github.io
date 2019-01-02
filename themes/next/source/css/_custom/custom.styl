@@ -1,5 +1,34 @@
 // Custom styles.
 
+
+body {
+    font-size: 1rem;
+    text-shadow: 0 0 1px rgba(0,0,0,.2)
+    margin: 0;
+    line-height: 2;
+    background: #fff;
+}
+
+// note样式图标自定义
+.post-body .note.default:not(.no-icon):before {
+    content: "\f10d";
+}
+.post-body .note.primary:not(.no-icon):before {
+    content: "\f25a";
+}
+.post-body .note.success:not(.no-icon):before {
+    content: "\f087";
+}
+.post-body .note.info:not(.no-icon):before {
+    content: "\f0eb";
+}
+.post-body .note.warning:not(.no-icon):before {
+    content: "\f0f3";
+}
+.post-body .note.danger:not(.no-icon):before {
+    content: "\f1e2";
+}
+
 // 选中文字部分的样式
 ::selection {
     background-color: rgb(255, 241, 89);
@@ -91,3 +120,4 @@ img:hover {
     border-bottom: 1px solid #fc6423;
   }
 }
+
