@@ -1,8 +1,8 @@
 ---
 title: iTerm2使用代理
 date: 2019-01-03 16:29:45
-tags: [iterm2,macos,proxy,brew]
-categories: MacOS
+tags: [iTerm2,macOS,proxy,brew]
+categories: macOS
 toc: true
 comments: true
 description: 从AWS上面下载东西太慢了，想通过代理下载，结果一直不成功
