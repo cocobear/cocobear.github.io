@@ -1,5 +1,9 @@
 ---
 title: {{ title }}
 date: {{ date }}
-tags:
+tags: []
+categories:
+toc: true
+comments: true
+description:
 ---
