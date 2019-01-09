@@ -12,7 +12,7 @@ description: 从AWS上面下载东西太慢了，想通过代理下载，结果�
 
 <!--more-->
 
-##遇到的问题
+## 遇到的问题
 
 以前在`Windows`下一直用`ShadowsocksR`科学上网，平时是不会开全局代理，只是在`Chrome`里面用插件`Proxy SwitchyOmega`配置成`auto switch`模式，基本可以满足日常使用，偶尔其它软件有要科学上网的需要，就打开`ShadowsocksR`的全局模式。
 
