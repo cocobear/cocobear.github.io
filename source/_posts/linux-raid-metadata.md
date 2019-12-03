@@ -5,16 +5,18 @@ toc: true
 comments: true
 date: 2019-11-18 15:13:39
 categories: Linux
-description: 
+description: 安装系统遇到RAID错误了！
 ---
 
+![](https://asset-1258390188.cos.ap-shanghai.myqcloud.com/linux-raid.png)
 
+<!--more-->
 
 今天在装一台工控机的时候遇到了无法识别硬盘的问题,在RHEL 6.9下报错：
 
 > Disks sdb contains BIOS RAID metadata, but is not part of any recognized BIOS RAID sets. Ignoring disks  sdb.
 
-![](https://asset-1258390188.cos.ap-shanghai.myqcloud.com/linux-raid.png)
+
 
 在RHEL 7.5下面是找不到硬盘，但没有上面的报错提示，这一点7.5就表现的不太好，这么重要的错误提示没有显示出来。
 

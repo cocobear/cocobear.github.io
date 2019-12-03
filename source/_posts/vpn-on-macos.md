@@ -8,6 +8,10 @@ categories:
 description: 需要从家里访问公司内网的资源，很自然想到了使用VPN，记录一下。
 ---
 
+![](https://images2017.cnblogs.com/blog/1148681/201711/1148681-20171113112636077-2136950569.png)
+
+<!--more-->
+
 ## VPN服务端安装(L2TP + IPSEC VPN)
 
 服务器是`CentOS 7`,为了方便使用了`docker`安装：
