@@ -1,0 +1,2063 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="theme-next gemini" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+  
+  
+    
+      
+    
+    
+      
+    
+  <script src="//cdn.staticfile.org/pace/1.0.2/pace.min.js"></script>
+  <link rel="stylesheet" href="//cdn.staticfile.org/pace/1.0.2/themes/blue/pace-theme-loading-bar.min.css">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+  <link rel="stylesheet" href="//cdn.staticfile.org/fancybox/3.2.5/jquery.fancybox.min.css">
+
+
+
+
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+
+    
+  
+
+  
+    
+    
+    <link rel="stylesheet" href="https://fonts.loli.net/css?family=Source Code Pro:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext">
+  
+
+
+
+
+
+
+  
+
+<link rel="stylesheet" href="//cdn.staticfile.org/font-awesome/4.6.2/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="/css/main.css?v=6.7.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-next.png?v=6.7.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=6.7.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=6.7.0">
+
+
+  <link rel="mask-icon" href="/logo.svg?v=6.7.0" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '6.7.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    fastclick: true,
+    lazyload: true,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="昨天打算用wget把kerneltravel上的深入分析Linux内核源码全部下载到本机，没想到使用wget下载到本地时文件名全部是乱码： [cocobear@cocobear ~]$ wget -r -p -k -np http://www.kerneltravel.net/kernel-book/深入分析Linux内核源码.html --19:52:02--  http://www.kerne">
+<meta name="keywords" content="wget">
+<meta property="og:type" content="article">
+<meta property="og:title" content="wget中文乱码">
+<meta property="og:url" content="http://cocobear.github.io/2008/04/19/wget-chinese-encode/index.html">
+<meta property="og:site_name" content="可可熊D窝">
+<meta property="og:description" content="昨天打算用wget把kerneltravel上的深入分析Linux内核源码全部下载到本机，没想到使用wget下载到本地时文件名全部是乱码： [cocobear@cocobear ~]$ wget -r -p -k -np http://www.kerneltravel.net/kernel-book/深入分析Linux内核源码.html --19:52:02--  http://www.kerne">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-12-28T05:56:28.494Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="wget中文乱码">
+<meta name="twitter:description" content="昨天打算用wget把kerneltravel上的深入分析Linux内核源码全部下载到本机，没想到使用wget下载到本地时文件名全部是乱码： [cocobear@cocobear ~]$ wget -r -p -k -np http://www.kerneltravel.net/kernel-book/深入分析Linux内核源码.html --19:52:02--  http://www.kerne">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="可可熊D窝" type="application/atom+xml">
+
+
+
+
+  <link rel="canonical" href="http://cocobear.github.io/2008/04/19/wget-chinese-encode/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>wget中文乱码 | 可可熊D窝</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">可可熊D窝</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <h1 class="site-subtitle" itemprop="description">Keep it simple, stupid</h1>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">182</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">8</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">358</span></a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+    <div class="reading-progress-bar"></div>
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2008/04/19/wget-chinese-encode/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="cocobear">
+      <meta itemprop="description" content="爱折腾的技术宅一枚">
+      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="可可熊D窝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">wget中文乱码
+
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2008-04-19 22:26:19" itemprop="dateCreated datePublished" datetime="2008-04-19T22:26:19+08:00">2008-04-19</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/编程相关/" itemprop="url" rel="index"><span itemprop="name">编程相关</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2008/04/19/wget-chinese-encode/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2008/04/19/wget-chinese-encode/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+            <div class="post-symbolscount">
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数：</span>
+                
+                <span title="字数">5.8k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读 &asymp;</span>
+                
+                <span title="阅读">5 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>昨天打算用wget把kerneltravel上的深入分析Linux内核源码全部下载到本机，没想到使用wget下载到本地时文件名全部是乱码：</p>
+<pre><code>[cocobear@cocobear ~]$ wget -r -p -k -np http://www.kerneltravel.net/kernel-book/深入分析Linux内核源码.html
+--19:52:02--  http://www.kerneltravel.net/kernel-book/%E6%B7%B1%E5%85%A5%E5%88%86%E6%9E%90Linux%E5%86%85%E6%A0%B8%E6%BA%90%E7%A0%81.html
+           =&gt; `www.kerneltravel.net/kernel-book/深�%85��%88%86�%9E%90Linux�%86%85核��%90��%81.html&apos;
+正在解析主机 www.kerneltravel.net... 202.75.211.215
+Connecting to www.kerneltravel.net|202.75.211.215|:80... 已连接。
+已发出 HTTP 请求，正在等待回应... 200 OK
+长度：133,528 (130K) [text/html]
+
+100%[====================================&gt;] 133,528       60.71K/s             
+
+19:52:05 (60.57 KB/s) - `www.kerneltravel.net/kernel-book/深�%85��%88%86�%9E%90Linux�%86%85核��%90��%81.html&apos; saved [133528/133528]
+</code></pre><p>google了半天也没有找到解决方案，似乎也有不少人碰到这个问题。仔细想了想应该是wget在处理url时的问题，于是下载了最新的<a href="http://www.sfr-fresh.com/unix/www/wget-1.11.1.tar.gz/" target="_blank" rel="noopener">wget源代码</a>开始找问题。</p>
+<p>基本看完了<a href="http://www.sfr-fresh.com/unix/www/wget-1.11.1.tar.gz:a/wget-1.11.1/src/main.c" target="_blank" rel="noopener">main.c</a>这个文件，后来在<a href="http://www.sfr-fresh.com/unix/www/wget-1.11.1.tar.gz:a/wget-1.11.1/src/url.c" target="_blank" rel="noopener">url.c</a>这个文件里找到了wget如何处理保存的文件名，url_file_name()这个函数。</p>
+<p>url_file_name()在根据url的形式判断该保存为什么样的文件名，并进行了多方面的考虑，最终该函数调用了append_uri_pathel()，该函数会判断url中的特殊字符，例如空格等，如果遇到这些字符wget把它进行转义，而问题就出在这里，append_uri_pathel()函数是通过FILE_CHAR_TEST (*p, mask)这一句来判断该字符是否为特殊字符，而同时它会认为中文也是特殊字符，然后按照转换空格之类的方式对中文进行转义，这样就会造成中文乱码的情况，知道了问题所在我在append_uri_pathel()函数对特殊字符的判断中排除了中文字符。</p>
+<p>接下来重新编译wget，再试一次：</p>
+<pre><code>[cocobear@cocobear src]$ ./wget -r -p -k -np http://www.kerneltravel.net/kernel-book/深入分析Linux内核源码.html
+--2008-04-19 20:16:34--  http://www.kerneltravel.net/kernel-book/%E6%B7%B1%E5%85%A5%E5%88%86%E6%9E%90Linux%E5%86%85%E6%A0%B8%E6%BA%90%E7%A0%81.html
+Resolving www.kerneltravel.net... 202.75.211.215
+Connecting to www.kerneltravel.net|202.75.211.215|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 133528 (130K) [text/html]
+Saving to: `www.kerneltravel.net/kernel-book/深入分析Linux内核源码.html&apos;
+
+74% [===========================&gt;           ] 98,832      79.7K/s      
+</code></pre><p>可以看到wget可以正确的把中文的网页保存下来了:-)</p>
+<p>我的locale是utf-8，如果使用gbk的话wget上面的网页会得到404错误，因为gbk环境下wget发出来GET请求是按照gbk编码的方式进行转义，而服务器对接收到的GET请求中的URL是按照UTF-8的方式进行“解码”，因此会得到404的错误。（早上测试的时候还是这样的，但下这会写这篇文章的时候gbk环境下使用wget也正常了，郁闷）</p>
+<p>以下是我修改后的url.c与原文的diff:<br>    [cocobear@cocobear ~]$ diff -u wget-1.11.1/src/url.c Codes/wget-1.11.1/src/url.c<br>    — wget-1.11.1/src/url.c       2008-04-19 11:42:24.000000000 +0800<br>    +++ Codes/wget-1.11.1/src/url.c 2008-04-19 11:56:49.000000000 +0800<br>    @@ -1332,11 +1332,10 @@<br>       /<em> Walk the PATHEL string and check how many characters we’ll need<br>          to quote.  </em>/<br>       quoted = 0;</p>
+<pre><code>-  for (p = b; p &lt; e; p++) {
+-    if (FILE_CHAR_TEST (*p, mask) &amp;&amp; !((*p | 0x0fffffff) == 0xffffffff)) {
++  for (p = b; p &lt; e; p++)
++    if (FILE_CHAR_TEST (*p, mask) &amp;&amp; !((*p | 0x0fffffff) == 0xffffffff))
+                   ++quoted;
+-              }
+-  }
++  
+   /* Calculate the length of the output string.  e-b is the input
+      string length.  Each quoted char introduces two additional
+      characters in the string, hence 2*quoted.  */
+</code></pre><p>以上仅仅是我自己对wget的一些分析、看法，如有错误请路过的指正一下。</p>
+<p>BTW：<br>(1):<a href="http://www.sfr-fresh.com这个网站不错，有不少源代码在上面可以在线看。" target="_blank" rel="noopener">http://www.sfr-fresh.com这个网站不错，有不少源代码在上面可以在线看。</a><br>(2):深入分析Linux内核源码这本书打包下载(html格式):<a href="http://cocobear.github.io/download/Understand_Linux_kernel.tar.bz2">http://cocobear.github.io/download/Understand_Linux_kernel.tar.bz2</a></p>
+<p>Update1(08.4.20):<br>这个问题是wget对国际化的字符支持不好，目前google summer code已经有人在这方面进行改进，期待。我的解决方案只是临时的，只能针对utf-8环境。</p>
+<h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#4339" title="2008-09-20 00:14:56">sept</a>:</strong> 你好，我也遇到同样的问题，在百度google也没找到方法。看到你有解决方法很兴奋，无奈水平有限，没看出来该修改url.c的哪里？能否在详细说一下，或者能否把改完的发给我，谢谢</p>
+<p><strong><a href="#3113" title="2008-04-19 22:37:34">luguo</a>:</strong> 晕，我今天搜索时也正好搜到那个网站上面的代码～～真巧啊！！</p>
+<p><strong><a href="#3114" title="2008-04-19 23:14:15">kongove</a>:</strong> 能不能用个脚本把文件URL的后边截取下来，用wget的-O 选项支持输出文件名？</p>
+<p><strong><a href="#3115" title="2008-04-19 23:20:00">kongove</a>:</strong> Thanks for your share of ulk.</p>
+<p><strong><a href="#3116" title="2008-04-20 08:44:24">cocobear</a>:</strong> 单个文件下载你可以使用脚本截取，如果递归下载你都没办法知道可能下载的文件。</p>
+<p><strong><a href="#3828" title="2008-07-16 08:57:03">cocobear</a>:</strong> to:leon 原理上还是一样的，不过windows使用的是gb2312编码，针对编码处理的地方应该不太一样。 如果要完全解决这个问题，还得wget官方做不少东西毕竟国际化的支持是件不小的工作。</p>
+<p><strong><a href="#3811" title="2008-07-15 18:39:11">leon</a>:</strong> cocobear:您好。看到您解决了这个问题，简直是五体投地。我现在不是使用linux，只能够使用wget的windows版或者cygwin版，请问应该怎么解决问题？请高手出手相救。谢谢。</p>
+<p><strong><a href="#3842" title="2008-07-16 19:13:06">leon</a>:</strong> cocobear: 感谢您的回答。请问应该如何修改代码才能够正确获得中文文件名？如果需要，我可以把windows下的代码发给您。谢谢</p>
+<p><strong><a href="#3918" title="2008-07-21 09:51:06">Simxinzi</a>:</strong> Win下该如何修改url.c这个文件呢，不知道需要修改哪里才能解决UTf-8编码的文件下载的问题，望不吝赐教,感激不尽。QQ:9961459</p>
+<p><strong><a href="#3919" title="2008-07-21 10:27:16">cocobear</a>:</strong> WIN下的实现和linux下不一样，而且win使用的是gb2312具体修改我不太清楚。 不知道你是使用的是wget的win版一还是cywin中的wget？</p>
+<p><strong><a href="#3920" title="2008-07-21 10:52:37">Simxinzi</a>:</strong> 谢谢斑竹的回复，我使用的是wget的win版 访问中文URL时因为编码问题，出现403错误 Wget编码默认为非utf-8 而服务器Apache编码为UTF-8 比如说下载这样一个文件 此中文路径可直接访问并可下载： <a href="http://www.****.com/QQ幻想/music/M001.ogg" target="_blank" rel="noopener">http://www.****.com/QQ幻想/music/M001.ogg</a> Wget却访问成： <a href="http://www.****.com/QQ%BB%C3%CF%EB/music/M002.ogg" target="_blank" rel="noopener">http://www.****.com/QQ%BB%C3%CF%EB/music/M002.ogg</a> 以下路径也可以下载： <a href="http://www.****.com/QQ%e5%b9%bb%e6%83%b3/music/M002.ogg" target="_blank" rel="noopener">http://www.****.com/QQ%e5%b9%bb%e6%83%b3/music/M002.ogg</a> 应该是一个编码的问题：Win下的源码下载地址： <a href="http://www.christopherlewis.com/WGet/wget-1.11.4s.zip" target="_blank" rel="noopener">http://www.christopherlewis.com/WGet/wget-1.11.4s.zip</a></p>
+<p><strong><a href="#3921" title="2008-07-21 10:55:03">Simxinzi</a>:</strong> 你的思路应该能解决问题，即不转换中文路径，仅转换空格等其他字符，但就是不知道该修改哪里</p>
+<p><strong><a href="#3922" title="2008-07-21 14:17:59">cocobear</a>:</strong> 同样的位置,你试着改了,编译一下.我没有环境编译.</p>
+<p><strong><a href="#3982" title="2008-08-02 08:59:25">j</a>:</strong> - for (p = b; p &lt; e; p++) { - if (FILE_CHAR_TEST (<em>p, mask) &amp;&amp; !((</em>p | 0×0fffffff) == 0xffffffff)) { + for (p = b; p &lt; e; p++) + if (FILE_CHAR_TEST (<em>p, mask) &amp;&amp; !((</em>p | 0×0fffffff) == 0xffffffff)) ++quoted; - } - } + 这两段代码功能完全一样呀，只是少了｛｛｝｝</p>
+<p><strong><a href="#3925" title="2008-07-22 13:39:32">leon</a>:</strong> 我成功了，呵呵</p>
+<p><strong><a href="#3926" title="2008-07-22 13:40:04">leon</a>:</strong> 昨天加你的QQ你没有通过。不然可以把文件发给你了。</p>
+<p><strong><a href="#3927" title="2008-07-22 13:43:02">leon</a>:</strong> 不好意思，刚才没有看清楚。你的问题跟我的不一样。我的是下载UTF8编码文件乱码。现在解决了。你这个就不知道了，呵呵</p>
+<p><strong><a href="#3928" title="2008-07-22 13:49:29">leon</a>:</strong> 你要找到URL请求的代码，在wget发送请求前做一下转换就好了。</p>
+<p><strong><a href="#3931" title="2008-07-22 19:29:39">Simxinzi</a>:</strong> leon 麻烦再加一下，谢谢了，我也是和你一样的问题，下载UTF-8编码文件乱码，下载UTF-8路径找不到文件或乱码</p>
+<p><strong><a href="#3932" title="2008-07-22 19:29:59">Simxinzi</a>:</strong> leon 麻烦再加一下，谢谢了，我也是和你一样的问题，下载UTF-8编码文件乱码，下载UTF-8路径找不到文件或乱码 QQ:9961459</p>
+<p><strong><a href="#4377" title="2008-09-28 09:50:26">可可熊</a>:</strong> url.c修改1332行附近。</p>
+<p><strong><a href="#6090" title="2009-06-09 05:21:05">wmk</a>:</strong> wget -r -np -nH –cut-dirs=3 <a href="http://www.kerneltravel.net/kernel-book/%E6%B7%B1%E5%85%A5%E5%88%86%E6%9E%90Linux%E5%86%85%E6%A0%B8%E6%BA%90%E7%A0%81.html" target="_blank" rel="noopener">http://www.kerneltravel.net/kernel-book/%E6%B7%B1%E5%85%A5%E5%88%86%E6%9E%90Linux%E5%86%85%E6%A0%B8%E6%BA%90%E7%A0%81.html</a> --cut-dirs=3 可以解决问题。</p>
+<p><strong><a href="#6096" title="2009-06-09 09:15:11">cocobear</a>:</strong> To: wmk 不行的，不知道你试了没。 [root@ibmfedora8 ~]# wget –version GNU Wget 1.10.2 (Red Hat modified)</p>
+<p><strong><a href="#7023" title="2009-12-26 22:16:47">arthur1989</a>:</strong> 求一份修改后的wget..谢谢</p>
+<p><strong><a href="#7045" title="2010-01-01 00:37:42">angoo-mart</a>:</strong> 我也遇到这样的问题，请问一下，windows下的wget要怎么改？我参考的代码是wget-1.12的，我很想把这个问题解决掉，请各位牛人指点指点。我的QQ是43904930. 如果谁有已经修改好的，windows下可以运行的wget.exe就更好，麻烦提供一下。谢谢各位，谢谢cocobear</p>
+<p><strong><a href="#7050" title="2010-01-01 21:40:53">cocobear</a>:</strong> windows下应该是在cygwin里用wget的吗？修改的方法也应该是一样的。 在url.c里面，我上面已经写出来了。</p>
+<p><strong><a href="#7028" title="2009-12-29 09:57:41">cocobear</a>:</strong> To:arthur1989 上面有需要修改的地方，完整的修改过的包我现在没有了。</p>
+<p><strong><a href="#7749" title="2010-04-04 09:27:01">demonoid</a>:</strong> !((*p | 0×0fffffff) == 0xffffffff)) 这句“0×0fffffff”里 应为“x”，你错写成乘号了。</p>
+<p><strong><a href="#9907" title="2011-04-23 17:41:58">fedora</a>:</strong> 不过改代码的想法非常好</p>
+<p><strong><a href="#9906" title="2011-04-23 17:40:40">fedora</a>:</strong> --restrict-file-names=nocontrol 加上这个参数就行了</p>
+<p><strong><a href="#11398" title="2011-10-20 13:46:12">jinfeng</a>:</strong> 我需要一份wget文件，是解决Ascii乱码的，谢谢</p>
+<p><strong><a href="#11399" title="2011-10-20 13:46:56">jinfeng</a>:</strong> 我的QQ号是515331954</p>
+<p><strong><a href="#11397" title="2011-10-20 13:45:42">jinfeng</a>:</strong> 有没有人在啊？</p>
+<p><strong><a href="#23216" title="2013-04-13 18:55:52">Star Brilliant</a>:</strong> wget 有一个参数 –restrict-file-names=nocontrol 能解决这个问题。</p>
+
+      
+    </div>
+
+    
+      
+
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="https://asset-1258390188.cos.ap-shanghai.myqcloud.com/WechatPay.jpeg" alt="cocobear 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        
+
+
+
+  
+
+
+
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>cocobear</li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    
+    <a href="http://cocobear.github.io/2008/04/19/wget-chinese-encode/" title="wget中文乱码">http://cocobear.github.io/2008/04/19/wget-chinese-encode/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本文由 cocobear 原创，采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a>。转载请保留以上声明信息！</li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/wget/" rel="tag"><i class="fa fa-tag"></i> wget</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+          <div class="wp_rating">
+            <div id="wpac-rating"></div>
+          </div>
+        
+
+        
+
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2008/04/17/change-domain-cocobear-info/" rel="next" title="换了个域名cocobear.github.io">
+                <i class="fa fa-chevron-left"></i> 换了个域名cocobear.github.io
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2008/04/23/python-multi-list/" rel="prev" title="一篇文章引发的思考">
+                一篇文章引发的思考 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg" alt="cocobear">
+            
+              <p class="site-author-name" itemprop="name">cocobear</p>
+              <p class="site-description motion-element" itemprop="description">爱折腾的技术宅一枚</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">358</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">182</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/cocobear" title="GitHub &rarr; https://github.com/cocobear" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="mailto:cocobear.cn@gmail.com" title="E-Mail &rarr; mailto:cocobear.cn@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://twitter.com/_cocobear" title="Twitter &rarr; https://twitter.com/_cocobear" rel="noopener" target="_blank"><i class="fa fa-fw fa-twitter"></i>Twitter</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://www.douban.com/people/cocobear/" title="豆瓣 &rarr; https://www.douban.com/people/cocobear/" rel="noopener" target="_blank"><i class="fa fa-fw fa-book"></i>豆瓣</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                友情链接
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://wangcong.org" title="http://wangcong.org" rel="noopener" target="_blank">王聪</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://blog.liu-yang.info/" title="https://blog.liu-yang.info/" rel="noopener" target="_blank">老大</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Comments"><span class="nav-number">1.</span> <span class="nav-text">Comments</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2007 – <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">cocobear</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+    <span title="站点总字数">519k</span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    
+    <span title="站点阅读时长">7:52</span>
+  
+</div>
+
+
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v6.7.0</div>
+
+
+
+  <div class="footer-custom">Hosted by <a target="_blank" rel="external nofollow" href="https://pages.github.com/">GitHub Pages</a></div>
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv" title="总访客量">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+
+  
+    <span class="site-pv" title="总访问量">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script src="//cdn.staticfile.org/jquery/2.1.3/jquery.min.js"></script>
+
+  
+  <script src="//cdn.staticfile.org/fastclick/1.0.6/fastclick.min.js"></script>
+
+  
+  <script src="//cdn.staticfile.org/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script src="//cdn.staticfile.org/fancybox/3.2.5/jquery.fancybox.min.js"></script>
+
+  
+  <script src="/lib/reading_progress/reading_progress.js"></script>
+
+
+  
+
+
+  <script src="/js/src/utils.js?v=6.7.0"></script>
+
+  <script src="/js/src/motion.js?v=6.7.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/src/affix.js?v=6.7.0"></script>
+
+  <script src="/js/src/schemes/pisces.js?v=6.7.0"></script>
+
+
+
+  
+  <script src="/js/src/scrollspy.js?v=6.7.0"></script>
+<script src="/js/src/post-details.js?v=6.7.0"></script>
+
+
+
+  
+
+
+  <script src="/js/src/bootstrap.js?v=6.7.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  <script src="//cdn1.lncld.net/static/js/3.11.1/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  <script>
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item) > -1;
+    });
+    new Valine({
+      el: '#comments' ,
+      verify: false,
+      notify: false,
+      appId: 'GWpjMXr7BpoLENnXXTFt4QoW-gzGzoHsz',
+      appKey: 'yaHPwQTKhDXDPOUNWso3P42n',
+      placeholder: '说点啥呢？',
+      avatar: 'identicon',
+      meta:guest,
+      pageSize: '10' || 10,
+      visitor: false
+    });
+  </script>
+
+
+
+
+  
+
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+        // ref: https://github.com/ForbesLindesay/unescape-html
+        var unescapeHtml = function(html) {
+          return String(html)
+            .replace(/&quot;/g, '"')
+            .replace(/&#39;/g, '\'')
+            .replace(/&#x3A;/g, ':')
+            // replace all the other &#x; chars
+            .replace(/&#(\d+);/g, function (m, p) { return String.fromCharCode(p); })
+            .replace(/&lt;/g, '<')
+            .replace(/&gt;/g, '>')
+            .replace(/&amp;/g, '&');
+        };
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                content = unescapeHtml(content);
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <script>
+    wpac_init = window.wpac_init || [];
+    wpac_init.push({
+      widget: 'Rating',
+      id: 15759,
+      el: 'wpac-rating',
+      color: 'fc6423'
+    });
+    (function() {
+      if ('WIDGETPACK_LOADED' in window) return;
+      WIDGETPACK_LOADED = true;
+      var mc = document.createElement('script');
+      mc.type = 'text/javascript';
+      mc.async = true;
+      mc.src = '//embed.widgetpack.com/widget.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(mc, s.nextSibling);
+    })();
+  </script>
+
+
+  
+
+  
+  <script src="/js/src/js.cookie.js?v=6.7.0"></script>
+  <script src="/js/src/scroll-cookie.js?v=6.7.0"></script>
+
+
+  
+
+  
+
+  
+  <style>
+    .copy-btn {
+      display: inline-block;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 20px;
+      color: #333;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      background-color: #eee;
+      background-image: linear-gradient(#fcfcfc, #eee);
+      border: 1px solid #d5d5d5;
+      border-radius: 3px;
+      user-select: none;
+      outline: 0;
+    }
+
+    .highlight-wrap .copy-btn {
+      transition: opacity .3s ease-in-out;
+      opacity: 0;
+      padding: 2px 6px;
+      position: absolute;
+      right: 4px;
+      top: 8px;
+    }
+
+    .highlight-wrap:hover .copy-btn,
+    .highlight-wrap .copy-btn:focus {
+      opacity: 1
+    }
+
+    .highlight-wrap {
+      position: relative;
+    }
+  </style>
+  <script>
+    $('.highlight').each(function (i, e) {
+      var $wrap = $('<div>').addClass('highlight-wrap');
+      $(e).after($wrap);
+      $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function (e) {
+        var code = $(this).parent().find('.code').find('.line').map(function (i, e) {
+          return $(e).text();
+        }).toArray().join('\n');
+        var ta = document.createElement('textarea');
+        var range = document.createRange(); //For Chrome
+        var sel = window.getSelection(); //For Chrome
+        var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+        ta.style.top = yPosition + 'px'; //Prevent page scroll
+        ta.style.position = 'absolute';
+        ta.style.opacity = '0';
+        ta.value = code;
+        ta.textContent = code; //For FireFox
+        ta.contentEditable = true;
+        ta.readOnly = false;
+        document.body.appendChild(ta);
+        range.selectNode(ta);
+        sel.removeAllRanges();
+        sel.addRange(range);
+        ta.setSelectionRange(0, code.length);
+        var result = document.execCommand('copy');
+        
+        ta.blur(); //For iOS
+        $(this).blur();
+      })).on('mouseleave', function (e) {
+        var $b = $(this).find('.copy-btn');
+        setTimeout(function () {
+          $b.text('复制');
+        }, 300);
+      }).append(e);
+    })
+  </script>
+
+
+  
+
+</body>
+</html>

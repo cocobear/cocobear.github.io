@@ -1,0 +1,2720 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="theme-next gemini" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+  
+  
+    
+      
+    
+    
+      
+    
+  <script src="//cdn.staticfile.org/pace/1.0.2/pace.min.js"></script>
+  <link rel="stylesheet" href="//cdn.staticfile.org/pace/1.0.2/themes/blue/pace-theme-loading-bar.min.css">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+  <link rel="stylesheet" href="//cdn.staticfile.org/fancybox/3.2.5/jquery.fancybox.min.css">
+
+
+
+
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+
+    
+  
+
+  
+    
+    
+    <link rel="stylesheet" href="https://fonts.loli.net/css?family=Source Code Pro:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext">
+  
+
+
+
+
+
+
+  
+
+<link rel="stylesheet" href="//cdn.staticfile.org/font-awesome/4.6.2/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="/css/main.css?v=6.7.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-next.png?v=6.7.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=6.7.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=6.7.0">
+
+
+  <link rel="mask-icon" href="/logo.svg?v=6.7.0" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '6.7.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    fastclick: true,
+    lazyload: true,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="爱折腾的技术宅一枚">
+<meta name="keywords" content="cocobear blog python linux">
+<meta property="og:type" content="website">
+<meta property="og:title" content="可可熊D窝">
+<meta property="og:url" content="http://cocobear.github.io/page/6/index.html">
+<meta property="og:site_name" content="可可熊D窝">
+<meta property="og:description" content="爱折腾的技术宅一枚">
+<meta property="og:locale" content="zh-CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="可可熊D窝">
+<meta name="twitter:description" content="爱折腾的技术宅一枚">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="可可熊D窝" type="application/atom+xml">
+
+
+
+
+  <link rel="canonical" href="http://cocobear.github.io/page/6/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>可可熊D窝 – Keep it simple, stupid</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left 
+  page-home">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">可可熊D窝</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <h1 class="site-subtitle" itemprop="description">Keep it simple, stupid</h1>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">182</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">8</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">358</span></a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2010/06/27/run/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="cocobear">
+      <meta itemprop="description" content="爱折腾的技术宅一枚">
+      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="可可熊D窝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2010/06/27/run/" class="post-title-link" itemprop="url">跑步</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2010-06-27 20:11:43" itemprop="dateCreated datePublished" datetime="2010-06-27T20:11:43+08:00">2010-06-27</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/" itemprop="url" rel="index"><span itemprop="name">Life</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2010/06/27/run/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2010/06/27/run/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数：</span>
+                
+                <span title="字数">574</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读 &asymp;</span>
+                
+                <span title="阅读">1 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>好久都没有运动后的汗水浸湿衣服的感觉了，下午天气挺凉快，于是出去跑了一会儿，回来在google地图上测了下距离，大概跑了4.5公里。<br>一直慢跑，最后的时候加速了一会儿，就开始喘不上气来了，身体还是太差，以后应该多跑。，我想着是不是应该试着哪天下午下班后顶着太阳跑回来（9公里），体验下全身上下所有毛孔都出汗的感觉。</p>
+<p>不能太宅了啊，不然哪天现代文明消失了，要想填饱肚子可靠得是体力啊！</p>
+<h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#8282" title="2010-07-05 20:09:12">老汉推车</a>:</strong> 长做运动身体好！</p>
+<p><strong><a href="#8278" title="2010-07-05 17:09:39">cocobear</a>:</strong> 呵呵 要的就是大热天的时候跑步的这种感觉。</p>
+<p><strong><a href="#8266" title="2010-07-01 22:27:30">wind</a>:</strong> 汗死，我都不想动了，就想窝在有空调的地方，或者外面凉快的地方也行，现在白天就不想出去</p>
+<p><strong><a href="#8268" title="2010-07-02 21:57:16">crazyfranc</a>:</strong> 强！我现在早上跑半小时，不过还没到你一半！</p>
+<p><strong><a href="#8277" title="2010-07-05 15:55:10">Leyond</a>:</strong> 这天气热的快崩溃啊 更别说跑步去了啊</p>
+<p><strong><a href="#8256" title="2010-06-28 20:10:50">luguo</a>:</strong> 你指2012？你有船票了嘛？跑也没用唉～！</p>
+<p><strong><a href="#8258" title="2010-06-29 13:31:06">cocobear</a>:</strong> 假如2012不需要船呢 一个山洞加足够的食物 类似于小行星撞到地球 恐龙灭绝，但其它生物还是生存下来了。</p>
+<p><strong><a href="#8249" title="2010-06-28 08:38:15">草儿</a>:</strong> 你不会从公司跑会租房吧？</p>
+<p><strong><a href="#8247" title="2010-06-27 22:44:01">xiaket</a>:</strong> 赞最后一句…</p>
+<p><strong><a href="#8251" title="2010-06-28 10:58:39">Wendy</a>:</strong> 生命在于运动！ 好好锻炼哈! ^_^</p>
+<p><strong><a href="#8303" title="2010-07-14 17:02:18">指舞六弦</a>:</strong> 不然哪天现代文明消失了，要想填饱肚子可靠得是体力啊 呵呵，这个嘛，防患于未然吗，莫非？</p>
+<p><strong><a href="#8337" title="2010-07-23 12:32:23">su</a>:</strong> 哎呀 懒得做运动 感冒了呢</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2010/06/26/cube/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="cocobear">
+      <meta itemprop="description" content="爱折腾的技术宅一枚">
+      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="可可熊D窝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2010/06/26/cube/" class="post-title-link" itemprop="url">魔方</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2010-06-26 20:54:58" itemprop="dateCreated datePublished" datetime="2010-06-26T20:54:58+08:00">2010-06-26</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/" itemprop="url" rel="index"><span itemprop="name">Life</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2010/06/26/cube/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2010/06/26/cube/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数：</span>
+                
+                <span title="字数">704</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读 &asymp;</span>
+                
+                <span title="阅读">1 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>前段时间买了一个魔方（永骏-炫指舞基础版常规魔方16元），在华润万家超市买的，手感还不错，顺滑程度估计不输于国甲一代（没怎么玩国甲一，大概在商店转了转），没玩多久魔方上的贴纸就起皮了，拿着挺不舒服，今天出去逛街的时候顺便买了一份PVC的贴纸，打算把上面的贴纸换一下。</p>
+<p>不过把原来的贴纸斯掉后，魔方上面有遗留的粘胶，很不好清理，在网上看到有人说用杀虫剂，试了试，果然效果不错，在魔方上面喷少许，然后用擦电脑屏幕的布擦一会儿，干净的很了。再让魔方上面的杀早剂挥发一下，然后给魔方换上了新的贴纸。</p>
+<p>目前的3阶还原成绩是SUB90，使用层先法，打算SUB60的时候再学学CFOP，本来打算买个国甲一代的，不过今天试了试感觉没有比我目前这个好很多，所以再说吧。现在得练下盲拧十字，不然做十字花好长的时间，不知道是不是我手法的问题，连做RUR’U’老容易卡住，还有魔方没用多久就起皮了。</p>
+<h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#8279" title="2010-07-05 17:10:43">cocobear</a>:</strong> To kongove: 我也是新学 还没熟 你还是挑战高手去吧</p>
+<p><strong><a href="#8280" title="2010-07-05 17:13:55">cocobear</a>:</strong> 华润万家几乎隆断了中国的大型超市了 到处是。</p>
+<p><strong><a href="#8281" title="2010-07-05 17:21:19">su</a>:</strong> 呵呵 万家还真是牛啊 慢慢学着呗 呵呵 这主题很酷啊 我喜欢</p>
+<p><strong><a href="#8269" title="2010-07-03 08:20:56">crazyfranc</a>:</strong> 魔方是聪明人比较喜欢玩的玩具。</p>
+<p><strong><a href="#8276" title="2010-07-05 15:54:17">su</a>:</strong> 华润万家 呵呵 珠海也有呢 没玩过魔法呢啊</p>
+<p><strong><a href="#8271" title="2010-07-04 10:39:05">kongove</a>:</strong> 有时间挑战你下你！</p>
+<p><strong><a href="#8253" title="2010-06-28 13:31:32">cocobear</a>:</strong> 橡皮擦也是个好办法。</p>
+<p><strong><a href="#8245" title="2010-06-27 10:15:35">草儿</a>:</strong> 沙发？ coco的口位越来越神秘了</p>
+<p><strong><a href="#8250" title="2010-06-28 10:55:48">Wendy</a>:</strong> 杀虫剂可以清除没有撕干净的胶~~~~ 这个方法得记住。</p>
+<p><strong><a href="#9583" title="2011-02-08 12:32:30">任刚</a>:</strong> 博主喜欢玩魔方啊？ 我玩过一次 不过玩不好</p>
+<p><strong><a href="#9728" title="2011-03-15 11:48:37">可可熊</a>:</strong> 玩了那么一段时间 速度还差远呢</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2010/05/23/escape-from-ename/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="cocobear">
+      <meta itemprop="description" content="爱折腾的技术宅一枚">
+      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="可可熊D窝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2010/05/23/escape-from-ename/" class="post-title-link" itemprop="url">建议各位逃离易名中国</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2010-05-23 23:11:19" itemprop="dateCreated datePublished" datetime="2010-05-23T23:11:19+08:00">2010-05-23</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/互联网/" itemprop="url" rel="index"><span itemprop="name">互联网</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2010/05/23/escape-from-ename/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2010/05/23/escape-from-ename/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数：</span>
+                
+                <span title="字数">1.7k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读 &asymp;</span>
+                
+                <span title="阅读">2 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>xiyoulinux.cn<br>过期日期    2010-05-17 10:52<br>kongove.cn<br> 过期日期    2010-05-18 14:59</p>
+<pre><code>您好：&gt; 
+　　经查，相关域名目前已经进入高价赎回期，无法续费仅可申请赎回，目前英文国内域名赎回价格为500元/个。若您需要申请赎回，请在相关会员ID下充入足够的预付款后回复确认，详细说明需要申请赎回哪个域名。若届时相关域名尚未被删除，我们将会为您提交相关部门申请赎回。
+</code></pre><p>按照域名管理的规定，域名过期15天内域名注册商是没有权利直接删除你的域名，然而易名不仅没在快到期的时候进行邮件通知，而且在到期后直接删除用户的域名，向用户索取高额的赎回价格（10倍于注册价格）。</p>
+<p>实在想说什么了，这个国家从政府到企业没有有道德的，他们只会唯利是图。</p>
+<p>最近上海出差，太久了，快一个月了。烦了 </p>
+<h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#8157" title="2010-05-30 00:47:33">asins</a>:</strong> 曾经以生在这国家自豪，现以生在这国家感到羞耻。搬出去吧，我在XXX宣布CN企业化后不久就不再用CN域名了，空间也在国外。</p>
+<p><strong><a href="#8119" title="2010-05-24 00:10:31">ayanamist</a>:</strong> 可以到ICANN投诉它，有具体的投诉信格式模板可以参考的。</p>
+<p><strong><a href="#8120" title="2010-05-24 00:25:02">risent</a>:</strong> 我靠，这TMD的也太不要脸了阿</p>
+<p><strong><a href="#8122" title="2010-05-24 07:22:41">Amankwah</a>:</strong> 晕，明抢了……</p>
+<p><strong><a href="#8147" title="2010-05-27 21:44:59">luguo</a>:</strong> flywhale写于10年05月25日 这个国家从政府到企业没有有道德的？ 这话说的，过了吧？你这才哪到哪？ 比这黑的多了去了。 但我们永远也不能那么说。 -——— 那就继续吃你的地沟油，喝你的三聚氰胺去吧！！！</p>
+<p><strong><a href="#8137" title="2010-05-25 23:29:02">雀巢</a>:</strong> ename确实垃圾，如果不是cn域名的话早就放弃它了</p>
+<p><strong><a href="#8123" title="2010-05-24 08:21:16">草儿</a>:</strong> 投诉吧</p>
+<p><strong><a href="#8124" title="2010-05-24 09:38:41">luguo</a>:</strong> 这叫全民抢钱～～！ 这就是我们的国家～！我TMD感谢这个国家了～～</p>
+<p><strong><a href="#8125" title="2010-05-24 10:25:18">Black-Xstar</a>:</strong> 没到赎回期啊，可以去cnnic告的。</p>
+<p><strong><a href="#8126" title="2010-05-24 11:48:01">DBLobster</a>:</strong> CN的没什么用就扔掉吧,要是有用就找CNNIC吧.</p>
+<p><strong><a href="#8127" title="2010-05-24 13:36:10">cocobear</a>:</strong> 一丘之貉 能告的了吗？</p>
+<p><strong><a href="#8128" title="2010-05-24 20:15:14">tttt</a>:</strong> 发生问题的时候，你是不是尝试去沟通，上面的网友也说了，可以去投诉，域名注册又不是个体户。如果真投诉无门了，再下结论比较好</p>
+<p><strong><a href="#8132" title="2010-05-25 00:42:03">flywhale</a>:</strong> 这个国家从政府到企业没有有道德的？ 这话说的，过了吧？你这才哪到哪？ 比这黑的多了去了。 但我们永远也不能那么说。</p>
+<p><strong><a href="#8414" title="2010-08-13 12:19:47">可可熊</a>:</strong> 国外很安全的 找大一点的域名商 转入转出很方便。</p>
+<p><strong><a href="#8413" title="2010-08-12 22:43:50">睿智小超人</a>:</strong> 不知道国外安全不安全</p>
+<p><strong><a href="#8454" title="2010-08-24 21:50:32">凤飞飞发</a>:</strong> 太不要脸了，幸好看到这个，要不我就要上当了</p>
+<p><strong><a href="#9605" title="2011-02-12 13:07:45">熠煊</a>:</strong> 像ename这类搞投机倒把业务的公司，根本就不要指望其能以道德示人！ 关键是要有自己的判辩能力！</p>
+<p><strong><a href="#8819" title="2010-10-21 17:27:32">垃圾易名中国</a>:</strong> 垃圾易名中国，我在上边缴费200元，总是不给退费，只能让域名，还要不停的认证，气死人了，希望大家引以为介，别上当了</p>
+<p><strong><a href="#9606" title="2011-02-12 13:08:41">熠煊</a>:</strong> 像ename这类搞投机倒把业务的，根本就不要指望其能以道德示人！ 关键是要有自己的判辩能力！</p>
+<p><strong><a href="#9622" title="2011-02-15 18:34:02">polaris14551 | 摇光</a>:</strong> <strong>关于Godaddy域名续费…</strong> 写这篇日志是因为看到了那篇日志：建议各位逃离易名中国。 只是说说在Godaddy上域名续费的经历来比较一下，5月18日，帐户下有一个域名到期。 3月19日，收到Godaddy的第一封续费提醒邮件。（一般国内也是60天到期提醒，但也有可能由于代理商的原因，收不到邮件提醒。） 3月30日/4月9日，收到包含Renewal Information的第一封邮件。（这两封邮件的主旨并不是说renew的问题，都是推广邮件。） 4月18日，收到Godaddy的第二封续费提醒邮件。 5月3日，收到Godaddy的第…</p>
+<p><strong><a href="#12407" title="2012-01-12 22:15:15">爱微博客</a>:</strong> 大家都去国外注册吧，我的空间和域名都是国外的，访问速度都还可以，又不用备案~</p>
+<p><strong><a href="#9584" title="2011-02-08 12:33:29">任刚的博客</a>:</strong> 不会吧，ename本来还是中国比较不错的注册商之一 比xin网啊wan网啊什么的好多了</p>
+<p><strong><a href="#15256" title="2012-09-27 10:57:53">我也考虑全部转到国外去。</a>:</strong> 我也考虑全部转到国外去。</p>
+<p><strong><a href="#15254" title="2012-09-27 10:56:55">流氓易名中国</a>:</strong> 流氓易名中国，保证金只进不出，冲进去了就不能提现。</p>
+<p><strong><a href="#15255" title="2012-09-27 10:57:20">流氓易名中国</a>:</strong> 你用了就知道了，太流氓了。</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2010/04/22/trying-palm-treo-680/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="cocobear">
+      <meta itemprop="description" content="爱折腾的技术宅一枚">
+      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="可可熊D窝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2010/04/22/trying-palm-treo-680/" class="post-title-link" itemprop="url">试用Palm treo 680</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2010-04-22 17:12:59" itemprop="dateCreated datePublished" datetime="2010-04-22T17:12:59+08:00">2010-04-22</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/" itemprop="url" rel="index"><span itemprop="name">Life</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2010/04/22/trying-palm-treo-680/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2010/04/22/trying-palm-treo-680/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数：</span>
+                
+                <span title="字数">1.6k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读 &asymp;</span>
+                
+                <span title="阅读">1 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>用了一天的Nokia 3120后，想起了公司似乎还有一个Palm手机，就找了出来试了试，这是一款移动定制的<a href="http://detail.zol.com.cn/103/102819/param.shtml" target="_blank" rel="noopener">Palm Treo 680</a>（很巧的是一位同学在上篇博客里面推荐650）, 2007年3月上市，拿起来很重，是个全键盘加触摸屏的。</p>
+<p>刚拿到的时候发现中间一排键盘不起作用了，感觉应该是哪儿的接触问题，让同事帮我拆开看了一下，把键盘的排线重新插了一下，合上后就好了。开机上了下网，速度挺快的，打开我的博客感觉差不多和电脑上一样，估计是EDGE功劳，以前那个MOTO E680不支持EDGE上网实在是很痛苦。又试了一下POP收邮件，浏览器里面查看邮件，速度都挺不错，就是有一点不舒服，全键盘发短信不习惯，虽然这个联想做的不错，但老是按错键，还是习惯了触屏的大按键，不知道这个上面有没有触屏的键盘。原机是个128M的存储卡，实在装不下什么东西，先用两天，如果还不错的话买个2G的卡吧。</p>
+<p>有一点不太爽就是数据线不是Mini USB，我要折腾刷机什么的还得买个数据线，黑莓的手机就是Mini USB多方便以前MOTO E680的线直接拿来就用了。还有电池只有1200mh，而他的前款机子650有1800mh的容量，据说这一点让680没能超越650。</p>
+<p>据说黑莓的上网速度比palm还快，打开浏览器直接就上了，没有每次讨厌的“连接到”，“登录”等等。看了看网上评价palm和黑莓的文章，有不少推荐黑莓，而且是从palm转过去的，似乎从palm开始用WM系统的时候就开始走下坡路了。<a href="http://blog.solrex.org/" target="_blank" rel="noopener">solrex</a>同学推荐的8700也是黑莓的一款经典机子，先用一段时间palm再看吧。</p>
+<p>昨天把以前那个老的索爱j200c拿公司顺便也让同事看了一下（话筒没声音，不能发短信），清理了下机子，重新把话筒装了下，结果就都好了，很奇怪的是短信也可以发了，没弄明天。其实一般手机出问题基本上都是接触或者虚焊的问题，只要弄几个螺丝刀，再有个小一点的电焊，自己可以解决大问题的问题。其实买这种经典的手机挺好的，价格又便宜，好玩的东西又多，有问题了也可以自己动手拆机。</p>
+<p>昨天那个palm的话筒好像没装好，今天到公司我又自己拆了下机子，小心安好话筒，上紧螺丝，很顺利的把话筒弄好了，如果自己手动修手机的同学得注意了，话筒这个东西挺容易接触不好的，一定要把位置安稳，螺丝上紧了。</p>
+<h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#7975" title="2010-04-29 14:06:27">crazyfranc</a>:</strong> <a href="http://news.csdn.net/a/20100429/218199.html" target="_blank" rel="noopener">http://news.csdn.net/a/20100429/218199.html</a></p>
+<p><strong><a href="#7980" title="2010-04-29 21:43:46">可可熊</a>:</strong> 主席这新闻看过了，俺不关注这。俺用的是老机型，也没打算一直用palm。</p>
+<p><strong><a href="#7884" title="2010-04-22 22:55:38">草儿</a>:</strong> 你同事不会是手机维修出身吧？</p>
+<p><strong><a href="#7882" title="2010-04-22 19:39:37">johnthu</a>:</strong> 650是支持edge的。 palm系统还是很好用的。 推荐你一个论坛<a href="http://www.hi-pda.com" target="_blank" rel="noopener">http://www.hi-pda.com</a></p>
+<p><strong><a href="#7879" title="2010-04-22 17:52:52">Liang Qi</a>:</strong> 玩Palm当然是指Palm OS的机器了，WM的还有啥意思。</p>
+<p><strong><a href="#7880" title="2010-04-22 18:10:19">朋朋</a>:</strong> 680没有用过,用过650,相当经典的机器,如果你习惯了这个较小的全键盘再加上巨硬输入法,那打字速度估计目前还是没有什么机器可以超越的…650不知道是否支持EDGE,不过对比我目前用的8820,上网速度还是差比较多的…这些过时的经典机器用起来还是很不错的,价钱不贵,功能挺多,而且坏了,自己捣直捣直也比较容易…</p>
+<p><strong><a href="#8102" title="2010-05-19 11:36:41">ollir</a>:</strong> solrex，yangwenbo?</p>
+<p><strong><a href="#8104" title="2010-05-19 20:49:25">cocobear</a>:</strong> 楼上正解。</p>
+<p><strong><a href="#8107" title="2010-05-20 07:50:28">John</a>:</strong> <em>680没有用过,用过650,相当经典的机器,如果你习惯了这个较小的全键盘再加上巨硬输入法,那打字速度估计目前还是没有什么机器可以超越的…650不知道是否支持EDGE,不过对比我目前用的8820,上网速度还是差比较多的…这些过时的经典机器用起来还是很不错的,价钱不贵,功能挺多,而且坏了,自己捣直捣直也比较容易…</em> +1</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2010/04/20/cell-phone-had-been-stolen/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="cocobear">
+      <meta itemprop="description" content="爱折腾的技术宅一枚">
+      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="可可熊D窝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2010/04/20/cell-phone-had-been-stolen/" class="post-title-link" itemprop="url">手机被偷了</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2010-04-20 23:11:51" itemprop="dateCreated datePublished" datetime="2010-04-20T23:11:51+08:00">2010-04-20</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/" itemprop="url" rel="index"><span itemprop="name">Life</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2010/04/20/cell-phone-had-been-stolen/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2010/04/20/cell-phone-had-been-stolen/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数：</span>
+                
+                <span title="字数">1.9k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读 &asymp;</span>
+                
+                <span title="阅读">2 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>昨天晚上准备打电话的时候发现手机找不到了，也不记得自己下班后是不是忘带手机了;今天早上还抱着侥幸的心理看手机是不躺在办公桌上，结果证实了我的标题没写错。</p>
+<p>幸好是我的SIM卡（一卡多号）上的几个号都备份出来了，更让我安心的是我的SIM卡是设了PIN码的，只要我的手机关机后那个卡是没办法再用了。6位数的PIN码，虽然我设置的比较简单但只有3次PIN的机会，不可能有人有这么好的运气，至于8位的随机PUK码更是不用担心了。所以提示大家SIM卡设置个PIN还是比较安全的，尤其是话费比较多，或者卡上有重要的联系人信息以及用一卡多号的同学，平时多按六个数字比丢了后着急划算的多。</p>
+<p>本来我手机前段时间还设置了个手机开机密码，但和PIN一起的话每次开机输入两次密码，用了几天嫌太麻烦，就把开机密码去掉了。我还装了一个手机防盗精灵，手机换卡后会自动拨打一个指定的电话号码，可惜我没有测试，不知道能不能用，现在我打那个备用的号码启用了，看看会不会有电话呼入。</p>
+<p>在西安呆着实在不容易，每次在外面人多的地方都得担心身上的东西，实在是太累了。我现在还后悔没把那个防盗精灵好好的测试好，即使我找不到偷手机的人，但他也别想安安稳稳的用手机。下次如果用的手机有这类软件，我一定先把这个设置好。其实这个E680也很老了，值不了多少钱，但是我最恨偷东西的人。在城市里每天挤公交上班族容易吗？偷了人家的钱包，害得别人花几个月的时间去补办身份证、银行卡，但这些东西对小偷都没用，一般都是被随手扔进了垃圾筒，当然也有更“精明”的小偷把身份证卖给“需要的人”。 </p>
+<p>继上次丢笔记本后这次又丢了手机，我在西安的这几年都丢了三次东西了，一次是钱包（身份证、银行卡等）一次是笔记本，这次是手机，也许不是我不小心，但西安的贼也太多了，稍不留神东西就丢了。而我每天坐公交经过的固定几站，差不多每天都会有小偷在蹲守，政腐拿着纳税人钱大概只会逛夜店、包二奶，然后逗我们这些屁民玩儿。</p>
+<p>很长一段时间没写博客了，有时候想写点东西发现一不小心就会出现敏感词，一不小心就扯到政腐了，你看这篇不就又扯到了吗？你看我也真是的，自己手机丢了，该怪自己不小心，怎么能扯到政腐头上呢。据说又有什么第九办公室成功了，专门监管我们这些P民的言论的， 一个同学的博客也因为敏感词被F掉了，看来以后写点东西实在得留神。</p>
+<p>到目前为至我大概用过四个手机，第一个是个翻盖的，不记得什么型号了，借同学的手机用了一段时间。后来买的索爱J200c，键盘没用多久就不灵了，最后是因为话筒出了问题而下岗，现在又被我翻了出来放上那张备用卡。第二个手机是诺基亚的1116，很实在一手机，待机时间超长。第三个手机就是这个摩托罗拉的E680了，不知道下次买手机买个什么，iPhone价格太高，还只能买水货，3GS太贵，3G的翻新太多；android的手机有不少不错的，比如MOTO的ME600还有HTC的几款，不过价格也不低。</p>
+<h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#7848" title="2010-04-20 23:26:34">luguo</a>:</strong> 西安就是小偷多啊～相比之下北京好多了～～ 老爷们才不管这个呢，人家不出门有保安，出门有专车～！</p>
+<p><strong><a href="#7850" title="2010-04-21 00:29:52">Solrex</a>:</strong> 用黑莓吧，我的8700虽然才350，用得是相当high，个人认为很超值。</p>
+<p><strong><a href="#7856" title="2010-04-21 08:42:58">rex</a>:</strong> 同情。 同事推荐一款旧机： palm treo 650.</p>
+<p><strong><a href="#7857" title="2010-04-21 09:01:05">草儿</a>:</strong> 回头把我那个680给你吧，我现在也用不到了。 或者你换个android玩玩。 要不干脆就奢侈一回，弄个iPhone 3GS~</p>
+<p><strong><a href="#7859" title="2010-04-21 11:05:39">可可熊</a>:</strong> 西安呆着可太得操心了。 不喜欢全键盘的手机，虽然黑莓据说有很多设计上的人性化的东西。 palm也是个比较好玩的手机，用来折腾不错，不过平时用的话拿在手机打电话还是不舒服。 一个3GS得5000来块钱，要是再被偷一了可就抓狂了。</p>
+<p><strong><a href="#7860" title="2010-04-21 11:06:39">可可熊</a>:</strong> 先拿公司的测试旧手机用几天，再说吧。西安的工资买个好手机还是很心疼的。</p>
+<p><strong><a href="#7863" title="2010-04-21 13:14:06">crazyfranc</a>:</strong> E63用着效果不错，而且也不贵。</p>
+<p><strong><a href="#7869" title="2010-04-22 05:54:58">gorush</a>:</strong> 买个g4 tattoo吧。最近降价了，我才买了一个。用她给你留言的。</p>
+<p><strong><a href="#7878" title="2010-04-22 17:13:52">可可熊</a>:</strong> 决定了，暂时先不买手机。</p>
+<p><strong><a href="#8097" title="2010-05-18 15:21:21">wind</a>:</strong> 哥想把E6换了，还是再等几年吧。。。</p>
+<p><strong><a href="#8105" title="2010-05-19 20:50:12">cocobear</a>:</strong> 老大送我一台吧。</p>
+<p><strong><a href="#8094" title="2010-05-18 06:39:26">Amankwah</a>:</strong> 现在怎么样了？还用的是测试旧机？买HTC Desire吧～</p>
+<p><strong><a href="#8284" title="2010-07-06 12:48:19">su</a>:</strong> # Solrex写于10年04月21日 用黑莓吧，我的8700虽然才350，用得是相当high，个人认为很超值。 真还是假的 这么便宜 ？</p>
+<p><strong><a href="#8287" title="2010-07-07 09:55:46">cocobear</a>:</strong> 真的 淘宝上有很多。不过我觉得个头太大。</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+  </section>
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/5/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/72/">72</a><a class="extend next" rel="next" href="/page/7/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg" alt="cocobear">
+            
+              <p class="site-author-name" itemprop="name">cocobear</p>
+              <p class="site-description motion-element" itemprop="description">爱折腾的技术宅一枚</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">358</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">182</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/cocobear" title="GitHub &rarr; https://github.com/cocobear" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="mailto:cocobear.cn@gmail.com" title="E-Mail &rarr; mailto:cocobear.cn@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://twitter.com/_cocobear" title="Twitter &rarr; https://twitter.com/_cocobear" rel="noopener" target="_blank"><i class="fa fa-fw fa-twitter"></i>Twitter</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://www.douban.com/people/cocobear/" title="豆瓣 &rarr; https://www.douban.com/people/cocobear/" rel="noopener" target="_blank"><i class="fa fa-fw fa-book"></i>豆瓣</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                友情链接
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://wangcong.org" title="http://wangcong.org" rel="noopener" target="_blank">王聪</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://blog.liu-yang.info/" title="https://blog.liu-yang.info/" rel="noopener" target="_blank">老大</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2007 – <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">cocobear</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+    <span title="站点总字数">519k</span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    
+    <span title="站点阅读时长">7:52</span>
+  
+</div>
+
+
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v6.7.0</div>
+
+
+
+  <div class="footer-custom">Hosted by <a target="_blank" rel="external nofollow" href="https://pages.github.com/">GitHub Pages</a></div>
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv" title="总访客量">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+
+  
+    <span class="site-pv" title="总访问量">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script src="//cdn.staticfile.org/jquery/2.1.3/jquery.min.js"></script>
+
+  
+  <script src="//cdn.staticfile.org/fastclick/1.0.6/fastclick.min.js"></script>
+
+  
+  <script src="//cdn.staticfile.org/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script src="//cdn.staticfile.org/fancybox/3.2.5/jquery.fancybox.min.js"></script>
+
+  
+  <script src="/lib/reading_progress/reading_progress.js"></script>
+
+
+  
+
+
+  <script src="/js/src/utils.js?v=6.7.0"></script>
+
+  <script src="/js/src/motion.js?v=6.7.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/src/affix.js?v=6.7.0"></script>
+
+  <script src="/js/src/schemes/pisces.js?v=6.7.0"></script>
+
+
+
+  
+
+  
+
+
+  <script src="/js/src/bootstrap.js?v=6.7.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  <script src="//cdn1.lncld.net/static/js/3.11.1/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  <script>
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item) > -1;
+    });
+    new Valine({
+      el: '#comments' ,
+      verify: false,
+      notify: false,
+      appId: 'GWpjMXr7BpoLENnXXTFt4QoW-gzGzoHsz',
+      appKey: 'yaHPwQTKhDXDPOUNWso3P42n',
+      placeholder: '说点啥呢？',
+      avatar: 'identicon',
+      meta:guest,
+      pageSize: '10' || 10,
+      visitor: false
+    });
+  </script>
+
+
+
+
+  
+
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+        // ref: https://github.com/ForbesLindesay/unescape-html
+        var unescapeHtml = function(html) {
+          return String(html)
+            .replace(/&quot;/g, '"')
+            .replace(/&#39;/g, '\'')
+            .replace(/&#x3A;/g, ':')
+            // replace all the other &#x; chars
+            .replace(/&#(\d+);/g, function (m, p) { return String.fromCharCode(p); })
+            .replace(/&lt;/g, '<')
+            .replace(/&gt;/g, '>')
+            .replace(/&amp;/g, '&');
+        };
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                content = unescapeHtml(content);
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <script src="/js/src/js.cookie.js?v=6.7.0"></script>
+  <script src="/js/src/scroll-cookie.js?v=6.7.0"></script>
+
+
+  
+
+  
+
+  
+  <style>
+    .copy-btn {
+      display: inline-block;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 20px;
+      color: #333;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      background-color: #eee;
+      background-image: linear-gradient(#fcfcfc, #eee);
+      border: 1px solid #d5d5d5;
+      border-radius: 3px;
+      user-select: none;
+      outline: 0;
+    }
+
+    .highlight-wrap .copy-btn {
+      transition: opacity .3s ease-in-out;
+      opacity: 0;
+      padding: 2px 6px;
+      position: absolute;
+      right: 4px;
+      top: 8px;
+    }
+
+    .highlight-wrap:hover .copy-btn,
+    .highlight-wrap .copy-btn:focus {
+      opacity: 1
+    }
+
+    .highlight-wrap {
+      position: relative;
+    }
+  </style>
+  <script>
+    $('.highlight').each(function (i, e) {
+      var $wrap = $('<div>').addClass('highlight-wrap');
+      $(e).after($wrap);
+      $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function (e) {
+        var code = $(this).parent().find('.code').find('.line').map(function (i, e) {
+          return $(e).text();
+        }).toArray().join('\n');
+        var ta = document.createElement('textarea');
+        var range = document.createRange(); //For Chrome
+        var sel = window.getSelection(); //For Chrome
+        var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+        ta.style.top = yPosition + 'px'; //Prevent page scroll
+        ta.style.position = 'absolute';
+        ta.style.opacity = '0';
+        ta.value = code;
+        ta.textContent = code; //For FireFox
+        ta.contentEditable = true;
+        ta.readOnly = false;
+        document.body.appendChild(ta);
+        range.selectNode(ta);
+        sel.removeAllRanges();
+        sel.addRange(range);
+        ta.setSelectionRange(0, code.length);
+        var result = document.execCommand('copy');
+        
+        ta.blur(); //For iOS
+        $(this).blur();
+      })).on('mouseleave', function (e) {
+        var $b = $(this).find('.copy-btn');
+        setTimeout(function () {
+          $b.text('复制');
+        }, 300);
+      }).append(e);
+    })
+  </script>
+
+
+  
+
+</body>
+</html>

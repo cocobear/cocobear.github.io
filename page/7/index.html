@@ -1,0 +1,2788 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="theme-next gemini" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+  
+  
+    
+      
+    
+    
+      
+    
+  <script src="//cdn.staticfile.org/pace/1.0.2/pace.min.js"></script>
+  <link rel="stylesheet" href="//cdn.staticfile.org/pace/1.0.2/themes/blue/pace-theme-loading-bar.min.css">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+  <link rel="stylesheet" href="//cdn.staticfile.org/fancybox/3.2.5/jquery.fancybox.min.css">
+
+
+
+
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+
+    
+  
+
+  
+    
+    
+    <link rel="stylesheet" href="https://fonts.loli.net/css?family=Source Code Pro:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext">
+  
+
+
+
+
+
+
+  
+
+<link rel="stylesheet" href="//cdn.staticfile.org/font-awesome/4.6.2/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="/css/main.css?v=6.7.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-next.png?v=6.7.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=6.7.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=6.7.0">
+
+
+  <link rel="mask-icon" href="/logo.svg?v=6.7.0" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '6.7.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    fastclick: true,
+    lazyload: true,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="爱折腾的技术宅一枚">
+<meta name="keywords" content="cocobear blog python linux">
+<meta property="og:type" content="website">
+<meta property="og:title" content="可可熊D窝">
+<meta property="og:url" content="http://cocobear.github.io/page/7/index.html">
+<meta property="og:site_name" content="可可熊D窝">
+<meta property="og:description" content="爱折腾的技术宅一枚">
+<meta property="og:locale" content="zh-CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="可可熊D窝">
+<meta name="twitter:description" content="爱折腾的技术宅一枚">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="可可熊D窝" type="application/atom+xml">
+
+
+
+
+  <link rel="canonical" href="http://cocobear.github.io/page/7/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>可可熊D窝 – Keep it simple, stupid</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left 
+  page-home">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">可可熊D窝</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <h1 class="site-subtitle" itemprop="description">Keep it simple, stupid</h1>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">182</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">8</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">358</span></a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2010/01/31/war-of-internet-addiction/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="cocobear">
+      <meta itemprop="description" content="爱折腾的技术宅一枚">
+      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="可可熊D窝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2010/01/31/war-of-internet-addiction/" class="post-title-link" itemprop="url">推荐一段视频：《网瘾战争》</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2010-01-31 22:44:24" itemprop="dateCreated datePublished" datetime="2010-01-31T22:44:24+08:00">2010-01-31</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/" itemprop="url" rel="index"><span itemprop="name">Life</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2010/01/31/war-of-internet-addiction/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2010/01/31/war-of-internet-addiction/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数：</span>
+                
+                <span title="字数">942</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读 &asymp;</span>
+                
+                <span title="阅读">1 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>推荐一段视频：《网瘾战争》</p>
+<p>我要说的剧本里面已经说出来了</p>
+<pre><code>**我们不敢说话，就算我们说了，也会被无视或断章取义。我们曾经和你一样天真，以为这里处处是花园，以为光凭努力就能触及到理想。但抬头仰望金字塔顶的 服务者们，手捧着被赐予的“幸福感”退缩到全世界最自由的无路由网，靠低廉的成本互相沟通，靠游戏来缓解生活的痛苦。仅仅这样，他们为了利益，仍然雁过拔 毛般的想尽办法，我们已经习惯了沉默……但这沉默并不代表奴颜卑膝，这钟声会传给你我们的力量，今天他们能为剥削一个游戏而不择手段……**
+</code></pre><p>很庆幸我们还能通过”正常的”的途径看到这样的视频，也许你能做到的也仅仅是和更多的人去分享这段视频，让2009年更清晰的刻在历史的车轮上。</p>
+<p>电驴地址:</p>
+<p><a href="ed2k://|file|%5B%E7%88%B1%E8%80%81%E8%99%8E%E6%B8%B8%E5%88%9B%E4%BD%9C%E5%9B%A2%E9%98%9F%5D%5B%E7%AC%AC3%E4%BD%9C.%E7%BD%91%E7%98%BE%E6%88%98%E4%BA%89%5D%5BGB%5D%5B1024x768.x264.AAC%5D.mp4|784774019|67f298ca261d14367195c922ba49ce66|h=qnckiy5nfnw4qqckc2jtzvi6awhvbnho|" target="_blank" rel="noopener">ed2k://|file|%5B%E7%88%B1%E8%80%81%E8%99%8E%E6%B8%B8%E5%88%9B%E4%BD%9C%E5%9B%A2%E9%98%9F%5D%5B%E7%AC%AC3%E4%BD%9C.%E7%BD%91%E7%98%BE%E6%88%98%E4%BA%89%5D%5BGB%5D%5B1024x768.x264.AAC%5D.mp4|784774019|67f298ca261d14367195c922ba49ce66|h=qnckiy5nfnw4qqckc2jtzvi6awhvbnho|</a></p>
+<p>土豆在线:<a href="http://www.tudou.com/programs/view/rhxNFUxCzF4/" target="_blank" rel="noopener">http://www.tudou.com/programs/view/rhxNFUxCzF4/</a></p>
+<p>也许你会想看看关于视频更多的内容:<a href="http://docs.google.com/View?docID=0AWO369Kx_1-7ZGMyM2txcnhfMjhjcjM0eHJjbQ&amp;hl=en&amp;pli=1" target="_blank" rel="noopener">http://docs.google.com/View?docID=0AWO369Kx_1-7ZGMyM2txcnhfMjhjcjM0eHJjbQ&amp;hl=en&amp;pli=1</a></p>
+<h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#7263" title="2010-02-02 23:02:54">danhao</a>:</strong> 黑色的背景不错，不过我看后，再看其他的白色背景网页，就像看灯泡一样啊···那个刺眼啊·</p>
+<p><strong><a href="#7264" title="2010-02-02 23:56:35">luguo</a>:</strong> 看了，最后那几段台词很牛逼～～绝对要顶～～！</p>
+<p><strong><a href="#7776" title="2010-04-10 15:50:53">iOver</a>:</strong> 很有视觉冲击的主题。不过貌似还有一些小瑕疵。 加油！一起共勉！</p>
+<p><strong><a href="#7309" title="2010-02-09 07:57:29">羽中</a>:</strong> 视频还没看不过台词如雷贯耳了</p>
+<p><strong><a href="#7239" title="2010-02-01 08:34:48">草儿</a>:</strong> 看过了，里面太和谐了。 比现实要和谐的多。</p>
+<p><strong><a href="#7819" title="2010-04-16 17:06:14">alex</a>:</strong> 看完这个视频，心里很舒服</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2010/01/13/write-web-query-system/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="cocobear">
+      <meta itemprop="description" content="爱折腾的技术宅一枚">
+      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="可可熊D窝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2010/01/13/write-web-query-system/" class="post-title-link" itemprop="url">给草儿同学写了个查询系统</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2010-01-13 17:07:20" itemprop="dateCreated datePublished" datetime="2010-01-13T17:07:20+08:00">2010-01-13</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/编程相关/" itemprop="url" rel="index"><span itemprop="name">编程相关</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2010/01/13/write-web-query-system/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2010/01/13/write-web-query-system/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数：</span>
+                
+                <span title="字数">333</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读 &asymp;</span>
+                
+                <span title="阅读">1 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>主要实现查询、添加、修改、删除、导入功能;<br>可以对Excel文件导出的csv文件直接导入，使用ajax使操作简单化。</p>
+<p>用到的技术关键词<br>PHP MySQL Ajax JavaScript Jquery Vim</p>
+<p>共计一个文件600行代码</p>
+<h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#7141" title="2010-01-13 17:29:38">草儿</a>:</strong> coco，我真是爱死你了，这几天你没少帮我忙。回头去西安好好感谢感谢你。</p>
+<p><strong><a href="#7157" title="2010-01-14 21:18:16">林晗烟</a>:</strong> 学长：我博客原来的域名<a href="http://www.wangshuo2046.cn被强行暂停解析，故现更换域名为http://www.wangshuo2046.com，还请麻烦抽空更新友情链接里的信息。谢谢啦！" target="_blank" rel="noopener">http://www.wangshuo2046.cn被强行暂停解析，故现更换域名为http://www.wangshuo2046.com，还请麻烦抽空更新友情链接里的信息。谢谢啦！</a></p>
+<p><strong><a href="#8301" title="2010-07-14 09:58:37">xname</a>:</strong> 能不能分享一下呃 上传我搞excel导入导出折腾了很久</p>
+<p><strong><a href="#8302" title="2010-07-14 14:17:28">可可熊</a>:</strong> 这个不是通用的东西，所以给你也用不了的。</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2009/12/15/update-cang2html/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="cocobear">
+      <meta itemprop="description" content="爱折腾的技术宅一枚">
+      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="可可熊D窝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2009/12/15/update-cang2html/" class="post-title-link" itemprop="url">更新百度搜藏导出工具</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2009-12-15 22:35:26" itemprop="dateCreated datePublished" datetime="2009-12-15T22:35:26+08:00">2009-12-15</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/" itemprop="url" rel="index"><span itemprop="name">Life</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2009/12/15/update-cang2html/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2009/12/15/update-cang2html/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数：</span>
+                
+                <span title="字数">1.5k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读 &asymp;</span>
+                
+                <span title="阅读">1 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>可以支持分类(或者叫标签)的导出了。<br>PyFetion在google code页面加了一个下载连接，方便没有svn时直接下载代码;使用的是r49的版本</p>
+<p>这似乎是一篇微博…</p>
+<h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#7261" title="2010-02-02 19:56:17">cat</a>:</strong> 不用了，已经下得了。。也导入得了，不胜感激啊。</p>
+<p><strong><a href="#7223" title="2010-01-28 10:35:05">可可熊</a>:</strong> <a href="http://www.box.net/shared/v73oa9s1tc" target="_blank" rel="noopener">http://www.box.net/shared/v73oa9s1tc</a> 更新了box上面可执行文件的下载，cat可以在上面的地址下载</p>
+<p><strong><a href="#7259" title="2010-02-02 17:29:37">cocobear</a>:</strong> 更新了 我试了下导入可以了</p>
+<p><strong><a href="#7260" title="2010-02-02 19:24:04">cat</a>:</strong> 下不下来啊。能不能发到我邮箱里啊？谢谢。。</p>
+<p><strong><a href="#7256" title="2010-02-02 12:36:20">cat</a>:</strong> 可可熊跟你回报个情况，CANG导出的文件无法导入IE啊。我把IE导出的和CANG导出的文件截了一部对比一下，你看看。 IE： Bookmarks Bookmarks Links <a href="http://www.proxy4free.com/index.html" target="_blank" rel="noopener">Proxy 4 free - Free Public Proxy Servers Home.URL</a> <a href="http://bbs.winzheng.com/viewthread.php?tid=578538&amp;fpage=1&amp;sid=ARkNNO" target="_blank" rel="noopener">赢政天下[WINZHENG.COM] -=-赢政天下论坛 - 『 软件使用交流 』 - 【原创】QQ用按.URL</a> ———————————————————— cang： Generated by cang2html ie 代理 <a href="http://bbs.winzheng.com/viewthread.php?tid=578538&amp;fpage=1&amp;sid=ARkNNO" target="_blank" rel="noopener">赢政天下[WINZHENG.COM] -=-赢政天下论坛 - 『 软件使用交流 』 - 【原创】QQ用按</a> <a href="http://www.proxy4free.com/index.html" target="_blank" rel="noopener">Proxy 4 free - Free Public Proxy Servers Home</a></p>
+<p><strong><a href="#7257" title="2010-02-02 12:38:58">cat</a>:</strong> 糟糕，代码贴上去就变成效果了。 就是IE导出的地址和文件夹名是不对齐的。Cang导出的是对齐的。你自己导一个出来看看就知道了。。辛苦了。</p>
+<p><strong><a href="#7211" title="2010-01-26 21:58:25">cat</a>:</strong> 你好，我差不多翻遍了互联网，终于发现你这里有百度收藏的导出程序了，你技术太高了，别人都弄不出来的东西被你弄出来了，上个版本不能分类。这个版本有没有WINDOWS下能直接用的啊？如果没有的话能不能帮我做一个EXE的啊?我对编程七窍通了六窍，还有一窍不通，呵呵。。麻烦了。小弟感激不尽啊。。</p>
+<p><strong><a href="#6875" title="2009-12-15 22:39:46">damon</a>:</strong> 沙发 安逸！ 这么晚了还不睡觉！ 天气冷 带点围脖</p>
+<p><strong><a href="#6880" title="2009-12-16 11:04:11">草儿</a>:</strong> 没想到你突然更新这玩意儿了</p>
+<p><strong><a href="#6883" title="2009-12-16 20:15:43">灰机要考研</a>:</strong> 恩，刚刚发现了</p>
+<p><strong><a href="#7049" title="2010-01-01 15:36:33">2004ip</a>:</strong> cocobear，代码没发上来吗？</p>
+<p><strong><a href="#7051" title="2010-01-01 21:42:05">cocobear</a>:</strong> 在google code上面 <a href="http://code.google.com/p/pytool/" target="_blank" rel="noopener">http://code.google.com/p/pytool/</a></p>
+<p><strong><a href="#7053" title="2010-01-01 23:28:17">2004ip</a>:</strong> 没想到coolbear兄这么快就回复了，谢谢。 我说的代码是指百度搜藏导出工具的代码，在 <a href="http://code.google.com/p/pytool/没看到有下载啊" target="_blank" rel="noopener">http://code.google.com/p/pytool/没看到有下载啊</a></p>
+<p><strong><a href="#7054" title="2010-01-01 23:57:27">2004ip</a>:</strong> 已经在svn中找到，谢谢coolbear兄</p>
+<p><strong><a href="#7055" title="2010-01-02 01:32:27">2004ip</a>:</strong> cocobear兄，google code上的代码和你的是一个版本是一样的<a href="http://cocobear.github.io/2008/08/18/export-baidu-cang/是不是还没有更新支持分类的导出的代码？">http://cocobear.github.io/2008/08/18/export-baidu-cang/是不是还没有更新支持分类的导出的代码？</a></p>
+<p><strong><a href="#7058" title="2010-01-02 17:11:15">cocobear</a>:</strong> 嗯，那里没有更新了。是旧的文章了。</p>
+<p><strong><a href="#8014" title="2010-05-04 20:46:22">葵</a>:</strong> 好像百毒那边我 无法批量修改为公开了，单个也不行，你们呢？提示有不适合公开的内容，其实内容，比如英语学习等等书签。不好百毒那么缺德吧。</p>
+<p><strong><a href="#7253" title="2010-02-02 11:46:27">cat</a>:</strong> 可可熊太谢谢你了，你太好了，么一个。</p>
+<p><strong><a href="#7724" title="2010-03-31 20:58:58">可可熊</a>:</strong> 评论里面有地址的</p>
+<p><strong><a href="#7713" title="2010-03-30 21:39:54">dodo</a>:</strong> 哪里可以下载，没找到啊~</p>
+<p><strong><a href="#7519" title="2010-02-27 22:50:04">atuko</a>:</strong> 好像无法导出中文用户名注册的百度搜藏记录。</p>
+<p><strong><a href="#8111" title="2010-05-22 17:33:17">黑白条</a>:</strong> 感谢楼主！困扰我好久的导出终于解决了！ 准备放弃百度搜藏，改用google bookmark，请问一些你有什么更好的在线书签推荐不？</p>
+<p><strong><a href="#8115" title="2010-05-23 16:23:53">cocobear</a>:</strong> 使用chrome浏览器，书签自动同步到google的文档中</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2009/12/15/app-use-pyfetion-on-gae/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="cocobear">
+      <meta itemprop="description" content="爱折腾的技术宅一枚">
+      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="可可熊D窝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2009/12/15/app-use-pyfetion-on-gae/" class="post-title-link" itemprop="url">GAE上使用PyFetion做一个应用</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2009-12-15 14:22:14" itemprop="dateCreated datePublished" datetime="2009-12-15T14:22:14+08:00">2009-12-15</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/编程相关/" itemprop="url" rel="index"><span itemprop="name">编程相关</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2009/12/15/app-use-pyfetion-on-gae/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2009/12/15/app-use-pyfetion-on-gae/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数：</span>
+                
+                <span title="字数">4.7k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读 &asymp;</span>
+                
+                <span title="阅读">4 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>GAE上有一个cron jobs的功能，类似于Linux下的crontab，可以实现在指定规则的时间里去运行程序。利用这个功能和飞信的短信功能就完成一些简单的小应用，比如天气预报，服务器监控，股票大盘实时行情提醒等等。</p>
+<p>拿服务器监控来说，我们先注册一个GAE账户，然后创建一个Application，下载一份GAE 的SDK，接下来就写代码了。<br>(以上过程请自行google之)</p>
+<p>monitor.py:</p>
+<pre><code>#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+#MIT License
+#By : cocobear.cn@gmail.com
+#
+
+from google.appengine.api import urlfetch
+from PyFetion import *
+
+def get():
+    print(&apos;&lt;html&gt;&lt;body&gt;&apos;)
+    url = &apos;http://61.236.244.162&apos;
+    result = urlfetch.fetch(url)
+    if result.status_code == 200:
+        print(&apos;OK&apos;)
+    else:
+        fetion = PyFetion(&apos;136xxxx&apos;,&apos;123456&apos;,&apos;HTTP&apos;)
+        i = 0
+        while True:
+            try:
+                fetion.login(FetionOnline)
+                fetion.send_sms(&apos;服务器掉了!&apos;)
+                fetion.logout()
+            except:
+                if i &gt; 5:
+                    break
+                continue
+    print(&apos;&lt;/body&gt;&lt;/html&gt;&apos;)
+
+if __name__ == &apos;__main__&apos;:
+    get()
+</code></pre><p>很简单的代码，使用GAE的函数urlfetch.fetch来访问这个地址，如果失败调用PyFetion来发短信给自己做通知。</p>
+<p>app.yaml:</p>
+<pre><code>application: pythoning
+version: 1
+runtime: python
+api_version: 1
+
+handlers:
+- url: /console/.*
+  script: $PYTHON_LIB/google/appengine/ext/admin
+  login: admin
+
+- url: /monitor
+  script: monitor.py
+
+- url: /
+  static_files: index.html
+  upload: index.html
+</code></pre><p>这里指定url映射的规则，访问pythoning.appspot.com/monitor就会执行monitor.py脚本。application需要填写你申请GAE应用时的名称，也就是这个二级域名pythoning，version：当前代码的版本。</p>
+<p>index.html:</p>
+<p>首页你可以做别的事，比如放个人主页，然后把自己域名指过来。</p>
+<p>cron.yaml:</p>
+<pre><code>cron:
+- description: watch http server 
+  url: /monitor
+  schedule: every 1 minutes
+  timezone: Asia/Shanghai
+</code></pre><p>关键的一个文件，对monitor这个url进行定时执行，这里是每分钟执行一次; 如果你是写天气预报，就可以写为 7:00 every day，每天早上7点发一次天气预报。</p>
+<p>写完这些以后，运行命令:<br>ls demos/test<br>app.yaml cron.yaml index.html monitor.py PyFetion.py<br>python appcfg.py update demos/test<br>把你的代码提交到GAE服务器上，你可以在GAE的后台Cron Jobs看到：</p>
+<pre><code>/monitor&gt; 
+watch http server     every 1 minutes (Asia/Shanghai) &gt; 
+2009/12/15 14:06:50 on time Success
+</code></pre><p>在GAE上使用r49版本的PyFetion，请注释掉from select import select,如果只是像上面做提醒的话最后去掉下面的代码(824行):</p>
+<pre><code>self.get_personal_info()
+if not self.get_contactlist():
+    d_print(&quot;get contactlist error&quot;)
+    return False
+self.get(&quot;compactlist&quot;,self.__uri,self.contactlist.keys())
+response = self.send()
+code = self.get_code(response)
+if code != 200:
+    return False
+#self.get(&quot;PGGetGroupList&quot;,self.__uri)
+#response = self.send()
+
+self.get_offline_msg()
+</code></pre><p>这里是获得了好友列表，然后给这些好友发一个上线的通知，如果你不想每次提醒的时飞信上的好友都看到你上线，那么就去掉这些，也会加快发送短信的速度。更进一步的优化，你可以去掉TCP通信的相关代码。</p>
+<p>ok, 发挥你的想象力，play with GAE and PyFetion</p>
+<h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#7262" title="2010-02-02 22:59:13">flyingzl</a>:</strong> 这页面背景可刺激死我的眼睛，呵呵。。</p>
+<p><strong><a href="#6917" title="2009-12-23 22:00:37">oo</a>:</strong> gae 又发不了飞信啦，每次都错误！！</p>
+<p><strong><a href="#6863" title="2009-12-15 14:32:18">bones7456</a>:</strong> 呵呵，这个挺好玩的。</p>
+<p><strong><a href="#6864" title="2009-12-15 14:34:52">草儿</a>:</strong> 搞的不错，越来越有意思了</p>
+<p><strong><a href="#7787" title="2010-04-11 21:46:05">xbwee</a>:</strong> 最近在GAE上使用报错，module object has no attribute socket PyFetion.py line 464 google之，一些人说可能是当前目录下有同名的 ‘socket’文件导致出错，我确定上传的目录中没有这个文件。错误只能是 GAE 的 Python 运行环境了，这麻烦了~~</p>
+<p><strong><a href="#6865" title="2009-12-15 16:57:23">david</a>:</strong> 正是我想要的</p>
+<p><strong><a href="#6867" title="2009-12-15 19:02:53">小卒</a>:</strong> 最近1周多，在GAE上的get_offline_msg()不能用了，是飞信协议修改了吗？我的一个应用，如果那样我的一个应用就废了，可可熊有办法吗？</p>
+<p><strong><a href="#6868" title="2009-12-15 19:30:50">可可熊</a>:</strong> 嗯，HTTP协议不能那样获得消息了，因为本来就没有官方走HTTP方式的飞信，所以我也没有什么办法。以前那样也是一种凑合的方法。</p>
+<p><strong><a href="#6873" title="2009-12-15 22:30:07">damon</a>:</strong> 哈哈··· 不错 终于发出来了··</p>
+<p><strong><a href="#6876" title="2009-12-15 22:46:56">evlos</a>:</strong> 帅呆了 ~ ( ⊙o⊙ )</p>
+<p><strong><a href="#6877" title="2009-12-15 23:19:53">Solrex</a>:</strong> Great work!</p>
+<p><strong><a href="#7738" title="2010-04-02 16:52:09">flourishing</a>:</strong> 能支持http proxy 吗</p>
+<p><strong><a href="#7739" title="2010-04-02 16:52:37">flourishing</a>:</strong> 建议调一下样式，几乎都看不见文章的标题。</p>
+<p><strong><a href="#8009" title="2010-05-04 15:37:26">cocobear</a>:</strong> 405的错误是只有在GAE上面使用才会出现，应该是移动做的针对IP的限制，405一般只能重试。</p>
+<p><strong><a href="#7794" title="2010-04-12 13:29:51">cocobear</a>:</strong> 注释掉socket那行 在GAE上使用HTTP方式 用不到socket模块</p>
+<p><strong><a href="#7998" title="2010-05-03 13:37:25">sinosure</a>:</strong> 谢谢指导，搞定了，但好像不稳定，有时候报错： (405, ‘Http error’) Traceback (most recent call last): File “/base/python_runtime/python_lib/versions/1/google/appengine/ext/webapp/<strong>init</strong>.py”, line 513, in <strong>call</strong> handler.post(*groups) File “/base/data/home/apps/forumfly2009/1.341680310453677646/helloworld.py”, line 513, in post fetion.login(FetionOnline) File “/base/data/home/apps/forumfly2009/1.341680310453677646/PyFetion.py”, line 829, in login response = self.send() File “/base/data/home/apps/forumfly2009/1.341680310453677646/PyFetion.py”, line 400, in send response = self.<strong>sendSIPP() File “/base/data/home/apps/forumfly2009/1.341680310453677646/PyFetion.py”, line 453, in </strong>sendSIPP raise PyFetionSocketError(405,’Http error’) PyFetionSocketError: (405, ‘Http error’) I 05-02 10:26PM 23.591 This request caused a new process to be started for your application, and thus caused your application code to be loaded for the first time. This request may thus take longer and use more CPU than a typical request for your application.</p>
+<p><strong><a href="#7973" title="2010-04-29 11:29:08">sinosure</a>:</strong> GAE上也遇到socket问题了，但不知道怎么调整，怎么调整构造函数，能否详细说一下，或者给出一份调整后的版本呢，谢谢了</p>
+<p><strong><a href="#7979" title="2010-04-29 21:42:37">可可熊</a>:</strong> To: sinosure 直接注释掉import socket，然后使用HTTP模式。</p>
+<p><strong><a href="#7801" title="2010-04-14 00:16:23">xbwee</a>:</strong> 哈哈，多谢提醒！PyFetion 类默认连接方式是TCP，只要在构造函数中指定为HTTP就可以了</p>
+<p><strong><a href="#8141" title="2010-05-26 13:36:35">Yao Wei</a>:</strong> 我在本机上测试是好的，但是一部署到GAE上，立马就有错误，一开始是urllib2的问题，后来我试了google.appengine.api的 urlfetch还是有问题 不知道有什么解决方法没有。 <a href="mailto:njustyw@sina.com" target="_blank" rel="noopener">njustyw@sina.com</a></p>
+<p><strong><a href="#8285" title="2010-07-06 20:53:41">文</a>:</strong> 可否提供源码？在PHP上的可以收到但有乱码出现</p>
+<p><strong><a href="#8286" title="2010-07-07 09:54:44">cocobear</a>:</strong> 源码都贴出来了 :-(</p>
+<p><strong><a href="#8255" title="2010-06-28 14:57:36">oppih</a>:</strong> 你好，我想用PyFetion做一个自动处理接收到的飞信内容的问题，想向你请教怎么做方便，不知道是否有空帮助研究研究？</p>
+<p><strong><a href="#9006" title="2010-11-29 09:17:27">cocobear</a>:</strong> 现在可以用 更新协议了</p>
+<p><strong><a href="#9001" title="2010-11-28 21:48:02">小江恩</a>:</strong> 请问现在还能用吗？不是飞信换了协议吗？</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2009/12/13/close-guestbook/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="cocobear">
+      <meta itemprop="description" content="爱折腾的技术宅一枚">
+      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="可可熊D窝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2009/12/13/close-guestbook/" class="post-title-link" itemprop="url">关闭留言板 </a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2009-12-13 22:39:21" itemprop="dateCreated datePublished" datetime="2009-12-13T22:39:21+08:00">2009-12-13</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/" itemprop="url" rel="index"><span itemprop="name">Life</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2009/12/13/close-guestbook/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2009/12/13/close-guestbook/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数：</span>
+                
+                <span title="字数">332</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读 &asymp;</span>
+                
+                <span title="阅读">1 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>先要对在我的那个留言板里留言的几位朋友说声：“对不起”，好久都没注意到自己还有个留言板，所以上面的留言一直没有回复，今天都回复了一下，虽然有几个月前的留言，但我还是回复了。</p>
+<p>这个留言板也没多大用处，所以就关了它。</p>
+<p>这个网站也就剩下博客了，或许我应该把博客也搬走，比如换到GAE上面，这样就全面把自己交给google了，呵呵。</p>
+<p>pythunder现在可以在<a href="http://code.google.com/p/pytool/" target="_blank" rel="noopener">google code</a>里下载了，需要另一个aes.py文件支持。</p>
+<h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#6859" title="2009-12-15 07:29:44">Amankwah</a>:</strong> 你还真水产啊～</p>
+<p><strong><a href="#7186" title="2010-01-20 20:56:58">aegiryy</a>:</strong> 不要太依赖google，万一走人就麻烦了</p>
+<p><strong><a href="#6861" title="2009-12-15 11:46:59">crazyfranc</a>:</strong> 博客不能关</p>
+<p><strong><a href="#6862" title="2009-12-15 13:05:44">cocobear</a>:</strong> 我是说不用这个独立的博客，用google的。</p>
+<p><strong><a href="#6839" title="2009-12-13 23:16:45">草儿</a>:</strong> 速度</p>
+<p><strong><a href="#6841" title="2009-12-13 23:57:22">est</a>:</strong> 板凳</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+  </section>
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/6/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><span class="space">&hellip;</span><a class="page-number" href="/page/72/">72</a><a class="extend next" rel="next" href="/page/8/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg" alt="cocobear">
+            
+              <p class="site-author-name" itemprop="name">cocobear</p>
+              <p class="site-description motion-element" itemprop="description">爱折腾的技术宅一枚</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">358</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">182</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/cocobear" title="GitHub &rarr; https://github.com/cocobear" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="mailto:cocobear.cn@gmail.com" title="E-Mail &rarr; mailto:cocobear.cn@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://twitter.com/_cocobear" title="Twitter &rarr; https://twitter.com/_cocobear" rel="noopener" target="_blank"><i class="fa fa-fw fa-twitter"></i>Twitter</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://www.douban.com/people/cocobear/" title="豆瓣 &rarr; https://www.douban.com/people/cocobear/" rel="noopener" target="_blank"><i class="fa fa-fw fa-book"></i>豆瓣</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                友情链接
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://wangcong.org" title="http://wangcong.org" rel="noopener" target="_blank">王聪</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://blog.liu-yang.info/" title="https://blog.liu-yang.info/" rel="noopener" target="_blank">老大</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2007 – <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">cocobear</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+    <span title="站点总字数">519k</span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    
+    <span title="站点阅读时长">7:52</span>
+  
+</div>
+
+
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v6.7.0</div>
+
+
+
+  <div class="footer-custom">Hosted by <a target="_blank" rel="external nofollow" href="https://pages.github.com/">GitHub Pages</a></div>
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv" title="总访客量">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+
+  
+    <span class="site-pv" title="总访问量">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script src="//cdn.staticfile.org/jquery/2.1.3/jquery.min.js"></script>
+
+  
+  <script src="//cdn.staticfile.org/fastclick/1.0.6/fastclick.min.js"></script>
+
+  
+  <script src="//cdn.staticfile.org/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script src="//cdn.staticfile.org/fancybox/3.2.5/jquery.fancybox.min.js"></script>
+
+  
+  <script src="/lib/reading_progress/reading_progress.js"></script>
+
+
+  
+
+
+  <script src="/js/src/utils.js?v=6.7.0"></script>
+
+  <script src="/js/src/motion.js?v=6.7.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/src/affix.js?v=6.7.0"></script>
+
+  <script src="/js/src/schemes/pisces.js?v=6.7.0"></script>
+
+
+
+  
+
+  
+
+
+  <script src="/js/src/bootstrap.js?v=6.7.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  <script src="//cdn1.lncld.net/static/js/3.11.1/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  <script>
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item) > -1;
+    });
+    new Valine({
+      el: '#comments' ,
+      verify: false,
+      notify: false,
+      appId: 'GWpjMXr7BpoLENnXXTFt4QoW-gzGzoHsz',
+      appKey: 'yaHPwQTKhDXDPOUNWso3P42n',
+      placeholder: '说点啥呢？',
+      avatar: 'identicon',
+      meta:guest,
+      pageSize: '10' || 10,
+      visitor: false
+    });
+  </script>
+
+
+
+
+  
+
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+        // ref: https://github.com/ForbesLindesay/unescape-html
+        var unescapeHtml = function(html) {
+          return String(html)
+            .replace(/&quot;/g, '"')
+            .replace(/&#39;/g, '\'')
+            .replace(/&#x3A;/g, ':')
+            // replace all the other &#x; chars
+            .replace(/&#(\d+);/g, function (m, p) { return String.fromCharCode(p); })
+            .replace(/&lt;/g, '<')
+            .replace(/&gt;/g, '>')
+            .replace(/&amp;/g, '&');
+        };
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                content = unescapeHtml(content);
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <script src="/js/src/js.cookie.js?v=6.7.0"></script>
+  <script src="/js/src/scroll-cookie.js?v=6.7.0"></script>
+
+
+  
+
+  
+
+  
+  <style>
+    .copy-btn {
+      display: inline-block;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 20px;
+      color: #333;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      background-color: #eee;
+      background-image: linear-gradient(#fcfcfc, #eee);
+      border: 1px solid #d5d5d5;
+      border-radius: 3px;
+      user-select: none;
+      outline: 0;
+    }
+
+    .highlight-wrap .copy-btn {
+      transition: opacity .3s ease-in-out;
+      opacity: 0;
+      padding: 2px 6px;
+      position: absolute;
+      right: 4px;
+      top: 8px;
+    }
+
+    .highlight-wrap:hover .copy-btn,
+    .highlight-wrap .copy-btn:focus {
+      opacity: 1
+    }
+
+    .highlight-wrap {
+      position: relative;
+    }
+  </style>
+  <script>
+    $('.highlight').each(function (i, e) {
+      var $wrap = $('<div>').addClass('highlight-wrap');
+      $(e).after($wrap);
+      $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function (e) {
+        var code = $(this).parent().find('.code').find('.line').map(function (i, e) {
+          return $(e).text();
+        }).toArray().join('\n');
+        var ta = document.createElement('textarea');
+        var range = document.createRange(); //For Chrome
+        var sel = window.getSelection(); //For Chrome
+        var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+        ta.style.top = yPosition + 'px'; //Prevent page scroll
+        ta.style.position = 'absolute';
+        ta.style.opacity = '0';
+        ta.value = code;
+        ta.textContent = code; //For FireFox
+        ta.contentEditable = true;
+        ta.readOnly = false;
+        document.body.appendChild(ta);
+        range.selectNode(ta);
+        sel.removeAllRanges();
+        sel.addRange(range);
+        ta.setSelectionRange(0, code.length);
+        var result = document.execCommand('copy');
+        
+        ta.blur(); //For iOS
+        $(this).blur();
+      })).on('mouseleave', function (e) {
+        var $b = $(this).find('.copy-btn');
+        setTimeout(function () {
+          $b.text('复制');
+        }, 300);
+      }).append(e);
+    })
+  </script>
+
+
+  
+
+</body>
+</html>

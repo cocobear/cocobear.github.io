@@ -1,0 +1,1280 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="sitemap.xsl"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+
+    <url>
+        <loc>http://cocobear.github.io/tags/JavaScript/</loc>
+        <lastmod>2019-12-28T05:56:28.456Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/puzzle/</loc>
+        <lastmod>2019-12-28T05:56:28.456Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/51/</loc>
+        <lastmod>2019-12-28T05:56:28.457Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/idea/</loc>
+        <lastmod>2019-12-28T05:56:28.457Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/ad/</loc>
+        <lastmod>2019-12-28T05:56:28.457Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/algorithm/</loc>
+        <lastmod>2019-12-28T05:56:28.458Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/crypto/</loc>
+        <lastmod>2019-12-28T05:56:28.458Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/ebank/</loc>
+        <lastmod>2019-12-28T05:56:28.458Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/work/</loc>
+        <lastmod>2019-12-28T05:56:28.458Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/PDF/</loc>
+        <lastmod>2019-12-28T05:56:28.458Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/PDG/</loc>
+        <lastmod>2019-12-28T05:56:28.458Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/AMD/</loc>
+        <lastmod>2019-12-28T05:56:28.459Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/iPhone/</loc>
+        <lastmod>2019-12-28T05:56:28.459Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/awk/</loc>
+        <lastmod>2019-12-28T05:56:28.461Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/cang/</loc>
+        <lastmod>2019-12-28T05:56:28.461Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/baidu/</loc>
+        <lastmod>2019-12-28T05:56:28.461Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/DokuWiki/</loc>
+        <lastmod>2019-12-28T05:56:28.461Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/MediaWiki/</loc>
+        <lastmod>2019-12-28T05:56:28.461Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/wiki/</loc>
+        <lastmod>2019-12-28T05:56:28.461Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/web2py/</loc>
+        <lastmod>2019-12-28T05:56:28.462Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/mail/</loc>
+        <lastmod>2019-12-28T05:56:28.463Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/joke/</loc>
+        <lastmod>2019-12-28T05:56:28.463Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/mail-Domain/</loc>
+        <lastmod>2019-12-28T05:56:28.463Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/css/</loc>
+        <lastmod>2019-12-28T05:56:28.463Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/calculator/</loc>
+        <lastmod>2019-12-28T05:56:28.464Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/wxPython/</loc>
+        <lastmod>2019-12-28T05:56:28.464Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/DreamHost/</loc>
+        <lastmod>2019-12-28T05:56:28.464Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/WebOS/</loc>
+        <lastmod>2019-12-28T05:56:28.464Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/app/</loc>
+        <lastmod>2019-12-28T05:56:28.465Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/libev/</loc>
+        <lastmod>2019-12-28T05:56:28.465Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/configure/</loc>
+        <lastmod>2019-12-28T05:56:28.465Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/oracle/</loc>
+        <lastmod>2019-12-28T05:56:28.466Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/bsddb/</loc>
+        <lastmod>2019-12-28T05:56:28.466Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/home/</loc>
+        <lastmod>2019-12-28T05:56:28.466Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/uwsgi/</loc>
+        <lastmod>2019-12-28T05:56:28.467Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/virtualenv/</loc>
+        <lastmod>2019-12-28T05:56:28.467Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/bottle/</loc>
+        <lastmod>2019-12-28T05:56:28.467Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/pystardict/</loc>
+        <lastmod>2019-12-28T05:56:28.467Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/stardict/</loc>
+        <lastmod>2019-12-28T05:56:28.467Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/dropbox/</loc>
+        <lastmod>2019-12-28T05:56:28.467Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/Shell/</loc>
+        <lastmod>2019-12-28T05:56:28.468Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/ebook/</loc>
+        <lastmod>2019-12-28T05:56:28.468Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/Domain/</loc>
+        <lastmod>2019-12-28T05:56:28.468Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/E680/</loc>
+        <lastmod>2019-12-28T05:56:28.468Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/GPRS/</loc>
+        <lastmod>2019-12-28T05:56:28.468Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/bookmark/</loc>
+        <lastmod>2019-12-28T05:56:28.469Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/zhuaxia/</loc>
+        <lastmod>2019-12-28T05:56:28.469Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/Ext2/</loc>
+        <lastmod>2019-12-28T05:56:28.469Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/ADSL/</loc>
+        <lastmod>2019-12-28T05:56:28.470Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/ssh/</loc>
+        <lastmod>2019-12-28T05:56:28.470Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/config/</loc>
+        <lastmod>2019-12-28T05:56:28.470Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/font/</loc>
+        <lastmod>2019-12-28T05:56:28.470Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/heartbeat/</loc>
+        <lastmod>2019-12-28T05:56:28.470Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/ATI/</loc>
+        <lastmod>2019-12-28T05:56:28.470Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/gcc%EF%BC%8CF9/</loc>
+        <lastmod>2019-12-28T05:56:28.470Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/vmware/</loc>
+        <lastmod>2019-12-28T05:56:28.471Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/Gnome/</loc>
+        <lastmod>2019-12-28T05:56:28.471Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/git/</loc>
+        <lastmod>2019-12-28T05:56:28.472Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/github/</loc>
+        <lastmod>2019-12-28T05:56:28.472Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/map/</loc>
+        <lastmod>2019-12-28T05:56:28.472Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/grub/</loc>
+        <lastmod>2019-12-28T05:56:28.472Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/ig-syntax-hilite/</loc>
+        <lastmod>2019-12-28T05:56:28.473Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/MAC/</loc>
+        <lastmod>2019-12-28T05:56:28.473Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/install/</loc>
+        <lastmod>2019-12-28T05:56:28.473Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/T21/</loc>
+        <lastmod>2019-12-28T05:56:28.473Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/mplayer/</loc>
+        <lastmod>2019-12-28T05:56:28.473Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/t400/</loc>
+        <lastmod>2019-12-28T05:56:28.473Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/script/</loc>
+        <lastmod>2019-12-28T05:56:28.473Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/iTerm2/</loc>
+        <lastmod>2019-12-28T05:56:28.474Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/macOS/</loc>
+        <lastmod>2019-12-28T05:56:28.474Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/brew/</loc>
+        <lastmod>2019-12-28T05:56:28.474Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/kindle/</loc>
+        <lastmod>2019-12-28T05:56:28.474Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/crontab/</loc>
+        <lastmod>2019-12-28T05:56:28.474Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/libevent/</loc>
+        <lastmod>2019-12-28T05:56:28.475Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/filesystem/</loc>
+        <lastmod>2019-12-28T05:56:28.475Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/linux/</loc>
+        <lastmod>2019-12-28T05:56:28.475Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/raid/</loc>
+        <lastmod>2019-12-28T05:56:28.475Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/network/</loc>
+        <lastmod>2019-12-28T05:56:28.476Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/centos/</loc>
+        <lastmod>2019-12-28T05:56:28.476Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/Django/</loc>
+        <lastmod>2019-12-28T05:56:28.476Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/nginx/</loc>
+        <lastmod>2019-12-28T05:56:28.476Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/MySQL/</loc>
+        <lastmod>2019-12-28T05:56:28.476Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/Travel/</loc>
+        <lastmod>2019-12-28T05:56:28.476Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/people/</loc>
+        <lastmod>2019-12-28T05:56:28.476Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/sopcast/</loc>
+        <lastmod>2019-12-28T05:56:28.476Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/google/</loc>
+        <lastmod>2019-12-28T05:56:28.476Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/locale/</loc>
+        <lastmod>2019-12-28T05:56:28.476Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/x509/</loc>
+        <lastmod>2019-12-28T05:56:28.477Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/md5/</loc>
+        <lastmod>2019-12-28T05:56:28.477Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/MUD/</loc>
+        <lastmod>2019-12-28T05:56:28.477Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/free/</loc>
+        <lastmod>2019-12-28T05:56:28.478Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/sed/</loc>
+        <lastmod>2019-12-28T05:56:28.479Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/Opera/</loc>
+        <lastmod>2019-12-28T05:56:28.479Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/GFW/</loc>
+        <lastmod>2019-12-28T05:56:28.479Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/OpenCV/</loc>
+        <lastmod>2019-12-28T05:56:28.479Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/https/</loc>
+        <lastmod>2019-12-28T05:56:28.479Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/fcitx/</loc>
+        <lastmod>2019-12-28T05:56:28.479Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/archlinux/</loc>
+        <lastmod>2019-12-28T05:56:28.481Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/xorg/</loc>
+        <lastmod>2019-12-28T05:56:28.481Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/plan/</loc>
+        <lastmod>2019-12-28T05:56:28.481Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/pppoe/</loc>
+        <lastmod>2019-12-28T05:56:28.481Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/gae/</loc>
+        <lastmod>2019-12-28T05:56:28.482Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/orc/</loc>
+        <lastmod>2019-12-28T05:56:28.483Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/money/</loc>
+        <lastmod>2019-12-28T05:56:28.484Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/security/</loc>
+        <lastmod>2019-12-28T05:56:28.485Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/pythunder/</loc>
+        <lastmod>2019-12-28T05:56:28.485Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/ext3/</loc>
+        <lastmod>2019-12-28T05:56:28.485Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/complain/</loc>
+        <lastmod>2019-12-28T05:56:28.485Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/website/</loc>
+        <lastmod>2019-12-28T05:56:28.485Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/hobby/</loc>
+        <lastmod>2019-12-28T05:56:28.486Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/android/</loc>
+        <lastmod>2019-12-28T05:56:28.486Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/C/</loc>
+        <lastmod>2019-12-28T05:56:28.486Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/serial/</loc>
+        <lastmod>2019-12-28T05:56:28.486Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/nexus4/</loc>
+        <lastmod>2019-12-28T05:56:28.486Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/smartisan/</loc>
+        <lastmod>2019-12-28T05:56:28.486Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/mood/</loc>
+        <lastmod>2019-12-28T05:56:28.487Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/gmail/</loc>
+        <lastmod>2019-12-28T05:56:28.487Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/words/</loc>
+        <lastmod>2019-12-28T05:56:28.487Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/online/</loc>
+        <lastmod>2019-12-28T05:56:28.488Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/boot/</loc>
+        <lastmod>2019-12-28T05:56:28.488Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/ssl/</loc>
+        <lastmod>2019-12-28T05:56:28.488Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/startx/</loc>
+        <lastmod>2019-12-28T05:56:28.488Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/book/</loc>
+        <lastmod>2019-12-28T05:56:28.489Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/habit/</loc>
+        <lastmod>2019-12-28T05:56:28.489Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/X/</loc>
+        <lastmod>2019-12-28T05:56:28.489Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/notes/</loc>
+        <lastmod>2019-12-28T05:56:28.490Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/tips/</loc>
+        <lastmod>2019-12-28T05:56:28.490Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/review/</loc>
+        <lastmod>2019-12-28T05:56:28.490Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/Apache/</loc>
+        <lastmod>2019-12-28T05:56:28.490Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/py2exe/</loc>
+        <lastmod>2019-12-28T05:56:28.490Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/tool/</loc>
+        <lastmod>2019-12-28T05:56:28.490Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/url/</loc>
+        <lastmod>2019-12-28T05:56:28.490Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/TinP2P/</loc>
+        <lastmod>2019-12-28T05:56:28.490Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/phone/</loc>
+        <lastmod>2019-12-28T05:56:28.491Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/hexo/</loc>
+        <lastmod>2019-12-28T05:56:28.491Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/Guide/</loc>
+        <lastmod>2019-12-28T05:56:28.491Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/rar/</loc>
+        <lastmod>2019-12-28T05:56:28.491Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/next/</loc>
+        <lastmod>2019-12-28T05:56:28.491Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/openssl/</loc>
+        <lastmod>2019-12-28T05:56:28.492Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/getsong/</loc>
+        <lastmod>2019-12-28T05:56:28.492Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/pysdcv/</loc>
+        <lastmod>2019-12-28T05:56:28.492Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/amarok/</loc>
+        <lastmod>2019-12-28T05:56:28.492Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/excel/</loc>
+        <lastmod>2019-12-28T05:56:28.492Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/Vim/</loc>
+        <lastmod>2019-12-28T05:56:28.493Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/sdcv/</loc>
+        <lastmod>2019-12-28T05:56:28.493Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/sendmail/</loc>
+        <lastmod>2019-12-28T05:56:28.493Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/QQ/</loc>
+        <lastmod>2019-12-28T05:56:28.493Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/dovecot/</loc>
+        <lastmod>2019-12-28T05:56:28.493Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/cscope/</loc>
+        <lastmod>2019-12-28T05:56:28.493Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/Gaim/</loc>
+        <lastmod>2019-12-28T05:56:28.493Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/Java/</loc>
+        <lastmod>2019-12-28T05:56:28.493Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/earthquake/</loc>
+        <lastmod>2019-12-28T05:56:28.494Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/proxy/</loc>
+        <lastmod>2019-12-28T05:56:28.494Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/macos/</loc>
+        <lastmod>2019-12-28T05:56:28.494Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/vpn/</loc>
+        <lastmod>2019-12-28T05:56:28.494Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/FTP/</loc>
+        <lastmod>2019-12-28T05:56:28.494Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/wget/</loc>
+        <lastmod>2019-12-28T05:56:28.494Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/fetion/</loc>
+        <lastmod>2019-12-28T05:56:28.495Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/PyFetion/</loc>
+        <lastmod>2019-12-28T05:56:28.495Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/wordpress/</loc>
+        <lastmod>2019-12-28T05:56:28.495Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/Python/</loc>
+        <lastmod>2019-12-28T05:56:28.495Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/Web/</loc>
+        <lastmod>2019-12-28T05:56:28.495Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/theme/</loc>
+        <lastmod>2019-12-28T05:56:28.495Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/PHP/</loc>
+        <lastmod>2019-12-28T05:56:28.495Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/Lua/</loc>
+        <lastmod>2019-12-28T05:56:28.495Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/Js/</loc>
+        <lastmod>2019-12-28T05:56:28.495Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/exploit/</loc>
+        <lastmod>2019-12-28T05:56:28.495Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/Plugins/</loc>
+        <lastmod>2019-12-28T05:56:28.495Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/WordPres/</loc>
+        <lastmod>2019-12-28T05:56:28.495Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/bash%EF%BC%8Cshell/</loc>
+        <lastmod>2019-12-28T05:56:28.495Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/IE/</loc>
+        <lastmod>2019-12-28T05:56:28.495Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/ajax/</loc>
+        <lastmod>2019-12-28T05:56:28.495Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/jquery/</loc>
+        <lastmod>2019-12-28T05:56:28.495Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/Life/</loc>
+        <lastmod>2019-12-28T05:56:28.496Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/Linux/</loc>
+        <lastmod>2019-12-28T05:56:28.496Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/blog/</loc>
+        <lastmod>2019-12-28T05:56:28.496Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/Fedora/</loc>
+        <lastmod>2019-12-28T05:56:28.496Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/share/</loc>
+        <lastmod>2019-12-28T05:56:28.496Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/drcom/</loc>
+        <lastmod>2019-12-28T05:56:28.496Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/xmms/</loc>
+        <lastmod>2019-12-28T05:56:28.496Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/deskmini/</loc>
+        <lastmod>2019-12-28T07:22:26.385Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/tags/hackintosh/</loc>
+        <lastmod>2019-12-28T07:22:26.385Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+</urlset>
+<!-- XML Sitemap generated by Hexo SEO Friendly Sitemap Generator -->

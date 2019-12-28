@@ -1,0 +1,2816 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="theme-next gemini" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+  
+  
+    
+      
+    
+    
+      
+    
+  <script src="//cdn.staticfile.org/pace/1.0.2/pace.min.js"></script>
+  <link rel="stylesheet" href="//cdn.staticfile.org/pace/1.0.2/themes/blue/pace-theme-loading-bar.min.css">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+  <link rel="stylesheet" href="//cdn.staticfile.org/fancybox/3.2.5/jquery.fancybox.min.css">
+
+
+
+
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+
+    
+  
+
+  
+    
+    
+    <link rel="stylesheet" href="https://fonts.loli.net/css?family=Source Code Pro:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext">
+  
+
+
+
+
+
+
+  
+
+<link rel="stylesheet" href="//cdn.staticfile.org/font-awesome/4.6.2/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="/css/main.css?v=6.7.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-next.png?v=6.7.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=6.7.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=6.7.0">
+
+
+  <link rel="mask-icon" href="/logo.svg?v=6.7.0" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '6.7.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    fastclick: true,
+    lazyload: true,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="爱折腾的技术宅一枚">
+<meta name="keywords" content="cocobear blog python linux">
+<meta property="og:type" content="website">
+<meta property="og:title" content="可可熊D窝">
+<meta property="og:url" content="http://cocobear.github.io/page/12/index.html">
+<meta property="og:site_name" content="可可熊D窝">
+<meta property="og:description" content="爱折腾的技术宅一枚">
+<meta property="og:locale" content="zh-CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="可可熊D窝">
+<meta name="twitter:description" content="爱折腾的技术宅一枚">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="可可熊D窝" type="application/atom+xml">
+
+
+
+
+  <link rel="canonical" href="http://cocobear.github.io/page/12/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>可可熊D窝 – Keep it simple, stupid</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left 
+  page-home">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">可可熊D窝</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <h1 class="site-subtitle" itemprop="description">Keep it simple, stupid</h1>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">182</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">8</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">358</span></a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2009/04/25/pyfetion-can-not-use-in-gae/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="cocobear">
+      <meta itemprop="description" content="爱折腾的技术宅一枚">
+      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="可可熊D窝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2009/04/25/pyfetion-can-not-use-in-gae/" class="post-title-link" itemprop="url">关于PyFetion不能在GAE上使用</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2009-04-25 17:56:36" itemprop="dateCreated datePublished" datetime="2009-04-25T17:56:36+08:00">2009-04-25</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/编程相关/" itemprop="url" rel="index"><span itemprop="name">编程相关</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2009/04/25/pyfetion-can-not-use-in-gae/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2009/04/25/pyfetion-can-not-use-in-gae/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数：</span>
+                
+                <span title="字数">4.4k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读 &asymp;</span>
+                
+                <span title="阅读">4 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>最近<a href="http://cocobear.github.io/2009/02/20/upgrade-pyfetion/">有同学反映</a>PyFetion不能在<a href="http://code.google.com/appengine/" target="_blank" rel="noopener">GAE</a>上使用，我看了下别人给出的错误，问题不出在PyFetion上，无论是TCP方式还是HTTP方式，使用本机测试都可以正常工作。<br>应该是移动的飞信服务器屏蔽了GAE的出口IP地址（某同学反应GAE的urlopen使用的是同一IP）。</p>
+<p>原因大概是广大GAE的爱好者众多，玩PyFetion的又比较多，所以移动不爽了，就封掉你。</p>
+<p>问题出来了，原因也大概知道了，那怎么解决方案呢，下面就给出几个吧:</p>
+<ol>
+<li>强烈要求GAE增加代理支持。</li>
+<li>打电话给10086，然后说你的飞信上不出了，然后给客服MM说你的IP是:[GAE_IP(哪位知道这个IP来补充一下)]。</li>
+<li>脱离GAE，使用自己的服务器。</li>
+<li>继续使用GAE，使用另一服务器做为跳板。</li>
+</ol>
+<p>Update(09.4.27):<br>据gohsy同学反映，GAE上不能使用是因为服务器返回了405错误，而别的fetion实现会忽略405错误，继续进行，而PyFetion遇到这个错误会产生异常。记得以前调PyFetion的时候也遇到过405错误，应该是发送的数据格式不对而造成的，所以我猜想这里是因为网络环境影响造成的数据不完整，从而使得飞信服务器返回405错误。因为在GAE上PyFetion还是可以偶尔发送成功的，所以出错的原因应该不是程序本身。</p>
+<p>为了在GAE上能更好的使用，我修改了一下PyFetion，增加了遇到405错误时重试功能，默认重试5次，这样会使得发送的成功率提高很多，但是由于405的出现，重试多次会影响到发送的速度，这一点是无法避免的。更新请到google code查看:<a href="http://code.google.com/p/pytool/source/detail?r=30" target="_blank" rel="noopener">http://code.google.com/p/pytool/source/detail?r=30</a></p>
+<p>其实根本的原因我想还是GAE上用PyFetion的人过多造成的:-)</p>
+<p>为了在GAE上调PyFetion，在gohsy同学的帮助下，搭建了GAE环境，感觉还不错，做应用挺方便的，不错的东东。</p>
+<h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#5787" title="2009-04-28 23:19:51">damon</a>:</strong> 忽忽！ fetionAPI邮件列表 诞生 <a href="http://groups.google.com/group/fetionapi" target="_blank" rel="noopener">http://groups.google.com/group/fetionapi</a></p>
+<p><strong><a href="#5789" title="2009-04-29 13:46:32">hawkli</a>:</strong> 发现r33版本也不太稳定啊，我上午刚试成功发了一个短信，吃完饭就又收不到了。我试了改了下修订bug的r30版本也一样不成功，在屏显提示上已经send msg ok了。 我估计还是fetion把地址屏蔽了的关系。 还有什么可以稳定运行的招呀，飞信比较可恶。</p>
+<p><strong><a href="#5784" title="2009-04-28 20:35:50">damon</a>:</strong> 那你对 什么感兴趣？ 分享你技术的哈 （不要想歪了） 朋友提示出来了 data = self.<strong>sock.recv(size,socket.MSG_WAITALL) 改成 data = self.</strong>sock.recv(size)</p>
+<p><strong><a href="#5785" title="2009-04-28 21:12:25">cocobear</a>:</strong> 邮件列表的方式比较好，QQ群太麻烦。</p>
+<p><strong><a href="#5786" title="2009-04-28 22:06:14">nile997</a>:</strong> 嗯，直接忽略405错误不可以吗？如果重试5次，时间会比较久，另外还是不能保证成功。</p>
+<p><strong><a href="#5781" title="2009-04-28 11:47:43">damon</a>:</strong> 我的执行出来是这样的 怪 [img]<a href="http://www.jiub2b.com/py.jpg[/img]" target="_blank" rel="noopener">http://www.jiub2b.com/py.jpg[/img]</a> 菜鸟建群 飞信API交流 ：76989585</p>
+<p><strong><a href="#5782" title="2009-04-28 17:08:01">cocobear</a>:</strong> 你给出来的是一个不完整的提示。 我对qq群没兴趣。</p>
+<p><strong><a href="#5769" title="2009-04-26 08:39:20">cocobear</a>:</strong> GAE(Google App Engine)</p>
+<p><strong><a href="#5770" title="2009-04-26 17:54:11">damon</a>:</strong> O(∩_∩)O哈哈~ cocobear 还做下名词解释！ 服务周到哦！</p>
+<p><strong><a href="#5772" title="2009-04-26 23:17:18">tatsuya</a>:</strong> : ‘module’ object has no attribute ‘error’ args = (“‘module’ object has no attribute ‘error’”,) message = “‘module’ object has no attribute ‘error’” 执行PyFetion的代码后就出这个问题，不知道哪里出问题了，可可熊能不能帮忙看一下，谢谢了</p>
+<p><strong><a href="#5771" title="2009-04-26 19:01:06">草儿</a>:</strong> 呵呵，我现在几乎不怎么用飞信了，有事直接打电话，嘿嘿</p>
+<p><strong><a href="#5774" title="2009-04-27 12:22:00">可可熊</a>:</strong> 把完整的错误贴出来，不然看不懂。</p>
+<p><strong><a href="#5775" title="2009-04-27 14:43:11">nile997</a>:</strong> 啊… 可惜了。 还想玩玩GAE上面的fetion呢 找另外一个服务器做跳板应该怎么做呢？ 有没有推荐的服务器啊？</p>
+<p><strong><a href="#5851" title="2009-05-06 16:46:16">cocobear</a>:</strong> 飞信的协议分析百度博客里有一份很详细的，你可以搜一下。 源码的的注释就是所有的说明了，不是很复杂的东西，所以如果你想了解的话就直接看源代码。有问题可以发邮件给我。</p>
+<p><strong><a href="#5895" title="2009-05-12 15:21:40">aoniao</a>:</strong> PyFetion的源文件只是这个PyFetion.py吗？我都不会Python……</p>
+<p><strong><a href="#5854" title="2009-05-06 21:38:47">蓝色旋风</a>:</strong> 谢谢熊大神，我想问下我用JSP怎么调用你的程序，怎么动态传入参数呢？我现在只会这个啊： import PyFetion fetion= PyFetion.PyFetion(“号码”,”密码”) fetion.login(); #fetion.send_sms(“我要发的消息”,to=”号码”)</p>
+<p><strong><a href="#5869" title="2009-05-07 22:15:49">蓝色旋风</a>:</strong> 那我是否应该把这个做成一个dll然后用ASP来调用期中的函数 具体应该怎么做呢，请指教啊，我的邮箱 <a href="mailto:lsxf_xin@163.com" target="_blank" rel="noopener">lsxf_xin@163.com</a> 谢谢！</p>
+<p><strong><a href="#5847" title="2009-05-06 12:40:24">蓝色旋风</a>:</strong> 你写的PyFethon很强啊，因为最近在做毕业设计，需要深入的理解一下你写的这个程序，能否提供一下这个源码的一些解释呢，还有Fetion协议分析能否也提供一下帮助呢，谢谢了！</p>
+<p><strong><a href="#5848" title="2009-05-06 12:54:44">蓝色旋风</a>:</strong> 我的qq:434731902</p>
+<p><strong><a href="#5893" title="2009-05-11 20:13:11">aoniao</a>:</strong> 非常感谢Cocobear大侠，我也是做毕业设计的，可能得调用飞信的接口来进行演示程序，可是刚刚接触Python，不了解PyFetion，我会发邮件向你请教的。到时候就麻烦你了。呵呵……</p>
+<p><strong><a href="#5864" title="2009-05-07 15:26:42">蓝色旋风</a>:</strong> 不知你的邮箱地址是多少 我想问下如何用ASP来调用，如何传参数呢</p>
+<p><strong><a href="#5915" title="2009-05-14 21:21:00">可可熊</a>:</strong> PyFetion目前没有做这样的功能。但是可以加进去。</p>
+<p><strong><a href="#5865" title="2009-05-07 15:47:13">cocobear</a>:</strong> JSP不能直接调用Python的代码。</p>
+<p><strong><a href="#5913" title="2009-05-14 16:57:33">aoniao</a>:</strong> 呵呵，我目前只是要知道，用PyFetion可以接收别人回复来的短信吗？Python我会搞定的…… 谢谢可可熊大哥！</p>
+<p><strong><a href="#5911" title="2009-05-14 14:46:36">可可熊</a>:</strong> 只有一个文件。不会Python我也帮不了你。</p>
+<p><strong><a href="#5766" title="2009-04-25 22:53:38">damon</a>:</strong> 哇 好快哦！~</p>
+<p><strong><a href="#5765" title="2009-04-25 22:45:15">wind</a>:</strong> 虾米是GAE？</p>
+<p><strong><a href="#5779" title="2009-04-27 21:55:39">idoyo</a>:</strong> 占个位置 :)</p>
+<p><strong><a href="#6068" title="2009-06-08 01:56:26">Edikud</a>:</strong> 老大为什么自己不开发个gae blog程序呢?这方面国内还是太少了,好的如徐明micolog程序,但作者已经很少更新了,比较遗憾的,好的程序我相信会有很多人用的…</p>
+<p><strong><a href="#6070" title="2009-06-08 09:35:07">cocobear</a>:</strong> web开发我不善长的，GAE的blog也有不少吧，在Python中文邮件列表里有很多人发过的。</p>
+<p><strong><a href="#6210" title="2009-07-05 23:15:55">rex</a>:</strong> 请教cocobear关于pythonfetion的几个问题： 如何快速查找某飞信号的sip值： 向手机发飞信，可以使用tel:\d{11}的形式；如果发给飞信号，则需要使用sip:\<a href="mailto:d=@fetion.com.cn" target="_blank" rel="noopener">d=@fetion.com.cn</a>;p=\d+的形式。 如果只知道某飞信号，不知其对应的手机号，如何快速地将它对应的sip号码查出来？需要每次调用phone.get_contact_list()，再从里面查找吗？ 我的email&amp;gtalk是 rex[at]zhasm[dot]com ，请指正。</p>
+<p><strong><a href="#6211" title="2009-07-05 23:18:03">rex</a>:</strong> 您提及的百度上的协议分析，上面有手机前6位减某数得p=xxx值，但是这只对于知道手机号的有效，对于不知道手机号的，就不怎么灵光了，我目前只能一个个查。</p>
+<p><strong><a href="#6213" title="2009-07-06 15:41:29">bibcc</a>:</strong> 老大，你Google code 上的 PyFetion.py 缩进有问题有几行的缩进用的tab ，下到本地看就乱了，望修正。 支持PyFetion</p>
+<p><strong><a href="#6217" title="2009-07-07 07:41:23">可可熊</a>:</strong> 关于sip号码，一般是一个地区后面的p=xxxx是相同的。 这个p=xxxx就类似邮编一样，如果你能把全国各地的p=xxxx全统计一下那么你就可以利用查表的方式来获取sip号码。 tab缩进我会改一下的,多谢提醒。</p>
+<p><strong><a href="#6220" title="2009-07-07 14:33:30">rex</a>:</strong> 最新的detail?r=43 pyfetion.py，好像不支持GAE。请问哪一款是比较新的，支持GAE的？</p>
+<p><strong><a href="#6221" title="2009-07-07 14:35:05">rex</a>:</strong> 我猜测原因是里面使用了os等模块。将其注释掉，指定utf8 coding，但是仍然无法执行。</p>
+<p><strong><a href="#6222" title="2009-07-07 20:57:04">可可熊</a>:</strong> GAE使用没问题的。</p>
+<p><strong><a href="#6297" title="2009-08-06 11:09:23">Perry</a>:</strong> 请教一个菜鸟问题：源代码中调试输出的部分形如“33[0;31;”的东东应该是ANSI颜色控制码？但是我无论在cmd还是在python的IDLE里运行，貌似都是把这些字符原样输出了……请教博主的环境是什么，可以支持这个的？</p>
+<p><strong><a href="#6307" title="2009-08-10 12:23:27">可可熊</a>:</strong> Linux终端里面控制颜色输出的。</p>
+<p><strong><a href="#6430" title="2009-09-06 11:57:24">Noe</a>:</strong> 对于GAE运行的问题，我也遇到了，但是情况比较诡异。 现象是第一次可以正常运行，之后的就不行了。 因为我是使用easy-twitter-sms调用PyFetion的，有个手动调用cron的路径。程序中加入log，第一次上传程序到gae后，手动执行一次cron，会看到解析地址，发送消息，成功，手机也可以收到。但如果之后再执行一次的话，就不出结果了。 我大概看了看代码，猜想是不是因为发送完短消息后没有logout的原因？ 不是很明白gae的cron原理，但感觉似乎是由于生成了多个实例的原因。 希望所说的情况对博主有点帮助</p>
+<p><strong><a href="#6262" title="2009-07-26 13:01:02">lin</a>:</strong> 发消息很奇怪，”&lt;”字符及之后的文字都被扔掉了，是fetion的个性？</p>
+<p><strong><a href="#9633" title="2011-02-19 00:39:25">PopACai</a>:</strong> cocobear的PyFetion库很赞纳。在此感谢一下。。 照着写了一份FETION。 还有一个本地GAE测试通过。结果上传上去后。报出500SERVER ERROR呢？有没有也碰到过？ PS：有一些地方提一下BUG（都是很小的） 在获取列表时，我发现当我的列表非合法时PyFetion会崩溃（我有几个拉黑的啥的。）然后会崩溃掉。 删除后可以运行正常。建议try catch。 还有就是在运行一段时间后会POP一个错误的表单。这个我后来TRY CATCH后正常了。 还有就是有时SEND后，在等待FETION_Server时会没有ACK回复（就是发送成功的标记）结果程序假死了。其实这个消息已经发出去了。。 谢谢你了。。最后表示真的写的很不错。很赞，结构也很好,阅读很舒服。除了稍微有时有点费解。其他的都非常漂亮。感谢提供PYFETION。 希望交流：<a href="mailto:popacai@gmail.com" target="_blank" rel="noopener">popacai@gmail.com</a></p>
+<p><strong><a href="#9565" title="2011-02-05 20:16:52">leungxh</a>:</strong> 菜鸟弱弱的问下，那个cli客户端可不可以把手机号，密码保存起来，不然每次使用都要输入一遍，很麻烦，希望老大给讲讲</p>
+<p><strong><a href="#9729" title="2011-03-15 11:50:00">可可熊</a>:</strong> 稍改一下代码就可以的 mobile_no = “136xxxxx” passwd = ‘1234576’</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2009/04/08/read-programming-in-lua-first-edition/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="cocobear">
+      <meta itemprop="description" content="爱折腾的技术宅一枚">
+      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="可可熊D窝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2009/04/08/read-programming-in-lua-first-edition/" class="post-title-link" itemprop="url">读完了Programming in Lua (first edition)</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2009-04-08 16:19:11" itemprop="dateCreated datePublished" datetime="2009-04-08T16:19:11+08:00">2009-04-08</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/" itemprop="url" rel="index"><span itemprop="name">Life</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2009/04/08/read-programming-in-lua-first-edition/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2009/04/08/read-programming-in-lua-first-edition/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数：</span>
+                
+                <span title="字数">1k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读 &asymp;</span>
+                
+                <span title="阅读">1 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>花了差不多两周的时间读完了<a href="http://www.lua.org/pil/index.html" target="_blank" rel="noopener">Lua Programming in Lua (first edition) </a>，没找到pdf格式的，一直在官网在线看的，不是很舒服。看的似乎有点慢，里面的英文很简单，讲的内容难点也不多，也没有太多的代码去动手实践，似乎是受别人打击了:-)（看到人家博客里写道：“花两天的时间过了一遍PIL”）。</p>
+<p>Lua作为一个脚本语言在很多地方与Python有相似之处，不过小巧了很多，数据类型、表达式、语句等都很精简，但是这并不影响Lua成为一个流行的脚本语言，灵活的table成就了Lua的强大，table可以演化出list,dict，更强大的是table可以实现OO，Lua并没有在语言级提供OO的实现，不过Lua的作者在<a href="http://www.lua.org/pil/16.html" target="_blank" rel="noopener">PIL中</a>展示了使用table完全可以实现近乎完美的OO编程，我觉得这是对整天鼓吹OO思想的人一个极大讽刺，OO其实没什么，C语言中使用结构体，函数指针也可以有模有样的进行OO编程。</p>
+<p>Lua中也有很多函数式编程语言的影子，所以很多人把Lua和Scheme归为了近亲，不过俺不了解Scheme，对函数式编程也是一知半解，只能凑个热闹。</p>
+<p>Lua之所以在游戏中使用比较广泛，是因为它可以很好的和C/C++结合在一起，可以很方便的互操作，通过使用Stack的方式。还有一个很重要的原因，Lua提供的是搭积木的原料，而不是搭好的建筑，所以你可以很灵活的用自己的方式去写程序。比如你可以用table实现一个完整的OO系统，然后在OO上面写程序(这里有一点很重要，基于table实现OO是很轻量的，而不是语言级的OO)；你也可以用metatable来实现Python中很强大的filter,map,reduce。</p>
+<p>Lua中的table有点类似道家学说里面的”道”,”道生一，一生二，二生三，三生万物”，而table就是Lua中的“道”。</p>
+<p>还得提一点Lua是完全用ANSI C编写的。</p>
+<pre><code>cocobear@0-0 /home/cocobear/Codes/lua-5.1.4/src $ wc *.c *.h -l | tail -1&gt; 
+ 17002 total
+</code></pre><h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#5694" title="2009-04-09 09:11:12">草儿</a>:</strong> 00?什么是00？</p>
+<p><strong><a href="#5722" title="2009-04-12 22:16:37">luguo</a>:</strong> 我花了一个下午就把这本书的前三部分给看完了。。。。。 因为有饭局，所以第四部分没看完就赶场子去了。。。。 我是不是有点bt？ 另外，我是坐在书城里白看的。。。。-_-</p>
+<p><strong><a href="#5727" title="2009-04-14 07:47:07">Amankwah</a>:</strong> 呵呵，都玩Lua了啊～确实好东西</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2009/03/31/summary-of-march/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="cocobear">
+      <meta itemprop="description" content="爱折腾的技术宅一枚">
+      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="可可熊D窝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2009/03/31/summary-of-march/" class="post-title-link" itemprop="url">三月培养习惯总结</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2009-03-31 20:23:31" itemprop="dateCreated datePublished" datetime="2009-03-31T20:23:31+08:00">2009-03-31</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/" itemprop="url" rel="index"><span itemprop="name">Life</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2009/03/31/summary-of-march/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2009/03/31/summary-of-march/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数：</span>
+                
+                <span title="字数">456</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读 &asymp;</span>
+                
+                <span title="阅读">1 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>月中开始写字，每天都能坚持写半个小时以上，不过有那么一两天写的不太认真，进步倒是看不起来，不过已经可以很自觉的去练字了，算是个进步，希望可以到7月的时候能有些进步，09年底能写得像个样子吧。<strong>15/15</strong></p>
+<p>晚上12点前睡觉只有一天没做到，记得是看《色戒》，可惜这电影也不怎么样。<strong>14/15</strong></p>
+<p>早上7点起床两个周末都没那么早起来，还有一天是因为前一天晚上看《色戒》了，没按时起来。<strong>10/15</strong></p>
+<p>下个月继续努力吧。</p>
+<h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#5631" title="2009-04-01 08:49:43">草儿</a>:</strong> 你是不是色戒看多了，发虚了，以致起不来了？</p>
+<p><strong><a href="#5632" title="2009-04-01 15:51:45">luguo</a>:</strong> 弱弱地同意楼上。。。。。。。。。。</p>
+<p><strong><a href="#5633" title="2009-04-01 16:43:34">可可熊</a>:</strong> 看电影睡迟了而已，汗！</p>
+<p><strong><a href="#5636" title="2009-04-01 20:31:36">kongove</a>:</strong> 练钢笔字吗？ 我大一的时候也喜欢练，还有就是在个别无聊的课堂上。 我这两天正在坚持一个习惯，就是午休！</p>
+<p><strong><a href="#5637" title="2009-04-01 21:02:29">Amankwah</a>:</strong> 很强大，应该发出倡议——向DP同学学习～</p>
+<p><strong><a href="#5690" title="2009-04-08 16:29:12">可可熊</a>:</strong> 呵呵，一个一个慢慢培养，我们还年轻:-)</p>
+<p><strong><a href="#5698" title="2009-04-09 13:23:11">wind</a>:</strong> 好孩子阿! 我已经养成1点左右睡觉,9点多起床的习惯了.</p>
+<p><strong><a href="#5685" title="2009-04-08 11:20:42">rhlei</a>:</strong> 我发现需要养成的习惯是在太多了~~</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2009/03/31/tail-call-optimization-in-python-lua/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="cocobear">
+      <meta itemprop="description" content="爱折腾的技术宅一枚">
+      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="可可熊D窝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2009/03/31/tail-call-optimization-in-python-lua/" class="post-title-link" itemprop="url">Python与Lua中的尾部调用优化</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2009-03-31 14:23:12" itemprop="dateCreated datePublished" datetime="2009-03-31T14:23:12+08:00">2009-03-31</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/" itemprop="url" rel="index"><span itemprop="name">Life</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2009/03/31/tail-call-optimization-in-python-lua/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2009/03/31/tail-call-optimization-in-python-lua/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数：</span>
+                
+                <span title="字数">3.5k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读 &asymp;</span>
+                
+                <span title="阅读">3 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <pre><code>&gt;     function foo (n)
+&gt;&gt;       if n &gt; 0 then return foo(n - 1) end
+&gt;&gt;     end
+&gt; foo(100)
+&gt; foo(1000)
+&gt; foo(10000)
+&gt; foo(100000)
+&gt; foo(1000000)
+</code></pre><p>如果函数最后一句是return g(…)这样的形式，Lua将会把这句解释为goto g(x)，因为这里除了对g函数调用，再没有别的事做，也不需要保存堆栈里调用函数的信息。因此上面即使调用很多次也没有出现堆栈溢出的问题，把上面的代码转换为Python:</p>
+<pre><code>&gt;&gt;&gt; def foo(n):
+...     if n&gt;0: return foo(n-1)
+... 
+&gt;&gt;&gt; foo(100)
+&gt;&gt;&gt; foo(1000)
+...
+  File &quot;&lt;stdin&gt;&quot;, line 2, in foo
+  File &quot;&lt;/stdin&gt;&lt;stdin&gt;&quot;, line 2, in foo
+  File &quot;&lt;/stdin&gt;&lt;stdin&gt;&quot;, line 2, in foo
+RuntimeError: maximum recursion depth exceeded
+</code></pre><p>很快出就现了堆栈溢出的问题，在这里表现为达到了递归调用的最大限制。Python自身没有实现尾部调用优化，不过也可以通过实现一个decorator办法来实现:</p>
+<pre><code>#!/usr/bin/env python2.4
+# This program shows off a python decorator(
+# which implements tail call optimization. It
+# does this by throwing an exception if it is 
+# it&apos;s own grandparent, and catching such 
+# exceptions to recall the stack.
+
+import sys
+
+class TailRecurseException:
+  def __init__(self, args, kwargs):
+    self.args = args
+    self.kwargs = kwargs
+
+def tail_call_optimized(g):
+  &quot;&quot;&quot;
+  This function decorates a function with tail call
+  optimization. It does this by throwing an exception
+  if it is it&apos;s own grandparent, and catching such
+  exceptions to fake the tail call optimization.
+
+  This function fails if the decorated
+  function recurses in a non-tail context.
+  &quot;&quot;&quot;
+  def func(*args, **kwargs):
+    f = sys._getframe()
+    if f.f_back and f.f_back.f_back 
+        and f.f_back.f_back.f_code == f.f_code:
+      raise TailRecurseException(args, kwargs)
+    else:
+      while 1:
+        try:
+          return g(*args, **kwargs)
+        except TailRecurseException, e:
+          args = e.args
+          kwargs = e.kwargs
+  func.__doc__ = g.__doc__
+  return func
+
+@tail_call_optimized
+def factorial(n, acc=1):
+  &quot;calculate a factorial&quot;
+  if n == 0:
+    return acc
+  return factorial(n-1, n*acc)
+
+print factorial(10000)
+# prints a big, big number,
+# but doesn&apos;t hit the recursion limit.
+
+@tail_call_optimized
+def fib(i, current = 0, next = 1):
+  if i == 0:
+    return current
+  else:
+    return fib(i - 1, next, current + next)
+
+print fib(10000)
+# also prints a big number,
+# but doesn&apos;t hit the recursion limit.
+</code></pre><p>代码来自<a href="http://code.activestate.com/recipes/474088/" target="_blank" rel="noopener">http://code.activestate.com/recipes/474088/</a></p>
+<p>在这段代码里tail_call_optimized是一个decorator，在执行factorial函数前，这个decorator先执行，tail_call_optimized中通过sys._getframe()这个方法会返回一个frame对象，包含了堆栈顶部的信息，当发现当前调用是一个递归调用:<br>      if f.f_back and f.f_back.f_back<br>        and f.f_back.f_back.f_code == f.f_code:</p>
+<p>则抛出一个异常，下面的代码则截获异常，继续执行，这样就避免了堆栈的使用，很巧妙的一种方式。</p>
+<p>在python-dev的邮件列表里，有人曾经做过一个Python的尾调用优化的<a href="http://mail.python.org/pipermail/python-dev/2004-July/046150.html" target="_blank" rel="noopener">补丁</a>，不过Guido拒绝了这个补丁:<br>     I’m not interested in adding this to the official Python release.&gt; </p>
+<pre><code>One reason is that if an exception happens in such a tail-recursive&gt; 
+call, the stack trace will be confusing.&gt; 
+
+Another reason is that I don&apos;t think it&apos;s a good idea to try to&gt; 
+encourage a Scheme-ish &quot;solve everything with recursion&quot; programming&gt; 
+style in Python.&gt; 
+
+But feel free to maintain this as an independent modification, a la&gt; 
+Stackless -- I&apos;m sure there are people who would like to try this&gt; 
+out.&gt; 
+
+--Guido van Rossum (home page: http://www.python.org/~guido/)
+</code></pre><p></p>
+<h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#5834" title="2009-05-04 20:39:43">shellex</a>:</strong> 唉。真是的。加入尾递归支持又不意味着大家都会do every thing with recursion… 多个选择多好…</p>
+<p><strong><a href="#5835" title="2009-05-04 20:40:03">shellex</a>:</strong> 非得hack下。真是的。</p>
+<p><strong><a href="#6624" title="2009-10-21 09:25:07">xiongharry</a>:</strong> 黑色主题，配深色字体，看起来真累。</p>
+<p><strong><a href="#24622" title="2013-05-17 19:36:03">Louis Vuitton Outlet San Diego California</a>:</strong> Louis Authentic LV Outlet Handbags</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2009/03/31/write-a-counter-with-python-and-lua/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="cocobear">
+      <meta itemprop="description" content="爱折腾的技术宅一枚">
+      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="可可熊D窝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2009/03/31/write-a-counter-with-python-and-lua/" class="post-title-link" itemprop="url">Python与Lua分别实现一个计数器</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2009-03-31 12:47:15" itemprop="dateCreated datePublished" datetime="2009-03-31T12:47:15+08:00">2009-03-31</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/" itemprop="url" rel="index"><span itemprop="name">Life</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2009/03/31/write-a-counter-with-python-and-lua/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2009/03/31/write-a-counter-with-python-and-lua/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数：</span>
+                
+                <span title="字数">1.1k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读 &asymp;</span>
+                
+                <span title="阅读">1 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">	&gt;   function newCounter ()</span><br><span class="line">	&gt;&gt;     local i = 0</span><br><span class="line">	&gt;&gt;     return function ()   -- anonymous function</span><br><span class="line">	&gt;&gt;              i = i + 1</span><br><span class="line">	&gt;&gt;              return i</span><br><span class="line">	&gt;&gt;            end</span><br><span class="line">	&gt;&gt;   end</span><br><span class="line">	&gt;   </span><br><span class="line">	&gt;   c1 = newCounter()</span><br><span class="line">	&gt; print(c1())</span><br><span class="line">	1</span><br><span class="line">	&gt; print(c1())</span><br><span class="line"></span><br><span class="line">2</span><br></pre></td></tr></table></figure>
+<p>Lua同Python类似，也可以嵌套定义函数，不过Lua嵌套函数可以访问上层闭包函数的局部变量，而在这个内嵌函数中这些变量不是全局变量，也不是局部变量，而是一种upvalue，与C语言中的static修饰的变量类似，所以在这里可以利用这个特性完成这个计数器。</p>
+<p>Python:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">def counter(last=[1]):</span><br><span class="line">...     next = last[0] + 1</span><br><span class="line">...     last[0] = next</span><br><span class="line">...     return next</span><br><span class="line">... </span><br><span class="line">counter()</span><br><span class="line">2</span><br><span class="line">counter()</span><br><span class="line">3</span><br></pre></td></tr></table></figure>
+<p>今天看Lua的时候觉得Python也应该有比较简单的办法写个计数器，找到<a href="http://www.ibm.com/developerworks/library/l-pycon.html" target="_blank" rel="noopener">一篇文章</a>介绍这个小技巧，其中有一句话：</p>
+<pre><code>However, if named parameters are given mutable default values, the parameters can act as persistent memories of previous invocations. Lists, specifically, are handy mutable objects that can conveniently even hold multiple values.
+</code></pre><p>Lua作为一个嵌入式（嵌入到其它语言中）的脚本语言，在很多地方与Python类似，这几天在看Programming in  Lua 。<br>     this is quote text</p>
+<h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#5626" title="2009-03-31 19:25:41">草儿</a>:</strong> 靠，你的文章对我来说越来越深奥了，都快成天书了。</p>
+<p><strong><a href="#6659" title="2009-11-04 11:11:44">tocer</a>:</strong> 用 itertools.count 算不算？ from itertools import count counter = count(1) for i in range(10): print counter.next()</p>
+<p><strong><a href="#6663" title="2009-11-05 14:42:43">cocobear</a>:</strong> 没用过这个库 不错</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+  </section>
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/11/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><span class="page-number current">12</span><a class="page-number" href="/page/13/">13</a><span class="space">&hellip;</span><a class="page-number" href="/page/72/">72</a><a class="extend next" rel="next" href="/page/13/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg" alt="cocobear">
+            
+              <p class="site-author-name" itemprop="name">cocobear</p>
+              <p class="site-description motion-element" itemprop="description">爱折腾的技术宅一枚</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">358</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">182</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/cocobear" title="GitHub &rarr; https://github.com/cocobear" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="mailto:cocobear.cn@gmail.com" title="E-Mail &rarr; mailto:cocobear.cn@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://twitter.com/_cocobear" title="Twitter &rarr; https://twitter.com/_cocobear" rel="noopener" target="_blank"><i class="fa fa-fw fa-twitter"></i>Twitter</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://www.douban.com/people/cocobear/" title="豆瓣 &rarr; https://www.douban.com/people/cocobear/" rel="noopener" target="_blank"><i class="fa fa-fw fa-book"></i>豆瓣</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                友情链接
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://wangcong.org" title="http://wangcong.org" rel="noopener" target="_blank">王聪</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://blog.liu-yang.info/" title="https://blog.liu-yang.info/" rel="noopener" target="_blank">老大</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2007 – <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">cocobear</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+    <span title="站点总字数">519k</span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    
+    <span title="站点阅读时长">7:52</span>
+  
+</div>
+
+
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v6.7.0</div>
+
+
+
+  <div class="footer-custom">Hosted by <a target="_blank" rel="external nofollow" href="https://pages.github.com/">GitHub Pages</a></div>
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv" title="总访客量">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+
+  
+    <span class="site-pv" title="总访问量">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script src="//cdn.staticfile.org/jquery/2.1.3/jquery.min.js"></script>
+
+  
+  <script src="//cdn.staticfile.org/fastclick/1.0.6/fastclick.min.js"></script>
+
+  
+  <script src="//cdn.staticfile.org/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script src="//cdn.staticfile.org/fancybox/3.2.5/jquery.fancybox.min.js"></script>
+
+  
+  <script src="/lib/reading_progress/reading_progress.js"></script>
+
+
+  
+
+
+  <script src="/js/src/utils.js?v=6.7.0"></script>
+
+  <script src="/js/src/motion.js?v=6.7.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/src/affix.js?v=6.7.0"></script>
+
+  <script src="/js/src/schemes/pisces.js?v=6.7.0"></script>
+
+
+
+  
+
+  
+
+
+  <script src="/js/src/bootstrap.js?v=6.7.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  <script src="//cdn1.lncld.net/static/js/3.11.1/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  <script>
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item) > -1;
+    });
+    new Valine({
+      el: '#comments' ,
+      verify: false,
+      notify: false,
+      appId: 'GWpjMXr7BpoLENnXXTFt4QoW-gzGzoHsz',
+      appKey: 'yaHPwQTKhDXDPOUNWso3P42n',
+      placeholder: '说点啥呢？',
+      avatar: 'identicon',
+      meta:guest,
+      pageSize: '10' || 10,
+      visitor: false
+    });
+  </script>
+
+
+
+
+  
+
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+        // ref: https://github.com/ForbesLindesay/unescape-html
+        var unescapeHtml = function(html) {
+          return String(html)
+            .replace(/&quot;/g, '"')
+            .replace(/&#39;/g, '\'')
+            .replace(/&#x3A;/g, ':')
+            // replace all the other &#x; chars
+            .replace(/&#(\d+);/g, function (m, p) { return String.fromCharCode(p); })
+            .replace(/&lt;/g, '<')
+            .replace(/&gt;/g, '>')
+            .replace(/&amp;/g, '&');
+        };
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                content = unescapeHtml(content);
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <script src="/js/src/js.cookie.js?v=6.7.0"></script>
+  <script src="/js/src/scroll-cookie.js?v=6.7.0"></script>
+
+
+  
+
+  
+
+  
+  <style>
+    .copy-btn {
+      display: inline-block;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 20px;
+      color: #333;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      background-color: #eee;
+      background-image: linear-gradient(#fcfcfc, #eee);
+      border: 1px solid #d5d5d5;
+      border-radius: 3px;
+      user-select: none;
+      outline: 0;
+    }
+
+    .highlight-wrap .copy-btn {
+      transition: opacity .3s ease-in-out;
+      opacity: 0;
+      padding: 2px 6px;
+      position: absolute;
+      right: 4px;
+      top: 8px;
+    }
+
+    .highlight-wrap:hover .copy-btn,
+    .highlight-wrap .copy-btn:focus {
+      opacity: 1
+    }
+
+    .highlight-wrap {
+      position: relative;
+    }
+  </style>
+  <script>
+    $('.highlight').each(function (i, e) {
+      var $wrap = $('<div>').addClass('highlight-wrap');
+      $(e).after($wrap);
+      $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function (e) {
+        var code = $(this).parent().find('.code').find('.line').map(function (i, e) {
+          return $(e).text();
+        }).toArray().join('\n');
+        var ta = document.createElement('textarea');
+        var range = document.createRange(); //For Chrome
+        var sel = window.getSelection(); //For Chrome
+        var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+        ta.style.top = yPosition + 'px'; //Prevent page scroll
+        ta.style.position = 'absolute';
+        ta.style.opacity = '0';
+        ta.value = code;
+        ta.textContent = code; //For FireFox
+        ta.contentEditable = true;
+        ta.readOnly = false;
+        document.body.appendChild(ta);
+        range.selectNode(ta);
+        sel.removeAllRanges();
+        sel.addRange(range);
+        ta.setSelectionRange(0, code.length);
+        var result = document.execCommand('copy');
+        
+        ta.blur(); //For iOS
+        $(this).blur();
+      })).on('mouseleave', function (e) {
+        var $b = $(this).find('.copy-btn');
+        setTimeout(function () {
+          $b.text('复制');
+        }, 300);
+      }).append(e);
+    })
+  </script>
+
+
+  
+
+</body>
+</html>

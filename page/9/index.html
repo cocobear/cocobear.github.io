@@ -1,0 +1,2729 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="theme-next gemini" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+  
+  
+    
+      
+    
+    
+      
+    
+  <script src="//cdn.staticfile.org/pace/1.0.2/pace.min.js"></script>
+  <link rel="stylesheet" href="//cdn.staticfile.org/pace/1.0.2/themes/blue/pace-theme-loading-bar.min.css">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+  <link rel="stylesheet" href="//cdn.staticfile.org/fancybox/3.2.5/jquery.fancybox.min.css">
+
+
+
+
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+
+    
+  
+
+  
+    
+    
+    <link rel="stylesheet" href="https://fonts.loli.net/css?family=Source Code Pro:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext">
+  
+
+
+
+
+
+
+  
+
+<link rel="stylesheet" href="//cdn.staticfile.org/font-awesome/4.6.2/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="/css/main.css?v=6.7.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-next.png?v=6.7.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=6.7.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=6.7.0">
+
+
+  <link rel="mask-icon" href="/logo.svg?v=6.7.0" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '6.7.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    fastclick: true,
+    lazyload: true,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="爱折腾的技术宅一枚">
+<meta name="keywords" content="cocobear blog python linux">
+<meta property="og:type" content="website">
+<meta property="og:title" content="可可熊D窝">
+<meta property="og:url" content="http://cocobear.github.io/page/9/index.html">
+<meta property="og:site_name" content="可可熊D窝">
+<meta property="og:description" content="爱折腾的技术宅一枚">
+<meta property="og:locale" content="zh-CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="可可熊D窝">
+<meta name="twitter:description" content="爱折腾的技术宅一枚">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="可可熊D窝" type="application/atom+xml">
+
+
+
+
+  <link rel="canonical" href="http://cocobear.github.io/page/9/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>可可熊D窝 – Keep it simple, stupid</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left 
+  page-home">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">可可熊D窝</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <h1 class="site-subtitle" itemprop="description">Keep it simple, stupid</h1>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">182</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">8</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">358</span></a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2009/06/28/arrived-guang-zhou/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="cocobear">
+      <meta itemprop="description" content="爱折腾的技术宅一枚">
+      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="可可熊D窝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2009/06/28/arrived-guang-zhou/" class="post-title-link" itemprop="url">初到广州</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2009-06-28 22:41:23" itemprop="dateCreated datePublished" datetime="2009-06-28T22:41:23+08:00">2009-06-28</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/" itemprop="url" rel="index"><span itemprop="name">Life</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2009/06/28/arrived-guang-zhou/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2009/06/28/arrived-guang-zhou/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数：</span>
+                
+                <span title="字数">748</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读 &asymp;</span>
+                
+                <span title="阅读">1 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>出差去广州了，两个小时的飞机，觉得挺累的，快到广州那会儿还晕了一会儿。广州果然是很闷热，下雨天空气都是热的，还是北方的天气比较好。</p>
+<p>从机场到酒店的路上觉得广州很拥挤，房子也乱的很，下了机场大巴走向酒店的那段路几乎和西安中铀线改造一样，几乎没了人行道。</p>
+<p>初到广州，印象很不好啊！</p>
+<h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#6189" title="2009-06-29 08:31:26">家长</a>:</strong> 靠，坐飞机还晕，服了你</p>
+<p><strong><a href="#6187" title="2009-06-29 00:42:58">wind</a>:</strong> 那家伙还没来南方就已经在那儿嫌东嫌西了，不用鸟他的。。。 话说我当年都没嫌西北干燥的说。。。。。 只能说这只适应能力太烂了。。。 看看人家刘洋在南方活的多滋润阿。 PS：LS不要这几天不要太甜蜜，我怕会刺激到某些人的。。。</p>
+<p><strong><a href="#6185" title="2009-06-28 22:47:30">Amankwah</a>:</strong> 那段在修BRT，据说十一月完工……不便你是得忍受了；由此带来的便利，下次来享受吧。</p>
+<p><strong><a href="#6190" title="2009-06-29 13:53:56">可可熊</a>:</strong> 什么是BRT啊？ 刺激“某些人”是指谁啊？说清楚啊！</p>
+<p><strong><a href="#6191" title="2009-06-29 20:30:39">kermit.mei</a>:</strong> Cocobear要是有时间可来深圳一日游，我代表陕西人民在深圳欢迎你！ 呵呵，我来深圳的第一感觉是这里空气真TMD好，到处都是花园，不过确实很闷热……</p>
+<p><strong><a href="#6192" title="2009-06-29 20:42:43">rhlei</a>:</strong> 熊仔开始了旅行生活~~</p>
+<p><strong><a href="#6202" title="2009-07-03 00:03:47">luguo</a>:</strong> 两小时的飞机你都累。。。。。我无语了。。。。</p>
+<p><strong><a href="#6200" title="2009-07-02 18:35:24">可可熊</a>:</strong> 有可能要去深圳的。 出差生活啊，可不是旅行，每天还要改程序改到晚上11点。。。</p>
+<p><strong><a href="#6242" title="2009-07-16 22:32:38">Gh0u1</a>:</strong> 建议关闭wp的评论功能. 请看<a href="http://secer.org/0dayexp/wordpress-ping-lun-xian-shi-xss-lou-dong.html" target="_blank" rel="noopener">http://secer.org/0dayexp/wordpress-ping-lun-xian-shi-xss-lou-dong.html</a></p>
+<p><strong><a href="#6421" title="2009-09-02 23:11:52">Keengle</a>:</strong> 广州的印象这么差吗？我在广州，公路老在修，确实有点烦</p>
+<p><strong><a href="#6534" title="2009-09-27 16:21:50">小虾</a>:</strong> 广州好的地方也蛮多的！ 我在大学城，这里简直像个工业园。</p>
+<p><strong><a href="#6535" title="2009-09-27 21:13:52">可可熊</a>:</strong> 基本上没怎么逛 刚好中山路那块在修什么快速公交 感觉乱的很 :-)</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2009/06/17/use-openssl-in-php/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="cocobear">
+      <meta itemprop="description" content="爱折腾的技术宅一枚">
+      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="可可熊D窝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2009/06/17/use-openssl-in-php/" class="post-title-link" itemprop="url">PHP中使用openssl</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2009-06-17 15:23:36" itemprop="dateCreated datePublished" datetime="2009-06-17T15:23:36+08:00">2009-06-17</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/" itemprop="url" rel="index"><span itemprop="name">Life</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2009/06/17/use-openssl-in-php/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2009/06/17/use-openssl-in-php/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数：</span>
+                
+                <span title="字数">649</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读 &asymp;</span>
+                
+                <span title="阅读">1 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>服务器端要对客户端POST 上来的签名后的数据进行验证，本来想着用Python调用openssl命令行来实现，不过没有找到相关的命令，后来找了下PHP的openssl的封装，果然有的：<a href="http://php.chinaunix.net/manual/zh/ref.openssl.php" target="_blank" rel="noopener">http://php.chinaunix.net/manual/zh/ref.openssl.php</a></p>
+<p>封装的函数也比较好用。（我还想着要是实在不行就用C语言写个CGI来调用openssl 了）</p>
+<p>上面的代码中，首先从客户的证书中获取公钥，然后使用openssl_verify($data, $signature, $pubkeyid);对签名后的数据($signature)进行验证,$date为原始数据，$pubkeyid是从证书中读出的公钥，该函数还可以使用第四个参数，设置一个使用的hash算法，默认使用的是sha1。</p>
+<p>被注释掉的代码是使用私钥对数据进行签名。</p>
+<p>代码中第一行是获取原始的POST数据内容，也就是获取标准输入的数据。如果是Python写CGI的话可以使用:<br>data =  sys.stdin.read()</p>
+<p>代码见：<a href="http://code.google.com/p/cocobear/source/browse/trunk/openssl/openssl_php.php" target="_blank" rel="noopener">http://code.google.com/p/cocobear/source/browse/trunk/openssl/openssl_php.php</a></p>
+<p>在wordpress日志里加PHP代码一直出错，没办法，只能放在别的地方。</p>
+<h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#6182" title="2009-06-27 17:00:56">卢松松</a>:</strong> 牛啊 程序高手！~以后多多交流啊！</p>
+<p><strong><a href="#6687" title="2009-11-10 11:55:21">冬瓜蛋汤</a>:</strong> 那个google code的链接没有权限访问哦。。 能不能开下权限，谢谢！</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2009/06/11/lv-ba/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="cocobear">
+      <meta itemprop="description" content="爱折腾的技术宅一枚">
+      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="可可熊D窝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2009/06/11/lv-ba/" class="post-title-link" itemprop="url">绿坝</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2009-06-11 13:30:41" itemprop="dateCreated datePublished" datetime="2009-06-11T13:30:41+08:00">2009-06-11</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/互联网/" itemprop="url" rel="index"><span itemprop="name">互联网</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2009/06/11/lv-ba/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2009/06/11/lv-ba/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数：</span>
+                
+                <span title="字数">1.6k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读 &asymp;</span>
+                
+                <span title="阅读">1 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>我Dang大概也就会做这种事了，从GFW到绿坝，巴不得让每个人装个摄象头，每天让我Dang了解我们这些“刁民”做了些什么。</p>
+<p>绿坝是个什么东西，<a href="http://www.zzjinhui.com/" target="_blank" rel="noopener">http://www.zzjinhui.com/</a> ，他们的官网有一句话：“金惠堵截黄图像及不良信息专家系统是目前国内唯一的智能识别黄色图像内容的互联网信息过滤产品，彻底解决了网络反黄的技术难题，填补了国内空白，技术独创性和领先性得到了国家四个部委的一致肯定和支持：”</p>
+<p>真是大言不惭，“唯一”，“填补空白”竟然敢用这些词，我没去下载试用，有人已经做过很详细的分析了，请在下面的页面查看：</p>
+<p><a href="https://docs.google.com/View?id=afk7vnz54wt_12f8jzj9gw" target="_blank" rel="noopener">https://docs.google.com/View?id=afk7vnz54wt_12f8jzj9gw</a></p>
+<p>从中我们可以发现绿坝的一些特点：典型流氓特征、盗用开源软件、侵犯知识产权，弱智密码保护，就这样一个软件，竟然可以那样宣传自己，也能获得“国家四个部委的一致肯定和支持”，我们也大概能知道这四部委都是些什么货色了。</p>
+<p>我们放低点要放，就算你们弄出来这么个垃圾软件，你自己忽悠SB去，你也不能让纳税人掏出40000000钱去强制我们当SB吧？让所有计算机出厂前预置这么个垃圾，工信部的人真XX的有才。</p>
+<p>这件事大概应该是这个样子，这个垃圾软件的厂商花钱找关系在工信部推销他们的垃圾，结果工信部的一群SB脑子一热，还以为能做点政绩给我Dang看，于是就做了这些让全国人民恶心的事。结果呢，在人民的唾沫中这群SB消失了。</p>
+<p>有些兴趣的朋友可以看下关于绿坝的关键词过滤：<a href="https://docs.google.com/Doc?docid=dczkbptk_0ffc2hvc9" target="_blank" rel="noopener">https://docs.google.com/Doc?docid=dczkbptk_0ffc2hvc9</a>绿坝–花季护航，到底是在做什么，真的是“花季护航”吗？</p>
+<pre><code>“有试验的小白鼠说，装了绿坝.花季护航以后在word中输入“老师教学生玩摸球游戏”，word会被强制关闭，我一看，“玩摸”果然是关键字，”
+</code></pre><p>推荐阅读：<br><a href="http://blog.sina.com.cn/s/blog_48c00fbb0100efku.html" target="_blank" rel="noopener">我们需要家长，但不需要大家长！</a>【回应外交部的“你有孩子吧”】</p>
+<h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#6150" title="2009-06-18 08:45:59">crazyfranc</a>:</strong> To silence: 是政治监控,政治防火墙是GFW. 这个软件我看过小榕的分析,感觉真是应验了”流氓有文化,是人都害怕”这句话.而且据说这个项目花了￥4780w！</p>
+<p><strong><a href="#6133" title="2009-06-13 09:42:44">可可熊</a>:</strong> 老大，你竟然来我这里刷屏！</p>
+<p><strong><a href="#6113" title="2009-06-11 17:01:00">dream</a>:</strong> 我都已经无力去骂了….</p>
+<p><strong><a href="#6114" title="2009-06-11 17:52:42">家长</a>:</strong> 你个无知烂民，竟敢污蔑我伟大的party，想我天朝天天有饭吃，家家有房住，人人有衣穿，比万恶的资本帝国主义要好不知道多少万倍，简直是一个在天上，一个在地下还要挖口井，井里再要挖个坑。想我天朝美好生活，再看帝国主义践踏下处于水深火热困苦中的全世界无产阶级同胞们。现在我天朝伟大的“攻心部”出来保护一下下一代可爱的花朵们，你这个贱民就在这儿唧唧歪歪，看来你真是想去玩躲猫猫了。</p>
+<p><strong><a href="#6115" title="2009-06-11 22:14:51">luguo</a>:</strong> 恩，gong匪嘛～～</p>
+<p><strong><a href="#6117" title="2009-06-11 23:53:18">YOUI</a>:</strong> 共建和谐社会，大家共发财，发大财！呵呵</p>
+<p><strong><a href="#6121" title="2009-06-12 05:56:27">wind</a>:</strong> 怎么都在说这个？昨天公司里也在讨论这个。。。</p>
+<p><strong><a href="#6128" title="2009-06-13 07:20:15">Amankwah</a>:</strong> 竟然越过了软件部署的小范围试用阶段？？这么强大？这些人NB啊，一次到位！崇拜一下……</p>
+<p><strong><a href="#6127" title="2009-06-13 07:01:49">Amankwah</a>:</strong> 唉……真强大啊～</p>
+<p><strong><a href="#6137" title="2009-06-13 18:03:47">Silence</a>:</strong> 不如说是政治防火墙</p>
+<p><strong><a href="#6140" title="2009-06-14 14:08:52">Kermit</a>:</strong> 我觉得这和那个IPv9有得一拼！ 估计一波人想搞河蟹工程混点政绩，另一波人想弄点钱花花，于是乎同一个产品，加载上不同的梦想，以一切为了孩子的名义大张旗鼓地开卖了！</p>
+<p><strong><a href="#6141" title="2009-06-14 18:01:33">Brhum</a>:</strong> ≈⊙≈螃蟹,天天向上</p>
+<p><strong><a href="#6156" title="2009-06-19 15:32:48">Gavin</a>:</strong> 难道比我党我金盾工程还历害？</p>
+<p><strong><a href="#6168" title="2009-06-23 10:33:14">NONENONE</a>:</strong> 这个软件我也听说了, 给我的感觉就是不是很好, 我没用过, 所以其中有没恶意的东西我自己没结论. 不过这个软件有一个好处大家有没发现? 让所有使用的人都成为高龄处男女, 结果会产生比计划生育还要理想的效果,(:D 这个只是想象了)</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2009/06/02/multi-thread-and-broken-point-resume-technology/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="cocobear">
+      <meta itemprop="description" content="爱折腾的技术宅一枚">
+      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="可可熊D窝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2009/06/02/multi-thread-and-broken-point-resume-technology/" class="post-title-link" itemprop="url">多资源、多线程、断点续传</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2009-06-02 17:22:59" itemprop="dateCreated datePublished" datetime="2009-06-02T17:22:59+08:00">2009-06-02</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/" itemprop="url" rel="index"><span itemprop="name">Life</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2009/06/02/multi-thread-and-broken-point-resume-technology/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2009/06/02/multi-thread-and-broken-point-resume-technology/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数：</span>
+                
+                <span title="字数">2.9k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读 &asymp;</span>
+                
+                <span title="阅读">3 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>我要做一个支持多资源、多线程、断点续传的小工具，基于Python。Windows下有迅雷、FlashGet、QQ旋风（相当地泛滥），Linux下也有D4X,Axel ,aria2，那为什么还要写这样一个工具呢？</p>
+<p>(1) 上面都不是Python写的。<br>(2) Linux下的下载工具都不能主动获取资源，而现在迅雷和FlashGet之所以快就是因为他们有资源。<br>(3) Linux下几个工具多线程、断点续传做的不太好。aria2似乎不错，不过我没编译过去，支持那么多协议，觉得有点臃肿。</p>
+<p>其实从原理上讲，迅雷不过就是一个HTTP/FTP的多线程断点下载工具，现在做大了就来抢BT、电驴的用户，把这两个协议也加了进去。</p>
+<p>前段时间看过axel，它的实现太简单了，只是固定的产生N个线程，然后把文件分成N块交给这些线程去下载。从迅雷的配置文件和下载的日志中可以看出来迅雷对下载文件的分块和线程的使用是有自己独有的方式（它线程下载的数据块有时很大4M，有时很小32K，即使在同一个线程中也是这样），我没办法知道迅雷是怎么做这个工作。所以我只能通过猜测和自己的一些想法来做这个工作。尽可能的保证合理的分块和线程使用。</p>
+<p>创建一个下载管理器，包括配置信息，任务列表，一个具有速度值与使用次数的URL列表。</p>
+<p>首先得到下载文件的大小(filesize)，然后根据配置以及获得的URL数(N)对文件进行分块。<br>设置一个最小的分块值 MinPiece = 1024<em>128 （最小分块大于filesize的5%）<br>设置一个最大的分块值 MaxPiece = 1024</em>1024*200</p>
+<p>if filesize &lt; = MinPiece:<br>不进行分块。选第一个地址进行下载，如果该地址下载超时则使用其它地址下载。（是否可以考虑使用N个地址同时下载？）</p>
+<p>elif:<br>把文件分为N块，每块大小为Piece。<br>if Piece &lt; MinPiece<br>把文件分为N-1块，Until Piece &gt; MinPiece</p>
+<p>if Piece &gt; MaxPiece<br>把文件分为N+1块，Until Piece &lt; MaxPiece</p>
+<p>生成任务列表，一个任务包括:URL,filename,range[start,pos,end]<br>任务列表中对任务进行标记，DONE，RUNNING,PAUSE,STOP(需要这么多吗？)</p>
+<p>根据获得的资源数产生N线程的线程池。</p>
+<p>逐步向线程池中增加线程：前提是所有线程成功运行，则增加一个线程。<br>每个URL对应一个线程的上限数（5），总使用线程数固定（35）</p>
+<p>线程运行时检查是否有空闲线程，如果有，则把自己的任务分割（分割的办法使用折半方式，同时要保证分块大于MinPiece），放在任务列表中，同时修改自己的任务的分段信息。<br>加入任务列表时从URL列表中选一个速度较快的URL，且该URL线程数未达到上限。（如何判断是否达到服务器支持连接数上限？如果针对某个URL创建新连接失败则标记该URL为不可再连接）</p>
+<p>线程运行时检查缓冲区的大小，当大于write_buffer_size时则写文件（大于文件的10%时也写？），并且写记录文件，更新URL列表中的速度值，做这些操作时要使用锁机制。这个write_buffer_size根据不同的文件对应不同的大小（2M—&gt;16M迅雷使用8-256）。写文件时可以直接seek到需要写入的位置，如果操作系统不支持这种方式，则先用0填充文件。</p>
+<p>线程对失效的URL进行标记，对不支持断点续传的URL进行标记。考虑GBK,UTF-8编码。<br>线程完成时与停止时做写文件操作与上面操作相同。</p>
+<p>记录文件中保存任务列表：<br>URL,filename,range[start,pos,end]<br>这样续传的时候程序就根据记录文件载入所有的任务，然后开启线程，进行下载。<br>记录文件使用MD5校验（最后一行存放前面信息的MD5值）。</p>
+<p>一个线程如果速度过慢，则释放当前的任务，把它扔回任务列表中，标记该URL很慢，由空闲的线程再次开启这个任务，这时候有可能又由这个线程接管，但是使用的URL不同，因为扔回任务列表的时候会先一个较快的URL。</p>
+<p>HTTP请求需要设置一个超时时间。</p>
+<hr>
+<p>只是把我的一些想法在这里先记录下来，所以比较乱，做的时候可能还会有些变化。至少我目前觉得这种设计方式还是比较智能和高效的，欢迎大家拍砖，如果有好的建议我会记录下来。</p>
+<h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#6028" title="2009-06-03 17:23:56">bones7456</a>:</strong> 支持!最近我也迷上了python…</p>
+<p><strong><a href="#6029" title="2009-06-03 17:52:13">est</a>:</strong> 博主把flashget, 旋风的资源请求格式一锅端了吧。</p>
+<p><strong><a href="#6030" title="2009-06-03 20:32:35">timesking</a>:</strong> 要在设计的时候做好强大的代理构想，我们很多人都在公司NTLM的防火墙后面。有时候用curl很好，但是就是断点续传麻烦。其他很多断点续传工具flashget等都无法使用NTLM代理。所以都无法使用</p>
+<p><strong><a href="#6041" title="2009-06-04 12:33:22">lun</a>:</strong> 支持博主，linux下，下载效率不高，是个事实。</p>
+<p><strong><a href="#6042" title="2009-06-04 14:04:24">Zhangxj2008</a>:</strong> 把设计的过程也写下来吧，用UMLChart。顺便开源，有很多人关注啊！</p>
+<p><strong><a href="#6043" title="2009-06-04 14:06:25">Zhangxj2008</a>:</strong> 多看看网络蚂蚁有很多可以参考。但是P2P下载就不太明白了。</p>
+<p><strong><a href="#6044" title="2009-06-04 14:14:47">haoqiwawa</a>:</strong> 设想挺有创意的。支持啊！</p>
+<p><strong><a href="#6045" title="2009-06-04 14:58:40">haoqiwawa</a>:</strong> 我手机短信发不出去了，你忙完上QQ了叫我啊</p>
+<p><strong><a href="#6046" title="2009-06-04 15:01:18">草儿</a>:</strong> 看来大体思路你是有了，就看下面怎么做了。希望能早日做出来。 其实可以先从简单做起，然后一步步丰富功能。</p>
+<p><strong><a href="#6058" title="2009-06-05 21:25:45">c</a>:</strong> 没意思!只会抢占兄弟带宽资源!</p>
+<p><strong><a href="#6111" title="2009-06-11 12:57:44">shuge.lee</a>:</strong> 支持 能开源和做成跨平台更好 舒阁（code.google.com/p/shuge）客户端对这样的下载工具有强烈的需求。</p>
+<p><strong><a href="#6129" title="2009-06-13 07:24:29">Amankwah</a>:</strong> 多资源是怎么实现的？没有服务器，客户端自己去试？还是通过迅雷等的服务器来获取信息，或者是用搜索引擎自己分析？ 另外，对这个相当感兴趣，考虑怎么管理这个项目？弄到Google code上去？sf上去？</p>
+<p><strong><a href="#6123" title="2009-06-12 14:21:26">M</a>:</strong> 迅雷不仅仅是一个HTTP、FTP下载工具。对于下载过的文件，它进行摘要，从而可以识别网络上不同URL对应的相同文件，这从跟上本解决了多源的问题。如果只是分块下载，服务器端的带宽总是有限的。 在摘要的基础上，相同文件使用新的URL如何匹配摘要值这些都是一些具体的问题。</p>
+<p><strong><a href="#6134" title="2009-06-13 09:44:17">可可熊</a>:</strong> <a href="http://cocobear.github.io/demo/pythunder/">http://cocobear.github.io/demo/pythunder/</a> 利用迅雷的资源。 google code，也不会是个大东西，一个小工具而已。不过最近一直忙公司的事。。。</p>
+<p><strong><a href="#6690" title="2009-11-10 19:56:50">deamon</a>:</strong> 建议用Twisted(强大的网络框架）， 可以单线程分块下载。 最近也想实现一个多线程下载工具用在自己的项目上。</p>
+<p><strong><a href="#7536" title="2010-03-02 18:41:20">ubunoon</a>:</strong> NTLM本来就已经由这个库了，不过没有对线程进行Sleep。 python写的download工具，利用迅雷的资源，一个很好的方式，至少在国内，通吃了所有的http下载，只要用的人不是很多，楼主还是可以放心的。</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2009/05/31/summary-of-may/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="cocobear">
+      <meta itemprop="description" content="爱折腾的技术宅一枚">
+      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="可可熊D窝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2009/05/31/summary-of-may/" class="post-title-link" itemprop="url">五月培养习惯总结</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2009-05-31 22:43:28" itemprop="dateCreated datePublished" datetime="2009-05-31T22:43:28+08:00">2009-05-31</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/" itemprop="url" rel="index"><span itemprop="name">Life</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2009/05/31/summary-of-may/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2009/05/31/summary-of-may/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数：</span>
+                
+                <span title="字数">1.4k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读 &asymp;</span>
+                
+                <span title="阅读">1 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>早起的习惯在五月完全被破坏掉了，五一放假三天没按时起，然后四天回到正常状态，紧接着是连着十多天下雨，就再没按时起床了。 <strong>6/31</strong></p>
+<p>再说晚睡的情况吧，还是以前遇到的问题，放假的时候就规律不了了，玩太迟了。<strong> 25/31</strong></p>
+<p>写字基本上是“完成任务”了，大部分没去认真的写，本来是早上起来写字的，没按时起床导致把写字放在了晚上，进而影响了写字时的状态，哎！还有就是觉得一直没什么进步，写出来还那样，所以不认真了。 <strong>29/31</strong></p>
+<p>这个月读了《乌合之众》，《少有人走的路》，《SSL与TLS》，《精通PKI网络安全认证技术与编程实现》。</p>
+<p>从五月总结中可以发现，人性中的惰性是很容易被激发出来的，一点外在的因素（下雨），就导致了一个人回到原点。这个月状态很不好，又遇到间隙性的迷茫了！</p>
+<p>该写的程序没写，该看的书没看，正在我还想写该XX的XX没XX的时候，突然脑袋里冒出来一句话“其实你也做了不少事”，工作上的事完成的挺顺利，相关的东西也学了不少，也帮同学折腾了程序，还顺道更新了PyFetion，也看了几本书，也出去好好玩了几次…………</p>
+<p>不知道为什么我老看不到自己的优点，老是这么不自信，难道我潜意识里是个完美主义者，希望自己可以做到潜意识里所期望的一切？</p>
+<p>心智的成长是痛苦的，缓慢的，曲折的，希望儿童节能带去迷茫 。</p>
+<p>BTW：-&gt;我觉得心理学挺有意思的，喜欢上了。<br>         -&gt;我觉得写篇文章真的好不容易，半天才能凑出来百十字，真佩服人家动辄上万字的写东西。得多喝点墨水啊！</p>
+<h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#5992" title="2009-06-01 09:52:09">可可熊</a>:</strong> To: xslug 我已经很迟钝了，没有太多出去可做的事。</p>
+<p><strong><a href="#5991" title="2009-06-01 09:49:42">可可熊</a>:</strong> To:BOSS 升华这个词一般用于物理变化……</p>
+<p><strong><a href="#5988" title="2009-06-01 08:24:01">草儿</a>:</strong> 正所谓大智若愚，看来coco已经升华到一个全新的境界了。</p>
+<p><strong><a href="#5990" title="2009-06-01 09:29:47">xslug</a>:</strong> 别老宅在家里了，时间长了思维容易迟钝，多出去晒晒太阳会比较好一些</p>
+<p><strong><a href="#5999" title="2009-06-02 12:21:31">crazyfranc</a>:</strong> 总感觉你的迷茫是轮回性的 BTW:你是个完美主义者!可以看看《九型人格》</p>
+<p><strong><a href="#6000" title="2009-06-02 15:14:30">可可熊</a>:</strong> 我也说了，我是间隙性的迷茫。 九型人格看过，没什么意思，对人进行这样的化分很勉强，至少我是在那九种之外。</p>
+<p><strong><a href="#6005" title="2009-06-03 00:02:02">草儿</a>:</strong> 升华的解释： 　　1.从迁移的历史知识中总结出分析问题的立场、角度和出发点，使之具有方法论的意义，从而以此为指导去解决其他同类问题。例如学了世界史“50年代至80年代的主要资本主义国家”和“亚洲经济的发展”后，要联想到当今中国建设有特色的社会主义也需要这些国家经济迅速发展的因素。 　　2.不仅将历史知识体现的理论观点挖掘出来，而且能运用理论观点分析历史现象的本质，从而达到从理论高度去驾驭知识。例如从中国古代史上社会形态的不断更替过程中挖掘出：生产力的发展起最根本的决定作用。 　　心理学中的含义 　　3.指被压抑的不符合社会规范的原始冲动或欲望用符合社会要求的建设性方式表达出来的一种心理防御机制，如用跳舞，绘画，文学等形式来替代性本能冲动的发泄。 那么，很明显就可以看出你是哪一种。</p>
+<p><strong><a href="#6026" title="2009-06-03 16:54:47">可可熊</a>:</strong> 拜托通俗点好不。。。</p>
+<p><strong><a href="#6130" title="2009-06-13 07:29:54">Amankwah</a>:</strong> DP很不错了！赞一下，我可是要颓废的多。是否发出号召：向DP同学学习？;)</p>
+<p><strong><a href="#6139" title="2009-06-14 13:50:20">Kermit</a>:</strong> CocoBear确实如一楼所说，最近思想发生了质的升华……</p>
+<p><strong><a href="#6143" title="2009-06-15 23:13:08">草儿</a>:</strong> 说通俗点就是你属于第三种，被压抑久了。</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+  </section>
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/8/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><span class="page-number current">9</span><a class="page-number" href="/page/10/">10</a><span class="space">&hellip;</span><a class="page-number" href="/page/72/">72</a><a class="extend next" rel="next" href="/page/10/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg" alt="cocobear">
+            
+              <p class="site-author-name" itemprop="name">cocobear</p>
+              <p class="site-description motion-element" itemprop="description">爱折腾的技术宅一枚</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">358</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">182</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/cocobear" title="GitHub &rarr; https://github.com/cocobear" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="mailto:cocobear.cn@gmail.com" title="E-Mail &rarr; mailto:cocobear.cn@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://twitter.com/_cocobear" title="Twitter &rarr; https://twitter.com/_cocobear" rel="noopener" target="_blank"><i class="fa fa-fw fa-twitter"></i>Twitter</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://www.douban.com/people/cocobear/" title="豆瓣 &rarr; https://www.douban.com/people/cocobear/" rel="noopener" target="_blank"><i class="fa fa-fw fa-book"></i>豆瓣</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                友情链接
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://wangcong.org" title="http://wangcong.org" rel="noopener" target="_blank">王聪</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://blog.liu-yang.info/" title="https://blog.liu-yang.info/" rel="noopener" target="_blank">老大</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2007 – <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">cocobear</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+    <span title="站点总字数">519k</span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    
+    <span title="站点阅读时长">7:52</span>
+  
+</div>
+
+
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v6.7.0</div>
+
+
+
+  <div class="footer-custom">Hosted by <a target="_blank" rel="external nofollow" href="https://pages.github.com/">GitHub Pages</a></div>
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv" title="总访客量">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+
+  
+    <span class="site-pv" title="总访问量">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script src="//cdn.staticfile.org/jquery/2.1.3/jquery.min.js"></script>
+
+  
+  <script src="//cdn.staticfile.org/fastclick/1.0.6/fastclick.min.js"></script>
+
+  
+  <script src="//cdn.staticfile.org/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script src="//cdn.staticfile.org/fancybox/3.2.5/jquery.fancybox.min.js"></script>
+
+  
+  <script src="/lib/reading_progress/reading_progress.js"></script>
+
+
+  
+
+
+  <script src="/js/src/utils.js?v=6.7.0"></script>
+
+  <script src="/js/src/motion.js?v=6.7.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/src/affix.js?v=6.7.0"></script>
+
+  <script src="/js/src/schemes/pisces.js?v=6.7.0"></script>
+
+
+
+  
+
+  
+
+
+  <script src="/js/src/bootstrap.js?v=6.7.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  <script src="//cdn1.lncld.net/static/js/3.11.1/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  <script>
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item) > -1;
+    });
+    new Valine({
+      el: '#comments' ,
+      verify: false,
+      notify: false,
+      appId: 'GWpjMXr7BpoLENnXXTFt4QoW-gzGzoHsz',
+      appKey: 'yaHPwQTKhDXDPOUNWso3P42n',
+      placeholder: '说点啥呢？',
+      avatar: 'identicon',
+      meta:guest,
+      pageSize: '10' || 10,
+      visitor: false
+    });
+  </script>
+
+
+
+
+  
+
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+        // ref: https://github.com/ForbesLindesay/unescape-html
+        var unescapeHtml = function(html) {
+          return String(html)
+            .replace(/&quot;/g, '"')
+            .replace(/&#39;/g, '\'')
+            .replace(/&#x3A;/g, ':')
+            // replace all the other &#x; chars
+            .replace(/&#(\d+);/g, function (m, p) { return String.fromCharCode(p); })
+            .replace(/&lt;/g, '<')
+            .replace(/&gt;/g, '>')
+            .replace(/&amp;/g, '&');
+        };
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                content = unescapeHtml(content);
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <script src="/js/src/js.cookie.js?v=6.7.0"></script>
+  <script src="/js/src/scroll-cookie.js?v=6.7.0"></script>
+
+
+  
+
+  
+
+  
+  <style>
+    .copy-btn {
+      display: inline-block;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 20px;
+      color: #333;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      background-color: #eee;
+      background-image: linear-gradient(#fcfcfc, #eee);
+      border: 1px solid #d5d5d5;
+      border-radius: 3px;
+      user-select: none;
+      outline: 0;
+    }
+
+    .highlight-wrap .copy-btn {
+      transition: opacity .3s ease-in-out;
+      opacity: 0;
+      padding: 2px 6px;
+      position: absolute;
+      right: 4px;
+      top: 8px;
+    }
+
+    .highlight-wrap:hover .copy-btn,
+    .highlight-wrap .copy-btn:focus {
+      opacity: 1
+    }
+
+    .highlight-wrap {
+      position: relative;
+    }
+  </style>
+  <script>
+    $('.highlight').each(function (i, e) {
+      var $wrap = $('<div>').addClass('highlight-wrap');
+      $(e).after($wrap);
+      $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function (e) {
+        var code = $(this).parent().find('.code').find('.line').map(function (i, e) {
+          return $(e).text();
+        }).toArray().join('\n');
+        var ta = document.createElement('textarea');
+        var range = document.createRange(); //For Chrome
+        var sel = window.getSelection(); //For Chrome
+        var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+        ta.style.top = yPosition + 'px'; //Prevent page scroll
+        ta.style.position = 'absolute';
+        ta.style.opacity = '0';
+        ta.value = code;
+        ta.textContent = code; //For FireFox
+        ta.contentEditable = true;
+        ta.readOnly = false;
+        document.body.appendChild(ta);
+        range.selectNode(ta);
+        sel.removeAllRanges();
+        sel.addRange(range);
+        ta.setSelectionRange(0, code.length);
+        var result = document.execCommand('copy');
+        
+        ta.blur(); //For iOS
+        $(this).blur();
+      })).on('mouseleave', function (e) {
+        var $b = $(this).find('.copy-btn');
+        setTimeout(function () {
+          $b.text('复制');
+        }, 300);
+      }).append(e);
+    })
+  </script>
+
+
+  
+
+</body>
+</html>

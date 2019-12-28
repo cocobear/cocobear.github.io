@@ -1,0 +1,3360 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="theme-next gemini" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+  
+  
+    
+      
+    
+    
+      
+    
+  <script src="//cdn.staticfile.org/pace/1.0.2/pace.min.js"></script>
+  <link rel="stylesheet" href="//cdn.staticfile.org/pace/1.0.2/themes/blue/pace-theme-loading-bar.min.css">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+  <link rel="stylesheet" href="//cdn.staticfile.org/fancybox/3.2.5/jquery.fancybox.min.css">
+
+
+
+
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+
+    
+  
+
+  
+    
+    
+    <link rel="stylesheet" href="https://fonts.loli.net/css?family=Source Code Pro:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext">
+  
+
+
+
+
+
+
+  
+
+<link rel="stylesheet" href="//cdn.staticfile.org/font-awesome/4.6.2/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="/css/main.css?v=6.7.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-next.png?v=6.7.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=6.7.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=6.7.0">
+
+
+  <link rel="mask-icon" href="/logo.svg?v=6.7.0" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '6.7.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    fastclick: true,
+    lazyload: true,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="爱折腾的技术宅一枚">
+<meta name="keywords" content="cocobear blog python linux">
+<meta property="og:type" content="website">
+<meta property="og:title" content="可可熊D窝">
+<meta property="og:url" content="http://cocobear.github.io/page/28/index.html">
+<meta property="og:site_name" content="可可熊D窝">
+<meta property="og:description" content="爱折腾的技术宅一枚">
+<meta property="og:locale" content="zh-CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="可可熊D窝">
+<meta name="twitter:description" content="爱折腾的技术宅一枚">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="可可熊D窝" type="application/atom+xml">
+
+
+
+
+  <link rel="canonical" href="http://cocobear.github.io/page/28/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>可可熊D窝 – Keep it simple, stupid</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left 
+  page-home">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">可可熊D窝</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <h1 class="site-subtitle" itemprop="description">Keep it simple, stupid</h1>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">182</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">8</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">358</span></a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2008/05/06/ext2-source-code-analysis-3-2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="cocobear">
+      <meta itemprop="description" content="爱折腾的技术宅一枚">
+      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="可可熊D窝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2008/05/06/ext2-source-code-analysis-3-2/" class="post-title-link" itemprop="url">Ext2文件系统源代码分析(3)</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2008-05-06 09:58:17" itemprop="dateCreated datePublished" datetime="2008-05-06T09:58:17+08:00">2008-05-06</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/编程相关/" itemprop="url" rel="index"><span itemprop="name">编程相关</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2008/05/06/ext2-source-code-analysis-3-2/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2008/05/06/ext2-source-code-analysis-3-2/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数：</span>
+                
+                <span title="字数">3.4k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读 &asymp;</span>
+                
+                <span title="阅读">3 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><strong>symlink.c:</strong></p>
+<pre><code>/*
+ *  linux/fs/ext2/symlink.c
+ *
+ * Only fast symlinks left here - the rest is done by generic code. AV, 1999
+ *
+ * Copyright (C) 1992, 1993, 1994, 1995
+ * Remy Card (card@masi.ibp.fr)
+ * Laboratoire MASI - Institut Blaise Pascal
+ * Universite Pierre et Marie Curie (Paris VI)
+ *
+ *  from
+ *
+ *  linux/fs/minix/symlink.c
+ *
+ *  Copyright (C) 1991, 1992  Linus Torvalds
+ *
+ *  ext2 symlink handling code
+ */
+
+#include &quot;ext2.h&quot;
+#include &quot;xattr.h&quot;
+#include &lt;linux /namei.h&gt;
+
+static void *ext2_follow_link(struct dentry *dentry, struct nameidata *nd)
+{
+        struct ext2_inode_info *ei = EXT2_I(dentry-&gt;d_inode);
+        nd_set_link(nd, (char *)ei-&gt;i_data);
+        return NULL;
+}
+//ext2_follow_link()函数用于搜索符号连接所在的目标文件
+
+const struct inode_operations ext2_symlink_inode_operations = {
+        .readlink       = generic_readlink,
+        .follow_link    = page_follow_link_light,
+        .put_link       = page_put_link,
+#ifdef CONFIG_EXT2_FS_XATTR
+        .setxattr       = generic_setxattr,
+        .getxattr       = generic_getxattr,
+        .listxattr      = ext2_listxattr,
+        .removexattr    = generic_removexattr,
+#endif
+};
+//ext2_symlink_inode_operations定义了上层(VFS)符号连接操作在ext2文件系统这一层中的具体实现函数
+
+const struct inode_operations ext2_fast_symlink_inode_operations = {
+        .readlink       = generic_readlink,
+        .follow_link    = ext2_follow_link,
+#ifdef CONFIG_EXT2_FS_XATTR
+        .setxattr       = generic_setxattr,
+        .getxattr       = generic_getxattr,
+        .listxattr      = ext2_listxattr,
+        .removexattr    = generic_removexattr,
+#endif
+};
+//ext2_fast_symlink_inode_operations应该是为了向下兼容2.4内核使用的符号连接操作函数
+</code></pre><p><strong>fsync.c:</strong></p>
+<pre><code>/*
+ *  linux/fs/ext2/fsync.c
+ *
+ *  Copyright (C) 1993  Stephen Tweedie (sct@dcs.ed.ac.uk)
+ *  from
+ *  Copyright (C) 1992  Remy Card (card@masi.ibp.fr)
+ *                      Laboratoire MASI - Institut Blaise Pascal
+ *                      Universite Pierre et Marie Curie (Paris VI)
+ *  from
+ *  linux/fs/minix/truncate.c   Copyright (C) 1991, 1992  Linus Torvalds
+ * 
+ *  ext2fs fsync primitive
+ *
+ *  Big-endian to little-endian byte-swapping/bitmaps by
+ *        David S. Miller (davem@caip.rutgers.edu), 1995
+ * 
+ *  Removed unnecessary code duplication for little endian machines
+ *  and excessive __inline__s. 
+ *        Andi Kleen, 1997
+ *
+ * Major simplications and cleanup - we only need to do the metadata, because
+ * we can depend on generic_block_fdatasync() to sync the data blocks.
+ */
+
+#include &quot;ext2.h&quot;
+#include &lt;/linux&gt;&lt;linux /buffer_head.h&gt;          /* for sync_mapping_buffers() */
+
+/*
+ *      File may be NULL when we are called. Perhaps we shouldn&apos;t
+ *      even pass file to fsync ?
+ */
+
+int ext2_sync_file(struct file *file, struct dentry *dentry, int datasync)
+{
+        struct inode *inode = dentry-&gt;d_inode;
+        int err;
+        int ret;
+
+        ret = sync_mapping_buffers(inode-&gt;i_mapping);
+        if (!(inode-&gt;i_state &amp; I_DIRTY))
+                return ret;
+        if (datasync &amp;&amp; !(inode-&gt;i_state &amp; I_DIRTY_DATASYNC))
+                return ret;
+
+        err = ext2_sync_inode(inode);
+        if (ret == 0)
+                ret = err;
+        return ret;
+}
+//ext2_sync_file函数对文件进行同步，它只检查inode中的脏数据，通过对ext2_sync_inode调用把数据写入硬盘
+//sync_mapping_buffers作用是写出地址空间所有间接的blocks
+</code></pre>
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2008/05/05/ext2-source-code-analysis-2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="cocobear">
+      <meta itemprop="description" content="爱折腾的技术宅一枚">
+      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="可可熊D窝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2008/05/05/ext2-source-code-analysis-2/" class="post-title-link" itemprop="url">Ext2文件系统源代码分析(2)</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2008-05-05 22:41:13" itemprop="dateCreated datePublished" datetime="2008-05-05T22:41:13+08:00">2008-05-05</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/编程相关/" itemprop="url" rel="index"><span itemprop="name">编程相关</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2008/05/05/ext2-source-code-analysis-2/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2008/05/05/ext2-source-code-analysis-2/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数：</span>
+                
+                <span title="字数">5.3k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读 &asymp;</span>
+                
+                <span title="阅读">5 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><strong>xattr.h</strong>:</p>
+<pre><code>/*
+  File: linux/ext2_xattr.h
+
+  On-disk format of extended attributes for the ext2 filesystem.
+
+  (C) 2001 Andreas Gruenbacher, &lt;a .gruenbacher@computer.org&gt;
+*/
+
+#include &lt;linux /init.h&gt;
+#include &lt;/linux&gt;&lt;linux /xattr.h&gt;
+
+/* Magic value in attribute blocks */
+#define EXT2_XATTR_MAGIC                0xEA020000
+//定义属性block中使用的魔数(一个标记，唯一的值)
+
+/* Maximum number of references to one attribute block */
+#define EXT2_XATTR_REFCOUNT_MAX         1024
+//定义一个属性block
+
+/* Name indexes */
+#define EXT2_XATTR_INDEX_USER                   1
+#define EXT2_XATTR_INDEX_POSIX_ACL_ACCESS       2
+#define EXT2_XATTR_INDEX_POSIX_ACL_DEFAULT      3
+#define EXT2_XATTR_INDEX_TRUSTED                4
+#define EXT2_XATTR_INDEX_LUSTRE                 5
+#define EXT2_XATTR_INDEX_SECURITY               6
+
+struct ext2_xattr_header {
+        __le32  h_magic;        /* magic number for identification */
+        __le32  h_refcount;     /* reference count */
+        __le32  h_blocks;       /* number of disk blocks used */
+        __le32  h_hash;         /* hash value of all attributes */
+        __u32   h_reserved[4];  /* zero right now */
+};
+//__le32 h_magic; 标识码，为0xEA020000 
+
+//__le32 h_refcount; 属性块被链接的数目 
+
+//__le32 h_blocks; 用于扩展属性的块数 
+
+//__le32 h_hash;  所有属性的哈希值 
+
+//__u32 h_reserved[4]; 保留变量，目前为0
+
+struct ext2_xattr_entry {
+        __u8    e_name_len;     /* length of name */
+        __u8    e_name_index;   /* attribute name index */
+        __le16  e_value_offs;   /* offset in disk block of value */
+        __le32  e_value_block;  /* disk block attribute is stored on (n/i) */
+        __le32  e_value_size;   /* size of attribute value */
+        __le32  e_hash;         /* hash value of name and value */
+        char    e_name[0];      /* attribute name */
+};
+
+//__u8 e_name_len; 属性名长度 
+
+//__u8 e_name_index; 属性名索引 
+
+//__le16 e_value_offs; 属性值在值块中的偏移量 
+
+//__le32 e_value_block;  保存属性值的块的块号 
+
+//__le32 e_value_size;  属性值长度 
+
+//__le32 e_hash;  属性名和值的哈希值 
+
+//char e_name[0];  属性名
+
+#define EXT2_XATTR_PAD_BITS             2
+#define EXT2_XATTR_PAD          (1&lt; &lt;EXT2_XATTR_PAD_BITS)
+#define EXT2_XATTR_ROUND                (EXT2_XATTR_PAD-1)
+#define EXT2_XATTR_LEN(name_len) \
+        (((name_len) + EXT2_XATTR_ROUND + \
+        sizeof(struct ext2_xattr_entry)) &amp; ~EXT2_XATTR_ROUND)
+#define EXT2_XATTR_NEXT(entry) \
+        ( (struct ext2_xattr_entry *)( \
+          (char *)(entry) + EXT2_XATTR_LEN((entry)-&gt;e_name_len)) )
+#define EXT2_XATTR_SIZE(size) \
+        (((size) + EXT2_XATTR_ROUND) &amp; ~EXT2_XATTR_ROUND)
+
+# ifdef CONFIG_EXT2_FS_XATTR
+//当内核编译时指定使用xattr扩展属性时，xattr相关函数的申明
+
+extern struct xattr_handler ext2_xattr_user_handler;
+extern struct xattr_handler ext2_xattr_trusted_handler;
+extern struct xattr_handler ext2_xattr_acl_access_handler;
+extern struct xattr_handler ext2_xattr_acl_default_handler;
+extern struct xattr_handler ext2_xattr_security_handler;
+
+extern ssize_t ext2_listxattr(struct dentry *, char *, size_t);
+
+extern int ext2_xattr_get(struct inode *, int, const char *, void *, size_t);
+extern int ext2_xattr_set(struct inode *, int, const char *, const void *, size_t, int);
+
+extern void ext2_xattr_delete_inode(struct inode *);
+extern void ext2_xattr_put_super(struct super_block *);
+
+extern int init_ext2_xattr(void);
+extern void exit_ext2_xattr(void);
+
+extern struct xattr_handler *ext2_xattr_handlers[];
+
+# else  /* CONFIG_EXT2_FS_XATTR */
+
+//当内核编译时未使用xattr扩展属性，xattr相关函数被置为空
+
+static inline int
+ext2_xattr_get(struct inode *inode, int name_index,
+               const char *name, void *buffer, size_t size)
+{
+        return -EOPNOTSUPP;
+}
+
+static inline int
+ext2_xattr_set(struct inode *inode, int name_index, const char *name,
+               const void *value, size_t size, int flags)
+{
+        return -EOPNOTSUPP;
+}
+
+static inline void
+ext2_xattr_delete_inode(struct inode *inode)
+{
+}
+
+static inline void
+ext2_xattr_put_super(struct super_block *sb)
+{
+}
+
+static inline int
+init_ext2_xattr(void)
+{
+        return 0;
+}
+
+static inline void
+exit_ext2_xattr(void)
+{
+}
+
+#define ext2_xattr_handlers NULL
+
+# endif  /* CONFIG_EXT2_FS_XATTR */
+
+#ifdef CONFIG_EXT2_FS_SECURITY
+extern int ext2_init_security(struct inode *inode, struct inode *dir);
+#else
+static inline int ext2_init_security(struct inode *inode, struct inode *dir)
+{
+        return 0;
+}
+#endif
+[/c]
+
+**xip.h**:
+[c]
+/*
+ *  linux/fs/ext2/xip.h
+ *
+ * Copyright (C) 2005 IBM Corporation
+ * Author: Carsten Otte (cotte@de.ibm.com)
+ */
+
+#ifdef CONFIG_EXT2_FS_XIP
+//当内核编译时指定使用xip扩展属性时，xip相关操作的函数申明
+extern void ext2_xip_verify_sb (struct super_block *);
+extern int ext2_clear_xip_target (struct inode *, int);
+
+static inline int ext2_use_xip (struct super_block *sb)
+{
+        struct ext2_sb_info *sbi = EXT2_SB(sb);
+        return (sbi-&gt;s_mount_opt &amp; EXT2_MOUNT_XIP);
+}
+struct page* ext2_get_xip_page (struct address_space *, sector_t, int);
+#define mapping_is_xip(map) unlikely(map-&gt;a_ops-&gt;get_xip_page)
+#else
+//当内核编译时未指定使用xattr扩展属性时，置这些函数操作为空
+
+#define mapping_is_xip(map)                     0
+#define ext2_xip_verify_sb(sb)                  do { } while (0)
+#define ext2_use_xip(sb)                        0
+#define ext2_clear_xip_target(inode, chain)     0
+#define ext2_get_xip_page                       NULL
+#endif
+</code></pre><h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#3148" title="2008-05-06 07:47:10">cocobear</a>:</strong> 你也找一个好做得呗……</p>
+<p><strong><a href="#3147" title="2008-05-05 23:31:16">luguo</a>:</strong> 哎，dp同学的毕设好做啊，写写注释就完～！ ;-)</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2008/05/05/ext2-source-code-analysis-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="cocobear">
+      <meta itemprop="description" content="爱折腾的技术宅一枚">
+      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="可可熊D窝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2008/05/05/ext2-source-code-analysis-1/" class="post-title-link" itemprop="url">Ext2文件系统源代码分析(1)</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2008-05-05 22:03:31" itemprop="dateCreated datePublished" datetime="2008-05-05T22:03:31+08:00">2008-05-05</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/编程相关/" itemprop="url" rel="index"><span itemprop="name">编程相关</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2008/05/05/ext2-source-code-analysis-1/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2008/05/05/ext2-source-code-analysis-1/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数：</span>
+                
+                <span title="字数">5.7k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读 &asymp;</span>
+                
+                <span title="阅读">5 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><strong>acl.h:</strong></p>
+<pre><code>/*
+  File: fs/ext2/acl.h
+
+  (C) 2001 Andreas Gruenbacher, &lt;a .gruenbacher@computer.org&gt;
+*/
+
+#include &lt;linux /posix_acl_xattr.h&gt;
+
+//简单说一下acl(访问控制表)，比传统的Linux具有更灵活的文件权限设定，ext2文件系统的扩展属性支持acl，这一点在编译的时候可以指定。
+#define EXT2_ACL_VERSION        0x0001
+
+//定义acl的版本；
+typedef struct {
+        __le16          e_tag;
+        __le16          e_perm;
+        __le32          e_id;
+} ext2_acl_entry;
+//__le16类型的定义：
+//typedef __u16 __bitwise __le16;
+//看起来比较复杂，其实（在x86平台下）只是一个unsigned short，__bitwise这个只是通过gcc的扩展使用sparse这个工具来进行代码检查。
+
+//ext2_acl_entry定义访问控制项的结构体
+//__le16          e_tag;   自身的使用者或組
+//__le16          e_perm;  允许访问的
+//__le32          e_id; 
+
+typedef struct {
+        __le16          e_tag;
+        __le16          e_perm;
+} ext2_acl_entry_short;
+//定义访问控制项的简单结构；
+
+typedef struct {
+        __le32          a_version;
+} ext2_acl_header;
+
+//接下来两个函数分别用到了size_t与ssize_t对应在x86平台下分别是unsigned int与int
+static inline size_t ext2_acl_size(int count)
+{
+        if (count &lt; = 4) {
+                return sizeof(ext2_acl_header) +
+                       count * sizeof(ext2_acl_entry_short);
+        } else {
+                return sizeof(ext2_acl_header) +
+                       4 * sizeof(ext2_acl_entry_short) +
+                       (count - 4) * sizeof(ext2_acl_entry);
+        }
+}
+
+//该函数用来计算acl的占用空间大小，当使用的acl多于4后剩余的acl使用完整的ext2_acl_entry来记录。
+static inline int ext2_acl_count(size_t size)
+{
+        ssize_t s;
+        size -= sizeof(ext2_acl_header);
+        s = size - 4 * sizeof(ext2_acl_entry_short);
+        if (s &lt; 0) {
+                if (size % sizeof(ext2_acl_entry_short))
+                        return -1;
+                return size / sizeof(ext2_acl_entry_short);
+        } else {
+                if (s % sizeof(ext2_acl_entry))
+                        return -1;
+                return s / sizeof(ext2_acl_entry) + 4;
+        }
+}
+//该函数与上面的函数刚好相反
+#ifdef CONFIG_EXT2_FS_POSIX_ACL
+
+//当内核编译时指定使用ext2的acl属性时这里ext2_permission等函数被申明，否则这些函数被定义为空。
+/* Value for inode-&gt;u.ext2_i.i_acl and inode-&gt;u.ext2_i.i_default_acl
+   if the ACL has not been cached */
+#define EXT2_ACL_NOT_CACHED ((void *)-1)
+
+/* acl.c */
+extern int ext2_permission (struct inode *, int, struct nameidata *);
+extern int ext2_acl_chmod (struct inode *);
+extern int ext2_init_acl (struct inode *, struct inode *);
+
+#else
+#include &lt;/linux&gt;&lt;linux /sched.h&gt;
+#define ext2_permission NULL
+#define ext2_get_acl    NULL
+#define ext2_set_acl    NULL
+
+static inline int
+ext2_acl_chmod (struct inode *inode)
+{
+        return 0;
+}
+
+static inline int ext2_init_acl (struct inode *inode, struct inode *dir)
+{
+        return 0;
+}
+#endif
+</code></pre><p><strong>file.c:</strong></p>
+<pre><code>/*
+ *  linux/fs/ext2/file.c
+ *
+ * Copyright (C) 1992, 1993, 1994, 1995
+ * Remy Card (card@masi.ibp.fr)
+ * Laboratoire MASI - Institut Blaise Pascal
+ * Universite Pierre et Marie Curie (Paris VI)
+ *
+ *  from
+ *
+ *  linux/fs/minix/file.c
+ *
+ *  Copyright (C) 1991, 1992  Linus Torvalds
+ *
+ *  ext2 fs regular file handling primitives
+ *
+ *  64-bit file support on 64-bit platforms by Jakub Jelinek
+ *      (jj@sunsite.ms.mff.cuni.cz)
+ */
+
+#include &lt;/linux&gt;&lt;linux /time.h&gt;
+#include &quot;ext2.h&quot;
+#include &quot;xattr.h&quot;
+#include &quot;acl.h&quot;
+
+/*
+ * Called when filp is released. This happens when all file descriptors
+ * for a single struct file are closed. Note that different open() calls
+ * for the same file yield different struct file structures.
+ */
+static int ext2_release_file (struct inode * inode, struct file * filp)
+{
+        if (filp-&gt;f_mode &amp; FMODE_WRITE) {
+                mutex_lock(&amp;EXT2_I(inode)-&gt;truncate_mutex);
+                ext2_discard_reservation(inode);
+                mutex_unlock(&amp;EXT2_I(inode)-&gt;truncate_mutex);
+        }
+        return 0;
+}
+
+//该函数释放文件所使用的block，前提是该文件以&quot;写&quot;的模式被打开。
+/*
+ * We have mostly NULL&apos;s here: the current defaults are ok for
+ * the ext2 filesystem.
+ */
+const struct file_operations ext2_file_operations = {
+        .llseek         = generic_file_llseek,
+        .read           = do_sync_read,
+        .write          = do_sync_write,
+        .aio_read       = generic_file_aio_read,
+        .aio_write      = generic_file_aio_write,
+        .ioctl          = ext2_ioctl,
+#ifdef CONFIG_COMPAT
+        .compat_ioctl   = ext2_compat_ioctl,
+#endif
+        .mmap           = generic_file_mmap,
+        .open           = generic_file_open,
+        .release        = ext2_release_file,
+        .fsync          = ext2_sync_file,
+        .splice_read    = generic_file_splice_read,
+        .splice_write   = generic_file_splice_write,
+};
+
+//ext2_file_operations这个结构体定义了上层（VFS）文件操作函数在ext2文件系统这一层中的具体实现函数。
+//这里又用到了gcc的扩展使用.[index]这样的方式来初始化结构体，这样结构体中的成员就不会受到顺序的限制。
+#ifdef CONFIG_EXT2_FS_XIP
+const struct file_operations ext2_xip_file_operations = {
+        .llseek         = generic_file_llseek,
+        .read           = xip_file_read,
+        .write          = xip_file_write,
+        .ioctl          = ext2_ioctl,
+#ifdef CONFIG_COMPAT
+        .compat_ioctl   = ext2_compat_ioctl,
+#endif
+        .mmap           = xip_file_mmap,
+        .open           = generic_file_open,
+        .release        = ext2_release_file,
+        .fsync          = ext2_sync_file,
+};
+#endif
+
+//ext2_xip_file_operations定义了使用xip(eXecute In Place)的文件操作函数
+const struct inode_operations ext2_file_inode_operations = {
+        .truncate       = ext2_truncate,
+#ifdef CONFIG_EXT2_FS_XATTR
+        .setxattr       = generic_setxattr,
+        .getxattr       = generic_getxattr,
+        .listxattr      = ext2_listxattr,
+        .removexattr    = generic_removexattr,
+#endif
+        .setattr        = ext2_setattr,
+        .permission     = ext2_permission,
+};
+//ext2_file_inode_operations定义了ext2中inode的文件操作函数。
+</code></pre>
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2008/04/29/ext2-source-code-analysis-0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="cocobear">
+      <meta itemprop="description" content="爱折腾的技术宅一枚">
+      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="可可熊D窝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2008/04/29/ext2-source-code-analysis-0/" class="post-title-link" itemprop="url">Ext2文件系统源代码分析(0)</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2008-04-29 22:22:26" itemprop="dateCreated datePublished" datetime="2008-04-29T22:22:26+08:00">2008-04-29</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/编程相关/" itemprop="url" rel="index"><span itemprop="name">编程相关</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2008/04/29/ext2-source-code-analysis-0/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2008/04/29/ext2-source-code-analysis-0/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数：</span>
+                
+                <span title="字数">9k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读 &asymp;</span>
+                
+                <span title="阅读">8 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><strong>Makefile:</strong></p>
+<pre><code>#
+# Makefile for the linux ext2-filesystem routines.
+#
+
+obj-$(CONFIG_EXT2_FS) += ext2.o
+
+ext2-y := balloc.o dir.o file.o fsync.o ialloc.o inode.o \
+          ioctl.o namei.o super.o symlink.o
+
+ext2-$(CONFIG_EXT2_FS_XATTR)     += xattr.o xattr_user.o xattr_trusted.o
+ext2-$(CONFIG_EXT2_FS_POSIX_ACL) += acl.o
+ext2-$(CONFIG_EXT2_FS_SECURITY)  += xattr_security.o
+ext2-$(CONFIG_EXT2_FS_XIP)       += xip.o
+</code></pre><p>obj-$(CONFIG_EXT2_FS)指定编译生成的目标文件，CONFIG_EXT2_FS变量在配置内核时指定，有三个选项：y,m,x分别代表编译，以模块方式编译，不编译。</p>
+<p>ext2-y指定了编译ext2.o时所需要同时编译的其它文件。</p>
+<p>下面四个是ext2文件系统的一些扩展属性，也是在编译内核时配置是否使用。</p>
+<p><strong>ext2.h:</strong></p>
+<pre><code>#include &lt;linux /fs.h&gt;
+#include &lt;/linux&gt;&lt;linux /ext2_fs.h&gt;
+
+/*
+ * ext2 mount options
+ */
+struct ext2_mount_options {
+        unsigned long s_mount_opt;
+        uid_t s_resuid;
+        gid_t s_resgid;
+};
+//这里定义了一个ext2文件系统挂载时所使用的一些选项，uid_t，gid_t在i386上是unsigned int。
+//s_mount_opt：安装选项
+//s_resuid：可以使用保留块的用户id
+//s_resgid：可以使用保留块的用户组id
+
+/*
+ * second extended file system inode data in memory
+ */
+struct ext2_inode_info {
+        __le32  i_data[15];
+        __u32   i_flags;
+        __u32   i_faddr;
+        __u8    i_frag_no;
+        __u8    i_frag_size;
+        __u16   i_state;
+        __u32   i_file_acl;
+        __u32   i_dir_acl;
+        __u32   i_dtime;
+
+        /*
+         * i_block_group is the number of the block group which contains
+         * this file&apos;s inode.  Constant across the lifetime of the inode,
+         * it is ued for making block allocation decisions - we try to
+         * place a file&apos;s data blocks near its inode block, and new inodes
+         * near to their parent directory&apos;s inode.
+         */
+        __u32   i_block_group;
+
+        /* block reservation info */
+        struct ext2_block_alloc_info *i_block_alloc_info;
+
+        __u32   i_dir_start_lookup;
+#ifdef CONFIG_EXT2_FS_XATTR
+        /*
+         * Extended attributes can be read independently of the main file
+         * data. Taking i_mutex even when reading would cause contention
+         * between readers of EAs and writers of regular file data, so
+         * instead we synchronize on xattr_sem when reading or changing
+         * EAs.
+         */
+        struct rw_semaphore xattr_sem;
+#endif
+#ifdef CONFIG_EXT2_FS_POSIX_ACL
+        struct posix_acl        *i_acl;
+        struct posix_acl        *i_default_acl;
+#endif
+        rwlock_t i_meta_lock;
+
+        /*
+         * truncate_mutex is for serialising ext2_truncate() against
+         * ext2_getblock().  It also protects the internals of the inode&apos;s
+         * reservation data structures: ext2_reserve_window and
+         * ext2_reserve_window_node.
+         */
+        struct mutex truncate_mutex;
+        struct inode    vfs_inode;
+        struct list_head i_orphan;      /* unlinked but open inodes */
+};
+
+//ext2_inode_info这个结构体定义了inode在内存中存放的信息。
+//__le32  i_data[15];  __le32是带bitwise属性的unsigned int；数据块指针数组
+//__u32   i_flags;  __u32是unsigned int；文件标志
+//__u32   i_faddr;  fragment地址
+//__u8    i_frag_no;  fragment号
+//__u8    i_frag_size;  fragment大小
+//__u16   i_state;  
+//__u32   i_file_acl;  文件访问控制链表
+//__u32   i_dir_acl;  目录访问控制链表
+//__u32   i_dtime;  文件删除时间 
+//__u32   i_block_group;  inode所在组号
+//struct ext2_block_alloc_info *i_block_alloc_info;  block保留信息
+
+/*
+ * Inode dynamic state flags
+ */
+#define EXT2_STATE_NEW                  0x00000001 /* inode is newly created */
+
+/*
+ * Function prototypes
+ */
+
+/*
+ * Ok, these declarations are also in &lt;/linux&gt;&lt;linux /kernel.h&gt; but none of the
+ * ext2 source programs needs to include it so they are duplicated here.
+ */
+
+static inline struct ext2_inode_info *EXT2_I(struct inode *inode)
+{
+        return container_of(inode, struct ext2_inode_info, vfs_inode);
+}
+//EXT2_I函数利用到了内核中经常使用的一个宏:container_of，它的参数为inode指针，返回一个ext2_inode_info的指针，也就是inode所在结构体的地址。
+//container_of在linux-2.6.24/include/linux/kernel.h里定义为：
+//#define container_of(ptr, type, member) ({                      \
+       const typeof( ((type *)0)-&gt;member ) *__mptr = (ptr);    \
+       (type *)( (char *)__mptr - offsetof(type,member) );})
+
+//这个宏的原理其实很简单就是利用结构体中某个元素的地址减去该元素相对于结构体的偏移量，得到结构体的地址。
+
+//offsetof在linux-2.6.24/include/linux/stddef.h中定义为：
+//#undef offsetof
+//#ifdef __compiler_offsetof
+//#define offsetof(TYPE,MEMBER) __compiler_offsetof(TYPE,MEMBER)
+//#else
+//#define offsetof(TYPE, MEMBER) ((size_t) &amp;((TYPE *)0)-&gt;MEMBER)
+//#endif
+
+//接下来这这些是定义在ext2其它文件中的函数的申明。
+/* balloc.c */
+extern int ext2_bg_has_super(struct super_block *sb, int group);
+extern unsigned long ext2_bg_num_gdb(struct super_block *sb, int group);
+extern ext2_fsblk_t ext2_new_block(struct inode *, unsigned long, int *);
+extern ext2_fsblk_t ext2_new_blocks(struct inode *, unsigned long,
+                                unsigned long *, int *);
+extern void ext2_free_blocks (struct inode *, unsigned long,
+                              unsigned long);
+extern unsigned long ext2_count_free_blocks (struct super_block *);
+extern unsigned long ext2_count_dirs (struct super_block *);
+extern void ext2_check_blocks_bitmap (struct super_block *);
+extern struct ext2_group_desc * ext2_get_group_desc(struct super_block * sb,
+                                                    unsigned int block_group,
+                                                    struct buffer_head ** bh);
+extern void ext2_discard_reservation (struct inode *);
+extern int ext2_should_retry_alloc(struct super_block *sb, int *retries);
+extern void ext2_init_block_alloc_info(struct inode *);
+extern void ext2_rsv_window_add(struct super_block *sb, struct ext2_reserve_window_node *rsv);
+
+/* dir.c */
+extern int ext2_add_link (struct dentry *, struct inode *);
+extern ino_t ext2_inode_by_name(struct inode *, struct dentry *);
+extern int ext2_make_empty(struct inode *, struct inode *);
+extern struct ext2_dir_entry_2 * ext2_find_entry (struct inode *,struct dentry *, struct page **);
+extern int ext2_delete_entry (struct ext2_dir_entry_2 *, struct page *);
+extern int ext2_empty_dir (struct inode *);
+extern struct ext2_dir_entry_2 * ext2_dotdot (struct inode *, struct page **);
+extern void ext2_set_link(struct inode *, struct ext2_dir_entry_2 *, struct page *, struct inode *);
+
+/* fsync.c */
+extern int ext2_sync_file (struct file *, struct dentry *, int);
+
+/* ialloc.c */
+extern struct inode * ext2_new_inode (struct inode *, int);
+extern void ext2_free_inode (struct inode *);
+extern unsigned long ext2_count_free_inodes (struct super_block *);
+extern void ext2_check_inodes_bitmap (struct super_block *);
+extern unsigned long ext2_count_free (struct buffer_head *, unsigned);
+
+/* inode.c */
+extern void ext2_read_inode (struct inode *);
+extern int ext2_write_inode (struct inode *, int);
+extern void ext2_put_inode (struct inode *);
+extern void ext2_delete_inode (struct inode *);
+extern int ext2_sync_inode (struct inode *);
+extern int ext2_get_block(struct inode *, sector_t, struct buffer_head *, int);
+extern void ext2_truncate (struct inode *);
+extern int ext2_setattr (struct dentry *, struct iattr *);
+extern void ext2_set_inode_flags(struct inode *inode);
+extern void ext2_get_inode_flags(struct ext2_inode_info *);
+int __ext2_write_begin(struct file *file, struct address_space *mapping,
+                loff_t pos, unsigned len, unsigned flags,
+                struct page **pagep, void **fsdata);
+
+/* ioctl.c */
+extern int ext2_ioctl (struct inode *, struct file *, unsigned int,
+                       unsigned long);
+extern long ext2_compat_ioctl(struct file *, unsigned int, unsigned long);
+
+/* namei.c */
+struct dentry *ext2_get_parent(struct dentry *child);
+
+/* super.c */
+extern void ext2_error (struct super_block *, const char *, const char *, ...)
+        __attribute__ ((format (printf, 3, 4)));
+extern void ext2_warning (struct super_block *, const char *, const char *, ...)
+        __attribute__ ((format (printf, 3, 4)));
+extern void ext2_update_dynamic_rev (struct super_block *sb);
+extern void ext2_write_super (struct super_block *);
+
+/*
+ * Inodes and files operations
+ */
+
+/* dir.c */
+extern const struct file_operations ext2_dir_operations;
+
+/* file.c */
+extern const struct inode_operations ext2_file_inode_operations;
+extern const struct file_operations ext2_file_operations;
+extern const struct file_operations ext2_xip_file_operations;
+
+/* inode.c */
+extern const struct address_space_operations ext2_aops;
+extern const struct address_space_operations ext2_aops_xip;
+extern const struct address_space_operations ext2_nobh_aops;
+
+/* namei.c */
+extern const struct inode_operations ext2_dir_inode_operations;
+extern const struct inode_operations ext2_special_inode_operations;
+
+/* symlink.c */
+extern const struct inode_operations ext2_fast_symlink_inode_operations;
+extern const struct inode_operations ext2_symlink_inode_operations;
+
+static inline ext2_fsblk_t
+ext2_group_first_block_no(struct super_block *sb, unsigned long group_no)
+{
+        return group_no * (ext2_fsblk_t)EXT2_BLOCKS_PER_GROUP(sb) +
+                le32_to_cpu(EXT2_SB(sb)-&gt;s_es-&gt;s_first_data_block);
+}
+</code></pre>
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2008/04/29/code-of-python/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="cocobear">
+      <meta itemprop="description" content="爱折腾的技术宅一枚">
+      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="可可熊D窝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2008/04/29/code-of-python/" class="post-title-link" itemprop="url">看一段python的代码</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2008-04-29 21:43:38" itemprop="dateCreated datePublished" datetime="2008-04-29T21:43:38+08:00">2008-04-29</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/编程相关/" itemprop="url" rel="index"><span itemprop="name">编程相关</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2008/04/29/code-of-python/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2008/04/29/code-of-python/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数：</span>
+                
+                <span title="字数">435</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读 &asymp;</span>
+                
+                <span title="阅读">1 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <pre><code>def xselections(items, n):
+    if n == 0:
+        yield []
+    else:
+        for i in xrange(len(items)):
+            for ss in xselections(items, n-1):
+                yield [items[i]] + ss
+for l in xselections(xrange(10), 3):
+    print l
+</code></pre><p>上面这段代码实现了从x数中取出y个数的全排列，xselections的实现用到了递归和yield，yield这个语句比较有意思：<br>“yield跟return一样会返回值，但是不一样的是return之后就退出函数了，而yield在丢出一次值给调用者之后还会返回继续运行生成器函数，并随着yield的再次调用丢出随后的生成值”</p>
+<h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#3138" title="2008-04-30 13:05:46">luguo</a>:</strong> 恩，以前见识过yield的威力了～～</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+  </section>
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/27/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/27/">27</a><span class="page-number current">28</span><a class="page-number" href="/page/29/">29</a><span class="space">&hellip;</span><a class="page-number" href="/page/72/">72</a><a class="extend next" rel="next" href="/page/29/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg" alt="cocobear">
+            
+              <p class="site-author-name" itemprop="name">cocobear</p>
+              <p class="site-description motion-element" itemprop="description">爱折腾的技术宅一枚</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">358</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">182</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/cocobear" title="GitHub &rarr; https://github.com/cocobear" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="mailto:cocobear.cn@gmail.com" title="E-Mail &rarr; mailto:cocobear.cn@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://twitter.com/_cocobear" title="Twitter &rarr; https://twitter.com/_cocobear" rel="noopener" target="_blank"><i class="fa fa-fw fa-twitter"></i>Twitter</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://www.douban.com/people/cocobear/" title="豆瓣 &rarr; https://www.douban.com/people/cocobear/" rel="noopener" target="_blank"><i class="fa fa-fw fa-book"></i>豆瓣</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                友情链接
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://wangcong.org" title="http://wangcong.org" rel="noopener" target="_blank">王聪</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://blog.liu-yang.info/" title="https://blog.liu-yang.info/" rel="noopener" target="_blank">老大</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2007 – <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">cocobear</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+    <span title="站点总字数">519k</span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    
+    <span title="站点阅读时长">7:52</span>
+  
+</div>
+
+
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v6.7.0</div>
+
+
+
+  <div class="footer-custom">Hosted by <a target="_blank" rel="external nofollow" href="https://pages.github.com/">GitHub Pages</a></div>
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv" title="总访客量">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+
+  
+    <span class="site-pv" title="总访问量">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script src="//cdn.staticfile.org/jquery/2.1.3/jquery.min.js"></script>
+
+  
+  <script src="//cdn.staticfile.org/fastclick/1.0.6/fastclick.min.js"></script>
+
+  
+  <script src="//cdn.staticfile.org/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script src="//cdn.staticfile.org/fancybox/3.2.5/jquery.fancybox.min.js"></script>
+
+  
+  <script src="/lib/reading_progress/reading_progress.js"></script>
+
+
+  
+
+
+  <script src="/js/src/utils.js?v=6.7.0"></script>
+
+  <script src="/js/src/motion.js?v=6.7.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/src/affix.js?v=6.7.0"></script>
+
+  <script src="/js/src/schemes/pisces.js?v=6.7.0"></script>
+
+
+
+  
+
+  
+
+
+  <script src="/js/src/bootstrap.js?v=6.7.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  <script src="//cdn1.lncld.net/static/js/3.11.1/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  <script>
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item) > -1;
+    });
+    new Valine({
+      el: '#comments' ,
+      verify: false,
+      notify: false,
+      appId: 'GWpjMXr7BpoLENnXXTFt4QoW-gzGzoHsz',
+      appKey: 'yaHPwQTKhDXDPOUNWso3P42n',
+      placeholder: '说点啥呢？',
+      avatar: 'identicon',
+      meta:guest,
+      pageSize: '10' || 10,
+      visitor: false
+    });
+  </script>
+
+
+
+
+  
+
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+        // ref: https://github.com/ForbesLindesay/unescape-html
+        var unescapeHtml = function(html) {
+          return String(html)
+            .replace(/&quot;/g, '"')
+            .replace(/&#39;/g, '\'')
+            .replace(/&#x3A;/g, ':')
+            // replace all the other &#x; chars
+            .replace(/&#(\d+);/g, function (m, p) { return String.fromCharCode(p); })
+            .replace(/&lt;/g, '<')
+            .replace(/&gt;/g, '>')
+            .replace(/&amp;/g, '&');
+        };
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                content = unescapeHtml(content);
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <script src="/js/src/js.cookie.js?v=6.7.0"></script>
+  <script src="/js/src/scroll-cookie.js?v=6.7.0"></script>
+
+
+  
+
+  
+
+  
+  <style>
+    .copy-btn {
+      display: inline-block;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 20px;
+      color: #333;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      background-color: #eee;
+      background-image: linear-gradient(#fcfcfc, #eee);
+      border: 1px solid #d5d5d5;
+      border-radius: 3px;
+      user-select: none;
+      outline: 0;
+    }
+
+    .highlight-wrap .copy-btn {
+      transition: opacity .3s ease-in-out;
+      opacity: 0;
+      padding: 2px 6px;
+      position: absolute;
+      right: 4px;
+      top: 8px;
+    }
+
+    .highlight-wrap:hover .copy-btn,
+    .highlight-wrap .copy-btn:focus {
+      opacity: 1
+    }
+
+    .highlight-wrap {
+      position: relative;
+    }
+  </style>
+  <script>
+    $('.highlight').each(function (i, e) {
+      var $wrap = $('<div>').addClass('highlight-wrap');
+      $(e).after($wrap);
+      $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function (e) {
+        var code = $(this).parent().find('.code').find('.line').map(function (i, e) {
+          return $(e).text();
+        }).toArray().join('\n');
+        var ta = document.createElement('textarea');
+        var range = document.createRange(); //For Chrome
+        var sel = window.getSelection(); //For Chrome
+        var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+        ta.style.top = yPosition + 'px'; //Prevent page scroll
+        ta.style.position = 'absolute';
+        ta.style.opacity = '0';
+        ta.value = code;
+        ta.textContent = code; //For FireFox
+        ta.contentEditable = true;
+        ta.readOnly = false;
+        document.body.appendChild(ta);
+        range.selectNode(ta);
+        sel.removeAllRanges();
+        sel.addRange(range);
+        ta.setSelectionRange(0, code.length);
+        var result = document.execCommand('copy');
+        
+        ta.blur(); //For iOS
+        $(this).blur();
+      })).on('mouseleave', function (e) {
+        var $b = $(this).find('.copy-btn');
+        setTimeout(function () {
+          $b.text('复制');
+        }, 300);
+      }).append(e);
+    })
+  </script>
+
+
+  
+
+</body>
+</html>

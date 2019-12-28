@@ -1,0 +1,602 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>可可熊D窝</title>
+  
+  <subtitle>Keep it simple, stupid</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://cocobear.github.io/"/>
+  <updated>2019-12-28T07:22:26.385Z</updated>
+  <id>http://cocobear.github.io/</id>
+  
+  <author>
+    <name>cocobear</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>DeskMini 310组装及黑苹果安装</title>
+    <link href="http://cocobear.github.io/2019/12/02/DeskMini-310-hackintosh/"/>
+    <id>http://cocobear.github.io/2019/12/02/DeskMini-310-hackintosh/</id>
+    <published>2019-12-02T06:29:33.000Z</published>
+    <updated>2019-12-28T07:22:26.385Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://asset-1258390188.cos.ap-shanghai.myqcloud.com/DeskMini310.png" style="zoom: 50%;"><br><a id="more"></a></p><h2 id="写在开头"><a href="#写在开头" class="headerlink" title="写在开头"></a>写在开头</h2><p>​    自从在办公室的电脑上装了黑苹果后用着越来越顺手，于是将<code>X220</code>笔记本也装了个黑苹果在家里用。8G的内存，2代i5的处理器，凑合能用，但是屏幕太小，分辨率太低，最近屏幕开始有横线出来，于是换个电脑的想法就有了。</p><p>​    一开始的想法自然是换个笔记本，屏幕一定要15寸以上（受够了X220的12.5寸的小屏幕），内存一定要够大，至少16G，32G最好，硬盘肯定是SATA或者NVME了，512G以上。最简单的方案就是直接买 一个新出来MacBook Pro 16寸（18999RMB），但这个价格还是劝退了，16G+512G的配置都不是很理想，而且苹果的东西都没办法升级，要是定制32G+1T价格更是离谱，苹果的东西真是消费不起。所以继续黑苹果，看中了联想Y9000，但硬盘好像黑苹果不支持，新机器拆机保修就没了，所以也不想折腾。</p><p>​    后来想了想其实我现在的电脑基本不需要移动，其实配个迷你主机就挺好的，还可以用24寸以上的4K屏。如果不想用了，还可以当<code>homelab</code>主机用。</p><h2 id="装机方案选择"><a href="#装机方案选择" class="headerlink" title="装机方案选择"></a>装机方案选择</h2><p>既然可以自己装机，那么选择余地就大了，在网上逛了几天弄出来了以下几个方案（都仅包含CPU+主板+机箱+电源），因为内存，硬盘都是通用的。</p><h3 id="备选方案"><a href="#备选方案" class="headerlink" title="备选方案"></a>备选方案</h3><ol><li>Intel Nuc8i5beh</li><li>华擎DeskMini 310</li><li>华擎Z370m-ITX/AC+立人H60机箱带电源</li></ol><h3 id="配置对比"><a href="#配置对比" class="headerlink" title="配置对比"></a>配置对比</h3><table><thead><tr><th></th><th>芯片组</th><th>CPU</th><th>显卡</th><th>价格(仅供参考)</th><th>尺寸</th><th>黑苹果成功案例</th></tr></thead><tbody><tr><td>NUC</td><td><strong>Z370</strong></td><td>i5-8259u(不可升级)</td><td><strong>Iris Plus 580</strong></td><td>3099</td><td><strong>117 x 112 x 51 mm</strong></td><td>多</td></tr><tr><td>310</td><td>H310</td><td><strong>i5-8500</strong></td><td>UHD630</td><td><strong>1059+1499=2558</strong></td><td>155 x 155 x 80 mm</td><td>多</td></tr><tr><td>H60</td><td><strong>Z370</strong></td><td><strong>i5-8500</strong></td><td>UHD630</td><td>1099+240+1499=2838</td><td>200 x 200 x 60 mm</td><td>少</td></tr></tbody></table><h3 id="接口对比"><a href="#接口对比" class="headerlink" title="接口对比"></a>接口对比</h3><table><thead><tr><th style="text-align:left"></th><th>M.2</th><th>DP</th><th>HDMI</th><th>SATA</th><th>雷电</th><th>USB3.1</th><th>Type-C</th></tr></thead><tbody><tr><td style="text-align:left">NUC</td><td>1</td><td>1.2/4K@60Hz</td><td>(4K@60Hz)</td><td>1</td><td>1</td><td>4</td><td>1</td></tr><tr><td style="text-align:left">310</td><td>2</td><td>1.2/4K@60Hz</td><td>(4K@30Hz)</td><td>2</td><td>0</td><td>3</td><td>1</td></tr><tr><td style="text-align:left">H60</td><td>2</td><td>1.2/4K@60Hz</td><td>(4K@30Hz)</td><td>6</td><td>0</td><td>6</td><td>0</td></tr></tbody></table><h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p>这三个方案的价格差别不是很大，下来基本都是2000多。</p><p>NUC用的是低压CPU不是很理想，但是集显性能强一些，又有满血雷电3，体积最小，不过M.2接口只有一个如果用了硬盘那么无线网卡就不能用了，有人通过改造从读卡器接口弄出来一个M.2（这种方案是不考虑了，手艺不行）。</p><p>DeskMini 310的芯片组是H310比其它两个差一点，体积厚一点，其它的基本没有啥缺点。</p><p>华擎Z370m-ITX/AC+立人H60机箱的方案就是完全自己装机了，接口丰富，这个方案来源在<a href="https://nodeedge.com/itx-build-note.html" target="_blank" rel="noopener">这里</a>。自带的WIFI是Intel芯片黑苹果无法使用。我想买的时候发现主板没货，再加上博主说自己遇到了静电的问题，所以就放弃了。</p><p>最后就选择了今天的主角华擎DeskMini 310。</p><h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><table><thead><tr><th></th><th>型号</th></tr></thead><tbody><tr><td>CPU</td><td>i5-8500</td></tr><tr><td>主板/机箱/电源</td><td>DeskMini 310</td></tr><tr><td>内存</td><td>Crucial DDR4 2400 16G x2</td></tr><tr><td>SSD</td><td>三星 860 evo 512G</td></tr><tr><td>无线/蓝牙</td><td>DW1820A(BCM94356) 096JNT</td></tr><tr><td>天线</td><td>NGFF M2无线网卡转接线天线</td></tr><tr><td>USB排线</td><td>双口USB线9孔杜邦USB带耳朵挡板</td></tr><tr><td>显示器</td><td>KOIOS K2718UD</td></tr></tbody></table><h2 id="机器组装"><a href="#机器组装" class="headerlink" title="机器组装"></a>机器组装</h2><p>DeskMini 310是一个准系统，安装起来挺方便，主要就是硬盘，网卡，CPU的安装，主要参考了这几个地址：</p><p><a href="https://w2x.me/2019/06/13/Deskmini-310-黑苹果折腾记/" target="_blank" rel="noopener">Deskmini-310-黑苹果折腾记</a></p><p><a href="https://blog.fooleap.org/deskmini-310.html" target="_blank" rel="noopener">组一台迷你主机 DeskMini 310</a></p><p><a href="https://post.smzdm.com/p/aek8k2lq" target="_blank" rel="noopener">为了4K显示器，我重新配了一台迷你主机！Deskmini 310晒单</a></p><p>安装过程比较简单，不过还是耗费了2个多小时，其中无线网卡最难装，一个是天线，需要从机箱走天线出来（用内置天线的话需要离你的无线设备很近）;另一个是我用的1820A(096) 需要屏蔽前3后2。盗用黑果小兵的一张图，这是两张网卡，一正一反放在一起的照片，需要屏蔽的就是图中框出来的5个金手指，看这个图觉得挺容易，拿到网卡发现太难了，这网卡太小！</p><p><img src="http://7.daliansky.net/DW1820A/DW1820A_Cover_pins.jpg" alt></p><h2 id="系统安装"><a href="#系统安装" class="headerlink" title="系统安装"></a>系统安装</h2><h3 id="制作macOS-Mojave安装盘"><a href="#制作macOS-Mojave安装盘" class="headerlink" title="制作macOS Mojave安装盘"></a>制作macOS Mojave安装盘</h3><p>建议使用<a href="https://www.balena.io/etcher/" target="_blank" rel="noopener"><code>Etcher</code></a>制作安装盘，镜像文件可以从黑果小兵那里<a href="https://blog.daliansky.net/macOS-Mojave-10.14.4-18E226-official-version-with-Clover-4903-original-image.html" target="_blank" rel="noopener">下载</a>，我安装的版本是<code>Mojave 10.14.4</code>，然后替换掉里面的<code>CLOVER</code>。我的CLOVER来源主要是<a href="https://github.com/yuqi/Deskmini-310-Hackintosh" target="_blank" rel="noopener">这个</a>。</p><p><code>CLOVER</code>里最主要的就是<code>kext</code>驱动文件，<a href="https://www.kancloud.cn/chandler/mac_os/480623" target="_blank" rel="noopener">这里</a>有个对<code>kext</code>的介绍比较详细，可以了解一下。</p><h3 id="BIOS设置"><a href="#BIOS设置" class="headerlink" title="BIOS设置"></a>BIOS设置</h3><p>我的BIOS版本是P4.2</p><blockquote><p>Load UEFI Defaults</p><ul><li>Advanced<ul><li>CPU Configuration<ul><li>CPU C States Support : Enable<ul><li>CFG LOCK : Disabled</li></ul></li></ul></li></ul><ul><li>Chipset Configuration<ul><li>VT-d: Disabled</li><li>Onboard HD Audio: Enabled</li></ul></li><li>USB Configuration<ul><li>XHCI Hand-off: Enabled</li></ul></li><li>Super IO Configuration<ul><li>Serial Port: Disabled</li></ul></li></ul></li><li><p>Security</p><ul><li>Secure Boot: Disabled(by default)</li></ul></li></ul><ul><li>Boot<ul><li>CSM disable</li></ul></li></ul></blockquote><h3 id="安装macOS"><a href="#安装macOS" class="headerlink" title="安装macOS"></a>安装macOS</h3><p>​    选择U盘引导，中间要重起两次，注意每次选择的启动项。安装成功后就基本可以用了。需要额外处理的有WIFI，蓝牙，HDMI声音输出。</p><h3 id="WIFI蓝牙-DW1820A"><a href="#WIFI蓝牙-DW1820A" class="headerlink" title="WIFI蓝牙(DW1820A)"></a>WIFI蓝牙(<code>DW1820A</code>)</h3><p>​    建议参考黑苹果小兵的文章<a href="https://blog.daliansky.net/DW1820A_BCM94350ZAE-driver-inserts-the-correct-posture.html" target="_blank" rel="noopener">DW1820A/BCM94350ZAE/BCM94356ZEPA50DX插入的正确姿势</a>。</p><p>我使用的WIFI蓝牙二合一网卡型号是<code>DW180A</code>，M.2接口，芯片是<code>BCM94356</code>，这个型号的网卡有几种类型，我用到的是<code>096JNT</code>，也有别的也可以用，但是可能会有些差异，购买的时候需要特别注意。</p><p><img src="https://asset-1258390188.cos.ap-shanghai.myqcloud.com/dw1820a.jpg" style="zoom: 25%;"></p><p>我装的时候一开始没有做屏蔽，用了上面文章里的配置结果就无法启动了，会卡在：</p><blockquote><p>AirPort——Brcm43XX::stat: Failed ‘startGated()’</p></blockquote><p>后面在小兵的帮助下修改了<code>config.plist</code>文件，然后重起结果是蓝牙可以使用，WIFI不正常，最后我才做了前3后2的屏蔽，重起后一切都正常。</p><h3 id="HDMI声音"><a href="#HDMI声音" class="headerlink" title="HDMI声音"></a>HDMI声音</h3><p>现在很多显示器都有内置音箱，用起来很方便。我开始使用的<code>CLOVER</code>是无法使用的显示器的音箱，在解决网卡蓝牙问题的时候顺便这个问题也解决了，有点意外的惊喜。</p><h3 id="工作正常"><a href="#工作正常" class="headerlink" title="工作正常"></a>工作正常</h3><h2 id="正常"><a href="#正常" class="headerlink" title="正常"></a>正常</h2><ul><li><p>变频 </p><ul><li>需要使用Intel Power Gadget工具来查看，别的不准确</li></ul></li><li><p>声音 </p><ul><li>DP接口显示器音频正常</li><li>机箱3.5mm输出正常</li></ul></li><li><p>4K输出</p><ul><li>K2718UD </li></ul></li><li><p>无线</p><ul><li>1820A(096) 屏蔽5个针角</li></ul></li><li><p>蓝牙</p></li><li><p>睡眠</p></li></ul><h2 id="我的EFI"><a href="#我的EFI" class="headerlink" title="我的EFI"></a>我的EFI</h2><p><a href="https://github.com/cocobear/DeskMini310_EFI" target="_blank" rel="noopener">https://github.com/cocobear/DeskMini310_EFI</a></p>]]></content>
+    
+    <summary type="html">
+    
+      弄个迷你机箱装个黑苹果吧
+    
+    </summary>
+    
+    
+      <category term="deskmini" scheme="http://cocobear.github.io/tags/deskmini/"/>
+    
+      <category term="hackintosh" scheme="http://cocobear.github.io/tags/hackintosh/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux下清除硬盘上的RAID metadata</title>
+    <link href="http://cocobear.github.io/2019/11/18/linux-raid-metadata/"/>
+    <id>http://cocobear.github.io/2019/11/18/linux-raid-metadata/</id>
+    <published>2019-11-18T07:13:39.000Z</published>
+    <updated>2019-12-28T05:56:28.475Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://asset-1258390188.cos.ap-shanghai.myqcloud.com/linux-raid.png" alt></p><a id="more"></a><p>今天在装一台工控机的时候遇到了无法识别硬盘的问题,在RHEL 6.9下报错：</p><blockquote><p>Disks sdb contains BIOS RAID metadata, but is not part of any recognized BIOS RAID sets. Ignoring disks  sdb.</p></blockquote><p>在RHEL 7.5下面是找不到硬盘，但没有上面的报错提示，这一点7.5就表现的不太好，这么重要的错误提示没有显示出来。</p><p>根据提示来看应该是硬盘上面有以前做过<code>RAID</code>的信息在里面，于是试用<code>fdisk</code>重建分区，结果还是报错，拆下来用<code>Windows</code>下的<code>DiskGenius</code>软件重建<code>MBR</code>也是不行，最后在<code>macOS</code>下重建分区格式化成了GPT的分区表，装回原来的机器，结果就好了。</p><p>装好机器后又了解了一下Linux下的软件RAID，原来它是把<code>metadata</code>写在了硬盘的最后位置，所以即使怎么重建分区，都不会删除硬盘最后面的数据，所以最根本的解决办法是把这些数据清除掉：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dd if=/dev/zero of=$YOUR_DEV bs=512 seek=$(( $(blockdev --getsz $YOUR_DEV) - 1024 )) count=1024</span><br></pre></td></tr></table></figure><p><code>macOS</code>下的磁盘管理工具应该是清除了硬盘最后面的数据。</p>]]></content>
+    
+    <summary type="html">
+    
+      安装系统遇到RAID错误了！
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://cocobear.github.io/categories/Linux/"/>
+    
+    
+      <category term="linux" scheme="http://cocobear.github.io/tags/linux/"/>
+    
+      <category term="raid" scheme="http://cocobear.github.io/tags/raid/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>macOS上使用L2TP+IPSec访问内网资源</title>
+    <link href="http://cocobear.github.io/2019/11/14/vpn-on-macos/"/>
+    <id>http://cocobear.github.io/2019/11/14/vpn-on-macos/</id>
+    <published>2019-11-14T11:44:55.000Z</published>
+    <updated>2019-12-28T05:56:28.494Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://images2017.cnblogs.com/blog/1148681/201711/1148681-20171113112636077-2136950569.png" alt></p><a id="more"></a><h2 id="VPN服务端安装-L2TP-IPSEC-VPN"><a href="#VPN服务端安装-L2TP-IPSEC-VPN" class="headerlink" title="VPN服务端安装(L2TP + IPSEC VPN)"></a>VPN服务端安装(L2TP + IPSEC VPN)</h2><p>服务器是<code>CentOS 7</code>,为了方便使用了<code>docker</code>安装：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run --name ipsec-vpn-server --env-file /etc/l2tp-env --restart=always -p 500:500/udp -p 4500:4500/udp -v /lib/modules:/lib/modules:ro -d --privileged hwdsl2/ipsec-vpn-server</span><br></pre></td></tr></table></figure></p><p>路由器上打开了500和4500的端口映射。</p><h2 id="macOS-使用"><a href="#macOS-使用" class="headerlink" title="macOS 使用"></a>macOS 使用</h2><p>在<code>macOS</code>的网络设置里面直接新建一个VPN的连接，输入VPN的相关配置。</p><p>然后试着访问一个内网的服务器结果不行，拿出Android手机试了一下，发现是可以的，想着应该是<code>macOS</code>下的配置问题，google一下看到有人提到了在VPN配置的高级选项里可以勾选 <code>通过VPN连接发送所有流量</code>, 确实可以解决问题。</p><p>不过我又想既然默认<code>macOS</code>没有让所有连接都走VPN，那何不加个路由规则去让公司内网的IP走VPN,这样不影响其它网络访问。</p><p>查看当前的路由：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">route -n get 192.168.0.12</span><br></pre></td></tr></table></figure></p><p>发现果然没有走VPN对应的网关， 添加新的路由：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo route add 192.168.1.0/24 192.168.42.1</span><br><span class="line">sudo route add 192.168.0.0/24 192.168.42.1</span><br></pre></td></tr></table></figure></p><p>果然可以访问了。 因为公司有两个网段，所以加了两条路由。</p><p>不需要的话删除该路由<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo route delete 192.168.0.0/24</span><br></pre></td></tr></table></figure></p><p>同时也发现了一个<code>android</code>上面使用VPN的一个问题， <code>android</code>上面可以访问第一个网段，第二个不行，VPN的服务是安装在一台虚拟机上面，该机器是0网段，但这个物理机器又是1网段，不太确定和这个有关系没，估计应该也是路由的问题。</p>]]></content>
+    
+    <summary type="html">
+    
+      需要从家里访问公司内网的资源，很自然想到了使用VPN，记录一下。
+    
+    </summary>
+    
+    
+      <category term="macos" scheme="http://cocobear.github.io/tags/macos/"/>
+    
+      <category term="vpn" scheme="http://cocobear.github.io/tags/vpn/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>iTerm2使用代理</title>
+    <link href="http://cocobear.github.io/2019/01/03/iterm2-with-proxy/"/>
+    <id>http://cocobear.github.io/2019/01/03/iterm2-with-proxy/</id>
+    <published>2019-01-03T08:29:45.000Z</published>
+    <updated>2019-12-28T05:56:28.474Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://asset-1258390188.cos.ap-shanghai.myqcloud.com/iterm2-proxy.gif"></p><a id="more"></a><h2 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h2><p>以前在<code>Windows</code>下一直用<code>ShadowsocksR</code>科学上网，平时是不会开全局代理，只是在<code>Chrome</code>里面用插件<code>Proxy SwitchyOmega</code>配置成<code>auto switch</code>模式，基本可以满足日常使用，偶尔其它软件有要科学上网的需要，就打开<code>ShadowsocksR</code>的全局模式。</p><p>这样用着一直很顺，直到今天在<code>MacOS</code>下面安装软件时发现有个软件在亚马逊的<code>S3</code>上面，下载速度奇慢(<em>在家里电信的网络却没有遇到这问题</em>)，于是很自然的就打开<code>ShadowsocksX-NG</code>的全局模式，结果在<code>iTerm2</code>下面<code>brew</code>速度依然很慢，试着重新打开<code>iTerm2</code>，也不行，折腾了一会儿都不行，突然意识到是不是<code>ShadowsocksX-NG</code>的全局模式没有起作用，于是测试了一下：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">curl ip.sb</span><br><span class="line">111.18.41.235</span><br></pre></td></tr></table></figure><p>果然是国内的IP地址，后来又了解了一下，原来<code>MacOS</code>下<code>ShadowsocksX-NG</code>全局代理在<code>iTerm2</code>里是不起作用的。</p><h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>通过<code>Google</code>了解到可以通过设置环境变量来手动指定终端下面的代理，于是手动进行设置环境变量<code>ALL_PROXY</code>，最后<code>brew</code>下载速度果然上去了。</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">export ALL_PROXY=socks5://127.0.0.1:1080</span><br><span class="line">curl ip.sb</span><br><span class="line">66.112.220.gfw</span><br></pre></td></tr></table></figure><p>下载完成后，恢复原来的环境：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">unset ALL_PROXY</span><br><span class="line">curl ip.sb</span><br><span class="line">111.18.41.235</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      从AWS上面下载东西太慢了，想通过代理下载，结果一直不成功
+    
+    </summary>
+    
+      <category term="macOS" scheme="http://cocobear.github.io/categories/macOS/"/>
+    
+    
+      <category term="iTerm2" scheme="http://cocobear.github.io/tags/iTerm2/"/>
+    
+      <category term="macOS" scheme="http://cocobear.github.io/tags/macOS/"/>
+    
+      <category term="proxy" scheme="http://cocobear.github.io/tags/proxy/"/>
+    
+      <category term="brew" scheme="http://cocobear.github.io/tags/brew/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo &amp;&amp; Next升级</title>
+    <link href="http://cocobear.github.io/2018/12/28/update-hexo-next/"/>
+    <id>http://cocobear.github.io/2018/12/28/update-hexo-next/</id>
+    <published>2018-12-28T06:19:17.000Z</published>
+    <updated>2019-12-28T05:56:28.491Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://asset-1258390188.cos.ap-shanghai.myqcloud.com/hexo_next.jpg" alt><br><a id="more"></a></p><h2 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h2><p>很久没有更新博客， 想记录些东西，看到<code>Hexo</code>版本比较老了，就顺便升级一下。</p><p>升级的方式有很多种，建议使用增量升级的方式，简单来说就是直接在新的环境中安装最新版本的<code>Hexo</code>以及<code>NexT</code>主题，然后创建一个博客的框架，把旧的配置文件中自定义的内容复制到新的配置文件中，最后把文章拷到新的目录中。<br>此次升级的目标版本为：</p><blockquote><p>hexo: 3.8.0<br>hexo-cli: 1.1.0<br>node: 10.13.0<br>hexo-theme-next: 6.6.0</p></blockquote><p>旧的版本</p><blockquote><p>Hexo: xxx</p><p>hexo-theme-next: 5.1.0</p></blockquote><h2 id="升级步骤"><a href="#升级步骤" class="headerlink" title="升级步骤"></a>升级步骤</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">npm i hexo-cli -g</span><br><span class="line">hexo init blog &amp;&amp; cd blog</span><br><span class="line">npm install hexo —save</span><br><span class="line">npm install hexo-server --save</span><br><span class="line">vim _config.yml theme/next/_config.yml</span><br><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</span><br></pre></td></tr></table></figure><h2 id="升级过程中问题记录"><a href="#升级过程中问题记录" class="headerlink" title="升级过程中问题记录"></a>升级过程中问题记录</h2><h3 id="页面空白，只有侧边栏"><a href="#页面空白，只有侧边栏" class="headerlink" title="页面空白，只有侧边栏"></a>页面空白，只有侧边栏</h3><p>有可能是用了motion, 解决办法修改Next的配置文件:</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">motion:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure><p>也有可能是网络问题，刷新后会显示，但我用不到，所以就直接把这个关掉了。</p><h3 id="导航栏不显示图标"><a href="#导航栏不显示图标" class="headerlink" title="导航栏不显示图标"></a>导航栏不显示图标</h3><p><img src="https://asset-1258390188.cos.ap-shanghai.myqcloud.com/no_icon.png" alt>原因是一般和font-awesome.css 文件有关，比如我遇到的情况是chrome浏览器使用了Stylish 插件，自定义了自体样式，所以导致了图标未能正常显示，解决办法是让自定义的样式不要修改class为icon的样式：</p><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;<span class="attribute">text-shadow</span>: <span class="number">#707070</span> <span class="number">0.05px</span> <span class="number">0.05px</span> <span class="number">0.05px</span>&#125;</span><br><span class="line">*<span class="selector-pseudo">:not(</span><span class="selector-attr">[class*=<span class="string">"icon"</span>]</span>)<span class="selector-pseudo">:not(i)</span></span><br><span class="line">&#123;<span class="attribute">font-family</span>:Arial,<span class="string">"Microsoft YaHei"</span> <span class="meta">!important</span>;&#125;</span><br><span class="line">*<span class="selector-pseudo">:not(</span><span class="selector-attr">[class*=<span class="string">"icon"</span>]</span>)<span class="selector-pseudo">:not(i)</span></span><br><span class="line">&#123;<span class="attribute">font-weight</span>:<span class="number">400</span><span class="meta">!important</span>;&#125;</span><br><span class="line"><span class="keyword">@font-face</span> &#123;<span class="attribute">font-family</span>: <span class="string">"Microsoft YaHei"</span>;<span class="attribute">src</span>: <span class="built_in">local</span>(<span class="string">"Source Han Sans Bold"</span>)&#125;</span><br><span class="line"><span class="keyword">@font-face</span> &#123;<span class="attribute">font-family</span>: <span class="string">"Arial"</span>;<span class="attribute">src</span>: <span class="built_in">local</span>(<span class="string">"Source Han Sans Bold"</span>)&#125;</span><br></pre></td></tr></table></figure><h3 id="导航栏里面是英文"><a href="#导航栏里面是英文" class="headerlink" title="导航栏里面是英文"></a>导航栏里面是英文</h3><p>如上图， Home等未被汉化， 原因是新的Next主题里的汉化文件名有变化：</p><figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="deletion">-next/languages/zh-Hans.yml</span></span><br><span class="line"><span class="addition">+next/languages/zh-CN.yml</span></span><br></pre></td></tr></table></figure><p>所以需要修改配置文件_config.yml</p><figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="deletion">-language: zh-Hans</span></span><br><span class="line"><span class="addition">+language: zh-CN</span></span><br></pre></td></tr></table></figure><h3 id="导航栏的标签等不能点击"><a href="#导航栏的标签等不能点击" class="headerlink" title="导航栏的标签等不能点击"></a>导航栏的标签等不能点击</h3><p>原因是改了hexo的配置文件, 不清楚的时候最好这里使用false：</p><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">relative_link:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure><h2 id="图床迁移"><a href="#图床迁移" class="headerlink" title="图床迁移"></a>图床迁移</h2><p>以前用的七牛图床，突然有一天就挂了，当然不至于是七牛挂了，而是针对我们这些免费用户发了个邮件</p><blockquote><p>测试域名回收通知</p></blockquote><p>感觉七牛做的不太地道，直接回收了域名，都没有办法续用，网上很多人在用静态博客的时候都用了七牛的图床，最近几个月看到好多人博客的图片挂掉了。七牛这么做让很多人不舒服，当然毕竟是免费使用，大家也无话可说，所以很多人干脆就换地方了。</p><p>如果要继续使用七牛还需要进行实名认证以及使用国内备案的域名，我不想弄，所以干脆换个地方，还好有办法可以把图片导出，参考<a href="https://blog.csdn.net/lkj345/article/details/83382636" target="_blank" rel="noopener">这篇文章</a>。找了找各种图床，最后还是决定用腾讯的COS，首先免费，再次速度还不错，参考<a href="https://www.yangyilts.com/2018/使用腾讯云作为Hexo图床.html/" target="_blank" rel="noopener">腾讯云作为Hexo图床</a>把七牛的图片都导入了腾讯。然后就是使用<code>sed</code>把文章里面的链接替换掉，好久没用<code>sed</code>, 在写替换命令时费了老长时间。打算把图片名字后缀修改一下，比如<code>lnmp-450x300.jpg</code>改为<code>lnmp.jpg</code></p><p>我开始写的正则是这样：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sed 's/-[0-9]&#123;3&#125;x[0-9]&#123;3&#125;(.jpg|.png|.jpeg)/\1/g'</span><br></pre></td></tr></table></figure><p>但sed需要的是这样，有的需要转义，有的不需要，真痛苦!</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sed 's/-[0-9]\&#123;3\&#125;x[0-9]\&#123;3\&#125;\(.png\|.jpg\|.jpeg\)/\1/g'</span><br></pre></td></tr></table></figure><h2 id="主题定制"><a href="#主题定制" class="headerlink" title="主题定制"></a>主题定制</h2><h3 id="评论"><a href="#评论" class="headerlink" title="评论"></a>评论</h3><p>静态博客的评论是个很大的问题，虽然也有很多可选的评论方案，但都有各自的缺点，打算先用用<a href="https://valine.js.org/" target="_blank" rel="noopener">valine</a>, 这个基于js的评论插件是依赖于国内的<code>leancloud</code>服务商，免费使用有一些限制，以后会不会出现问题也不得而知，反正不是关键的点，先用用看。</p><p>开启<code>valine</code>在<code>NexT</code> v6里面很简单，直接修改主题的配置文件：</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">valine:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span> </span><br><span class="line">  <span class="attr">appid:</span>  <span class="string">填写从leancloud获取的appid</span> </span><br><span class="line">  <span class="attr">appkey:</span> <span class="string">填写从leancloud获取的appkey</span></span><br></pre></td></tr></table></figure><p>有评论当然要有通知才好，找了找发现<a href="http://www.zhaojun.im/hexo-valine-modify/" target="_blank" rel="noopener">valine有扩展通知的方案</a>，用起来感觉还不错，使用了QQ 邮箱接收，微信会自动通知。</p><p>后面打算再加个<code>gitment</code>, 虽然应该很稳定，但需要用户登录<code>github</code>账号，也不是很完美，而且同时有两个评论看着也不是很爽。</p><div class="note warning"><p><em>文章写的不是很详细，细节部分请参考相关文档以及参考链接 </em> </p></div><h2 id="TODO"><a href="#TODO" class="headerlink" title="TODO:"></a>TODO:</h2><ul><li style="list-style: none"><input type="checkbox"> 修改主题在首页文章下面加上tag， 类似于<a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" rel="noopener">hexo-theme-yelee</a>主题一样<hr></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      好久没有更新博客了，给窝重新装修一下吧！
+    
+    </summary>
+    
+      <category term="互联网" scheme="http://cocobear.github.io/categories/%E4%BA%92%E8%81%94%E7%BD%91/"/>
+    
+    
+      <category term="blog" scheme="http://cocobear.github.io/tags/blog/"/>
+    
+      <category term="hexo" scheme="http://cocobear.github.io/tags/hexo/"/>
+    
+      <category term="next" scheme="http://cocobear.github.io/tags/next/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>将博客从WordPress迁移至GitHub(GitCafe)+Hexo</title>
+    <link href="http://cocobear.github.io/2014/12/26/from-wordpress-to-hexo/"/>
+    <id>http://cocobear.github.io/2014/12/26/from-wordpress-to-hexo/</id>
+    <published>2014-12-26T07:18:20.000Z</published>
+    <updated>2019-12-28T05:56:28.472Z</updated>
+    
+    <content type="html"><![CDATA[<p>题记：对<code>markdown</code>不了解的同学可以先观看<a href="http://xiaocong.github.io/slides/writing-documentation-with-markdown/#/markdown-index" target="_blank" rel="noopener">这段slide</a></p><p>　　好长一段时间内都没有什么热情去写博客，有的时候需要记录一点东西也直接打开<code>notepad2</code>，用<a href="http://daringfireball.net/projects/markdown/syntax" target="_blank" rel="noopener">markdown</a>格式写完后保存在了Dropbox里，因为是随便记录，所以基本上没什么格式，一般都是一大堆的项目符号<code>* xxx *xxx</code>。不记得是哪天看到别人使用<code>markdown+github</code>来写博客，界面简洁清爽，顿时觉得这种方式才是最适合自己的博客模式，不用登录后台，不用关心托管的服务器，直接用自己喜欢的编辑器写博客，然后<code>git push</code>, 一篇博客就诞生了。甚至你可以通过Git来查看你对文章进行的所有修改，一切都显得那么合适，这才是最有情怀的blog方式。</p><p>　　使用<code>markdown+github</code>写博客的方案一般有<code>jekyll, Octopress, hexo</code> 经过比较后，最后我选择了<code>hexo</code>, 一个基于<code>nodejs</code>的博客，我主要看中了他的部署简单，速度快的特点。接下来就是从wordpress迁移过来了。<br><a id="more"></a>　　</p><h2 id="从WordPress迁移数据"><a href="#从WordPress迁移数据" class="headerlink" title="从WordPress迁移数据"></a>从WordPress迁移数据</h2><h3 id="数据导出"><a href="#数据导出" class="headerlink" title="数据导出"></a>数据导出</h3><ul><li><p>通过wordpress后台的export导出xml格式的数据如果原来的域名已经失效，需要更换新的域名时，可以通过修改wp-config.php文件，添加下面两行来实现更换域名:</p><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">define(<span class="string">'WP_HOME'</span>,<span class="string">'http://new_domain/blog/'</span>);</span><br><span class="line">define(<span class="string">'WP_SITEURL'</span>,<span class="string">'http://new_domain/blog/'</span>);</span><br></pre></td></tr></table></figure></li><li><p>从服务商主机中下载wordpress目录下的uploads中的所有数据(主要是写文章时插入的图片)</p></li></ul><h3 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h3><ul><li>安装Node.js (Windows下有可执行的安装包)</li></ul><blockquote><p>sudo apt-get install nodejs</p></blockquote><p>如果出现找不到node命令的时候，需要再安装<code>nodejs-legacy</code>, 其实就是一个<code>ln -s node nodejs</code></p><ul><li>安装hexo</li></ul><blockquote><p>   npm install -g hexo<br>    mkdir hexo<br>    cd hexo<br>    hexo init<br>    npm install<br>    hexo generate<br>    hexo server</p></blockquote><h3 id="xml数据导入"><a href="#xml数据导入" class="headerlink" title="xml数据导入"></a>xml数据导入</h3><h4 id="使用hexo提供的插件来导入"><a href="#使用hexo提供的插件来导入" class="headerlink" title="使用hexo提供的插件来导入"></a>使用hexo提供的插件来导入</h4><blockquote><p>   npm install hexo-migrator-wordpress –save<br>    hexo migrate wordpress wordpress.2014-12-18.xml</p></blockquote><p>　　因为原始的wordpress文章中有html标签，通过hexo-migrator-wordpress插件生成的markdown文件中仍然包含了html标签，所以转换后的页面会比较乱，仍然需要把xml中的html标签转化为markdown语法，这样才能使得hexo生成html页面和wordpress处理后一样的效果。</p><h4 id="使用第三方工具转换"><a href="#使用第三方工具转换" class="headerlink" title="使用第三方工具转换"></a>使用第三方工具转换</h4><p>　　通过能过万能的Gooogle，我找到了一个叫<a href="https://github.com/verygamer/wp2md" target="_blank" rel="noopener">wp2md</a>的工具，专门是做上面这件事的。不过使用官方建议的安装方式时出错了，最后我手工从github中下载了代码，然后pip install依赖的包markdown,手动下载了另一个依赖包html2text.py。<br>　　最后使用<code>python wp2md.py -d ./ wordpress-dump.xml</code> 来生成markdown文件，第一次生成的时候报错了，想到应该是xml文件格式的问题，于是使用xmllint检查一下wordpress导出的xml文件</p><blockquote><p>xmllint –noout  wordpress.2014-12-18.xml</p></blockquote><p>　　根据错误提示修改了xml文件，再次使用wp2md.py，成功了：</p><blockquote></blockquote><p>Dumping index to ‘C:\wp2md-master\index.md’</p><blockquote><p>Total: posts: 364; pages: 3; comments: 2124<br>Elapsed time: 1.998 s</p></blockquote><p>　　但是处理后的结果hexo解析时会有问题，不能完美显示，其中tags和categories都没有，而且更严重的问题是处理后的目录结构是以年为目录，直接把这些文件夹拷到hexo的source/_posts/目录下后hexo server无法启动。所以还是需要使用hexo自带的插件处理，然后再想办法掉去其中的HTML标签比较靠谱。wp2md里面有用到html2text.py这个工具，可以把html代码转换为markdown格式，本来想用html2text.py把hexo生成的所有markdown文件全处理一遍。但是hexo生成的文件已经是markdown格式了，继续用html2text.py处理的时候会把markdown格式破坏。</p><h4 id="最后还是手动处理"><a href="#最后还是手动处理" class="headerlink" title="最后还是手动处理"></a>最后还是手动处理</h4><p>　　想不到什么别的好办法了，索性直接手动处理了，300多篇文章，使用Beyond Compare比较hexo和wp2md生成的md文件，然后手动修改hexo生成的文章，处理了几个小时，终于完工了，可能会有不小心露掉的，不碍大事，就先这样吧。</p><h3 id="评论迁移"><a href="#评论迁移" class="headerlink" title="评论迁移"></a>评论迁移</h3><p>　　文章内容没什么问题了，接下来就是评论的问题，以前的博客有2000多的评论，而hexo转换出来的是不支持评论的，似乎disqus可以做评论迁移，但是由于我改过一些文章的标题，而且disqus在国内使用和访问都不是很方便，所以决定把wp2md生成的评论直接添加到过去文章的内容里。写了一个Python脚本来完成这个任务，几行代码就可以搞定。</p><h3 id="图片迁移"><a href="#图片迁移" class="headerlink" title="图片迁移"></a>图片迁移</h3><p>　　接下来就是迁移以前博客里面的图片了，看了下wordpress里面的图库，发现没有多少图片，直接放在hexo的source目录下面也是可以的，不过为了让hexo更简洁一些，还是把图片放在别的地方，看到好多用hexo的用户都推荐使用七牛这个图床，我也试了一下，但是觉得不太好用，官方提供的Linux下的同步工具老是失败，而且提供的外链域名是个不能修改的域名(如果要个性化域名好像是要实名认证的:-( 。最后直接用web页面上传了以前的图片，然后替换了markdown文件中的链接。先这样用一用吧，如果有更好的图床，再折腾吧。</p><blockquote></blockquote><p>sed -e ‘s/cocobear.github.io\/blog\/wp-content\/uploads\/[0-9]{4}\/[0-9]{2}/7sbxmt.com1.z0.glb.clouddn.com/‘</p><h2 id="hexo优化"><a href="#hexo优化" class="headerlink" title="hexo优化"></a>hexo优化</h2><h3 id="安装主题"><a href="#安装主题" class="headerlink" title="安装主题"></a>安装主题</h3><blockquote></blockquote><p>git clone <a href="https://github.com/wzpan/hexo-theme-freemind.git" target="_blank" rel="noopener">https://github.com/wzpan/hexo-theme-freemind.git</a> themes/freemind</p><p>然后修改<code>_config.yml</code> , 修改内容：<code>theme: freemind</code></p><h3 id="加快访问速度"><a href="#加快访问速度" class="headerlink" title="加快访问速度"></a>加快访问速度</h3><p>可以把主题中使用的js等库替换为公共CDN提供的地址，例如：</p><blockquote><p><a href="http://libs.baidu.com/jquery/2.0.3/jquery.min.js" target="_blank" rel="noopener">http://libs.baidu.com/jquery/2.0.3/jquery.min.js</a></p></blockquote><h3 id="评论："><a href="#评论：" class="headerlink" title="评论："></a>评论：</h3><p>可以使用Disqus和多数。Disqus是hexo默认支持的，直接在配置文件中添加你的用户名就可以，而多数是freemind这个主题支持的，也是直接在配置文件中添加：<br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Disqus</span></span><br><span class="line"><span class="attr">disqus_shortname:</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#duoshuo</span></span><br><span class="line"><span class="attr">duoshuo_shortname:</span> <span class="string">cocobear</span></span><br></pre></td></tr></table></figure></p><h3 id="部署到github和gitcafe"><a href="#部署到github和gitcafe" class="headerlink" title="部署到github和gitcafe"></a>部署到github和gitcafe</h3><p>试了几种_config.yml的配置方式，我使用的hexo(2.8.3)版本只有下面这种方式是两个服务器都可以成功push的:<br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">    <span class="attr">type:</span> <span class="string">github</span></span><br><span class="line">    <span class="attr">repo:</span> <span class="string">https://github.com/cocobear/cocobear.github.io.git</span></span><br><span class="line">    <span class="attr">type:</span> <span class="string">github</span></span><br><span class="line">    <span class="attr">repo:</span> <span class="string">https://gitcafe.com/cocobear/cocobear.git</span></span><br><span class="line">    <span class="attr">branch:</span> <span class="string">gitcafe-pages</span></span><br></pre></td></tr></table></figure></p><p>配置好后就可以使用下面的命令进行发布了：</p><blockquote></blockquote><p>hexo clean<br>rm -rf .deploy<br>hexo g<br>hexo d</p><h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>目前这样的博客写作方式比较符合Unix的哲学，</p><blockquote><p>程序应该只关注一个目标，并尽可能把它做好。让程序能够互相协同工作。应该让程序处理文本数据流，因为这是一个通用的接口。</p></blockquote><p>其实互联网的发展趋势也是朝着精细化服务的方向</p><blockquote><p>   Every Unix Command eventually become an internet service. 每条 Unix/Linux 命令最终将成为一种互联网服务<br>    Grep -&gt; Google<br>    rsync - Dropbox<br>    man -&gt; Stack Overflow<br>    cron -&gt; ifttt<br>    来自推友@cdixon。</p></blockquote><p>参考链接:<br><a href="http://gfrog.net/2013/03/convert-wordpress-to-octopress/" target="_blank" rel="noopener">http://gfrog.net/2013/03/convert-wordpress-to-octopress/</a><br><a href="http://www.aogun.com/2013/04/10/wordpress-2-markdown/" target="_blank" rel="noopener">http://www.aogun.com/2013/04/10/wordpress-2-markdown/</a><br><a href="http://bubbyroom.com/2013/08/11/migrate-my-blog-from-wordpress-to-hexo/" target="_blank" rel="noopener">http://bubbyroom.com/2013/08/11/migrate-my-blog-from-wordpress-to-hexo/</a><br><a href="http://armsword.com/2014/11/22/move-from-wordpress-to-hexo/" target="_blank" rel="noopener">http://armsword.com/2014/11/22/move-from-wordpress-to-hexo/</a><br><a href="http://ibruce.info/2013/11/22/hexo-your-blog/" target="_blank" rel="noopener">http://ibruce.info/2013/11/22/hexo-your-blog/</a><br><a href="http://blog.csdn.net/qmhball/article/details/8955588" target="_blank" rel="noopener">http://blog.csdn.net/qmhball/article/details/8955588</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;题记：对&lt;code&gt;markdown&lt;/code&gt;不了解的同学可以先观看&lt;a href=&quot;http://xiaocong.github.io/slides/writing-documentation-with-markdown/#/markdown-index&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;这段slide&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;　　好长一段时间内都没有什么热情去写博客，有的时候需要记录一点东西也直接打开&lt;code&gt;notepad2&lt;/code&gt;，用&lt;a href=&quot;http://daringfireball.net/projects/markdown/syntax&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;markdown&lt;/a&gt;格式写完后保存在了Dropbox里，因为是随便记录，所以基本上没什么格式，一般都是一大堆的项目符号&lt;code&gt;* xxx *xxx&lt;/code&gt;。不记得是哪天看到别人使用&lt;code&gt;markdown+github&lt;/code&gt;来写博客，界面简洁清爽，顿时觉得这种方式才是最适合自己的博客模式，不用登录后台，不用关心托管的服务器，直接用自己喜欢的编辑器写博客，然后&lt;code&gt;git push&lt;/code&gt;, 一篇博客就诞生了。甚至你可以通过Git来查看你对文章进行的所有修改，一切都显得那么合适，这才是最有情怀的blog方式。&lt;/p&gt;
+&lt;p&gt;　　使用&lt;code&gt;markdown+github&lt;/code&gt;写博客的方案一般有&lt;code&gt;jekyll, Octopress, hexo&lt;/code&gt; 经过比较后，最后我选择了&lt;code&gt;hexo&lt;/code&gt;, 一个基于&lt;code&gt;nodejs&lt;/code&gt;的博客，我主要看中了他的部署简单，速度快的特点。接下来就是从wordpress迁移过来了。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="互联网" scheme="http://cocobear.github.io/categories/%E4%BA%92%E8%81%94%E7%BD%91/"/>
+    
+    
+      <category term="wordpress" scheme="http://cocobear.github.io/tags/wordpress/"/>
+    
+      <category term="hexo" scheme="http://cocobear.github.io/tags/hexo/"/>
+    
+      <category term="git" scheme="http://cocobear.github.io/tags/git/"/>
+    
+      <category term="github" scheme="http://cocobear.github.io/tags/github/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>在没有微信公众账号的情况如何发送微信通知</title>
+    <link href="http://cocobear.github.io/2013/12/19/send-wechat-notify-without-wechat-public-account/"/>
+    <id>http://cocobear.github.io/2013/12/19/send-wechat-notify-without-wechat-public-account/</id>
+    <published>2013-12-19T03:25:40.000Z</published>
+    <updated>2019-12-28T05:56:28.486Z</updated>
+    
+    <content type="html"><![CDATA[<p>如果你有一个需求，对某个事件进行监控，而在出现异常的情况下需要通知自己，通知的方式最常用的应该是短信、电话、微信等，而短信、电话用起来不是很方便，目前微信比较流行，所以可以考虑使用微信通知。</p><p>但是微信公众账号申请太麻烦，这里提供一个最简单的通知办法，微信可以收到QQ的邮件通知，所以如果我们需要发微信通知的时候，只需要给你微信号所绑定的QQ邮箱发一个邮件就可以了。</p><p>下面是Linux下发送邮件的一个简单的办法，使用了外部SMTP服务器发方式发送，这样可以避免发送邮件时被邮件服务商当作垃圾邮件处理。</p><ul><li>安装mail </li><li>配置 /etc/mail.rc </li><li>添加以下内容 </li></ul><pre><code>set from=123456@qq.comset smtp=smtp.qq.com  set smtp-auth-user=123456set smtp-auth-password=sbsbsbsbset smtp-auth=login </code></pre><ul><li>然后通过命令来发送邮件 </li></ul><pre><code>echo  hello  | mail -s &quot; title&quot; 123456@qq.com</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;如果你有一个需求，对某个事件进行监控，而在出现异常的情况下需要通知自己，通知的方式最常用的应该是短信、电话、微信等，而短信、电话用起来不是很方便，目前微信比较流行，所以可以考虑使用微信通知。&lt;/p&gt;
+&lt;p&gt;但是微信公众账号申请太麻烦，这里提供一个最简单的通知办法，微信可以收
+      
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://cocobear.github.io/categories/Linux/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Smartisan OS 0.2 alpha for Nexus 4</title>
+    <link href="http://cocobear.github.io/2013/07/24/smartisan-os-0-2-alpha-for-nexus-4/"/>
+    <id>http://cocobear.github.io/2013/07/24/smartisan-os-0-2-alpha-for-nexus-4/</id>
+    <published>2013-07-24T05:52:04.000Z</published>
+    <updated>2019-12-28T05:56:28.486Z</updated>
+    
+    <content type="html"><![CDATA[<p>该版本是在<a href="http://bbs.anzhi.com/thread-7307404-1-2.html" target="_blank" rel="noopener">烟雨</a>的基础上移植了Smartisan OS 0.2 alpha版本，在速度和稳定性方面有了大幅的提升。</p><p><img src="https://asset-1258390188.cos.ap-shanghai.myqcloud.com/b8cc3b379b3872b7921ba5fb85a0020b.png" alt="截屏20130724133050"></p><p><img src="https://asset-1258390188.cos.ap-shanghai.myqcloud.com/fd41d7152e3f1654b5c83716f3c6d614.png" alt="截屏20130724133111"><br><a id="more"></a>　　<br><img src="https://asset-1258390188.cos.ap-shanghai.myqcloud.com/654f2099e8a227475a1b2783486796c7.png" alt="截屏20130724133117"></p><p><img src="https://asset-1258390188.cos.ap-shanghai.myqcloud.com/596e1cd7f8acb5bdef82e6edd62a324f.png" alt="截屏20130724133135"></p><p><img src="https://asset-1258390188.cos.ap-shanghai.myqcloud.com/287b8835308fcfbd20894268f48510cb.png" alt="截屏20130724133145"></p><p><img src="https://asset-1258390188.cos.ap-shanghai.myqcloud.com/4d44ba30af10c566589923d7199a1284.png" alt="截屏20130724133210"></p><p>可正常使用的功能：</p><ul><li>电话 </li><li>短信 </li><li>相机 </li><li>google套件(联系人，Play) </li><li>WIFI </li><li>GPS </li></ul><p>已知问题：</p><ul><li>如果未使用全屏方式，桌面图片会被挤压变形</li><li>解锁屏幕，拨号盘，由于分辨率的问题会有白边 </li><li>Chrome浏览器闪退 （可使用其它第三方浏览器，如UC，本ROM未内置，请自行下载） </li></ul><p>隐藏虚拟按键，使用Pie Pro来代替虚拟按键的办法： </p><p>首先打开 Pie Pro软件，在PIE这一屏中打开PIE PRO的开关，可以选择左侧或者右侧，任意钩选，也可同时钩选。<br><img src="https://asset-1258390188.cos.ap-shanghai.myqcloud.com/5bb4072f943be017f9fa87c3f4152d9d.png" alt="截屏20130724133240"></p><p>然后在级别1中添加第一按键，点“短击”，弹出的菜单中选择“工具－返回”，然后确定，这样就添加了一个抽屉式的菜单,<br><img src="https://asset-1258390188.cos.ap-shanghai.myqcloud.com/1f506bf971c7fdb2073bca1c9fc6dd45.png" alt="截屏20130724134012"></p><p>使用时手指从屏幕左侧或右侧向屏幕内滑动，就会弹出你设定好的菜单，同样的方法，你可以最多添加5个按键。<br><img src="https://asset-1258390188.cos.ap-shanghai.myqcloud.com/c93425ecf7f4fe93760418a6d08f1e91.png" alt="截屏20130724133229"></p><p>添加好后可以关闭系统的虚拟按键：使用自带的文件管理器，选择设置：</p><p><img src="https://asset-1258390188.cos.ap-shanghai.myqcloud.com/376981f83907b43ff9fbb48b7eb48f93.png" alt="截屏20130724133015"></p><p>打开ROOT权限<br><img src="https://asset-1258390188.cos.ap-shanghai.myqcloud.com/4b2f58c53a6f454290a4f663de25fff7.png" alt="截屏20130724133025"></p><p><img src="https://asset-1258390188.cos.ap-shanghai.myqcloud.com/40f8acd4f870eec26164dbda16a4f393.png" alt="截屏20130724133033"></p><p>选择/system/build.prop文件<br><img src="https://asset-1258390188.cos.ap-shanghai.myqcloud.com/f103d82a76720d4aa902ffbcb9909b46.png" alt="截屏20130724132956"></p><p>注释掉这行：&gt; #qemu.hw.mainkeys=0<br><img src="https://asset-1258390188.cos.ap-shanghai.myqcloud.com/ca27a1957683efea9c254960f7d81ece.png" alt="截屏20130724132932"></p><p><a href="http://pan.baidu.com/share/link?shareid=3790763553&amp;uk=1896185499" title="下载地址（百度网盘）" target="_blank" rel="noopener">下载地址（百度网盘）</a></p><p>我用了几天的时间，日常使用不会有大的问题，不过毕竟只是一个alpha版，太挑剔者请慎重，这里只是为了第一时间体验。</p><p>有任何问题可以在这里交流，不过不一定可以解决。</p><p><a href="http://weibo.com/u/1924225341" title="微博 " target="_blank" rel="noopener">围脖交流：http://weibo.com/u/1924225341</a></p><h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#25381" title="2013-07-25 09:17:27">可可熊</a>:</strong> 拨号盘右侧有白条，不影响使用。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;该版本是在&lt;a href=&quot;http://bbs.anzhi.com/thread-7307404-1-2.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;烟雨&lt;/a&gt;的基础上移植了Smartisan OS 0.2 alpha版本，在速度和稳定性方面有了大幅的提升。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://asset-1258390188.cos.ap-shanghai.myqcloud.com/b8cc3b379b3872b7921ba5fb85a0020b.png&quot; alt=&quot;截屏20130724133050&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://asset-1258390188.cos.ap-shanghai.myqcloud.com/fd41d7152e3f1654b5c83716f3c6d614.png&quot; alt=&quot;截屏20130724133111&quot;&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Life" scheme="http://cocobear.github.io/categories/Life/"/>
+    
+    
+      <category term="android" scheme="http://cocobear.github.io/tags/android/"/>
+    
+      <category term="nexus4" scheme="http://cocobear.github.io/tags/nexus4/"/>
+    
+      <category term="smartisan" scheme="http://cocobear.github.io/tags/smartisan/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Django记录一</title>
+    <link href="http://cocobear.github.io/2013/06/26/django-note/"/>
+    <id>http://cocobear.github.io/2013/06/26/django-note/</id>
+    <published>2013-06-26T06:01:59.000Z</published>
+    <updated>2019-12-28T05:56:28.467Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://asset-1258390188.cos.ap-shanghai.myqcloud.com/django.png" alt="django"></p><ul><li>如何清空app对应的数据库表项并重建数据库表 </li></ul><pre><code>python manage.py sqlclear mcard | python manage.py dbshell&gt; python manage.py syncdb</code></pre><ul><li>如何使用South管理Django数据库（model)：<a id="more"></a></li></ul><p>使用Django做开发的，有时候一个app运行了一段时间，有新的需求要在数据库表项增加一个字段，这时候South就可以帮到大忙了。</p><p>首先安装south, 可以使用pip south来安装，然后把South添加到项目的INSTALLED_APPS 中，运行 ./manage.py syncdb 加载South 用到的数据库表项。安装好South后需要把现有的app添加到South里，可以使用下面的命令：</p><pre><code>./manage.py schemamigration mmq --initial&gt; ./manage.py migrate mmq 0001 --fake</code></pre><p>如果对models进行了修改后，则可以运行下面的命令来修改数据库：</p><pre><code>./manage.py schemamigration app_name--auto &gt; ./manage.py migrate app_name</code></pre><p>如果你的操作失败了（如你执行了 migrate app_name命令，但是由于新加的field是非空，不能正常更新数据库），但South还是把你的操作记录进了数据库，你可以手动回退操作：</p><pre><code>rm app_name/migrations/000X_something_you_have_done.py&gt; ./manage.py dbshell &gt; sqlite&gt; select * from south_migrationhistory;&gt; sqlite&gt; delete from south_migrationhistory where id=xx;&gt; sqlite&gt; drop table _south_new_table_name;</code></pre><ul><li>使用自定义的locale文件：</li></ul><p>首先要在项目的settings.py文件中添加locale目录位置，如果你的locale位于你的app下，则可以略过下面的步骤：</p><pre><code>LOCALE_PATHS = ( os.path.join(BASE_DIR , &apos;locale&apos;), ) </code></pre><p>请注意上面的LOCALE_PATHS 是一个tuple,如果你只有一个位置，也需要在后面加一个逗号，否则Django不会报任何错误，但是它不会使用这个位置的locale文件。</p><p>配置好locale目录后，在项目目录下运行命令：</p><pre><code>./manage.py makemessages -l zh_CN</code></pre><p>将生成如下的目录结构：<br>     (django)[www@HJY-SERVER manage]$ tree locale/&gt;<br>     locale/&gt;<br>     └── zh_CN&gt;<br>         └── LC_MESSAGES&gt;<br>             ├── django.mo&gt;<br>             └── django.po</p><p>如果使用Django admin开发应用，<a href="https://github.com/sehmaschine/django-grappelli" target="_blank" rel="noopener">grappelli</a>和<a href="https://github.com/saxix/django-adminactions" target="_blank" rel="noopener">adminactions</a>是两个不错的插件，安装很简单，请参考官方的文档说明。</p><p>参考文章：</p><p><a href="http://agiliq.com/blog/2012/01/south/" target="_blank" rel="noopener">http://agiliq.com/blog/2012/01/south/</a><br><a href="http://simple-is-better.com/news/798" target="_blank" rel="noopener">http://simple-is-better.com/news/798</a><br><a href="http://south.readthedocs.org/en/latest/tutorial/part3.html" target="_blank" rel="noopener">http://south.readthedocs.org/en/latest/tutorial/part3.html</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://asset-1258390188.cos.ap-shanghai.myqcloud.com/django.png&quot; alt=&quot;django&quot;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如何清空app对应的数据库表项并重建数据库表 &lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;python manage.py sqlclear mcard | python manage.py dbshell&amp;gt; 
+python manage.py syncdb
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;如何使用South管理Django数据库（model)：
+    
+    </summary>
+    
+      <category term="Life" scheme="http://cocobear.github.io/categories/Life/"/>
+    
+    
+      <category term="Python" scheme="http://cocobear.github.io/tags/Python/"/>
+    
+      <category term="Django" scheme="http://cocobear.github.io/tags/Django/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CentOS部署 Nginx+uWSGI+Django</title>
+    <link href="http://cocobear.github.io/2013/06/19/centos-deploy-nginx-uwsgi-django/"/>
+    <id>http://cocobear.github.io/2013/06/19/centos-deploy-nginx-uwsgi-django/</id>
+    <published>2013-06-19T06:53:33.000Z</published>
+    <updated>2019-12-28T05:56:28.463Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://asset-1258390188.cos.ap-shanghai.myqcloud.com/django-nginx-uwsgi.jpg" alt="django-nginx-uwsgi"></p><p>创建单独的django环境：</p><pre><code>virtualenv django</code></pre><p>激活django环境：</p><pre><code>[root@HJY-SERVER html]# source ../venv/django/bin/activate</code></pre><p>新建一个工程：</p><pre><code>(django)[root@HJY-SERVER html]# django-admin.py startproject mcard(django)[root@HJY-SERVER html]# tree mcard/mcard├── manage.py└── mcard&gt;  ├── __init__.py ├── settings.py ├── urls.py └── wsgi.py1 directory, 5 files</code></pre><a id="more"></a><p>最外面这个目录mcard可以任意修改，只要保证nginx指向这个目录就可以了，下一层目录中的mcard存放的是该工程的核心配置文件，settings.py为数据库、语言、链接库等配置，urls.py指定了转发规则，wsgi.py则是入口程序，需要在uwsgi的配置文件中指定该文件，下面我们配置uwsgi：</p><pre><code>(django)[root@HJY-SERVER html]# cat /opt/uwsgi/conf/mcard.ini[uwsgi]#variablesbase=/opt/uwsgi#configsocket=%(base)/run/%n.sockdaemonize=%(base)/run/%n.logpidfile=%(base)/run/%n.pidgid=wwwuid=wwwvirtualenv=/home/www/venv/djangochdir=/home/www/html/%npathonpath=/home/www/html/%nmodule=%n.wsgi:applicationmaster=Trueprocesses=4max-requests=5000</code></pre><p>这次对uwsgi的配置脚本进行了优化，考虑了多个app共存的情况，使用%n来代替app的名称，而这个%n就是这个配置的文件名，如mcard.ini, uwsg解析这个配置文件的时候会自动把%n替换为mcard,这样如果要新加一个app，只需要</p><pre><code>copy mcard.ini mmq.ini&gt; (django)[root@HJY-SERVER html]# ls /opt/uwsgi/conf/&gt; mcard.ini  mmq.ini  mobile.ini</code></pre><p>就完成了，不需要再手动改配置文件里面的应用名称了，只需要再创建一个应用目录就完成应用的增加。</p><p>而启动的时候修改一下启动脚本，使用emperor 模式来运行uwsgi， 这样 有多个应用（比如一个bottle应用，两个django应用）你就不需要写三个自启动的脚本，只需要把原来启动脚本中的启动参数改类似下面的模式：</p><pre><code>uwsgi --emperor &quot;/var/www/*/conf/uwsgi.ini&quot;</code></pre><p>下面是截取的 /etc/init.d/uwsgi脚本片段：</p><pre><code>. /etc/rc.d/init.d/functionsUWSGI=/opt/uwsgi/uwsgiCONFFILE=/opt/uwsgi/confprog=uwsgiapp=mmquwsgi=${UWSGI}conffile=${CONFFILE}lockfile=/opt/uwsgi/run/${prog}.lckpidfile=/opt/uwsgi/run/${prog}.pidlogfile=/opt/uwsgi/run/${prog}.logSLEEPMSEC=100000RETVAL=0start() {    echo -n $&quot;Starting $prog: &quot;    daemon ${uwsgi} --emperor ${conffile} -d ${logfile} --pidfile=${pidfile}    RETVAL=$?    echo    [ $RETVAL = 0 ] &amp;amp;&amp;amp; touch ${lockfile}    return $RETVAL}</code></pre><p>接下来更新一下nginx的配置文件，以下配置支持应用的情况为：</p><p>一个PHP应用在80端口；<br>一个bottle应用配置在8051端口；<br>两个django应用配置在8052端口，分别使用/mcard和/mmq访问；</p><pre><code>server {    listen       8051;    server_name  localhost;    root   /home/www/html/mobile;    location / {        include uwsgi_params;        uwsgi_pass unix:///opt/uwsgi/run/mobile.sock;    }}server {    listen       8052;    server_name  localhost;    #下面这行指定了访问/mmq转发到mmq.sock这个uwsgi进程上    location /mmq/ {        include uwsgi_params;        uwsgi_pass unix:///opt/uwsgi/run/mmq.sock;    }    #下面指定了mmq应用静态目录的位置，因为该应用基于admin控制台，所以把静态文件指向django系统默认的目录中    location /mmq/static/ {        alias /home/www/venv/django/lib64/python2.6/site-packages/django/contrib/admin/static/;    }    #访问/mcard/转发到mcard.sock这个uwsgi进程上    location /mcard/ {        include uwsgi_params;        uwsgi_pass unix:///opt/uwsgi/run/mcard.sock;    }}server {    listen       80;    server_name  localhost;    root   /home/www/html;    location ~ .*\.(php|php5)?$    {        fastcgi_pass 127.0.0.1:9000;        fastcgi_index index.php;        include fastcgi.conf;    }}</code></pre><p>Web文档的目录结构为：<br>    (django)[root@HJY-SERVER html]# ls<br>    index.php  mcard/  mmq/  mobile/</p><p>配置好后重起系统，分别访问<br><a href="http://127.0.0.1:8051" target="_blank" rel="noopener">http://127.0.0.1:8051</a><br><a href="http://127.0.0.1:8052/mcard/" target="_blank" rel="noopener">http://127.0.0.1:8052/mcard/</a><br><a href="http://127.0.0.1:8052/mmq/" target="_blank" rel="noopener">http://127.0.0.1:8052/mmq/</a></p><p>参考文章：<br>第二、三篇文章介绍的很详细，包括部署应用的目录结构，配置文件的写法，都挺值得参考的。</p><p><a href="http://obmem.info/?p=703" target="_blank" rel="noopener">http://obmem.info/?p=703</a><br><a href="http://www.collabspot.com/2012/08/14/setting-up-nginx-uwsgi-python-ubuntu-12-04/" target="_blank" rel="noopener">http://www.collabspot.com/2012/08/14/setting-up-nginx-uwsgi-python-ubuntu-12-04/</a><br><a href="http://jawher.me/2012/03/16/multiple-python-apps-with-nginx-uwsgi-emperor-upstart/" target="_blank" rel="noopener">http://jawher.me/2012/03/16/multiple-python-apps-with-nginx-uwsgi-emperor-upstart/</a><br><a href="http://loosky.net/archives/2665.html" target="_blank" rel="noopener">http://loosky.net/archives/2665.html</a><br><a href="http://blog.csdn.net/quicktest/article/details/7818781" target="_blank" rel="noopener">http://blog.csdn.net/quicktest/article/details/7818781</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://asset-1258390188.cos.ap-shanghai.myqcloud.com/django-nginx-uwsgi.jpg&quot; alt=&quot;django-nginx-uwsgi&quot;&gt;&lt;/p&gt;
+&lt;p&gt;创建单独的django环境：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;virtualenv django
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;激活django环境：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[root@HJY-SERVER html]# source ../venv/django/bin/activate
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;新建一个工程：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;(django)[root@HJY-SERVER html]# django-admin.py startproject mcard
+(django)[root@HJY-SERVER html]# tree mcard/
+mcard
+├── manage.py
+└── mcard&amp;gt; 
+ ├── __init__.py
+ ├── settings.py
+ ├── urls.py
+ └── wsgi.py
+1 directory, 5 files
+&lt;/code&gt;&lt;/pre&gt;
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://cocobear.github.io/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="http://cocobear.github.io/tags/Linux/"/>
+    
+      <category term="Python" scheme="http://cocobear.github.io/tags/Python/"/>
+    
+      <category term="centos" scheme="http://cocobear.github.io/tags/centos/"/>
+    
+      <category term="Django" scheme="http://cocobear.github.io/tags/Django/"/>
+    
+      <category term="nginx" scheme="http://cocobear.github.io/tags/nginx/"/>
+    
+      <category term="uwsgi" scheme="http://cocobear.github.io/tags/uwsgi/"/>
+    
+      <category term="virtualenv" scheme="http://cocobear.github.io/tags/virtualenv/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Android4.2.2源码编译并修改系统App</title>
+    <link href="http://cocobear.github.io/2013/06/18/compile-android-4-2-2-and-modify-system-app/"/>
+    <id>http://cocobear.github.io/2013/06/18/compile-android-4-2-2-and-modify-system-app/</id>
+    <published>2013-06-18T01:59:17.000Z</published>
+    <updated>2019-12-28T05:56:28.465Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://asset-1258390188.cos.ap-shanghai.myqcloud.com/android-logo.jpg" alt="android-logo"></p><p>Android4.2.2源码编译</p><p>这不是一份详细的Android源码编译指南，这里只是除官方指南外的记录，请先阅读<a href="http://source.android.com/source/initializing.html" title="官方编译指南" target="_blank" rel="noopener">官方编译指南</a></p><p>官方的编译指南挺详细的，最好看仔细一点，比如ccache这个东西，如果你老在不同的分枝切换编译这个东西能节省不少的时间，官方推荐的操作系统是Ubuntu 10.04　64位,　不过我这里原来这里有一个下载好的12.04，看到官方说明也也支持所以就在12.04上面进行编译了。</p><p>花了几天的时间下载源码，因为老是卡死在一个地方，本来把机器开着一个晚上下载，希望第二天能下载完，结果不知道啥时候已经卡死了，所以断断续续的下载了几天，天朝的环境真是不管做什么都“<strong>多难兴邦</strong>”。</p><p>下载完所有的源码后，最好能打包一下放在别的地方，省得弄乱了需要重新下载：</p><pre><code>tar -jcvf android.tar.bz2 android/</code></pre><p>编译的时候如果你不做别的事情，最好根据你的CPU指定多线程编译:</p><pre><code>make -j8</code></pre><p>我在编译的时候由于使用虚拟机，而且同时又在做别的事情，经常会造成虚拟机死掉，有时使用Ctrl+c中断了编译过程，所以出现了下面的错误：</p><pre><code>make: *** [out/target/product/generic/obj/SHARED_LIBRARIES/libwebcore_intermediates/LINKED/libwebcore.so] Error 1</code></pre><p>在Google Group里找到了原因：<br><a href="https://groups.google.com/forum/?fromgroups#!topic/android-porting/LVpm39BAqRw" title="Solution" target="_blank" rel="noopener">https://groups.google.com/forum/?fromgroups#!topic/android-porting/LVpm39BAqRw</a></p><p>解决办法：</p><pre><code>make clean-libwebcore &gt; make -j4 libwebcore&gt; make -j4</code></pre><p>修改并编译系统App方法一:</p><p>如果你需要单独编译某个App，会生成apk文件和odex文件，如果你只想生成apk文件，修改在Android.mk文件</p><pre><code>cd packages/apps/Stk/&gt; vi Android.mkLOCAL_PACKAGE_NAME := Stk&gt; LOCAL_CERTIFICATE := platform&gt; #这行是新添加的:&gt; WITH_DEXPREOPT := false</code></pre><p>修改完后使用命令：mm</p><p>编译完会在out目录下会生成Stk.apk文件，把该文件push到手机上，就可以替换原有的系统程序了：</p><pre><code>adb push Stk.apk /system/app/&gt; 1236 KB/s (39262 bytes in 0.031s)&gt; adb shell chmod 644 /system/app/Stk.apk&gt; adb reboot</code></pre><p>折腾了几天自己编译的系统程序（system app)总是不能在手机上运行，而从别的地方下载的app就可以用上面的命令运行，早上突然意识到是不是TARGET不对，于是试了一下：</p><pre><code>You&apos;re building on Linux&gt; Lunch menu... pick a combo:&gt;      1\. full-eng&gt;      2\. full_x86-eng&gt;      3\. vbox_x86-eng&gt;      4\. full_mips-eng&gt;      5\. full_grouper-userdebug&gt;      6\. full_tilapia-userdebug&gt;      7\. mini_armv7a_neon-userdebug&gt;      8\. mini_armv7a-userdebug&gt;      9\. mini_mips-userdebug&gt;      10\. mini_x86-userdebug&gt;      11\. full_mako-userdebug&gt;      12\. full_maguro-userdebug&gt;      13\. full_manta-userdebug&gt;      14\. full_toroplus-userdebug&gt;      15\. full_toro-userdebug&gt;      16\. full_panda-userdebug&gt; Which would you like? [full-eng] 8&gt; or:&gt; lunch mini_armv7a-userdebug</code></pre><p>再次重新运行mm命令，push到手机上，终于可以运行了，网上看到的文章一般都没有提到lunch的作用，默认的情况下lunch会被设定为：full-eng，而这个选项是用给虚拟机的，所以生成的apk在手机上无法运行，所以要选择编译选项为arm。full_mako-userdebug指的是Nexus 4，因为我这里编译的只是上层应用所以用这个选项也可以。</p><p>我这里用的测试手机是MOTO ME525+ 已刷机 CM10.1（4.2.2） 已ROOT，如果你也有类似的需要请注意保持手机系统的版本和你编译的源码一致，并且你的手机已经ROOT。</p><p>修改并编译系统App方法二:</p><p>首先下载App源代码:</p><pre><code>git clone https://android.googlesource.com/platform/packages/apps/Launcher -b android-4.2.2_r1</code></pre><p>然后把下载的代码通过在Eclipse的菜单<android project from existing code>新建一个工程，在工程目录下新建文件夹libs, 用来存放out/target/common/obj/JAVA_LIBRARIES/framework_intermediates/classes.jar<br>文件，这个文件包含了一些隐藏的系统API，我们在Eclipse里编译系统app的时候需要调用这个库。</android></p><p>在工程文件的属性中按以下步骤添加系统库：</p><pre><code>Java Build Path－&gt; Libraries - &gt; Add Library -&gt; User Library -&gt; User Libraries -&gt; New -&gt; input User library name(like framework_android) and checkbox System library on -&gt; Add JARs -&gt; Select ./libs/classes.jar file&gt; Select: Order and Export  -&gt; make framework_android on the top and checked</code></pre><p>我这里使用自己编译生成的framework_intermediates/classes.jar文件总是无法成功调用到隐藏的系统API,但是通过查看jar包,可以看到com.android.internal这样的系统API. 使用别人在网上发出来的classes.jar文件可以找到系统API,不过因为不是4.2的,所以我这里编译的时候出现了其它引用错误. </p><p><strong>参考文章:</strong></p><p><a href="http://www.iteye.com/topic/937547" target="_blank" rel="noopener">http://www.iteye.com/topic/937547</a></p><p><a href="http://www.mkyong.com/android/attach-android-source-code-to-eclipse-ide" target="_blank" rel="noopener">http://www.mkyong.com/android/attach-android-source-code-to-eclipse-ide</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;https://asset-1258390188.cos.ap-shanghai.myqcloud.com/android-logo.jpg&quot; alt=&quot;android-logo&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Android4.2.2源码编译&lt;/p&gt;
+&lt;p&gt;这不是一
+      
+    
+    </summary>
+    
+      <category term="Life" scheme="http://cocobear.github.io/categories/Life/"/>
+    
+    
+      <category term="android" scheme="http://cocobear.github.io/tags/android/"/>
+    
+      <category term="app" scheme="http://cocobear.github.io/tags/app/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CentOS部署 Nginx+uWSGI+Bottle</title>
+    <link href="http://cocobear.github.io/2013/06/08/depoly-bottle-with-uwsgi-nginx/"/>
+    <id>http://cocobear.github.io/2013/06/08/depoly-bottle-with-uwsgi-nginx/</id>
+    <published>2013-06-08T09:53:25.000Z</published>
+    <updated>2019-12-28T05:56:28.467Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://asset-1258390188.cos.ap-shanghai.myqcloud.com/bottle_uwsgi.jpg" alt="bottle_uwsgi"></p><p>安装virtualenv<br>看到别人布署bottle都是配合virtualenv来的，看了一下<a href="http://www.virtualenv.org/en/latest/" title="virtualenv" target="_blank" rel="noopener">virtualenv的介绍</a>，确实比较有用，它可以为你的应用创建一个独立的Python环境，这样如果你布署了几个Python应用，就不需要担心它们各自需要的依赖文件版本不同，甚至它们需要的Python版本也不同。</p><p>virtualenv官方建使用 pip-1.3以上版本安装，所以先安装一个pip（当然你也可以直接从源码安装）：</p><pre><code>wget http://peak.telecommunity.com/dist/ez_setup.py&gt; python ez_setup.py&gt; easy_install pip&gt; pip install virtualenv</code></pre><p>virtualenv会把所有依赖包安装在一个独立的环境下，所以你需要先建立一个给它专用的目录：</p><pre><code>mkdir venv</code></pre><p>针对你目前要布置的Python应用，建立一个新的环境目录：</p><pre><code>virtualenv venv/bottle</code></pre><p>激活：<br>     [www@HJY-SERVER ~]$ source ./venv/bottle/bin/activate&gt;<br>     (bottle)[www@HJY-SERVER ~]$</p><p>激活后你可以看到上面的Shell提示符前面有了你当前环境名称“bottle”。</p><p>安装bottle：</p><pre><code>(bottle)[www@HJY-SERVER ~]$ pip install bottle&gt; Downloading/unpacking bottle&gt;   Downloading bottle-0.11.6.tar.gz (60kB): 60kB downloaded&gt;   Running setup.py egg_info for package bottle&gt; Installing collected packages: bottle&gt;   Running setup.py install for bottle&gt;     changing mode of build/scripts-2.6/bottle.py from 664 to 775&gt;     changing mode of /home/www/venv/bottle/bin/bottle.py to 775&gt; Successfully installed bottle&gt; Cleaning up...</code></pre><p>安装uWSGI:</p><pre><code>wget http://projects.unbit.it/downloads/uwsgi-1.4.9.tar.gz&gt; tar zxvf uwsgi-1.4.9.tar.gz&gt; cd ../uwsgi-1.4.9.tar.gz&gt; make</code></pre><p>如果遇到一大片的错误位置在pythong_plugin.c ,那么应该是缺少python-devel包，用yum安装一下：</p><pre><code>plugins/python/python_plugin.c:1871: error: statement with no effect&gt; yum install python-devel</code></pre><p>编译完成后配置：</p><pre><code>mkdir opt/uwsgi&gt; cp uwsgi /opt/uwsgi/&gt; touch /opt/uwsgi/bottle.xml&gt; mkdir /home/www/html/cgi/</code></pre><p>写一个测试页面：</p><pre><code>cat &gt;&gt; /home/www/html/cgi/index.pyfrom bottle import route, run, default_app@route(&apos;/&apos;)def index(): return &quot;hello world&quot;if __name__ == &quot;__main__&quot;: run(host=&quot;localhost&quot;, port=8888)else: application = default_app()</code></pre><p>uwsgi启动参数配置脚本：</p><pre><code>[root@HJY-SERVER ~]# cat /opt/uwsgi/bottle.ini&gt; [uwsgi]&gt; socket=/opt/uwsgi/run/bottle.sock&gt; daemonize=/opt/uwsgi/run/bottle.log&gt; pidfile=/opt/uwsgi/run/bottle.pid&gt; gid=www&gt; uid=www&gt; virtualenv=/home/www/venv/bottle&gt; chdir=/home/www/html/cgi&gt; module=index&gt; master=True&gt; processes=4&gt; max-requests=5000</code></pre><p>uWSGI没有自带的启动脚本，我这里从nginx的启动脚本改了一个过来：</p><pre><code>#!/bin/sh## uwsgi        Startup script for uwsgi## chkconfig: - 85 15# processname: uwsgi# config: /etc/uwsgi/uwsgi.conf# config: /etc/sysconfig/uwsgi# pidfile: /var/run/uwsgi.pid#### BEGIN INIT INFO# Provides: uwsgi# Required-Start: $local_fs $remote_fs $network# Required-Stop: $local_fs $remote_fs $network# Default-Start: 2 3 4 5# Default-Stop: 0 1 6# Short-Description: start and stop uwsgi### END INIT INFO# Source function library.. /etc/rc.d/init.d/functionsUWSGI=/opt/uwsgi/uwsgiCONFFILE=/opt/uwsgi/bottle.ini#CONFFILE=/opt/uwsgi/bottle.xmlprog=uwsgiuwsgi=${UWSGI}conffile=${CONFFILE}lockfile=/opt/uwsgi/run/bottle.lckpidfile=/opt/uwsgi/run/bottle.pidlogfile=/opt/uwsgi/run/bottle.logSLEEPMSEC=100000RETVAL=0start() {    echo -n $&quot;Starting $prog: &quot;    ${uwsgi} --ini ${conffile}    #daemon --pidfile=${pidfile} ${uwsgi} -x ${conffile} -d ${logfile}    RETVAL=$?    echo    [ $RETVAL = 0 ] &amp;&amp; touch ${lockfile}    return $RETVAL}stop() {    echo -n $&quot;Stopping $prog: &quot;    killproc -p ${pidfile} ${prog}    RETVAL=$?    echo    [ $RETVAL = 0 ] &amp;&amp; rm -f ${lockfile} ${pidfile}}reload() {    echo -n $&quot;Reloading $prog: &quot;    killproc -p ${pidfile} ${prog} -HUP    RETVAL=$?    echo}upgrade() {    oldbinpidfile=${pidfile}.oldbin    configtest -q || return 6    echo -n $&quot;Staring new master $prog: &quot;    killproc -p ${pidfile} ${prog} -USR2    RETVAL=$?    echo    /bin/usleep $SLEEPMSEC    if [ -f ${oldbinpidfile} -a -f ${pidfile} ]; then        echo -n $&quot;Graceful shutdown of old $prog: &quot;        killproc -p ${oldbinpidfile} ${prog} -QUIT        RETVAL=$?        echo    else        echo $&quot;Upgrade failed!&quot;        return 1    fi}configtest() {    if [ &quot;$#&quot; -ne 0 ] ; then        case &quot;$1&quot; in            -q)                FLAG=$1                ;;            *)                ;;        esac        shift    fi    ${uwsgi} -t -c ${conffile} $FLAG    RETVAL=$?    return $RETVAL}rh_status() {    status -p ${pidfile} ${uwsgi}}# See how we were called.case &quot;$1&quot; in    start)        rh_status &gt;/dev/null 2&gt;&amp;1 &amp;&amp; exit 0        start        ;;    stop)        stop        ;;    status)        rh_status        RETVAL=$?        ;;    restart)        configtest -q || exit $RETVAL        stop        start        ;;    upgrade)        upgrade        ;;    condrestart|try-restart)        if rh_status &gt;/dev/null 2&gt;&amp;1; then            stop            start        fi        ;;    force-reload|reload)        reload        ;;    configtest)        configtest        ;;    *)        echo $&quot;Usage: $prog {start|stop|restart|condrestart|try-restart|force-re                                                                             load|upgrade|reload|status|help|configtest}&quot;        RETVAL=2esacexit $RETVAL</code></pre><p>把uWSGI加入系统自启动脚本中：</p><pre><code>[root@HJY-SERVER ~]# chkconfig --add uwsgi&gt; [root@HJY-SERVER ~]# chkconfig --level 345 uwsgi on&gt; [root@HJY-SERVER ~]# service uwsgi status</code></pre><p>修改nginx.conf文件，支持不同端口的虚拟主机，一个80端口用来支持PHP,一个8051端口支持uWSGI：</p><p>user  www www;<br>worker_processes  1;<br>events {<br>    worker_connections  1024;<br>}<br>http {<br>    include       mime.types;<br>    default_type  application/octet-stream;<br>    sendfile        on;<br>    keepalive_timeout  65;<br>    gzip  on;<br>    server {<br>        listen       8051;<br>        server_name  localhost;<br>                root   /home/www/html/cgi;<br>        location / {<br>                        include uwsgi_params;<br>                        uwsgi_pass unix:///opt/uwsgi/run/bottle.sock;<br>        }<br>        }<br>    server {<br>        listen       80;<br>        server_name  localhost;<br>                root   /home/www/html;<br>                location ~ .*.(php|php5)?$<br>                {<br>                        fastcgi_pass 127.0.0.1:9000;<br>                        fastcgi_index index.php;<br>                        include fastcgi.conf;<br>                }<br>    }<br>}</p><p>参考文章：</p><p><a href="http://www.liuts.com/post/216/" target="_blank" rel="noopener">http://www.liuts.com/post/216/</a><br><a href="http://jinghong.iteye.com/blog/1283984" target="_blank" rel="noopener">http://jinghong.iteye.com/blog/1283984</a><br><a href="http://www.actkr.com/?p=791#sthash.gMK8MScq.3f8JF7RD.dpbs" target="_blank" rel="noopener">http://www.actkr.com/?p=791#sthash.gMK8MScq.3f8JF7RD.dpbs</a></p><h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#25361" title="2013-06-14 20:10:12">kongove</a>:</strong> 最近博客很活跃呀，还改版了。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;https://asset-1258390188.cos.ap-shanghai.myqcloud.com/bottle_uwsgi.jpg&quot; alt=&quot;bottle_uwsgi&quot;&gt;&lt;/p&gt;
+&lt;p&gt;安装virtualenv&lt;br&gt;看到别人布署bottle
+      
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://cocobear.github.io/categories/Linux/"/>
+    
+    
+      <category term="Python" scheme="http://cocobear.github.io/tags/Python/"/>
+    
+      <category term="centos" scheme="http://cocobear.github.io/tags/centos/"/>
+    
+      <category term="nginx" scheme="http://cocobear.github.io/tags/nginx/"/>
+    
+      <category term="uwsgi" scheme="http://cocobear.github.io/tags/uwsgi/"/>
+    
+      <category term="virtualenv" scheme="http://cocobear.github.io/tags/virtualenv/"/>
+    
+      <category term="bottle" scheme="http://cocobear.github.io/tags/bottle/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CentOS配置LNMP环境</title>
+    <link href="http://cocobear.github.io/2013/06/07/lnmp-on-centos/"/>
+    <id>http://cocobear.github.io/2013/06/07/lnmp-on-centos/</id>
+    <published>2013-06-07T08:53:58.000Z</published>
+    <updated>2019-12-28T05:56:28.476Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://asset-1258390188.cos.ap-shanghai.myqcloud.com/lnmp.jpg" alt="Linux Nginx MySQL PHP"></p><p>由于SELinux经常会使PHP FTP等常用的WEB服务产生一些奇怪的错误,所以我们在安装LNMP环境前先关闭SELinux:</p><pre><code>sed -i s/SELINUX=enforcing/SELINUX=disabled/ /etc/sysconfig/selinux</code></pre><p>以下配置中, 所有编译安装的软件全部在/opt目录下, WEB服务器的目录为/home/www/html, MySQL数据目录为/opt/mysql/data</p><p>一. Nginx编译安装</p><p>安装编译环境以及依赖包:</p><pre><code>yum install wget&gt; yum install pcre-devel&gt; yum -y install gcc gcc-c++ autoconf libjpeg libjpeg-devel libpng libpng-devel freetype freetype-devel libxml2 libxml2-devel zlib zlib-devel glibc glibc-devel glib2 glib2-devel bzip2 bzip2-devel ncurses ncurses-devel curl curl-devel e2fsprogs e2fsprogs-devel krb5-devel libidn libidn-devel openssl openssl-devel openldap openldap-devel openldap-clients openldap-servers make gd gd-devel</code></pre><p>添加WEB服务器专用的用户:</p><pre><code>/usr/sbin/groupadd www&gt; /usr/sbin/useradd -g www www</code></pre><p>编译安装Nginx:</p><pre><code>wget http://nginx.org/download/nginx-1.4.1.tar.gz&gt; mkdir /opt/nginx&gt; tar zxvf nginx-1.4.1.tar.gz&gt; cd nginx-1.4.1&gt; ./configure --user=www --group=www --prefix=/opt/nginx --with-http_ssl_module --with-pcre --with-http_image_filter_module&gt; make &amp;&amp; make install</code></pre><p>创建Nginx服务器目录:</p><pre><code>mkdir /home/www/html</code></pre><p>编辑nginx.conf文件:</p><pre><code>[root@HJY-SERVER conf]# sed &apos;/#/d&apos; /opt/nginx/conf/nginx.conf | sed &apos;/^$/d&apos;user  www www;worker_processes  1;events {    worker_connections  1024;}http {    include       mime.types;    default_type  application/octet-stream;    sendfile        on;    keepalive_timeout  65;    gzip  on;    server {        listen       80;        server_name  localhost;        location / {            root   /home/www/html;            index  index.php index.html index.htm;        }    }}</code></pre><p>配置Nginx自启动, Nginx官方有rpm包格式的二进制安装包,下载一个从里面提取nginx启动脚本,这里可以借用一下:</p><pre><code>wget http://nginx.org/packages/centos/6/x86_64/RPMS/nginx-1.4.1-1.el6.ngx.x86_64.rpm&gt; rpm2cpio nginx-1.4.1-1.el6.ngx.x86_64.rpm | cpio -idmv</code></pre><p>nginx脚本: </p><pre><code>#!/bin/sh# nginx        Startup script for nginx## chkconfig: - 85 15# processname: nginx# config: /etc/nginx/nginx.conf# config: /etc/sysconfig/nginx# pidfile: /var/run/nginx.pid# description: nginx is an HTTP and reverse proxy server#### BEGIN INIT INFO# Provides: nginx# Required-Start: $local_fs $remote_fs $network# Required-Stop: $local_fs $remote_fs $network# Default-Start: 2 3 4 5# Default-Stop: 0 1 6# Short-Description: start and stop nginx### END INIT INFO# Source function library.. /etc/rc.d/init.d/functionsNGINX=/opt/nginx/sbin/nginxCONFFILE=/opt/nginx/conf/nginx.confprog=nginxnginx=${NGINX}conffile=${CONFFILE}lockfile=${LOCKFILE-/opt/nginx/nginx.lck}pidfile=${PIDFILE-/opt/nginx/logs/nginx.pid}SLEEPMSEC=100000RETVAL=0start() {    echo -n $&quot;Starting $prog: &quot;    daemon --pidfile=${pidfile} ${nginx} -c ${conffile}    RETVAL=$?    echo    [ $RETVAL = 0 ] &amp;amp;&amp;amp; touch ${lockfile}    return $RETVAL}stop() {    echo -n $&quot;Stopping $prog: &quot;    killproc -p ${pidfile} ${prog}    RETVAL=$?    echo    [ $RETVAL = 0 ] &amp;amp;&amp;amp; rm -f ${lockfile} ${pidfile}}reload() {    echo -n $&quot;Reloading $prog: &quot;    killproc -p ${pidfile} ${prog} -HUP    RETVAL=$?    echo}upgrade() {    oldbinpidfile=${pidfile}.oldbin    configtest -q || return 6    echo -n $&quot;Staring new master $prog: &quot;    killproc -p ${pidfile} ${prog} -USR2    RETVAL=$?    echo    /bin/usleep $SLEEPMSEC    if [ -f ${oldbinpidfile} -a -f ${pidfile} ]; then        echo -n $&quot;Graceful shutdown of old $prog: &quot;        killproc -p ${oldbinpidfile} ${prog} -QUIT        RETVAL=$?        echo    else        echo $&quot;Upgrade failed!&quot;        return 1    fi}configtest() {    if [ &quot;$#&quot; -ne 0 ] ; then        case &quot;$1&quot; in            -q)                FLAG=$1                ;;            *)                ;;        esac        shift    fi    ${nginx} -t -c ${conffile} $FLAG    RETVAL=$?    return $RETVAL}rh_status() {    status -p ${pidfile} ${nginx}}# See how we were called.case &quot;$1&quot; in    start)        rh_status &amp;gt;/dev/null 2&amp;gt;&amp;amp;1 &amp;amp;&amp;amp; exit 0        start        ;;    stop)        stop        ;;    status)        rh_status        RETVAL=$?        ;;    restart)        configtest -q || exit $RETVAL        stop        start        ;;    upgrade)        upgrade        ;;    condrestart|try-restart)        if rh_status &amp;gt;/dev/null 2&amp;gt;&amp;amp;1; then            stop            start        fi        ;;    force-reload|reload)        reload        ;;    configtest)        configtest        ;;    *)        echo $&quot;Usage: $prog {start|stop|restart|condrestart|try-restart|force-re                                                                             load|upgrade|reload|status|help|configtest}&quot;        RETVAL=2esacexit $RETVAL</code></pre><p>复制nginx脚本到init.d启动脚本目录下:</p><pre><code>cp ./etc/rc.d/init.d/nginx /etc/rc.d/init.d/&gt; chmod +x nginx &gt; chkconfig --add nginx&gt; chkconfig --level 345 nginx on</code></pre><p>测试配置并启动:</p><pre><code>service nginx configtest&gt; service nginx start</code></pre><p>到现在Nginx安装已经完成.</p><p>二. MySQL编译安装</p><p>安装依赖环境:</p><pre><code>yum install cmake bison</code></pre><p>下载稳定版本的MySQL 5.6:</p><pre><code>wget http://cdn.mysql.com/Downloads/MySQL-5.6/mysql-5.6.12.tar.gz</code></pre><p>添加mysql用户:</p><pre><code>groupadd mysql&gt; useradd -r -g mysql mysql</code></pre><p>编译安装:</p><pre><code>cd mysql-5.6.12&gt; cmake -DCMAKE_INSTALL_PREFIX=/opt/mysql -DMYSQL_UNIX_ADDR=/tmp/mysql.sock -DDEFAULT_CHARSET=utf8 -DDEFAULT_COLLATION=utf8_general_ci -DWITH_EXTRA_CHARSETS:STRING=utf8,gbk -DWITH_MYISAM_STORAGE_ENGINE=1 -DWITH_INNOBASE_STORAGE_ENGINE=1 -DWITH_READLINE=1 -DENABLED_LOCAL_INFILE=1 -DMYSQL_DATADIR=/opt/mysql/data -DINSTALL_MYSQLTESTDIR=&gt; make &amp;&amp; make install</code></pre><p>编译安装完成后进行配置:</p><pre><code>chmod +w /opt/mysql/&gt; chown -R mysql:mysql /opt/mysql/&gt; &lt;del datetime=&quot;2013-06-08T07:46:57+00:00&quot;&gt;ln -s /usr/local/mysql/lib/libmysqlclient.so.18 /usr/lib/libmysqlclient.so.18&lt;/del&gt;&gt; ln -s /opt/mysql/lib/libmysqlclient.so.18 /usr/lib64/libmysqlclient.so.18&gt; cd /opt/mysql/support-files/&gt; cp mysql.server /etc/rc.d/init.d/mysqld&gt; chmod +x /etc/init.d/mysqld&gt; ./scripts/mysql_install_db --defaults-file=/opt/mysql/my.cnf --basedir=/opt/mysql/ --datadir=/opt/mysql/data/ --user=mysqlshell&gt; bin/mysqld_safe --user=mysql &gt; vi /etc/init.d/mysqld（编辑此文件，查找并修改以下变量内容：）&gt; basedir=/opt/mysql&gt; datadir=/opt/mysql/data&gt; chkconfig --add mysqld&gt; chkconfig --level 345 mysqld on&gt; service mysqld start&gt; /usr/local/mysql/bin/mysqladmin password [new-password]</code></pre><p>三. 编译安装PHP</p><p>依赖的软件包:</p><pre><code>wget &quot;http://downloads.sourceforge.net/mhash/mhash-0.9.9.9.tar.gz?modtime=1175740843&amp;big_mirror=0&quot;&gt; wget &quot;http://downloads.sourceforge.net/mcrypt/libmcrypt-2.5.8.tar.gz?modtime=1171868460&amp;big_mirror=0&quot;&gt; wget &quot;http://downloads.sourceforge.net/mcrypt/mcrypt-2.6.8.tar.gz?modtime=1194463373&amp;big_mirror=0&quot;&gt; tar zxvf libmcrypt-2.5.8.tar.gz&gt; cd libmcrypt-2.5.8/&gt; ./configure --prefix=/opt/libs&gt; make&gt; make install&gt; cd libltdl/&gt; ./configure --prefix=/opt/libs --enable-ltdl-install&gt; make&gt; make install&gt; cd ../../&gt; tar zxvf mhash-0.9.9.9.tar.gz&gt; cd mhash-0.9.9.9/&gt; ./configure --prefix=/opt/libs&gt; make&gt; make install&gt; cd ../</code></pre><p>把安装好的libs目录加入系统路径中:</p><pre><code>cd /etc/ld.so.conf.d/&gt; [root@HJY-SERVER ld.so.conf.d]# cat opt-libs.conf&gt; /opt/libs/lib</code></pre><p>编译安装PHP：</p><pre><code>wget http://cdn.mysql.com/Downloads/MySQL-5.6/mysql-5.6.12.tar.gztar zxvf mysql-5.6.12.tar.gzcd mysql-5.6.12.tar.gzexport LIBS=&quot;-lm -ltermcap -lresolv&quot;export DYLD_LIBRARY_PATH=&quot;/opt/mysql/lib/:/lib/:/usr/lib/:/usr/local/lib:/lib64/:/usr/lib64/:/usr/local/lib64&quot;export LD_LIBRARY_PATH=&quot;/opt/mysql/lib/:/lib/:/usr/lib/:/usr/local/lib:/lib64/:/usr/lib64/:/usr/local/lib64&quot;./configure --prefix=/opt/php --with-config-file-path=/opt/php/etc --with-mysql=/opt/mysql --with-mysqli=/opt/mysql/bin/mysql_config --with-iconv-dir --with-freetype-dir=/opt/libs --with-jpeg-dir=/opt/libs --with-png-dir=/opt/libs --with-zlib --with-libxml-dir=/usr --enable-xml --disable-rpath --enable-bcmath --enable-shmop --enable-sysvsem --enable-inline-optimization --with-curl --enable-mbregex --enable-fpm --enable-mbstring --with-mcrypt=/opt/libs --with-gd --enable-gd-native-ttf --with-openssl --with-mhash --enable-pcntl --enable-sockets --with-xmlrpc --enable-zip --enable-soap makemake install</code></pre><p>配置：</p><pre><code>cp php.ini-development /opt/php/etc/php.ini&gt; cd ../&gt; mv /opt/php/etc/php-fpm.conf.default /opt/php/etc/php-fpm.conf</code></pre><p>Update 2013.6.8:</p><p>安装好后没有对PHP进行测试，今天测试了一下，结果PHP脚本不能被执行，默认在浏览器里被下载了下来，习惯了以前用Apache不用对PHP进行配置, 现在要继续未完成的配置：</p><pre><code>cp sapi/fpm/init.d.php-fpm /etc/init.d/php-fpm&gt; chkconfig --add php-fpm&gt; chkconfig --level 345 php-fpm on</code></pre><p>修改php-fpm文件：</p><pre><code>pid = run/php-fpm.pid&gt; user = www&gt; group = www</code></pre><p>修改nginx.conf文件，在server字段处添加以下内容：</p><pre><code>location ~ .*\.(php|php5)?$&gt;             {&gt;                 root   /home/www/html;&gt;                 fastcgi_pass 127.0.0.1:9000;&gt;                 fastcgi_index index.php;&gt;                 include fastcgi.conf;&gt;             }</code></pre><p>配置完成后重起服务：</p><pre><code>service nginx restart&gt; service php-fpm restart</code></pre><p>可以用下面的命令查看占用端口的进程名，pid，nginx和php-fpm分别占用80和9000端口:</p><pre><code>netstat -anpo ｜ grep tcp</code></pre><p>参考文章:<br><a href="http://blog.s135.com/nginx_php_v7/" target="_blank" rel="noopener">http://blog.s135.com/nginx_php_v7/</a><br><a href="http://www.centos.bz/2011/09/linux-compile-install-mysql-5-5-15-from-source/" target="_blank" rel="noopener">http://www.centos.bz/2011/09/linux-compile-install-mysql-5-5-15-from-source/</a><br><a href="http://www.boluo.org/archives/chkconfig-nginx-on.html" target="_blank" rel="noopener">http://www.boluo.org/archives/chkconfig-nginx-on.html</a><br><a href="http://www.linuxsong.org/2010/09/cpio/" target="_blank" rel="noopener">http://www.linuxsong.org/2010/09/cpio/</a></p><p>btw: wordpress中想要添加空行还不容易,p,br 标签都会被过滤掉, 找到一个简单的办法适用于最新的3.5.1版本，安装TinyMCE Advanced插件， 打开插件里面的选项，禁止自动删除&lt; p &gt;, &lt; br \ &gt;标签，不过我这里测试的只支持： &lt; br \ &gt; 标签.</p><h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#25355" title="2013-06-08 11:48:18">Amankwah</a>:</strong> 最近你在干嘛呢？？</p><p><strong><a href="#25358" title="2013-06-08 12:56:08">可可熊</a>:</strong> 配个服务器么！ 好奇怪吗？</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;https://asset-1258390188.cos.ap-shanghai.myqcloud.com/lnmp.jpg&quot; alt=&quot;Linux Nginx MySQL PHP&quot;&gt;&lt;/p&gt;
+&lt;p&gt;由于SELinux经常会使PHP FTP等常用的WEB
+      
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://cocobear.github.io/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="http://cocobear.github.io/tags/Linux/"/>
+    
+      <category term="centos" scheme="http://cocobear.github.io/tags/centos/"/>
+    
+      <category term="nginx" scheme="http://cocobear.github.io/tags/nginx/"/>
+    
+      <category term="MySQL" scheme="http://cocobear.github.io/tags/MySQL/"/>
+    
+      <category term="PHP" scheme="http://cocobear.github.io/tags/PHP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CentOS 6.4安装配置-使用U盘作为安装介质</title>
+    <link href="http://cocobear.github.io/2013/06/06/centos-6-4-install-and-config/"/>
+    <id>http://cocobear.github.io/2013/06/06/centos-6-4-install-and-config/</id>
+    <published>2013-06-06T06:25:13.000Z</published>
+    <updated>2019-12-28T05:56:28.463Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://asset-1258390188.cos.ap-shanghai.myqcloud.com/centos61.jpg" alt="centos6"><br>前期准备:</p><pre><code>* IOS文件 : CentOS-6.4-x86_64-minima.iso * U盘 : 因为使用最小化的安装, 所以1G的U盘就够用了 * UltraISO: 最好使用9.X的版本, 新版本制作的U盘启动支持的主板比较多 </code></pre><p>CentOS 6系统使用U盘安装会遇到一些问题:</p><ul><li>首先是如果直接把官方下载的IOS用UltraISO写入U盘启动时会遇到错误, U盘启动后会停在下面的画面: </li></ul><pre><code>Press the &lt;enter&gt; key to begin the installation process</code></pre><p>解决方法: <strong>用记事本打开这个文件syslinux\syslinux.cfg，把第一行default vesamenu.c32 替换为 default linux timeout 600 label linux kernel vmlinuz append initrd=initrd.img 这样修改之后，系统启动的时候就会跳过安装菜单选项界面，直接进入到语言选择界面</strong></p><ul><li><p>使用上面的方法修改ISO文件, 重新用UltraISO写入U盘, <strong>同时需要把官方下载的原始ISO文件拷贝到U盘中一份</strong>, 如果你错误的把你修改过的ISO拷贝到U盘则会遇到错误:</p><p>   Unable to read group information from repositories. This is a problem with the generation of your install tree</p></li><li><p>顺利进入安装过程后,需要注意的是在分区结束后, 要修改一下安装GRUB的位置, 不要把GRUB安装在你的U盘上.</p></li></ul><p>安装完成后需要做一些基本的配置: </p><ul><li><strong>网络</strong><br>使用下面的命令编辑网卡的配置文件:<br>   vi /etc/sysconfig/network-scripts/ifcfg-eth0</li></ul><pre><code>DEVICE=eth0HWADDR=00:24:1D:7F:39:7FTYPE=EthernetUUID=040e48f1-9712-42bb-8ad4-942ec0a5a5e5ONBOOT=yesNM_CONTROLLED=noBOOTPROTO=staticIPADDR=192.168.1.11NETMASK=255.255.255.0GATEWAY=192.168.1.1</code></pre><p>使用下面的命令编辑DNS的配置文件:</p><pre><code> vi /etc/resolv.confnameserver 61.134.1.5nameserver 8.8.8.8</code></pre><p>修改完这些配置文件后重起网络:</p><pre><code>service network restart</code></pre><p>重起后更新一下系统:</p><pre><code>yum -y update</code></pre><p>如果习惯ntsysv这样的系统启动配置工具,需要手动安装一下,mini盘里默认没有这样的软件包, 或者你可以使用chkconfig命令行程序来配置启动:</p><pre><code>yum  -y install　　ntsysv</code></pre><p>mysql导出所有数据库:</p><pre><code>mysqldump --opt --user=root --all-databases &gt; mysql_all.sql</code></pre><h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#25350" title="2013-06-06 20:08:10">Amankwah</a>:</strong> 怎么又开始装CentOS了？</p><p><strong><a href="#25351" title="2013-06-06 21:00:33">可可熊</a>:</strong> 当服务器用么。</p><p><strong><a href="#25352" title="2013-06-07 11:09:30">Amankwah</a>:</strong> 改行做SA了？</p><p><strong><a href="#25353" title="2013-06-07 16:55:39">可可熊</a>:</strong> 不知道SA是啥！</p><p><strong><a href="#25354" title="2013-06-08 11:47:43">Amankwah</a>:</strong> System Administrator，你这就是这个节奏啊！！</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;https://asset-1258390188.cos.ap-shanghai.myqcloud.com/centos61.jpg&quot; alt=&quot;centos6&quot;&gt;&lt;br&gt;前期准备:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;* IOS文件 : CentOS-6.4
+      
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://cocobear.github.io/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="http://cocobear.github.io/tags/Linux/"/>
+    
+      <category term="centos" scheme="http://cocobear.github.io/tags/centos/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>在AMD的PC机上使用Vmware安装Mac OS Mountain-Lion进行iPhone(iOS 6)开发</title>
+    <link href="http://cocobear.github.io/2013/05/11/amd-vmware-osx-mountain-lion-iphone/"/>
+    <id>http://cocobear.github.io/2013/05/11/amd-vmware-osx-mountain-lion-iphone/</id>
+    <published>2013-05-11T10:36:16.000Z</published>
+    <updated>2019-12-28T05:56:28.459Z</updated>
+    
+    <content type="html"><![CDATA[<p>　　Android的开发环境很方便搭建，不管是用Windows还是Linux（Mac上面还真不清楚）。 iPhone的开发环境就麻烦多了，为了验证个想法，写个小程序Android上面很快就可以完成，iPhone还得折腾半天，尤其是使用的还是AMD的CPU，折腾了几次，今天终于可以在Vmware里跑的Mac OS 上面跑Xcode了，前面先安装了一个Snow Leopard（10.6）可是不支持最新的iOS 6，也没办法升级到最新的系统，只好重新再安装新的系统，光是下载镜象以及Xcode的安装包就等了好长时间（8M的网还是不给力）。</p><p>　　这里就不贴图了，下面链接里面有比较详细的说明，请大家按照链接一中的步骤安装系统。</p><p>　　我开始是在<a href="http://www.hankcs.com/appos/amd_mac_vmware.html" title="安装步骤" target="_blank" rel="noopener">链接一</a>看到这个Vmware的镜象文件，里面有安装的步骤，不过文章没有在显示的位置给出<a href="http://www.souldevteam.net/blog/2013/02/06/os-x-mountain-lion-vmware-image-amd/" title="Vmware镜象来源" target="_blank" rel="noopener">链接二镜象的来源</a>，只有在后面的链接里面提到。</p><p>　　这个镜象的来源是国外的一个团队：<strong>Soul Dev Team</strong></p><p>　　以下是我机器的配置，拿出来给需要使用该镜象包的同学作参考：</p><pre><code>CPU AMD Athlon（速龙） II X4 640 &gt; 主板 技嘉 GA-880G-UD3H (AMD 880G/980G (RS880P) + SB750/SB710) &gt; 内存 8 GBytes &gt; 显卡 ATI/AMD Radeon HD 4250 (RS880) &gt; 硬盘 希捷 ST31000528AS &gt; 显示器 冠捷 TFT1980 &gt; 网卡 瑞昱 Semiconductor RTL8168/8111 PCI-E 千兆以太网 NIC &gt; 声卡 ATI/AMD SB600 - High Definition 音频设备 控制器</code></pre><p>　　总结下这个Mac OS Mountain Lion 10.8.3镜象包吧：</p><p>　　首先使用起来很简单，基本上不需要做任何事情，下载后直接解压，打开，然后如果不出意外的话你就可以使用了，不过速度有点慢，打开程序的时候有明显的卡顿现象，镜象默认使用了1G的内存，以及一个CPU核，我多分配了一些，大家可以根据自己机器的配置适当的在Vmware中修改Mac的配置，同时打开显卡的加速，之后再次启动虚拟机，能明显感觉到速度快了一些，不过还是有些卡，由于是在Terminal下一个diff命令能卡1，2秒，比较奇怪。原来是因为显卡驱动的问题，安装了Soul Dev Team贴子下面评论中提到的<a href="http://sourceforge.net/projects/vmsvga2/files/" title="vmsvga2" target="_blank" rel="noopener">vmsvga2</a>，感觉速度快多了。强烈建议都安装一下，不过在安装显卡驱动之前一定要对虚拟做个快照（snapshot）,否则出现问题无法进入系统就麻烦了。</p><p>　　Mountain Lion有一点很不错，刚才重起了一次，重起前打开的东西都完整的显示在屏幕上面了，之前打的的Terminal被我最大化了，重起后这个Terminal是先显示出来，然后完成了一次类似我点最大化时出现的效果，赞一个感觉工作台是跳到我面前了，而不是象Windows的休眠一样，死寂沉沉的。</p><p>　　放个截图吧，都讲究图文并茂么：<br><img src="https://asset-1258390188.cos.ap-shanghai.myqcloud.com/desktop.jpg" alt="desktop"><br>Update:<br><a href="http://blog.csdn.net/fightingbull/article/details/8059651" target="_blank" rel="noopener">Xcode 4.6.2开发免99美金证书真机调试</a></p><h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#24413" title="2013-05-13 15:01:39">草儿</a>:</strong> 难怪离线里那么多OSX，嘿嘿 我一直用的virutalbox，前段时间也想虚拟机里搞个玩玩，可惜一直启动不了，郁闷</p><p><strong><a href="#24513" title="2013-05-15 15:32:18">Amankwah</a>:</strong> 可以考虑直接搞个黑青苹果装上？</p><p><strong><a href="#24514" title="2013-05-15 15:52:42">可可熊</a>:</strong> AMD的CPU啊, 怕啃不动黑苹果.</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;　　Android的开发环境很方便搭建，不管是用Windows还是Linux（Mac上面还真不清楚）。 iPhone的开发环境就麻烦多了，为了验证个想法，写个小程序Android上面很快就可以完成，iPhone还得折腾半天，尤其是使用的还是AMD的CPU，折腾了几次，今天终
+      
+    
+    </summary>
+    
+      <category term="Life" scheme="http://cocobear.github.io/categories/Life/"/>
+    
+    
+      <category term="AMD" scheme="http://cocobear.github.io/tags/AMD/"/>
+    
+      <category term="iPhone" scheme="http://cocobear.github.io/tags/iPhone/"/>
+    
+      <category term="MAC" scheme="http://cocobear.github.io/tags/MAC/"/>
+    
+      <category term="vmware" scheme="http://cocobear.github.io/tags/vmware/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Kindle Touch入手记</title>
+    <link href="http://cocobear.github.io/2012/03/11/kindle-touch-begin/"/>
+    <id>http://cocobear.github.io/2012/03/11/kindle-touch-begin/</id>
+    <published>2012-03-11T09:51:20.000Z</published>
+    <updated>2019-12-28T05:56:28.474Z</updated>
+    
+    <content type="html"><![CDATA[<p>上个月买了个Kindle Touch，直接从Amazon购买，然后走的友家快递转运到国内。本来2.9日就在Amazon下单了，2.11友家通过USC发往中国上海，可是直到3.4号上海海关才处理了单子，3.6号EMS寄到我的手里，国内的海关效率实在是不敢恭维。还好的是完整无缺的送到了我手上，我买的是带有Special Offers的，价格为99$，连运费、保险下来一共是656块钱，还算挺便宜的，国内的汉王都比这贵。</p><p>拿到手以后看到显示效果确实不错，手感也不错，不过屏幕就是有一些小：只有6寸，而DXG版本又太大（价格也贵），所以买了这个Touch。刚拿到后下了个中文的书进去，果然是有字体不一样粗细的问题，看起来很不舒服，果断开始越狱。Kindle越狱和别的不太一样，目前网上的方法一般都是通过给Kindle写一个开发者的KEY进去，不会对系统有任何影响，所以可以放心大胆的越狱。</p><p>越狱后更换了字体，立刻舒服很多了，网上目前有两款横屏插件（亚马逊自己的系统竟然没有横屏功能），有一个插件是通过菜单手动做横屏，不过问题是横屏后屏幕的右边被切掉了那么一两行字，很不舒服，所以安装了另外一个可以自动横屏的（Kindle Touch有重力感应的硬件），亚马逊这Kindle Touch发布的也太仓促了，基本硬件功能都没做好。</p><p>一直很期待Kindle的推送功能，所以装完这些后，就在几个网站上注册了Kindle的推送，试着发了一些到Kindle上，结果Amazon的账户里是都有了，就是没到我的Kindle上，我在Kindle上可以正常访问网站，账户也登录进去了。于是我开始自己折腾，恢复初厂设置、卸载插件弄了好久仍然不行，最后还联系了亚马逊的客服，按照他们的要求做reset、Unregister，结果Unregister的时候一直无法进行，试了两次后，客户让我把Kindle寄回去，他们现在会先寄一个新的Kindle过来。虽然我在网上了解到这种情况下我寄过去的邮费亚马逊会出，但是还是觉得太麻烦，先没让客服给我做replacement order.</p><p>今天想着是不是可以看一下Kindle的出错日志呢，于是装了一个usbnet的插件，ssh过去看了下Sync时候的错误：</p><pre><code>120311:062741 todo[846]: E todo_get_document:CURL_EASY_PERFORM:res=28,url=https://todo-g7g.amazon.com/FionaTodoListProxy/getItems?count=20&amp;device_lto=0&amp;reason=Customer&amp;sof tware_rev=1496040004&amp;patch_rev=0&amp;currentTransportM ethod=wifi:&gt; 120311:062741 todo[846]: E todo:ProcessingToDoFailed:reason=getDocumentFailed NullDocument,errno=0:Null ToDo document returned</code></pre><p>Kindle已经访问服务器去取内容了，但是得到是是Null，再加上之前我这里有时候登录不上Amazon，所以中午特意跑永合豆浆那里吃饭，顺便用那里的WIFI试一下。吃饭的时候连上去点了“Sync and Check for Items“，仍然没有反映，还以为不是网络的问题，没想到回到酒店以后发现Archived Items里面多了东西，原来那个同步不是立刻就完成的，我吃饭的时候他自己下载了。现在可以在Kindle上看到我推送过来的标题，但无法下载，说明酒店这里的网络有问题。</p><p>还好没急着去换货，不然又不知道得折腾多久。</p><p>网上都说Kindle的这种屏幕比较脆弱，是不是应该去买个套子+屏保呢？</p><p>顺便说一下，以前时候博客一直无法访问，只有在国外才能访问，还以为是被墙了呢，后来发现是这个域名的解析服务器被墙了，换了一个后现在正常了。国内的网络真让人烦，一会儿封这一会儿封那儿，被折腾死了！！</p><p>附1：Kindle Touch 5.0.4 越狱包 <a href="http://db.tt/hmGoRogn" target="_blank" rel="noopener">http://db.tt/hmGoRogn</a> </p><p>Tips: 可以通过<a href="https://www.dropbox.com/enable_shmodel来打开Dropbox的分享功能，这样不必把要分享的文件放入Public文件夹了" target="_blank" rel="noopener">https://www.dropbox.com/enable_shmodel来打开Dropbox的分享功能，这样不必把要分享的文件放入Public文件夹了</a></p><h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#13334" title="2012-03-15 11:05:47">Wendy</a>:</strong> 拿到手还折腾了这么久呢！这个好玩意就得你用才能用出价值！我还在犹豫中…….</p><p><strong><a href="#13335" title="2012-03-15 11:06:13">Wendy</a>:</strong> 对了，注意到你换博客风格了!非常不错！</p><p><strong><a href="#13338" title="2012-03-15 11:59:08">cocobear</a>:</strong> 呵呵，ipad3出来了，才499$。</p><p><strong><a href="#13354" title="2012-03-16 23:58:21">小卒</a>:</strong> 看来大家兴趣很相似啊，之前看python 飞信库找到的你。去年我也海淘了touch，amazon.com在国内有时会被间歇性墙，有可能你是这个问题。</p><p><strong><a href="#13404" title="2012-03-21 14:09:26">Wendy</a>:</strong> 太贵了！</p><p><strong><a href="#13405" title="2012-03-21 14:12:10">cocobear</a>:</strong> 现在一手机都卖3000多了！</p><p><strong><a href="#13294" title="2012-03-12 09:30:05">草儿</a>:</strong> 你终于还是入手了。。。 PS：为什么不把我的域名解析也重做一下呢。。。</p><p><strong><a href="#19468" title="2013-01-01 16:24:04">tgyhg</a>:</strong> Device Information: Name: “Chinese-SI iPhone” UDID: a84807391cc91db03fa736ad28c856e50f52a2b7 Model: iPhone Localized Model: iPhone Firmware Version: 6.0.2 Multitasking Supported: Yes Capacity (Disk Space): 13.47 GB Available (Free Space): 7.39 GB System Name: iPhone OS Date: 2013年1月1日</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;上个月买了个Kindle Touch，直接从Amazon购买，然后走的友家快递转运到国内。本来2.9日就在Amazon下单了，2.11友家通过USC发往中国上海，可是直到3.4号上海海关才处理了单子，3.6号EMS寄到我的手里，国内的海关效率实在是不敢恭维。还好的是完整无缺
+      
+    
+    </summary>
+    
+      <category term="Life" scheme="http://cocobear.github.io/categories/Life/"/>
+    
+    
+      <category term="kindle" scheme="http://cocobear.github.io/tags/kindle/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>OpenCV试用</title>
+    <link href="http://cocobear.github.io/2011/12/10/opencv-try/"/>
+    <id>http://cocobear.github.io/2011/12/10/opencv-try/</id>
+    <published>2011-12-10T15:53:14.000Z</published>
+    <updated>2019-12-28T05:56:28.479Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>Windows下使用Python开发环境配置：</strong></p><ul><li>下载OpenCV-2.3.1-win-superpack.exe</li><li>解压后复制opencv\build\python\2.6\cv2.pyd文件到C:\Python26\Lib\site-packages下</li><li>Python文件中使用：import cv2.cv as cv</li></ul><p><strong>关于CaptureFromFile函数支持的文件格式：</strong><br>官方的文档中没有详细的说明所支持的格式，我只知道AVI应该可以，但是我的原始视频是MOV格式（很多数码相机选择小格式拍出来的视频都是MOV），刚开始下了一个MOV to AVI MPEG WMV Converter软件，但是不是无法转换，就是转换出来的AVI格式该函数无法正确加载，网上几乎都找不到关于使用opencv应使用何种AVI编码的文件，最后终于发现使用QuickTime专业版转换出来的AVI文件可以使用该函数打开。<br>    看了一下QuickTime转换出来的AVI文件，发现压缩使用的是“Cinepank Codec”，而MOV to AVI MPEG WMV Converter软件也有一个压缩选项是“Cinepak Codec by Radius”，但是该压缩选项只能转换出来100多K的大小，不明白是怎么回事。</p><pre><code>求“关于视频中运动物体的轨迹跟踪，路径分析”相关的代码、文章、软件。</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;strong&gt;Windows下使用Python开发环境配置：
+&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;下载OpenCV-2.3.1-win-superpack.exe&lt;/li&gt;
+&lt;li&gt;解压后复制opencv\build\python\2.6\cv2.pyd文件到C
+      
+    
+    </summary>
+    
+      <category term="Life" scheme="http://cocobear.github.io/categories/Life/"/>
+    
+    
+      <category term="OpenCV" scheme="http://cocobear.github.io/tags/OpenCV/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用Django Admin做一个简单的应用</title>
+    <link href="http://cocobear.github.io/2011/03/16/make-app-with-django-admin/"/>
+    <id>http://cocobear.github.io/2011/03/16/make-app-with-django-admin/</id>
+    <published>2011-03-16T06:29:44.000Z</published>
+    <updated>2019-12-28T05:56:28.476Z</updated>
+    
+    <content type="html"><![CDATA[<p>使用Django 的admin做一个简单的应用：</p><p>一、安装WSGI<br>官方推荐使用WSGI模式，而不是mod_python方式在Apache上运行Django。拿Fedora为例，直接:</p><pre><code>yum install mod_wsgi </code></pre><p>就可以完成WSGI的安装</p><p>二、配置Apache</p><p>安装好mod_wsgi后，Apache的服务器配置里面会自动加入mod_wsgi的调用，所以只需要配置Django相关的部分：</p><pre><code>#add for mod_wsig&gt; Alias /media &quot;/usr/lib/python2.5/site-packages/django/contrib/admin/media/&quot;&gt;     &lt;directory &quot;/usr/lib/python2.5/site-packages/django/contrib/admin/media/&quot;&gt;&gt;       AllowOverride All&gt;       Options None&gt;       Order allow,deny&gt;       Allow from all&gt;     &lt;/directory&gt;&gt; WSGIScriptAlias /mmq /var/www/Django/mmq/apache/django.wsgi</code></pre><p>这里我们假定项目名为mmq，位置在/var/www/Django/mmq，服务器访问的根目录为/mmq(比如你访问这个应用需要使用地址:<a href="http://127.0.0.1/mmq/mmq/" target="_blank" rel="noopener">http://127.0.0.1/mmq/mmq/</a>)</p><p>Alias /media是指定了Django访问静态文件的位置，因为我这里用到Django admin，所以需要把它指向Django admin静态文件的位置；当然你自己项目里面的模版文件会自动覆盖上面的设置。</p><p>如你可以mmq\templates\admin在这个位置创建一个index.html文件来自定义自己的admin主界面。</p><p>三、配置Django项目<br>刚才我们在http.conf文件中指定了一个django运行的根脚本，现在我们需要创建这个脚本：</p><p>django.wsgi:<br>     import os&gt;<br>     import sys&gt; </p><pre><code>sys.path.append(&apos;/var/www/Django&apos;)&gt; os.environ[&apos;DJANGO_SETTINGS_MODULE&apos;] = &apos;mmq.settings&apos;&gt; import django.core.handlers.wsgi&gt; application = django.core.handlers.wsgi.WSGIHandler()</code></pre><p>urls.py配置：<br>     from django.conf.urls.defaults import *&gt;<br>     from django.contrib import admin&gt;<br>     admin.autodiscover()&gt; </p><pre><code>from mmq.views import *&gt; urlpatterns = patterns(&apos;&apos;,&gt;     (r&apos;^mmq/&apos;, include(admin.site.urls)),&gt;     (r&apos;^mmq/admin/&apos;, include(admin.site.urls)),&gt; )</code></pre><p>这里把首地址直接指向了admin的登录页面。</p><p>settings.py配置：</p><pre><code>DATABASE_NAME = &apos;/var/www/Django/mmq/mmq.db&apos; &gt; MEDIA_ROOT = &apos;/var/www/Django/mmq/&apos;&gt; ADMIN_MEDIA_PREFIX = &apos;/media/&apos;&gt; TEMPLATE_LOADERS = (&gt;     &apos;django.template.loaders.filesystem.load_template_source&apos;,&gt;     &apos;django.template.loaders.app_directories.load_template_source&apos;,&gt; #     &apos;django.template.loaders.eggs.load_template_source&apos;,&gt; )&gt; MIDDLEWARE_CLASSES = (&gt;     &apos;django.middleware.common.CommonMiddleware&apos;,&gt;     &apos;django.contrib.sessions.middleware.SessionMiddleware&apos;,&gt;     &apos;django.contrib.auth.middleware.AuthenticationMiddleware&apos;,&gt; )&gt; ROOT_URLCONF = &apos;mmq.urls&apos;&gt; TEMPLATE_DIRS = (&gt;     &apos;/var/www/Django/mmq/templates/&apos;,&gt; )&gt; INSTALLED_APPS = (&gt;     &apos;django.contrib.auth&apos;,&gt;     &apos;django.contrib.sessions&apos;,&gt;     &apos;django.contrib.contenttypes&apos;,&gt;     # Uncomment the next line to enable the admin:&gt;     &apos;django.contrib.admin&apos;,&gt;     &apos;mmq&apos;,&gt; )</code></pre><p>在Linux上使用sqlite需要指定绝对路径，而且需要给Apache数据库所在父母录的写权限.</p><p>整合Django和WSGI有些麻烦，更详细的内容可以参考WSGI官方的文档:<br><a href="http://code.google.com/p/modwsgi/wiki/IntegrationWithDjango" target="_blank" rel="noopener">http://code.google.com/p/modwsgi/wiki/IntegrationWithDjango</a></p><p>关于使用Django admin 定制自己的应用在Django官方的文档中讲了不少，这里就不具体描述了。</p><p>想更改admin的CSS不过，不能像template里的文件一样，直接在app中写个来覆盖，路过的哪位知道的话麻烦留个言。</p><p>Django的设计、使用感觉挺不错的，可惜布署很是麻烦，下个别人写的app半天都运行不起来，自己写个app用Django自带的服务器运行没问题，可是移到Apache上又是一堆问题，如果能象PHP一样简单的布署那么Django应该会有更好的发展。</p><h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#12455" title="2012-01-16 18:05:54">cesc</a>:</strong> 您好，我非常喜欢您的博客，不管是内容还是UI，请问您是怎么做的，盼复</p><p><strong><a href="#9896" title="2011-04-21 19:04:45">ben</a>:</strong> 修改admin的CSS,你在Apache静态文件里做的有链接， Alias /media “/usr/lib/python2.5/site-packages/django/contrib/admin/media/” 把/usr/lib/python2.5/site-packages/django/contrib/admin/media/里复制一份，随便改吧 为什么要改CSS那?俺觉得怪好看的呀~</p><p><strong><a href="#12517" title="2012-01-21 11:01:03">cocobear</a>:</strong> 博客的程序用的是WordPress，主题用的是：gplus，你可以在网上下载到。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;使用Django 的admin做一个简单的应用：&lt;/p&gt;
+&lt;p&gt;一、安装WSGI&lt;br&gt;官方推荐使用WSGI模式，而不是mod_python方式在Apache上运行Django。拿Fedora为例，直接:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;yum install mod_wsg
+      
+    
+    </summary>
+    
+      <category term="Life" scheme="http://cocobear.github.io/categories/Life/"/>
+    
+    
+      <category term="Python" scheme="http://cocobear.github.io/tags/Python/"/>
+    
+      <category term="Django" scheme="http://cocobear.github.io/tags/Django/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>dropbox技巧</title>
+    <link href="http://cocobear.github.io/2010/12/14/dropbox/"/>
+    <id>http://cocobear.github.io/2010/12/14/dropbox/</id>
+    <published>2010-12-14T04:48:14.000Z</published>
+    <updated>2019-12-28T05:56:28.467Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://www.dropbox.com/" target="_blank" rel="noopener">dropbox</a>很早就听过了，只是一直没用，昨天要在QQ聊天记录里面找个东西，结果发现那天的聊天记录在公司的电脑上，才想起还是把这些东西都同步在云端比较方便。</p><p>不过根据天朝定律：好的互联网产品是不能在天朝生存。所以你得通过hosts(给个IP:174dot36.30.67)或者VPN等方式来使用dropbox。</p><p>dropbox免费用户有2G的免费空间，你可以通过以下几种方式增加自己的空间：</p><ol><li>邀请好友，每邀请一个好友增加250M的空间</li></ol><p><a href="https://www.dropbox.com/referrals2" target="_blank" rel="noopener">https://www.dropbox.com/referrals2</a>.  完成任务，每个任务可增加128M的空间</p><p><a href="https://www.dropbox.com/free3" target="_blank" rel="noopener">https://www.dropbox.com/free3</a>.  教学任务，增加250M的空间</p><p><a href="https://www.dropbox.com/gs4" target="_blank" rel="noopener">https://www.dropbox.com/gs4</a>.  edu邮箱验证，加倍每个邀请增加的空间</p><p>以下是我的邀请地址，大家在这里注册，然后下载dropbox客户端，我就能增加500M的空间了，同时你的空间也会增加500M(如果验证了edu邮箱)<br><a href="https://www.dropbox.com/referrals/NTY1NjIyOTc5?src=global0" target="_blank" rel="noopener">https://www.dropbox.com/referrals/NTY1NjIyOTc5?src=global0</a></p><p>免费用户通过以上方式最大可以获得18.88G的空间，一般来说足够用了，几乎可以把电脑中大多数的东西同步了。</p><p>－－－－－－－－－－－－－－－关于使用－－－－－－－－－－－－－－－－－－－－－－－－</p><p>这里有一篇介绍dropbox应用，可以参考一下：<br><a href="http://www.williamlong.info/archives/2044.html" target="_blank" rel="noopener">http://www.williamlong.info/archives/2044.html</a></p><p>Linux系统下可以使用ln命令来把常用的文件夹，以及各种程序的配置文件都链接到dropbox的文件夹下面。</p><h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#9102" title="2010-12-15 14:43:36">草儿</a>:</strong> 给需要用的人吧</p><p><strong><a href="#9096" title="2010-12-14 22:13:23">Amankwah</a>:</strong> 呃，迟了点，已经被功夫网了～</p><p><strong><a href="#9095" title="2010-12-14 21:56:32">crazyfranc</a>:</strong> 用迅雷随身盘吧，walkbox，那个帐号已经可以用了~</p><p><strong><a href="#9284" title="2010-12-21 23:18:35">luguo</a>:</strong> 唉，很早之前就用过dropbox，貌似还注册了一个。感谢国家了～</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://www.dropbox.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;dropbox&lt;/a&gt;很早就听过了，只是一直没用，昨天要在QQ聊天记录里面找个东西，结果发现那天的聊天记录在公司的电脑上，才想起还是把这些东西
+      
+    
+    </summary>
+    
+      <category term="互联网" scheme="http://cocobear.github.io/categories/%E4%BA%92%E8%81%94%E7%BD%91/"/>
+    
+    
+      <category term="dropbox" scheme="http://cocobear.github.io/tags/dropbox/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Android系统GOOGLE账号无法登录</title>
+    <link href="http://cocobear.github.io/2010/12/14/login-failed-on-android/"/>
+    <id>http://cocobear.github.io/2010/12/14/login-failed-on-android/</id>
+    <published>2010-12-14T02:32:22.000Z</published>
+    <updated>2019-12-28T05:56:28.476Z</updated>
+    
+    <content type="html"><![CDATA[<p>Android 系统上google账号无法登录，解决办法：</p><ul><li>手机上安装R.E.管理器.</li><li>创建一个hosts文件写入内容：</li></ul><pre><code>127.0.0.1            localhost&gt; 74.125.93.113 android.clients.google.com</code></pre><p>这个IP如果不能用了，可以使用nslookup查找一个IP替换</p><ul><li>他用R.E.用这个hosts文件替换掉/etc/hosts<h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2></li></ul><p><strong><a href="#9097" title="2010-12-14 22:14:38">Amankwah</a>:</strong> 貌似昨天是，Andorid自带的电子市场不能上，我的帐号在手机上登录是正常的～</p><p><strong><a href="#9717" title="2011-03-12 20:27:23">小杨</a>:</strong> 手机上登陆争产，市场不能上很正常。 android链接google账户似乎会传递很多东西。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Android 系统上google账号无法登录，解决办法：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;手机上安装R.E.管理器.&lt;/li&gt;
+&lt;li&gt;创建一个hosts文件写入内容：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;127.0.0.1            localhost&amp;g
+      
+    
+    </summary>
+    
+      <category term="Life" scheme="http://cocobear.github.io/categories/Life/"/>
+    
+    
+      <category term="android" scheme="http://cocobear.github.io/tags/android/"/>
+    
+      <category term="google" scheme="http://cocobear.github.io/tags/google/"/>
+    
+  </entry>
+  
+</feed>

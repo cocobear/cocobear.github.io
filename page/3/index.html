@@ -1,0 +1,3285 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="theme-next gemini" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+  
+  
+    
+      
+    
+    
+      
+    
+  <script src="//cdn.staticfile.org/pace/1.0.2/pace.min.js"></script>
+  <link rel="stylesheet" href="//cdn.staticfile.org/pace/1.0.2/themes/blue/pace-theme-loading-bar.min.css">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+  <link rel="stylesheet" href="//cdn.staticfile.org/fancybox/3.2.5/jquery.fancybox.min.css">
+
+
+
+
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+
+    
+  
+
+  
+    
+    
+    <link rel="stylesheet" href="https://fonts.loli.net/css?family=Source Code Pro:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext">
+  
+
+
+
+
+
+
+  
+
+<link rel="stylesheet" href="//cdn.staticfile.org/font-awesome/4.6.2/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="/css/main.css?v=6.7.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-next.png?v=6.7.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=6.7.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=6.7.0">
+
+
+  <link rel="mask-icon" href="/logo.svg?v=6.7.0" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '6.7.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    fastclick: true,
+    lazyload: true,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="爱折腾的技术宅一枚">
+<meta name="keywords" content="cocobear blog python linux">
+<meta property="og:type" content="website">
+<meta property="og:title" content="可可熊D窝">
+<meta property="og:url" content="http://cocobear.github.io/page/3/index.html">
+<meta property="og:site_name" content="可可熊D窝">
+<meta property="og:description" content="爱折腾的技术宅一枚">
+<meta property="og:locale" content="zh-CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="可可熊D窝">
+<meta name="twitter:description" content="爱折腾的技术宅一枚">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="可可熊D窝" type="application/atom+xml">
+
+
+
+
+  <link rel="canonical" href="http://cocobear.github.io/page/3/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>可可熊D窝 – Keep it simple, stupid</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left 
+  page-home">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">可可熊D窝</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <h1 class="site-subtitle" itemprop="description">Keep it simple, stupid</h1>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">182</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">8</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">358</span></a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2013/06/18/compile-android-4-2-2-and-modify-system-app/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="cocobear">
+      <meta itemprop="description" content="爱折腾的技术宅一枚">
+      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="可可熊D窝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2013/06/18/compile-android-4-2-2-and-modify-system-app/" class="post-title-link" itemprop="url">Android4.2.2源码编译并修改系统App</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2013-06-18 09:59:17" itemprop="dateCreated datePublished" datetime="2013-06-18T09:59:17+08:00">2013-06-18</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/" itemprop="url" rel="index"><span itemprop="name">Life</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2013/06/18/compile-android-4-2-2-and-modify-system-app/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2013/06/18/compile-android-4-2-2-and-modify-system-app/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数：</span>
+                
+                <span title="字数">3.2k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读 &asymp;</span>
+                
+                <span title="阅读">3 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><img src="https://asset-1258390188.cos.ap-shanghai.myqcloud.com/android-logo.jpg" alt="android-logo"></p>
+<p>Android4.2.2源码编译</p>
+<p>这不是一份详细的Android源码编译指南，这里只是除官方指南外的记录，请先阅读<a href="http://source.android.com/source/initializing.html" title="官方编译指南" target="_blank" rel="noopener">官方编译指南</a></p>
+<p>官方的编译指南挺详细的，最好看仔细一点，比如ccache这个东西，如果你老在不同的分枝切换编译这个东西能节省不少的时间，官方推荐的操作系统是Ubuntu 10.04　64位,　不过我这里原来这里有一个下载好的12.04，看到官方说明也也支持所以就在12.04上面进行编译了。</p>
+<p>花了几天的时间下载源码，因为老是卡死在一个地方，本来把机器开着一个晚上下载，希望第二天能下载完，结果不知道啥时候已经卡死了，所以断断续续的下载了几天，天朝的环境真是不管做什么都“<strong>多难兴邦</strong>”。</p>
+<p>下载完所有的源码后，最好能打包一下放在别的地方，省得弄乱了需要重新下载：</p>
+<pre><code>tar -jcvf android.tar.bz2 android/
+</code></pre><p>编译的时候如果你不做别的事情，最好根据你的CPU指定多线程编译:</p>
+<pre><code>make -j8
+</code></pre><p>我在编译的时候由于使用虚拟机，而且同时又在做别的事情，经常会造成虚拟机死掉，有时使用Ctrl+c中断了编译过程，所以出现了下面的错误：</p>
+<pre><code>make: *** [out/target/product/generic/obj/SHARED_LIBRARIES/libwebcore_intermediates/LINKED/libwebcore.so] Error 1
+</code></pre><p>在Google Group里找到了原因：<br><a href="https://groups.google.com/forum/?fromgroups#!topic/android-porting/LVpm39BAqRw" title="Solution" target="_blank" rel="noopener">https://groups.google.com/forum/?fromgroups#!topic/android-porting/LVpm39BAqRw
+</a></p>
+<p>解决办法：</p>
+<pre><code>make clean-libwebcore &gt; 
+make -j4 libwebcore&gt; 
+make -j4
+</code></pre><p>修改并编译系统App方法一:</p>
+<p>如果你需要单独编译某个App，会生成apk文件和odex文件，如果你只想生成apk文件，修改在Android.mk文件</p>
+<pre><code>cd packages/apps/Stk/&gt; 
+vi Android.mk
+
+LOCAL_PACKAGE_NAME := Stk&gt; 
+LOCAL_CERTIFICATE := platform&gt; 
+#这行是新添加的:&gt; 
+WITH_DEXPREOPT := false
+</code></pre><p>修改完后使用命令：mm</p>
+<p>编译完会在out目录下会生成Stk.apk文件，把该文件push到手机上，就可以替换原有的系统程序了：</p>
+<pre><code>adb push Stk.apk /system/app/&gt; 
+1236 KB/s (39262 bytes in 0.031s)&gt; 
+adb shell chmod 644 /system/app/Stk.apk&gt; 
+adb reboot
+</code></pre><p>折腾了几天自己编译的系统程序（system app)总是不能在手机上运行，而从别的地方下载的app就可以用上面的命令运行，早上突然意识到是不是TARGET不对，于是试了一下：</p>
+<pre><code>You&apos;re building on Linux&gt; 
+
+Lunch menu... pick a combo:&gt; 
+     1\. full-eng&gt; 
+     2\. full_x86-eng&gt; 
+     3\. vbox_x86-eng&gt; 
+     4\. full_mips-eng&gt; 
+     5\. full_grouper-userdebug&gt; 
+     6\. full_tilapia-userdebug&gt; 
+     7\. mini_armv7a_neon-userdebug&gt; 
+     8\. mini_armv7a-userdebug&gt; 
+     9\. mini_mips-userdebug&gt; 
+     10\. mini_x86-userdebug&gt; 
+     11\. full_mako-userdebug&gt; 
+     12\. full_maguro-userdebug&gt; 
+     13\. full_manta-userdebug&gt; 
+     14\. full_toroplus-userdebug&gt; 
+     15\. full_toro-userdebug&gt; 
+     16\. full_panda-userdebug&gt; 
+
+Which would you like? [full-eng] 8&gt; 
+or:&gt; 
+lunch mini_armv7a-userdebug
+</code></pre><p>再次重新运行mm命令，push到手机上，终于可以运行了，网上看到的文章一般都没有提到lunch的作用，默认的情况下lunch会被设定为：full-eng，而这个选项是用给虚拟机的，所以生成的apk在手机上无法运行，所以要选择编译选项为arm。full_mako-userdebug指的是Nexus 4，因为我这里编译的只是上层应用所以用这个选项也可以。</p>
+<p>我这里用的测试手机是MOTO ME525+ 已刷机 CM10.1（4.2.2） 已ROOT，如果你也有类似的需要请注意保持手机系统的版本和你编译的源码一致，并且你的手机已经ROOT。</p>
+<p>修改并编译系统App方法二:</p>
+<p>首先下载App源代码:</p>
+<pre><code>git clone https://android.googlesource.com/platform/packages/apps/Launcher -b android-4.2.2_r1
+</code></pre><p>然后把下载的代码通过在Eclipse的菜单<android project from existing code>新建一个工程，在工程目录下新建文件夹libs, 用来存放out/target/common/obj/JAVA_LIBRARIES/framework_intermediates/classes.jar<br>文件，这个文件包含了一些隐藏的系统API，我们在Eclipse里编译系统app的时候需要调用这个库。</android></p>
+<p>在工程文件的属性中按以下步骤添加系统库：</p>
+<pre><code>Java Build Path－&gt; Libraries - &gt; Add Library -&gt; User Library -&gt; User Libraries -&gt; New -&gt; input User library name(like framework_android) and checkbox System library on -&gt; Add JARs -&gt; Select ./libs/classes.jar file&gt; 
+
+Select: Order and Export  -&gt; make framework_android on the top and checked
+</code></pre><p>我这里使用自己编译生成的framework_intermediates/classes.jar文件总是无法成功调用到隐藏的系统API,但是通过查看jar包,可以看到com.android.internal这样的系统API. 使用别人在网上发出来的classes.jar文件可以找到系统API,不过因为不是4.2的,所以我这里编译的时候出现了其它引用错误. </p>
+<p><strong>参考文章:</strong></p>
+<p><a href="http://www.iteye.com/topic/937547" target="_blank" rel="noopener">http://www.iteye.com/topic/937547</a></p>
+<p><a href="http://www.mkyong.com/android/attach-android-source-code-to-eclipse-ide" target="_blank" rel="noopener">http://www.mkyong.com/android/attach-android-source-code-to-eclipse-ide</a></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2013/06/08/depoly-bottle-with-uwsgi-nginx/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="cocobear">
+      <meta itemprop="description" content="爱折腾的技术宅一枚">
+      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="可可熊D窝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2013/06/08/depoly-bottle-with-uwsgi-nginx/" class="post-title-link" itemprop="url">CentOS部署 Nginx+uWSGI+Bottle</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2013-06-08 17:53:25" itemprop="dateCreated datePublished" datetime="2013-06-08T17:53:25+08:00">2013-06-08</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2013/06/08/depoly-bottle-with-uwsgi-nginx/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2013/06/08/depoly-bottle-with-uwsgi-nginx/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数：</span>
+                
+                <span title="字数">6.4k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读 &asymp;</span>
+                
+                <span title="阅读">6 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><img src="https://asset-1258390188.cos.ap-shanghai.myqcloud.com/bottle_uwsgi.jpg" alt="bottle_uwsgi"></p>
+<p>安装virtualenv<br>看到别人布署bottle都是配合virtualenv来的，看了一下<a href="http://www.virtualenv.org/en/latest/" title="virtualenv" target="_blank" rel="noopener">virtualenv的介绍</a>，确实比较有用，它可以为你的应用创建一个独立的Python环境，这样如果你布署了几个Python应用，就不需要担心它们各自需要的依赖文件版本不同，甚至它们需要的Python版本也不同。</p>
+<p>virtualenv官方建使用 pip-1.3以上版本安装，所以先安装一个pip（当然你也可以直接从源码安装）：</p>
+<pre><code>wget http://peak.telecommunity.com/dist/ez_setup.py&gt; 
+python ez_setup.py&gt; 
+easy_install pip&gt; 
+pip install virtualenv
+</code></pre><p>virtualenv会把所有依赖包安装在一个独立的环境下，所以你需要先建立一个给它专用的目录：</p>
+<pre><code>mkdir venv
+</code></pre><p>针对你目前要布置的Python应用，建立一个新的环境目录：</p>
+<pre><code>virtualenv venv/bottle
+</code></pre><p>激活：<br>     [www@HJY-SERVER ~]$ source ./venv/bottle/bin/activate&gt;<br>     (bottle)[www@HJY-SERVER ~]$</p>
+<p>激活后你可以看到上面的Shell提示符前面有了你当前环境名称“bottle”。</p>
+<p>安装bottle：</p>
+<pre><code>(bottle)[www@HJY-SERVER ~]$ pip install bottle&gt; 
+Downloading/unpacking bottle&gt; 
+  Downloading bottle-0.11.6.tar.gz (60kB): 60kB downloaded&gt; 
+  Running setup.py egg_info for package bottle&gt; 
+Installing collected packages: bottle&gt; 
+  Running setup.py install for bottle&gt; 
+    changing mode of build/scripts-2.6/bottle.py from 664 to 775&gt; 
+    changing mode of /home/www/venv/bottle/bin/bottle.py to 775&gt; 
+Successfully installed bottle&gt; 
+Cleaning up...
+</code></pre><p>安装uWSGI:</p>
+<pre><code>wget http://projects.unbit.it/downloads/uwsgi-1.4.9.tar.gz&gt; 
+
+tar zxvf uwsgi-1.4.9.tar.gz&gt; 
+cd ../uwsgi-1.4.9.tar.gz&gt; 
+make
+</code></pre><p>如果遇到一大片的错误位置在pythong_plugin.c ,那么应该是缺少python-devel包，用yum安装一下：</p>
+<pre><code>plugins/python/python_plugin.c:1871: error: statement with no effect&gt; 
+yum install python-devel
+</code></pre><p>编译完成后配置：</p>
+<pre><code>mkdir opt/uwsgi&gt; 
+cp uwsgi /opt/uwsgi/&gt; 
+touch /opt/uwsgi/bottle.xml&gt; 
+
+mkdir /home/www/html/cgi/
+</code></pre><p>写一个测试页面：</p>
+<pre><code>cat &gt;&gt; /home/www/html/cgi/index.py
+
+from bottle import route, run, default_app
+
+@route(&apos;/&apos;)
+def index():
+ return &quot;hello world&quot;
+
+if __name__ == &quot;__main__&quot;:
+ run(host=&quot;localhost&quot;, port=8888)
+else:
+ application = default_app()
+</code></pre><p>uwsgi启动参数配置脚本：</p>
+<pre><code>[root@HJY-SERVER ~]# cat /opt/uwsgi/bottle.ini&gt; 
+[uwsgi]&gt; 
+socket=/opt/uwsgi/run/bottle.sock&gt; 
+daemonize=/opt/uwsgi/run/bottle.log&gt; 
+pidfile=/opt/uwsgi/run/bottle.pid&gt; 
+gid=www&gt; 
+uid=www&gt; 
+virtualenv=/home/www/venv/bottle&gt; 
+chdir=/home/www/html/cgi&gt; 
+module=index&gt; 
+master=True&gt; 
+processes=4&gt; 
+max-requests=5000
+</code></pre><p>uWSGI没有自带的启动脚本，我这里从nginx的启动脚本改了一个过来：</p>
+<pre><code>#!/bin/sh
+#
+# uwsgi        Startup script for uwsgi
+#
+# chkconfig: - 85 15
+# processname: uwsgi
+# config: /etc/uwsgi/uwsgi.conf
+# config: /etc/sysconfig/uwsgi
+# pidfile: /var/run/uwsgi.pid
+#
+### BEGIN INIT INFO
+# Provides: uwsgi
+# Required-Start: $local_fs $remote_fs $network
+# Required-Stop: $local_fs $remote_fs $network
+# Default-Start: 2 3 4 5
+# Default-Stop: 0 1 6
+# Short-Description: start and stop uwsgi
+### END INIT INFO
+
+# Source function library.
+. /etc/rc.d/init.d/functions
+
+UWSGI=/opt/uwsgi/uwsgi
+CONFFILE=/opt/uwsgi/bottle.ini
+#CONFFILE=/opt/uwsgi/bottle.xml
+
+
+prog=uwsgi
+uwsgi=${UWSGI}
+conffile=${CONFFILE}
+lockfile=/opt/uwsgi/run/bottle.lck
+pidfile=/opt/uwsgi/run/bottle.pid
+logfile=/opt/uwsgi/run/bottle.log
+SLEEPMSEC=100000
+RETVAL=0
+
+start() {
+    echo -n $&quot;Starting $prog: &quot;
+
+    ${uwsgi} --ini ${conffile}
+    #daemon --pidfile=${pidfile} ${uwsgi} -x ${conffile} -d ${logfile}
+    RETVAL=$?
+    echo
+    [ $RETVAL = 0 ] &amp;&amp; touch ${lockfile}
+    return $RETVAL
+}
+
+stop() {
+    echo -n $&quot;Stopping $prog: &quot;
+    killproc -p ${pidfile} ${prog}
+    RETVAL=$?
+    echo
+    [ $RETVAL = 0 ] &amp;&amp; rm -f ${lockfile} ${pidfile}
+}
+
+reload() {
+    echo -n $&quot;Reloading $prog: &quot;
+    killproc -p ${pidfile} ${prog} -HUP
+    RETVAL=$?
+    echo
+}
+
+upgrade() {
+    oldbinpidfile=${pidfile}.oldbin
+
+    configtest -q || return 6
+    echo -n $&quot;Staring new master $prog: &quot;
+    killproc -p ${pidfile} ${prog} -USR2
+    RETVAL=$?
+    echo
+    /bin/usleep $SLEEPMSEC
+    if [ -f ${oldbinpidfile} -a -f ${pidfile} ]; then
+        echo -n $&quot;Graceful shutdown of old $prog: &quot;
+        killproc -p ${oldbinpidfile} ${prog} -QUIT
+        RETVAL=$?
+        echo
+    else
+        echo $&quot;Upgrade failed!&quot;
+        return 1
+    fi
+}
+
+configtest() {
+    if [ &quot;$#&quot; -ne 0 ] ; then
+        case &quot;$1&quot; in
+            -q)
+                FLAG=$1
+                ;;
+            *)
+                ;;
+        esac
+        shift
+    fi
+    ${uwsgi} -t -c ${conffile} $FLAG
+    RETVAL=$?
+    return $RETVAL
+}
+
+rh_status() {
+    status -p ${pidfile} ${uwsgi}
+}
+
+# See how we were called.
+case &quot;$1&quot; in
+    start)
+        rh_status &gt;/dev/null 2&gt;&amp;1 &amp;&amp; exit 0
+        start
+        ;;
+    stop)
+        stop
+        ;;
+    status)
+        rh_status
+        RETVAL=$?
+        ;;
+    restart)
+        configtest -q || exit $RETVAL
+        stop
+        start
+        ;;
+    upgrade)
+        upgrade
+        ;;
+    condrestart|try-restart)
+        if rh_status &gt;/dev/null 2&gt;&amp;1; then
+            stop
+            start
+        fi
+        ;;
+    force-reload|reload)
+        reload
+        ;;
+    configtest)
+        configtest
+        ;;
+    *)
+        echo $&quot;Usage: $prog {start|stop|restart|condrestart|try-restart|force-re                                                                             load|upgrade|reload|status|help|configtest}&quot;
+        RETVAL=2
+esac
+
+exit $RETVAL
+</code></pre><p>把uWSGI加入系统自启动脚本中：</p>
+<pre><code>[root@HJY-SERVER ~]# chkconfig --add uwsgi&gt; 
+[root@HJY-SERVER ~]# chkconfig --level 345 uwsgi on&gt; 
+[root@HJY-SERVER ~]# service uwsgi status
+</code></pre><p>修改nginx.conf文件，支持不同端口的虚拟主机，一个80端口用来支持PHP,一个8051端口支持uWSGI：</p>
+<p>user  www www;<br>worker_processes  1;<br>events {<br>    worker_connections  1024;<br>}<br>http {<br>    include       mime.types;<br>    default_type  application/octet-stream;<br>    sendfile        on;<br>    keepalive_timeout  65;<br>    gzip  on;<br>    server {<br>        listen       8051;<br>        server_name  localhost;<br>                root   /home/www/html/cgi;<br>        location / {<br>                        include uwsgi_params;<br>                        uwsgi_pass unix:///opt/uwsgi/run/bottle.sock;<br>        }<br>        }<br>    server {<br>        listen       80;<br>        server_name  localhost;<br>                root   /home/www/html;<br>                location ~ .*.(php|php5)?$<br>                {<br>                        fastcgi_pass 127.0.0.1:9000;<br>                        fastcgi_index index.php;<br>                        include fastcgi.conf;<br>                }<br>    }<br>}</p>
+<p>参考文章：</p>
+<p><a href="http://www.liuts.com/post/216/" target="_blank" rel="noopener">http://www.liuts.com/post/216/</a><br><a href="http://jinghong.iteye.com/blog/1283984" target="_blank" rel="noopener">http://jinghong.iteye.com/blog/1283984</a><br><a href="http://www.actkr.com/?p=791#sthash.gMK8MScq.3f8JF7RD.dpbs" target="_blank" rel="noopener">http://www.actkr.com/?p=791#sthash.gMK8MScq.3f8JF7RD.dpbs</a></p>
+<h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#25361" title="2013-06-14 20:10:12">kongove</a>:</strong> 最近博客很活跃呀，还改版了。</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2013/06/07/lnmp-on-centos/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="cocobear">
+      <meta itemprop="description" content="爱折腾的技术宅一枚">
+      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="可可熊D窝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2013/06/07/lnmp-on-centos/" class="post-title-link" itemprop="url">CentOS配置LNMP环境</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2013-06-07 16:53:58" itemprop="dateCreated datePublished" datetime="2013-06-07T16:53:58+08:00">2013-06-07</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2013/06/07/lnmp-on-centos/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2013/06/07/lnmp-on-centos/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数：</span>
+                
+                <span title="字数">9.6k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读 &asymp;</span>
+                
+                <span title="阅读">9 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><img src="https://asset-1258390188.cos.ap-shanghai.myqcloud.com/lnmp.jpg" alt="Linux Nginx MySQL PHP"></p>
+<p>由于SELinux经常会使PHP FTP等常用的WEB服务产生一些奇怪的错误,所以我们在安装LNMP环境前先关闭SELinux:</p>
+<pre><code>sed -i s/SELINUX=enforcing/SELINUX=disabled/ /etc/sysconfig/selinux
+</code></pre><p>以下配置中, 所有编译安装的软件全部在/opt目录下, WEB服务器的目录为/home/www/html, MySQL数据目录为/opt/mysql/data</p>
+<p>一. Nginx编译安装</p>
+<p>安装编译环境以及依赖包:</p>
+<pre><code>yum install wget&gt; 
+yum install pcre-devel&gt; 
+yum -y install gcc gcc-c++ autoconf libjpeg libjpeg-devel libpng libpng-devel freetype freetype-devel libxml2 libxml2-devel zlib zlib-devel glibc glibc-devel glib2 glib2-devel bzip2 bzip2-devel ncurses ncurses-devel curl curl-devel e2fsprogs e2fsprogs-devel krb5-devel libidn libidn-devel openssl openssl-devel openldap openldap-devel openldap-clients openldap-servers make gd gd-devel
+</code></pre><p>添加WEB服务器专用的用户:</p>
+<pre><code>/usr/sbin/groupadd www&gt; 
+/usr/sbin/useradd -g www www
+</code></pre><p>编译安装Nginx:</p>
+<pre><code>wget http://nginx.org/download/nginx-1.4.1.tar.gz&gt; 
+mkdir /opt/nginx&gt; 
+
+tar zxvf nginx-1.4.1.tar.gz&gt; 
+cd nginx-1.4.1&gt; 
+./configure --user=www --group=www --prefix=/opt/nginx --with-http_ssl_module --with-pcre --with-http_image_filter_module&gt; 
+
+make &amp;&amp; make install
+</code></pre><p>创建Nginx服务器目录:</p>
+<pre><code>mkdir /home/www/html
+</code></pre><p>编辑nginx.conf文件:</p>
+<pre><code>[root@HJY-SERVER conf]# sed &apos;/#/d&apos; /opt/nginx/conf/nginx.conf | sed &apos;/^$/d&apos;
+user  www www;
+worker_processes  1;
+events {
+    worker_connections  1024;
+}
+http {
+    include       mime.types;
+    default_type  application/octet-stream;
+    sendfile        on;
+    keepalive_timeout  65;
+    gzip  on;
+    server {
+        listen       80;
+        server_name  localhost;
+        location / {
+            root   /home/www/html;
+            index  index.php index.html index.htm;
+        }
+    }
+}
+</code></pre><p>配置Nginx自启动, Nginx官方有rpm包格式的二进制安装包,下载一个从里面提取nginx启动脚本,这里可以借用一下:</p>
+<pre><code>wget http://nginx.org/packages/centos/6/x86_64/RPMS/nginx-1.4.1-1.el6.ngx.x86_64.rpm&gt; 
+rpm2cpio nginx-1.4.1-1.el6.ngx.x86_64.rpm | cpio -idmv
+</code></pre><p>nginx脚本: </p>
+<pre><code>#!/bin/sh
+# nginx        Startup script for nginx
+#
+# chkconfig: - 85 15
+# processname: nginx
+# config: /etc/nginx/nginx.conf
+# config: /etc/sysconfig/nginx
+# pidfile: /var/run/nginx.pid
+# description: nginx is an HTTP and reverse proxy server
+#
+### BEGIN INIT INFO
+# Provides: nginx
+# Required-Start: $local_fs $remote_fs $network
+# Required-Stop: $local_fs $remote_fs $network
+# Default-Start: 2 3 4 5
+# Default-Stop: 0 1 6
+# Short-Description: start and stop nginx
+### END INIT INFO
+
+# Source function library.
+. /etc/rc.d/init.d/functions
+
+NGINX=/opt/nginx/sbin/nginx
+CONFFILE=/opt/nginx/conf/nginx.conf
+
+prog=nginx
+nginx=${NGINX}
+conffile=${CONFFILE}
+lockfile=${LOCKFILE-/opt/nginx/nginx.lck}
+pidfile=${PIDFILE-/opt/nginx/logs/nginx.pid}
+SLEEPMSEC=100000
+RETVAL=0
+
+start() {
+    echo -n $&quot;Starting $prog: &quot;
+
+    daemon --pidfile=${pidfile} ${nginx} -c ${conffile}
+    RETVAL=$?
+    echo
+    [ $RETVAL = 0 ] &amp;amp;&amp;amp; touch ${lockfile}
+    return $RETVAL
+}
+
+stop() {
+    echo -n $&quot;Stopping $prog: &quot;
+    killproc -p ${pidfile} ${prog}
+    RETVAL=$?
+    echo
+    [ $RETVAL = 0 ] &amp;amp;&amp;amp; rm -f ${lockfile} ${pidfile}
+}
+
+reload() {
+    echo -n $&quot;Reloading $prog: &quot;
+    killproc -p ${pidfile} ${prog} -HUP
+    RETVAL=$?
+    echo
+}
+
+upgrade() {
+    oldbinpidfile=${pidfile}.oldbin
+
+    configtest -q || return 6
+    echo -n $&quot;Staring new master $prog: &quot;
+    killproc -p ${pidfile} ${prog} -USR2
+    RETVAL=$?
+    echo
+    /bin/usleep $SLEEPMSEC
+    if [ -f ${oldbinpidfile} -a -f ${pidfile} ]; then
+        echo -n $&quot;Graceful shutdown of old $prog: &quot;
+        killproc -p ${oldbinpidfile} ${prog} -QUIT
+        RETVAL=$?
+        echo
+    else
+        echo $&quot;Upgrade failed!&quot;
+        return 1
+    fi
+}
+
+configtest() {
+    if [ &quot;$#&quot; -ne 0 ] ; then
+        case &quot;$1&quot; in
+            -q)
+                FLAG=$1
+                ;;
+            *)
+                ;;
+        esac
+        shift
+    fi
+    ${nginx} -t -c ${conffile} $FLAG
+    RETVAL=$?
+    return $RETVAL
+}
+
+rh_status() {
+    status -p ${pidfile} ${nginx}
+}
+
+# See how we were called.
+case &quot;$1&quot; in
+    start)
+        rh_status &amp;gt;/dev/null 2&amp;gt;&amp;amp;1 &amp;amp;&amp;amp; exit 0
+        start
+        ;;
+    stop)
+        stop
+        ;;
+    status)
+        rh_status
+        RETVAL=$?
+        ;;
+    restart)
+        configtest -q || exit $RETVAL
+        stop
+        start
+        ;;
+    upgrade)
+        upgrade
+        ;;
+    condrestart|try-restart)
+        if rh_status &amp;gt;/dev/null 2&amp;gt;&amp;amp;1; then
+            stop
+            start
+        fi
+        ;;
+    force-reload|reload)
+        reload
+        ;;
+    configtest)
+        configtest
+        ;;
+    *)
+        echo $&quot;Usage: $prog {start|stop|restart|condrestart|try-restart|force-re                                                                             load|upgrade|reload|status|help|configtest}&quot;
+        RETVAL=2
+esac
+
+exit $RETVAL
+</code></pre><p>复制nginx脚本到init.d启动脚本目录下:</p>
+<pre><code>cp ./etc/rc.d/init.d/nginx /etc/rc.d/init.d/&gt; 
+chmod +x nginx &gt; 
+chkconfig --add nginx&gt; 
+chkconfig --level 345 nginx on
+</code></pre><p>测试配置并启动:</p>
+<pre><code>service nginx configtest&gt; 
+service nginx start
+</code></pre><p>到现在Nginx安装已经完成.</p>
+<p>二. MySQL编译安装</p>
+<p>安装依赖环境:</p>
+<pre><code>yum install cmake bison
+</code></pre><p>下载稳定版本的MySQL 5.6:</p>
+<pre><code>wget http://cdn.mysql.com/Downloads/MySQL-5.6/mysql-5.6.12.tar.gz
+</code></pre><p>添加mysql用户:</p>
+<pre><code>groupadd mysql&gt; 
+useradd -r -g mysql mysql
+</code></pre><p>编译安装:</p>
+<pre><code>cd mysql-5.6.12&gt; 
+
+cmake -DCMAKE_INSTALL_PREFIX=/opt/mysql -DMYSQL_UNIX_ADDR=/tmp/mysql.sock -DDEFAULT_CHARSET=utf8 -DDEFAULT_COLLATION=utf8_general_ci -DWITH_EXTRA_CHARSETS:STRING=utf8,gbk -DWITH_MYISAM_STORAGE_ENGINE=1 -DWITH_INNOBASE_STORAGE_ENGINE=1 -DWITH_READLINE=1 -DENABLED_LOCAL_INFILE=1 -DMYSQL_DATADIR=/opt/mysql/data -DINSTALL_MYSQLTESTDIR=&gt; 
+
+make &amp;&amp; make install
+</code></pre><p>编译安装完成后进行配置:</p>
+<pre><code>chmod +w /opt/mysql/&gt; 
+chown -R mysql:mysql /opt/mysql/&gt; 
+&lt;del datetime=&quot;2013-06-08T07:46:57+00:00&quot;&gt;ln -s /usr/local/mysql/lib/libmysqlclient.so.18 /usr/lib/libmysqlclient.so.18&lt;/del&gt;&gt; 
+ln -s /opt/mysql/lib/libmysqlclient.so.18 /usr/lib64/libmysqlclient.so.18&gt; 
+cd /opt/mysql/support-files/&gt; 
+cp mysql.server /etc/rc.d/init.d/mysqld&gt; 
+chmod +x /etc/init.d/mysqld&gt; 
+
+./scripts/mysql_install_db --defaults-file=/opt/mysql/my.cnf --basedir=/opt/mysql/ --datadir=/opt/mysql/data/ --user=mysqlshell&gt; bin/mysqld_safe --user=mysql &gt; 
+
+vi /etc/init.d/mysqld（编辑此文件，查找并修改以下变量内容：）&gt; 
+basedir=/opt/mysql&gt; 
+datadir=/opt/mysql/data&gt; 
+
+chkconfig --add mysqld&gt; 
+chkconfig --level 345 mysqld on&gt; 
+
+service mysqld start&gt; 
+
+/usr/local/mysql/bin/mysqladmin password [new-password]
+</code></pre><p>三. 编译安装PHP</p>
+<p>依赖的软件包:</p>
+<pre><code>wget &quot;http://downloads.sourceforge.net/mhash/mhash-0.9.9.9.tar.gz?modtime=1175740843&amp;big_mirror=0&quot;&gt; 
+wget &quot;http://downloads.sourceforge.net/mcrypt/libmcrypt-2.5.8.tar.gz?modtime=1171868460&amp;big_mirror=0&quot;&gt; 
+wget &quot;http://downloads.sourceforge.net/mcrypt/mcrypt-2.6.8.tar.gz?modtime=1194463373&amp;big_mirror=0&quot;&gt; 
+
+tar zxvf libmcrypt-2.5.8.tar.gz&gt; 
+cd libmcrypt-2.5.8/&gt; 
+./configure --prefix=/opt/libs&gt; 
+make&gt; 
+make install&gt; 
+cd libltdl/&gt; 
+./configure --prefix=/opt/libs --enable-ltdl-install&gt; 
+make&gt; 
+make install&gt; 
+cd ../../&gt; 
+
+tar zxvf mhash-0.9.9.9.tar.gz&gt; 
+cd mhash-0.9.9.9/&gt; 
+./configure --prefix=/opt/libs&gt; 
+make&gt; 
+make install&gt; 
+cd ../
+</code></pre><p>把安装好的libs目录加入系统路径中:</p>
+<pre><code>cd /etc/ld.so.conf.d/&gt; 
+[root@HJY-SERVER ld.so.conf.d]# cat opt-libs.conf&gt; 
+/opt/libs/lib
+</code></pre><p>编译安装PHP：</p>
+<pre><code>wget http://cdn.mysql.com/Downloads/MySQL-5.6/mysql-5.6.12.tar.gz
+tar zxvf mysql-5.6.12.tar.gz
+cd mysql-5.6.12.tar.gz
+
+export LIBS=&quot;-lm -ltermcap -lresolv&quot;
+export DYLD_LIBRARY_PATH=&quot;/opt/mysql/lib/:/lib/:/usr/lib/:/usr/local/lib:/lib64/:/usr/lib64/:/usr/local/lib64&quot;
+
+export LD_LIBRARY_PATH=&quot;/opt/mysql/lib/:/lib/:/usr/lib/:/usr/local/lib:/lib64/:/usr/lib64/:/usr/local/lib64&quot;
+
+./configure --prefix=/opt/php --with-config-file-path=/opt/php/etc --with-mysql=/opt/mysql --with-mysqli=/opt/mysql/bin/mysql_config --with-iconv-dir --with-freetype-dir=/opt/libs --with-jpeg-dir=/opt/libs --with-png-dir=/opt/libs --with-zlib --with-libxml-dir=/usr --enable-xml --disable-rpath --enable-bcmath --enable-shmop --enable-sysvsem --enable-inline-optimization --with-curl --enable-mbregex --enable-fpm --enable-mbstring --with-mcrypt=/opt/libs --with-gd --enable-gd-native-ttf --with-openssl --with-mhash --enable-pcntl --enable-sockets --with-xmlrpc --enable-zip --enable-soap 
+
+make
+make install
+</code></pre><p>配置：</p>
+<pre><code>cp php.ini-development /opt/php/etc/php.ini&gt; 
+cd ../&gt; 
+
+mv /opt/php/etc/php-fpm.conf.default /opt/php/etc/php-fpm.conf
+</code></pre><p>Update 2013.6.8:</p>
+<p>安装好后没有对PHP进行测试，今天测试了一下，结果PHP脚本不能被执行，默认在浏览器里被下载了下来，习惯了以前用Apache不用对PHP进行配置, 现在要继续未完成的配置：</p>
+<pre><code>cp sapi/fpm/init.d.php-fpm /etc/init.d/php-fpm&gt; 
+chkconfig --add php-fpm&gt; 
+chkconfig --level 345 php-fpm on
+</code></pre><p>修改php-fpm文件：</p>
+<pre><code>pid = run/php-fpm.pid&gt; 
+user = www&gt; 
+group = www
+</code></pre><p>修改nginx.conf文件，在server字段处添加以下内容：</p>
+<pre><code>location ~ .*\.(php|php5)?$&gt; 
+            {&gt; 
+
+                root   /home/www/html;&gt; 
+                fastcgi_pass 127.0.0.1:9000;&gt; 
+                fastcgi_index index.php;&gt; 
+                include fastcgi.conf;&gt; 
+            }
+</code></pre><p>配置完成后重起服务：</p>
+<pre><code>service nginx restart&gt; 
+service php-fpm restart
+</code></pre><p>可以用下面的命令查看占用端口的进程名，pid，nginx和php-fpm分别占用80和9000端口:</p>
+<pre><code>netstat -anpo ｜ grep tcp
+</code></pre><p>参考文章:<br><a href="http://blog.s135.com/nginx_php_v7/" target="_blank" rel="noopener">http://blog.s135.com/nginx_php_v7/</a><br><a href="http://www.centos.bz/2011/09/linux-compile-install-mysql-5-5-15-from-source/" target="_blank" rel="noopener">http://www.centos.bz/2011/09/linux-compile-install-mysql-5-5-15-from-source/</a><br><a href="http://www.boluo.org/archives/chkconfig-nginx-on.html" target="_blank" rel="noopener">http://www.boluo.org/archives/chkconfig-nginx-on.html</a><br><a href="http://www.linuxsong.org/2010/09/cpio/" target="_blank" rel="noopener">http://www.linuxsong.org/2010/09/cpio/</a></p>
+<p>btw: wordpress中想要添加空行还不容易,p,br 标签都会被过滤掉, 找到一个简单的办法适用于最新的3.5.1版本，安装TinyMCE Advanced插件， 打开插件里面的选项，禁止自动删除&lt; p &gt;, &lt; br \ &gt;标签，不过我这里测试的只支持： &lt; br \ &gt; 标签.</p>
+<h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#25355" title="2013-06-08 11:48:18">Amankwah</a>:</strong> 最近你在干嘛呢？？</p>
+<p><strong><a href="#25358" title="2013-06-08 12:56:08">可可熊</a>:</strong> 配个服务器么！ 好奇怪吗？</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2013/06/06/centos-6-4-install-and-config/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="cocobear">
+      <meta itemprop="description" content="爱折腾的技术宅一枚">
+      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="可可熊D窝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2013/06/06/centos-6-4-install-and-config/" class="post-title-link" itemprop="url">CentOS 6.4安装配置-使用U盘作为安装介质</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2013-06-06 14:25:13" itemprop="dateCreated datePublished" datetime="2013-06-06T14:25:13+08:00">2013-06-06</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2013/06/06/centos-6-4-install-and-config/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2013/06/06/centos-6-4-install-and-config/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数：</span>
+                
+                <span title="字数">1.4k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读 &asymp;</span>
+                
+                <span title="阅读">1 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><img src="https://asset-1258390188.cos.ap-shanghai.myqcloud.com/centos61.jpg" alt="centos6"><br>前期准备:</p>
+<pre><code>* IOS文件 : CentOS-6.4-x86_64-minima.iso 
+* U盘 : 因为使用最小化的安装, 所以1G的U盘就够用了 
+* UltraISO: 最好使用9.X的版本, 新版本制作的U盘启动支持的主板比较多 
+</code></pre><p>CentOS 6系统使用U盘安装会遇到一些问题:</p>
+<ul>
+<li>首先是如果直接把官方下载的IOS用UltraISO写入U盘启动时会遇到错误, U盘启动后会停在下面的画面: </li>
+</ul>
+<pre><code>Press the &lt;enter&gt; key to begin the installation process
+</code></pre><p>解决方法: <strong>用记事本打开这个文件syslinux\syslinux.cfg，把第一行default vesamenu.c32 替换为 default linux timeout 600 label linux kernel vmlinuz append initrd=initrd.img 这样修改之后，系统启动的时候就会跳过安装菜单选项界面，直接进入到语言选择界面</strong></p>
+<ul>
+<li><p>使用上面的方法修改ISO文件, 重新用UltraISO写入U盘, <strong>同时需要把官方下载的原始ISO文件拷贝到U盘中一份</strong>, 如果你错误的把你修改过的ISO拷贝到U盘则会遇到错误:</p>
+<p>   Unable to read group information from repositories. This is a problem with the generation of your install tree</p>
+</li>
+<li><p>顺利进入安装过程后,需要注意的是在分区结束后, 要修改一下安装GRUB的位置, 不要把GRUB安装在你的U盘上.</p>
+</li>
+</ul>
+<p>安装完成后需要做一些基本的配置: </p>
+<ul>
+<li><strong>网络</strong><br>使用下面的命令编辑网卡的配置文件:<br>   vi /etc/sysconfig/network-scripts/ifcfg-eth0</li>
+</ul>
+<pre><code>DEVICE=eth0
+HWADDR=00:24:1D:7F:39:7F
+TYPE=Ethernet
+UUID=040e48f1-9712-42bb-8ad4-942ec0a5a5e5
+ONBOOT=yes
+NM_CONTROLLED=no
+BOOTPROTO=static
+IPADDR=192.168.1.11
+NETMASK=255.255.255.0
+GATEWAY=192.168.1.1
+</code></pre><p>使用下面的命令编辑DNS的配置文件:</p>
+<pre><code> vi /etc/resolv.conf
+
+
+nameserver 61.134.1.5
+nameserver 8.8.8.8
+</code></pre><p>修改完这些配置文件后重起网络:</p>
+<pre><code>service network restart
+</code></pre><p>重起后更新一下系统:</p>
+<pre><code>yum -y update
+</code></pre><p>如果习惯ntsysv这样的系统启动配置工具,需要手动安装一下,mini盘里默认没有这样的软件包, 或者你可以使用chkconfig命令行程序来配置启动:</p>
+<pre><code>yum  -y install　　ntsysv
+</code></pre><p>mysql导出所有数据库:</p>
+<pre><code>mysqldump --opt --user=root --all-databases &gt; mysql_all.sql
+</code></pre><h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#25350" title="2013-06-06 20:08:10">Amankwah</a>:</strong> 怎么又开始装CentOS了？</p>
+<p><strong><a href="#25351" title="2013-06-06 21:00:33">可可熊</a>:</strong> 当服务器用么。</p>
+<p><strong><a href="#25352" title="2013-06-07 11:09:30">Amankwah</a>:</strong> 改行做SA了？</p>
+<p><strong><a href="#25353" title="2013-06-07 16:55:39">可可熊</a>:</strong> 不知道SA是啥！</p>
+<p><strong><a href="#25354" title="2013-06-08 11:47:43">Amankwah</a>:</strong> System Administrator，你这就是这个节奏啊！！</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2013/05/11/amd-vmware-osx-mountain-lion-iphone/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="cocobear">
+      <meta itemprop="description" content="爱折腾的技术宅一枚">
+      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="可可熊D窝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2013/05/11/amd-vmware-osx-mountain-lion-iphone/" class="post-title-link" itemprop="url">在AMD的PC机上使用Vmware安装Mac OS Mountain-Lion进行iPhone(iOS 6)开发</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2013-05-11 18:36:16" itemprop="dateCreated datePublished" datetime="2013-05-11T18:36:16+08:00">2013-05-11</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/" itemprop="url" rel="index"><span itemprop="name">Life</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2013/05/11/amd-vmware-osx-mountain-lion-iphone/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2013/05/11/amd-vmware-osx-mountain-lion-iphone/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数：</span>
+                
+                <span title="字数">1.4k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读 &asymp;</span>
+                
+                <span title="阅读">1 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>　　Android的开发环境很方便搭建，不管是用Windows还是Linux（Mac上面还真不清楚）。 iPhone的开发环境就麻烦多了，为了验证个想法，写个小程序Android上面很快就可以完成，iPhone还得折腾半天，尤其是使用的还是AMD的CPU，折腾了几次，今天终于可以在Vmware里跑的Mac OS 上面跑Xcode了，前面先安装了一个Snow Leopard（10.6）可是不支持最新的iOS 6，也没办法升级到最新的系统，只好重新再安装新的系统，光是下载镜象以及Xcode的安装包就等了好长时间（8M的网还是不给力）。</p>
+<p>　　这里就不贴图了，下面链接里面有比较详细的说明，请大家按照链接一中的步骤安装系统。</p>
+<p>　　我开始是在<a href="http://www.hankcs.com/appos/amd_mac_vmware.html" title="安装步骤" target="_blank" rel="noopener">链接一</a>看到这个Vmware的镜象文件，里面有安装的步骤，不过文章没有在显示的位置给出<a href="http://www.souldevteam.net/blog/2013/02/06/os-x-mountain-lion-vmware-image-amd/" title="Vmware镜象来源" target="_blank" rel="noopener">链接二镜象的来源</a>，只有在后面的链接里面提到。</p>
+<p>　　这个镜象的来源是国外的一个团队：<strong>Soul Dev Team</strong></p>
+<p>　　以下是我机器的配置，拿出来给需要使用该镜象包的同学作参考：</p>
+<pre><code>CPU AMD Athlon（速龙） II X4 640 &gt; 
+主板 技嘉 GA-880G-UD3H (AMD 880G/980G (RS880P) + SB750/SB710) &gt; 
+内存 8 GBytes &gt; 
+显卡 ATI/AMD Radeon HD 4250 (RS880) &gt; 
+硬盘 希捷 ST31000528AS &gt; 
+显示器 冠捷 TFT1980 &gt; 
+网卡 瑞昱 Semiconductor RTL8168/8111 PCI-E 千兆以太网 NIC &gt; 
+声卡 ATI/AMD SB600 - High Definition 音频设备 控制器
+</code></pre><p>　　总结下这个Mac OS Mountain Lion 10.8.3镜象包吧：</p>
+<p>　　首先使用起来很简单，基本上不需要做任何事情，下载后直接解压，打开，然后如果不出意外的话你就可以使用了，不过速度有点慢，打开程序的时候有明显的卡顿现象，镜象默认使用了1G的内存，以及一个CPU核，我多分配了一些，大家可以根据自己机器的配置适当的在Vmware中修改Mac的配置，同时打开显卡的加速，之后再次启动虚拟机，能明显感觉到速度快了一些，不过还是有些卡，由于是在Terminal下一个diff命令能卡1，2秒，比较奇怪。原来是因为显卡驱动的问题，安装了Soul Dev Team贴子下面评论中提到的<a href="http://sourceforge.net/projects/vmsvga2/files/" title="vmsvga2" target="_blank" rel="noopener">vmsvga2</a>，感觉速度快多了。强烈建议都安装一下，不过在安装显卡驱动之前一定要对虚拟做个快照（snapshot）,否则出现问题无法进入系统就麻烦了。</p>
+<p>　　Mountain Lion有一点很不错，刚才重起了一次，重起前打开的东西都完整的显示在屏幕上面了，之前打的的Terminal被我最大化了，重起后这个Terminal是先显示出来，然后完成了一次类似我点最大化时出现的效果，赞一个感觉工作台是跳到我面前了，而不是象Windows的休眠一样，死寂沉沉的。</p>
+<p>　　放个截图吧，都讲究图文并茂么：<br><img src="https://asset-1258390188.cos.ap-shanghai.myqcloud.com/desktop.jpg" alt="desktop"><br>Update:<br><a href="http://blog.csdn.net/fightingbull/article/details/8059651" target="_blank" rel="noopener">Xcode 4.6.2开发免99美金证书真机调试</a></p>
+<h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#24413" title="2013-05-13 15:01:39">草儿</a>:</strong> 难怪离线里那么多OSX，嘿嘿 我一直用的virutalbox，前段时间也想虚拟机里搞个玩玩，可惜一直启动不了，郁闷</p>
+<p><strong><a href="#24513" title="2013-05-15 15:32:18">Amankwah</a>:</strong> 可以考虑直接搞个黑青苹果装上？</p>
+<p><strong><a href="#24514" title="2013-05-15 15:52:42">可可熊</a>:</strong> AMD的CPU啊, 怕啃不动黑苹果.</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+  </section>
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/72/">72</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg" alt="cocobear">
+            
+              <p class="site-author-name" itemprop="name">cocobear</p>
+              <p class="site-description motion-element" itemprop="description">爱折腾的技术宅一枚</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">358</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">182</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/cocobear" title="GitHub &rarr; https://github.com/cocobear" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="mailto:cocobear.cn@gmail.com" title="E-Mail &rarr; mailto:cocobear.cn@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://twitter.com/_cocobear" title="Twitter &rarr; https://twitter.com/_cocobear" rel="noopener" target="_blank"><i class="fa fa-fw fa-twitter"></i>Twitter</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://www.douban.com/people/cocobear/" title="豆瓣 &rarr; https://www.douban.com/people/cocobear/" rel="noopener" target="_blank"><i class="fa fa-fw fa-book"></i>豆瓣</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                友情链接
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://wangcong.org" title="http://wangcong.org" rel="noopener" target="_blank">王聪</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://blog.liu-yang.info/" title="https://blog.liu-yang.info/" rel="noopener" target="_blank">老大</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2007 – <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">cocobear</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+    <span title="站点总字数">519k</span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    
+    <span title="站点阅读时长">7:52</span>
+  
+</div>
+
+
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v6.7.0</div>
+
+
+
+  <div class="footer-custom">Hosted by <a target="_blank" rel="external nofollow" href="https://pages.github.com/">GitHub Pages</a></div>
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv" title="总访客量">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+
+  
+    <span class="site-pv" title="总访问量">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script src="//cdn.staticfile.org/jquery/2.1.3/jquery.min.js"></script>
+
+  
+  <script src="//cdn.staticfile.org/fastclick/1.0.6/fastclick.min.js"></script>
+
+  
+  <script src="//cdn.staticfile.org/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script src="//cdn.staticfile.org/fancybox/3.2.5/jquery.fancybox.min.js"></script>
+
+  
+  <script src="/lib/reading_progress/reading_progress.js"></script>
+
+
+  
+
+
+  <script src="/js/src/utils.js?v=6.7.0"></script>
+
+  <script src="/js/src/motion.js?v=6.7.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/src/affix.js?v=6.7.0"></script>
+
+  <script src="/js/src/schemes/pisces.js?v=6.7.0"></script>
+
+
+
+  
+
+  
+
+
+  <script src="/js/src/bootstrap.js?v=6.7.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  <script src="//cdn1.lncld.net/static/js/3.11.1/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  <script>
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item) > -1;
+    });
+    new Valine({
+      el: '#comments' ,
+      verify: false,
+      notify: false,
+      appId: 'GWpjMXr7BpoLENnXXTFt4QoW-gzGzoHsz',
+      appKey: 'yaHPwQTKhDXDPOUNWso3P42n',
+      placeholder: '说点啥呢？',
+      avatar: 'identicon',
+      meta:guest,
+      pageSize: '10' || 10,
+      visitor: false
+    });
+  </script>
+
+
+
+
+  
+
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+        // ref: https://github.com/ForbesLindesay/unescape-html
+        var unescapeHtml = function(html) {
+          return String(html)
+            .replace(/&quot;/g, '"')
+            .replace(/&#39;/g, '\'')
+            .replace(/&#x3A;/g, ':')
+            // replace all the other &#x; chars
+            .replace(/&#(\d+);/g, function (m, p) { return String.fromCharCode(p); })
+            .replace(/&lt;/g, '<')
+            .replace(/&gt;/g, '>')
+            .replace(/&amp;/g, '&');
+        };
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                content = unescapeHtml(content);
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <script src="/js/src/js.cookie.js?v=6.7.0"></script>
+  <script src="/js/src/scroll-cookie.js?v=6.7.0"></script>
+
+
+  
+
+  
+
+  
+  <style>
+    .copy-btn {
+      display: inline-block;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 20px;
+      color: #333;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      background-color: #eee;
+      background-image: linear-gradient(#fcfcfc, #eee);
+      border: 1px solid #d5d5d5;
+      border-radius: 3px;
+      user-select: none;
+      outline: 0;
+    }
+
+    .highlight-wrap .copy-btn {
+      transition: opacity .3s ease-in-out;
+      opacity: 0;
+      padding: 2px 6px;
+      position: absolute;
+      right: 4px;
+      top: 8px;
+    }
+
+    .highlight-wrap:hover .copy-btn,
+    .highlight-wrap .copy-btn:focus {
+      opacity: 1
+    }
+
+    .highlight-wrap {
+      position: relative;
+    }
+  </style>
+  <script>
+    $('.highlight').each(function (i, e) {
+      var $wrap = $('<div>').addClass('highlight-wrap');
+      $(e).after($wrap);
+      $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function (e) {
+        var code = $(this).parent().find('.code').find('.line').map(function (i, e) {
+          return $(e).text();
+        }).toArray().join('\n');
+        var ta = document.createElement('textarea');
+        var range = document.createRange(); //For Chrome
+        var sel = window.getSelection(); //For Chrome
+        var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+        ta.style.top = yPosition + 'px'; //Prevent page scroll
+        ta.style.position = 'absolute';
+        ta.style.opacity = '0';
+        ta.value = code;
+        ta.textContent = code; //For FireFox
+        ta.contentEditable = true;
+        ta.readOnly = false;
+        document.body.appendChild(ta);
+        range.selectNode(ta);
+        sel.removeAllRanges();
+        sel.addRange(range);
+        ta.setSelectionRange(0, code.length);
+        var result = document.execCommand('copy');
+        
+        ta.blur(); //For iOS
+        $(this).blur();
+      })).on('mouseleave', function (e) {
+        var $b = $(this).find('.copy-btn');
+        setTimeout(function () {
+          $b.text('复制');
+        }, 300);
+      }).append(e);
+    })
+  </script>
+
+
+  
+
+</body>
+</html>
