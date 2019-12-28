@@ -2859,11 +2859,11 @@
       
         <tags>
             
+            <tag> Shell </tag>
+            
             <tag> awk </tag>
             
             <tag> sed </tag>
-            
-            <tag> Shell </tag>
             
             <tag> JavaScript </tag>
             
@@ -3110,9 +3110,9 @@
       
         <tags>
             
-            <tag> awk </tag>
-            
             <tag> Shell </tag>
+            
+            <tag> awk </tag>
             
         </tags>
       
@@ -3137,9 +3137,9 @@
       
         <tags>
             
-            <tag> sed </tag>
-            
             <tag> Shell </tag>
+            
+            <tag> sed </tag>
             
         </tags>
       
@@ -3164,11 +3164,11 @@
       
         <tags>
             
+            <tag> Shell </tag>
+            
             <tag> awk </tag>
             
             <tag> sed </tag>
-            
-            <tag> Shell </tag>
             
         </tags>
       
@@ -3293,11 +3293,11 @@
       
         <tags>
             
+            <tag> Shell </tag>
+            
             <tag> awk </tag>
             
             <tag> sed </tag>
-            
-            <tag> Shell </tag>
             
         </tags>
       
@@ -8410,9 +8410,9 @@
       
         <tags>
             
-            <tag> awk </tag>
-            
             <tag> Shell </tag>
+            
+            <tag> awk </tag>
             
         </tags>
       

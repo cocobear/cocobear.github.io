@@ -141,7 +141,7 @@
 
 
   <meta name="description" content="提取网页中资源的一个小工具 使用方法(假设保存bash脚本的文件名为get)： ./get -u http://my.opera.com/blog/ -t pdf 上面的命令会连接到my.opera.com/blog自动搜索pdf格式的资源，并下载(先给get加可执行权限) 如果网页文件已经保存，可以使用下面的命令： ./get -f index.html -t pdf 得到的结果与前面相同 代码">
-<meta name="keywords" content="awk,Shell">
+<meta name="keywords" content="Shell,awk">
 <meta property="og:type" content="article">
 <meta property="og:title" content="改进的bash脚本[网页资源提取]">
 <meta property="og:url" content="http://cocobear.github.io/2007/04/06/bash-script-of-claw/index.html">
@@ -704,7 +704,7 @@ else {
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/2008/07/10/02-issues-shell/" rel="bookmark">shell脚本解题1</a></div>
+      <div class="popular-posts-title"><a href="/2008/07/15/03-issues-shell/" rel="bookmark">shell脚本解题2</a></div>
       
     </li>
   
@@ -777,26 +777,14 @@ else {
       
         <div class="post-tags">
           
-            <a href="/tags/awk/" rel="tag"><i class="fa fa-tag"></i> awk</a>
-          
             <a href="/tags/Shell/" rel="tag"><i class="fa fa-tag"></i> Shell</a>
           
+            <a href="/tags/awk/" rel="tag"><i class="fa fa-tag"></i> awk</a>
+          
         </div>
       
 
       
-      
-        <div class="post-widgets">
-        
-          <div class="wp_rating">
-            <div id="wpac-rating"></div>
-          </div>
-        
-
-        
-
-        
-        </div>
       
       
 
@@ -1628,7 +1616,7 @@ else {
   
   
   <script src="//cdn1.lncld.net/static/js/3.11.1/av-min.js"></script>
-  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js"></script>
   <script>
     var GUEST = ['nick','mail','link'];
     var guest = 'nick,mail,link';
@@ -2006,25 +1994,6 @@ else {
   
 
   
-  <script>
-    wpac_init = window.wpac_init || [];
-    wpac_init.push({
-      widget: 'Rating',
-      id: 15759,
-      el: 'wpac-rating',
-      color: 'fc6423'
-    });
-    (function() {
-      if ('WIDGETPACK_LOADED' in window) return;
-      WIDGETPACK_LOADED = true;
-      var mc = document.createElement('script');
-      mc.type = 'text/javascript';
-      mc.async = true;
-      mc.src = '//embed.widgetpack.com/widget.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(mc, s.nextSibling);
-    })();
-  </script>
-
 
   
 

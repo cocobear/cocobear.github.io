@@ -141,7 +141,7 @@
 
 
   <meta name="description" content="问题：如何将命令的输出信息按行放入到数组里面? 解法：1.    n=0    while read line;do            array[$n]=”$line”            ((n++))    done &amp;lt; &amp;lt;(traceroute 192.168.1.1 -n) echo ${array[0]} 问题：sed 可以同时匹配多个条件？ 比如file:AAA">
-<meta name="keywords" content="awk,sed,Shell">
+<meta name="keywords" content="Shell,awk,sed">
 <meta property="og:type" content="article">
 <meta property="og:title" content="shell脚本解题3">
 <meta property="og:url" content="http://cocobear.github.io/2008/07/16/04-issues-shell/index.html">
@@ -612,6 +612,13 @@
     <li class="popular-posts-item">
       
       
+      <div class="popular-posts-title"><a href="/2008/07/18/05-issues-shell/" rel="bookmark">shell脚本解题4</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
       <div class="popular-posts-title"><a href="/2008/07/24/06-issues-shell/" rel="bookmark">shell脚本解题5</a></div>
       
     </li>
@@ -620,13 +627,6 @@
       
       
       <div class="popular-posts-title"><a href="/2007/04/06/bash-script-of-claw/" rel="bookmark">改进的bash脚本[网页资源提取]</a></div>
-      
-    </li>
-  
-    <li class="popular-posts-item">
-      
-      
-      <div class="popular-posts-title"><a href="/2008/07/18/05-issues-shell/" rel="bookmark">shell脚本解题4</a></div>
       
     </li>
   
@@ -699,28 +699,16 @@
       
         <div class="post-tags">
           
+            <a href="/tags/Shell/" rel="tag"><i class="fa fa-tag"></i> Shell</a>
+          
             <a href="/tags/awk/" rel="tag"><i class="fa fa-tag"></i> awk</a>
           
             <a href="/tags/sed/" rel="tag"><i class="fa fa-tag"></i> sed</a>
           
-            <a href="/tags/Shell/" rel="tag"><i class="fa fa-tag"></i> Shell</a>
-          
         </div>
       
 
       
-      
-        <div class="post-widgets">
-        
-          <div class="wp_rating">
-            <div id="wpac-rating"></div>
-          </div>
-        
-
-        
-
-        
-        </div>
       
       
 
@@ -1552,7 +1540,7 @@
   
   
   <script src="//cdn1.lncld.net/static/js/3.11.1/av-min.js"></script>
-  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js"></script>
   <script>
     var GUEST = ['nick','mail','link'];
     var guest = 'nick,mail,link';
@@ -1930,25 +1918,6 @@
   
 
   
-  <script>
-    wpac_init = window.wpac_init || [];
-    wpac_init.push({
-      widget: 'Rating',
-      id: 15759,
-      el: 'wpac-rating',
-      color: 'fc6423'
-    });
-    (function() {
-      if ('WIDGETPACK_LOADED' in window) return;
-      WIDGETPACK_LOADED = true;
-      var mc = document.createElement('script');
-      mc.type = 'text/javascript';
-      mc.async = true;
-      mc.src = '//embed.widgetpack.com/widget.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(mc, s.nextSibling);
-    })();
-  </script>
-
 
   
 
