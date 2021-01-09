@@ -310,7 +310,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">182</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">183</span></a>
 
   </li>
         
@@ -348,7 +348,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">358</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">360</span></a>
 
   </li>
 
@@ -413,6 +413,472 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2008/07/11/options-of-sed/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="cocobear">
+      <meta itemprop="description" content="爱折腾的技术宅一枚">
+      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="可可熊D窝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2008/07/11/options-of-sed/" class="post-title-link" itemprop="url">sed的几个选项</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2008-07-11 17:07:24" itemprop="dateCreated datePublished" datetime="2008-07-11T17:07:24+08:00">2008-07-11</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/编程相关/" itemprop="url" rel="index"><span itemprop="name">编程相关</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2008/07/11/options-of-sed/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2008/07/11/options-of-sed/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数：</span>
+                
+                <span title="字数">1.5k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读 &asymp;</span>
+                
+                <span title="阅读">1 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>sed中有些选项不太好理解,今天就顺一顺:</p>
+<p>几个命令:<br>n<br>把下一行输入读入模式空间中.当前行被发送到标准输出,下一行将成为当前行.控制将被转移给n后面所跟的命令,而不是回到脚本开始处.</p>
+<p>N<br>把下一行输入行添加到模式空间的内容之后;这两行文本用一个插入的换行符分隔开.</p>
+<p>p<br>打印出寻址到的行.除非使用命令行选项-n,否则该命令会导致输出相同的行.</p>
+<p>这里有一段对D的解释<br>函数参数 D 表示删除 pattern space 内的第一行资料。其指令格式如下:   </p>
+<pre><code>[address1,address2]D 
+</code></pre><p>对上述格式有下面几点说明 :   </p>
+<p>函数参数 D 最多配合两个位址参数。<br>函数参数 D 与 d 的比较如下 :<br>当 pattern space 内只有一资料行时 , D 与 d 作用相同。<br>当 pattern space 内有多行资料行时<br>D 表示只删除 pattern space 内第一行资料 ; d 则全删除。<br>D 表示执行删除後 , pattern space 内不添加下一笔资料 , 而将剩下的资料重新执行 sed script ; d 则读入下一行後执行 sed script。</p>
+<p>几个选项:<br>-e script<br>执行后面的脚本</p>
+<p>-n<br>禁止自动打印模式空间的内容</p>
+<p>例子:</p>
+<pre><code>[cocobear@cocobear test]$ cat 1
+1
+2
+3
+4
+5
+6
+7
+8
+9
+
+[cocobear@cocobear test]$ sed -e &apos;n&apos; -e &apos;d&apos; 1
+1
+3
+5
+7
+9
+</code></pre><p>sed读入第一行内容,执行命令’n’,把第二行读入模式空间,向标准输出第一行内容,第二行成为当前行,然后执行后面的命令’d’,’d’命令删除模式空间内容(也就是第二行内容),该行处理完成,接下来处理第三行,依此进行.</p>
+<pre><code>[cocobear@cocobear test]$ sed -e &apos;n&apos; -n -e &apos;p&apos; 1
+2
+4
+6
+8
+</code></pre><p>sed读入第一行内容,执行命令’n’,把第二行读入模式空间,向标准输出第一行内容,但由于使用了-n选项,所以这里就没有输出;第二行成为当前行,然后执行后面的命令’p’,’p’命令输出模式空间内容(也就是第二行内容),该行处理完成,接下来处理第三行,依此进行.</p>
+<pre><code>[cocobear@cocobear test]$ sed -e &apos;N&apos; -e &apos;d&apos; 1
+9
+</code></pre><p>sed读入第一行内容,执行命令’N’,把第二行添加到模式空间中,然后执行后面的命令’d’,’d’命令删除模式空间内容(也就是第一+第二行内容),该行处理完成,接下来处理第三行,依此进行.</p>
+<pre><code>[cocobear@cocobear test]$ sed -e &apos;N&apos; -n -e &apos;p&apos; 1
+1
+2
+3
+4
+5
+6
+7
+8
+</code></pre><p>sed读入第一行内容,执行命令’N’,把第二行添加到模式空间中,然后执行后面的命令’p’,’p’命令打印模式空间内容(也就是第一+第二行内容),由于-n选项,处理完后sed不会自己再次打印该行处理完成,接下来处理第三行,依此进行.处理完第七行后,使用’N’命令时出错,sed退出.</p>
+<h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#3676" title="2008-07-13 01:30:44">dream</a>:</strong> hehe 谢谢分享</p>
+<p><strong><a href="#3646" title="2008-07-11 17:47:45">luguo</a>:</strong> <a href="http://www.catonmat.net/blog/wp-content/plugins/wp-downloadMonitor/user_uploads/sed.stream.editor.cheat.sheet.txt" target="_blank" rel="noopener">http://www.catonmat.net/blog/wp-content/plugins/wp-downloadMonitor/user_uploads/sed.stream.editor.cheat.sheet.txt</a></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2008/07/10/02-issues-shell/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="cocobear">
+      <meta itemprop="description" content="爱折腾的技术宅一枚">
+      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="可可熊D窝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2008/07/10/02-issues-shell/" class="post-title-link" itemprop="url">shell脚本解题1</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2008-07-10 13:28:24" itemprop="dateCreated datePublished" datetime="2008-07-10T13:28:24+08:00">2008-07-10</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/编程相关/" itemprop="url" rel="index"><span itemprop="name">编程相关</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2008/07/10/02-issues-shell/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2008/07/10/02-issues-shell/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数：</span>
+                
+                <span title="字数">2.8k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读 &asymp;</span>
+                
+                <span title="阅读">3 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>问题：请教如何得到一个目录树的最深目录路径？</p>
+<p>解法：<br>1.<br>    find -type d | awk ‘{if( max &lt; gsub(/\//,”/“)) {max= gsub(/\//,”/“);maxp=$0”/“}  else if (max == gsub(/\//,”/“)) maxp=maxp”\n”$0”/“} END{print maxp}’</p>
+<p>2.<br>    find -type d -printf “%d %p\n” | sort -nrk1 | awk ‘NR==1{a=$1}a==$1{print $2}’</p>
+<p>问题：我想将包含read的行放在echo单词的后面</p>
+<p>解法：<br>[bash]sed ‘/read/{h;d};/echo/{G;s/(.<em>echo)(.</em>)\n(.*)/\1\3\2/}’  urfile </p>
+<p>问题：怎么copy一个目录中的某些文件，但保持目录结构？</p>
+<p>比如说，我想copy</p>
+<p>sourcedir\a\b\c.java<br>sourcedir\a\b\c.cs<br>sourcedir\a\b\d.java<br>sourcedir\a\b\d.cs</p>
+<p>到</p>
+<p>destdir\a\b\c.java<br>destdir\a\b\d.java</p>
+<p>解法:<br>1.<br>    rsync -av –include=’<em>.java’ –filter=’hide,! </em>/‘ ./sourcedir/ ./destdir</p>
+<p>2.<br>[bash]cp -r b dest;find dest -type f ! -name “<em>.java” | xargs rm<br>我的解法<br>3.<br>    tar -c </em> | tar -xf- –wildcards -C destdir <em>.java<br>4.<br>    find sourcedir -name “</em>.java”|xargs -I {} cp  –parents {} destdir</p>
+<p>请教：如何枚举目录中所有没有子目录的目录的路径？</p>
+<p>解法:<br>1.<br>    find -type d -printf “%h\t%p\n” | awk ‘BEGIN{FS=”\t”}{a[$1]++;a[$2]++}END{for(i in a)if(a[i]==1)print i}’</p>
+<p>2.<br>    find -type d -ls|awk ‘$4==2{print $NF}’</p>
+<p>问题:<br>有这样一个字符串  MG001:MobileLove:MGLoveCMD:down:  每个字段以冒号分割<br>STRING=”MG001:MobileLove:MGLoveCMD:down:”<br>我想把其中的每个字段分别赋值给另外几个变量，比如第一个字段赋值给SERV_CODE ，第二个赋值给<br>APPLICATION………….</p>
+<p>解法:<br>    IFS=: read SERV_CODE APPLICATION … &lt;&lt;&lt;”$STRING”</p>
+<h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#3682" title="2008-07-14 11:09:47">cocobear</a>:</strong> 1. man xargs: -I replace-str Replace occurrences of replace-str in the initial-arguments with names read from standard input. Also, unquoted blanks do not terminate input items; instead the separator is the newline character. [cocobear@cocobear test]$ find b -name “<em>.java”|xargs ls {} ls: 无法访问 {}: 没有那个文件或目录 b/08/07/1.java [cocobear@cocobear test]$ find b -name “</em>.java”|xargs -I{} ls {} b/08/07/1.java 2. &lt;&lt;&lt;这个我前面说过了，你看看bash手册，那里面提到了。 3. read就没有这样的用法；参考&lt;&lt;&lt;。</p>
+<p><strong><a href="#3675" title="2008-07-12 22:20:11">dream</a>:</strong> 对不起，有些看懂了，有些还没看懂，能不能帮我再解释一下，真的想学啊～～ 呵呵 1. 在你的例子4中，”find sourcedir -name “*.java”|xargs -I {} cp –parents {} destdir”。xargs -I {} 是什么意思？{}是指find所找到的内容，那么-I是什么意思？man xargs里没有-I的解释。 2. IFS=: read SERV_CODE APPLICATION … &lt;&lt;&lt;”$STRING”中，&lt;&lt;&lt;是什么意思？ 以前从没有见过，&lt; 不是作为输入的符号吗？怎么变成&lt;&lt;&lt;了？ 3. 我 echo “$STRING”| IFS=: read q w e r t 为什么赋不成值？ 谢谢了~ :)</p>
+<p><strong><a href="#3632" title="2008-07-10 20:32:17">luguo</a>:</strong> 我更喜欢： OLDIFS=$IFS; ….; IFS=$OLDIFS; 最后一个也可以用cut嘛！</p>
+<p><strong><a href="#3633" title="2008-07-10 22:43:00">luguo</a>:</strong> 第1个问题，我的解法： $ find -type d | awk -F’/‘ ‘BEGIN {m=0;l=”” } {if(NF&gt;m){m=NF; l=$0}} END {print l;}’ 当然，若有多个最深的它只能得到其中一个。</p>
+<p><strong><a href="#3644" title="2008-07-11 11:19:40">cocobear</a>:</strong> to:dream 你可以看看find手册， {} 就是代表前面find找到的结果。xargs是用来执行标准输入的内容 Here Strings A variant of here documents, the format is: &lt;&lt;&lt;word The word is expanded and supplied to the command on its standard input. 我也是学习中，很多都是别人写的脚本。</p>
+<p><strong><a href="#3621" title="2008-07-10 16:38:13">dream</a>:</strong> 请问： 1. find sourcedir -name “*.java”|xargs -I {} cp –parents {} destdir 中， xargs -I {} 是什么意思？ 2. cp –parents {} destdir 中 {} 是什么意思？ 你的解法中, awk用的很多啊 ～ 你真是厉害的bash高手～～～</p>
+<p><strong><a href="#3622" title="2008-07-10 16:43:17">dream</a>:</strong> 还有一个问题： 3. IFS=: read SERV_CODE APPLICATION … &lt;&lt;&lt;”$STRING” 中，为什么要用&lt;&lt;&lt;，而不是&lt;&lt;?</p>
+<p><strong><a href="#3623" title="2008-07-10 16:46:21">dream</a>:</strong> 我 echo “$STRING”| IFS=: read q w e r t 为什么赋不成值？</p>
+<p><strong><a href="#3836" title="2008-07-16 17:33:27">dream</a>:</strong> 哈哈，这回全明白了，太感谢了！</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
     
       
 
@@ -1049,415 +1515,6 @@ this is line Number four
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2008/05/30/fedora9-ati/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="cocobear">
-      <meta itemprop="description" content="爱折腾的技术宅一枚">
-      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="可可熊D窝">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2008/05/30/fedora9-ati/" class="post-title-link" itemprop="url">Fedora中ATI显示驱动问题</a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2008-05-30 16:25:34" itemprop="dateCreated datePublished" datetime="2008-05-30T16:25:34+08:00">2008-05-30</time>
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2008/05/30/fedora9-ati/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2008/05/30/fedora9-ati/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-symbolscount">
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数：</span>
-                
-                <span title="字数">1.1k</span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读 &asymp;</span>
-                
-                <span title="阅读">1 分钟</span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Fedora9中由于Xorg版本过新的原因（刚开始我还以为是内核版本过新的原因），最新的ATI显卡驱动没办法使用，因此3D效果无法开启，在我的机子上不仅如此，而且连在runlevel 5 下使用Ctrl+ALT+F1这样切换终端都出现问题（不支援）。</p>
-<p>忍了几天，今天终于解决掉了，我是按照<strong><a href="http://www.fedoraforum.org/forum/showthread.php?t=189227" target="_blank" rel="noopener">这篇文章</a></strong>来做的，既然Xorg版本过新，那就直接换个低版本的Xorg（Linux不就有这个好处吗^_^）。</p>
-<p>详细的我就不写出来了，说下大概过程：<br>首先是为系统添加Fedora8的源，可以直接下载<a href="http://www.linux-ati-drivers.homecall.co.uk/fedora8.repo" target="_blank" rel="noopener">这个文件</a>，然后在Fedora9 yum配置文件中把xorg<em>  linuxwacom</em>  rhpxl<em>  mesa</em>/“ 相关的软件包排除掉，卸载Xorg，重新安装一次，这时由于Fedora9中已经排除了Xorg相关的软件包，因此yum就会从Fedora8的源中安装这些包，这样就得到了downgrade的效果。</p>
-<p>文章的最后还给出来如果恢复到系统默认Xorg的办法，这里就不提了。</p>
-<p>现在我的Fedora9完全没有问题了，^_^</p>
-<p>btw:记个东西，ssh到内网的电脑：<br>首先得有个公网的IP，然后在内网（我公司的电脑）的电脑上使用下面命令：<br>[cocobear@cocobear ~]$ ssh -f -N -R 1986:localhost:22 <a href="mailto:cocobear@208.113.171.94" target="_blank" rel="noopener">cocobear@208.113.171.94</a><br>（208.113.171.94这个IP是我网站的IP，一会儿会提到为什么用这个IP）<br>接着在有公网IP的电脑上登录这台内网机器：</p>
-<p>因为我另一边要在宿舍来连公司的这台电脑，而宿舍的电脑也在内网，因此需要使用一个具有公网IP的跳板电脑，我先在宿舍ssh到我这个网站的服务器上：<br>[cocobear@cocobear ~]$ ssh -l cocobear cocobear.github.io<br>然后在服务器上连接<br>[crystallight]$ ssh cocobear@localhost -p 1986<br>呵呵，这样就可以从宿舍电脑ssh到公司了，一会儿回宿舍看看公司这边电脑东西下完了没^_^</p>
-<h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#3354" title="2008-06-02 12:41:01">kongove</a>:</strong> dreamhost确实不错，上面有好多软件可以方便使用。 用w3m在上面浏览网页也不错，懒得用代理。</p>
-<p><strong><a href="#3347" title="2008-06-01 12:06:35">crazyfranc</a>:</strong> TO DREAM： DREAMHOST 不贵的。</p>
-<p><strong><a href="#3342" title="2008-05-31 20:02:37">dream</a>:</strong> 羡慕啊，有dreamhost很贵吧，我也很想有一个～～：）</p>
-<p><strong><a href="#3336" title="2008-05-31 00:08:53">Amankwah</a>:</strong> 这个ssh方案好！可以对实验室不适用~</p>
-<p><strong><a href="#3334" title="2008-05-30 22:42:52">luguo</a>:</strong> 行啊，用dreamhost做中转啊～！</p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2008/05/27/leaving-earthquake/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="cocobear">
-      <meta itemprop="description" content="爱折腾的技术宅一枚">
-      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="可可熊D窝">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2008/05/27/leaving-earthquake/" class="post-title-link" itemprop="url">余震不断</a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2008-05-27 16:19:31" itemprop="dateCreated datePublished" datetime="2008-05-27T16:19:31+08:00">2008-05-27</time>
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/" itemprop="url" rel="index"><span itemprop="name">Life</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2008/05/27/leaving-earthquake/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2008/05/27/leaving-earthquake/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-symbolscount">
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数：</span>
-                
-                <span title="字数">276</span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读 &asymp;</span>
-                
-                <span title="阅读">1 分钟</span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>刚才又震了一下，公司的人下去了好几个，这几天余震把大家弄的都紧张兮兮的，不管有什么风吹草动都以为地震又来了，虽说西安离震中还比较远，但是5.12那天的地震确实把大家都吓着了，虽说官方的消息都称不会发生破坏性地震，但大家还是心里上绷了根弦。</p>
-<p>不过我自己倒是无所谓，刚看着那边的饮水机晃了一会儿，现在继续在这里写博客，俗话说了：“生死有命”</p>
-<p>Update 16:41 &gt;又晃了，比刚才时间还长一些。</p>
-<h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#3313" title="2008-05-28 10:55:08">dream</a>:</strong> 要多加注意啊</p>
-<p><strong><a href="#3311" title="2008-05-28 10:49:05">crazyfranc</a>:</strong> 生死有命！</p>
-<p><strong><a href="#3299" title="2008-05-27 16:50:41">kongove</a>:</strong> 响应一下！！</p>
-<p><strong><a href="#3302" title="2008-05-27 21:00:33">Amankwah</a>:</strong> 震源越来越近了~</p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1507,7 +1564,7 @@ this is line Number four
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">358</span>
+                    <span class="site-state-item-count">360</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1913,7 +1970,9 @@ this is line Number four
                     
                       
                     
-                    <span class="site-state-item-count">182</span>
+                      
+                    
+                    <span class="site-state-item-count">183</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -2032,7 +2091,7 @@ this is line Number four
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2007 – <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; 2007 – <span itemprop="copyrightYear">2021</span>
   <span class="with-love" id="animate">
     <i class="fa fa-heart"></i>
   </span>
@@ -2044,7 +2103,7 @@ this is line Number four
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">519k</span>
+    <span title="站点总字数">522k</span>
   
 
   
@@ -2053,7 +2112,7 @@ this is line Number four
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">7:52</span>
+    <span title="站点阅读时长">7:55</span>
   
 </div>
 
@@ -2155,7 +2214,7 @@ this is line Number four
 
 
   
-  <script src="//cdn.staticfile.org/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/jquery/2.1.3/jquery.min.js"></script>
 
   
   <script src="//cdn.staticfile.org/fastclick/1.0.6/fastclick.min.js"></script>

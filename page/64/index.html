@@ -310,7 +310,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">182</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">183</span></a>
 
   </li>
         
@@ -348,7 +348,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">358</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">360</span></a>
 
   </li>
 
@@ -413,6 +413,434 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2007/04/07/table-in-html/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="cocobear">
+      <meta itemprop="description" content="爱折腾的技术宅一枚">
+      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="可可熊D窝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2007/04/07/table-in-html/" class="post-title-link" itemprop="url">Html中的表格</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2007-04-07 01:54:48" itemprop="dateCreated datePublished" datetime="2007-04-07T01:54:48+08:00">2007-04-07</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/编程相关/" itemprop="url" rel="index"><span itemprop="name">编程相关</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2007/04/07/table-in-html/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2007/04/07/table-in-html/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数：</span>
+                
+                <span title="字数">811</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读 &asymp;</span>
+                
+                <span title="阅读">1 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>表格确实是刚学Html时最难的地方，觉得这篇文章确实不错，这里推荐给Html新手。</p>
+<p>记个东西：如果在Html中要显示<table>，需要写为：</table></p>
+<p>&lt;table&gt;</p>
+<p>&lt;可以用&lt;代替;</p>
+<p>&amp;lt可以使用&amp;lt;代替;</p>
+<p>&amp;lt;可以使用&amp;amp;lt;代替</p>
+<p>如此继续……，今天突然不知道如何在Html中显示&lt;，然后知道如何显示&lt;的时候又想知道如何显示&lt;，然后通过万能的Google得到以上结果。</p>
+<p>以下是正文：</p>
+<p>任何表格都包含三个最基本的要素：表格，表格行和格子。他们分别用<br>    <table>、<tr>、<td><br>表示，其中</td><td>是直接写数据的区域是所谓的Table Data区域，借此你可以记住格子的表示。</td></tr></table></p>
+<p>  源代码：</p>
+<table border><br><br>  <tr><br><br>    <td>格子1</td><br><br>    <td>格子2</td><br><br>  </tr><br><br>  <tr><br><br>    <td>格子3</td><br><br>    <td>格子4</td><br><br>  </tr><br><br></table>
+
+
+
+
+<p>格子1    格子2<br>格子3    格子4<br>  记住：<td>永远要以</td><tr>结束正如</tr><tr>永远要以<table></table></tr></p>
+<p> 其他：</p>
+<p>1、<th> - 定义表头，与</th><td>同级，使<th>包含下的内容自动加重显示</th></td></p>
+<p>2、<caption align="#">xxx</caption> #=left, center, right 定义表格的标题</p>
+<p>3、表格边框尺寸设置<table border="#">，缺省值2</table></p>
+<p>4、表格尺寸设置<table border width="#" height="#"></table></p>
+<p>5、格子间隙设置：<table border cellspacing="#"></table></p>
+<p>6、格子内部空白大小设置 <table border cellpadding="#"></table></p>
+<p>7、<td colspan="2">跨两列的格子</td> 列间隔等于2</p>
+<p>8、<td rowspan="2">跨两行的格子</td> 行间隔等于2</p>
+<p>9、表格内文字的水平对齐 <tr align="#">、<th align="#">、</th><td align="#"> #=left, center, right</td></tr></p>
+<p>10、表格内文字的垂直布局<tr valign="#">、<th valign="#">、</th><td valign="#"> #=top,middle,bottom,baseline</td></tr></p>
+<p>11、表格在页面中的对齐/布局(Floating Table)：<table align="#"> #=left,right,center</table></p>
+<p>12、单元格的背景色彩和背景图象 <td bgcolor="#"> 、</td><td background="”URL”"></td></p>
+<p>13、表格边框的色彩 <table bordercolor="#"></table></p>
+<p>14、表格边框色彩的亮度控制</p>
+<p><table bordercolorlight="#">亮边框色彩</table></p>
+<p><table bordercolordark="#"> 暗边框色彩</table></p>
+<p>转载自<a href="http://zmb.hbsz.cn/rjjc/ShowArticle.asp?ArticleID=410" target="_blank" rel="noopener">HERE</a></p>
+<h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#1692" title="2007-09-16 00:43:51">cocobear</a>:</strong> 楼上的怎么不给个你的链接呢?我也好去看看啊。</p>
+<p><strong><a href="#1690" title="2007-09-15 17:26:42">沸点</a>:</strong> 谢谢哦！ 用在我的博客上了！</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2007/04/06/move-blog/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="cocobear">
+      <meta itemprop="description" content="爱折腾的技术宅一枚">
+      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="可可熊D窝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2007/04/06/move-blog/" class="post-title-link" itemprop="url">搬家到这里了</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2007-04-06 19:18:39" itemprop="dateCreated datePublished" datetime="2007-04-06T19:18:39+08:00">2007-04-06</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/" itemprop="url" rel="index"><span itemprop="name">Life</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2007/04/06/move-blog/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2007/04/06/move-blog/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数：</span>
+                
+                <span title="字数">126</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读 &asymp;</span>
+                
+                <span title="阅读">1 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>其实opera的blog是我认为最好的blog，之所以博过来是想开始做自己的站点，其实还是有点舍不得的，不过还有一个原因就是百度对opera收录似乎有问题。</p>
+<p>文章显示只能全部显示，因为摘要需要一个一个去编辑，就不弄了，先把每页显示的文章数设置小一点。</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
     
       
 
@@ -1101,417 +1529,6 @@ error06-[大家添加一些]
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2007/04/06/tips-about-apache/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="cocobear">
-      <meta itemprop="description" content="爱折腾的技术宅一枚">
-      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="可可熊D窝">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2007/04/06/tips-about-apache/" class="post-title-link" itemprop="url">随手笔记[apache]</a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2007-04-06 19:18:31" itemprop="dateCreated datePublished" datetime="2007-04-06T19:18:31+08:00">2007-04-06</time>
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2007/04/06/tips-about-apache/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2007/04/06/tips-about-apache/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-symbolscount">
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数：</span>
-                
-                <span title="字数">681</span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读 &asymp;</span>
-                
-                <span title="阅读">1 分钟</span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Monday, 19. March 2007, 05:41:01<br>关于apache:</p>
-<p>error_log文件中出现下列错误：</p>
-<p>[Mon Mar 19 13:31:31 2007] [error] [client 192.168.11.12] (13)Permission denied: access to /home/image/index.jpg denied</p>
-<pre><code>Permission denied
-
-A Permission denied error in the error_log, accompanied by a Forbidden message to the client usually indicates a problem with your filesystem permissions, rather than a problem in the Apache HTTP Server configuration files. Check to make sure that the User and Group running the child processes has adequate permission to access the files in question. Also check that the directory and all parent directories are at least searchable for that user and group (i.e., chmod +x).
-</code></pre><p><a href="httpd.apache.org/docs/2.2/faq/error.html">FROM</a></p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2007/04/06/using-java-on-linux/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="cocobear">
-      <meta itemprop="description" content="爱折腾的技术宅一枚">
-      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="可可熊D窝">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2007/04/06/using-java-on-linux/" class="post-title-link" itemprop="url">linux下使用java</a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2007-04-06 19:18:29" itemprop="dateCreated datePublished" datetime="2007-04-06T19:18:29+08:00">2007-04-06</time>
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2007/04/06/using-java-on-linux/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2007/04/06/using-java-on-linux/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-symbolscount">
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数：</span>
-                
-                <span title="字数">673</span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读 &asymp;</span>
-                
-                <span title="阅读">1 分钟</span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Friday, 16. March 2007, 14:02:55</p>
-<p>学校开设了java课，得写些java程序，今天配置了一下linux下的java编译以及运行环境:</p>
-<p>首先在java.sun.com下载的jdk1.6.0</p>
-<p><a href="http://192.18.108.139/ECom/EComTicketServlet/BEGIND2D5C9D462B1CCD71DC405A5E5630F63/-2147483648/2007288495/1/790634/790370/2007288495/2ts+/westCoastFSEND/jdk-6-oth-JPR/jdk-6-oth-JPR:5/jdk-6-linux-i586.bin" target="_blank" rel="noopener">jdk-6-linux-i586.bin</a></p>
-<p>建议大家还是下.bin格式的,虽然rpm格式也是可以用的。</p>
-<p>配置环境变量的时候还是出了点问题，可能是与环境变量的先后顺序有关系，其实挺简单的，就是在.bashrc文件中加几行东西就ok了,如下：</p>
-<pre><code>JAVA_HOME=/usr/java/jdk1.6.0/
-PATH=$JAVA_HOME/bin:$PATH
-CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tool.jar:$CLASSPATH
-export JAVA_HOME PATH CLASSPATH
-</code></pre><p>JAVA_HOME是java的主安装目录，PATH里添加java的bin目录，CLASSPATH：如果传递给javac编译器的源文件里引用到的类定义在本文件和传递的其它文件中找不到， 则编译器会按CLASSPATH定义的路径来搜索</p>
-<p>最后我又在opera里添加了java支持，只需要添加java的路径就可以了/usr/java/jdk1.6.0，记得要重起一下浏览器，我当时就是因为没有重起浏览器怎么都不行<img src="/community/graphics/smilies/smile.gif" alt=":smile:"></p>
-<p>推荐一个不错的java在线小游戏，我是用来测试opera中的java是否可以正常使用，机子太慢了，玩起来_卡_</p>
-<p><a href="http://www.javagameplay.com/" target="_blank" rel="noopener">http://www.javagameplay.com/</a></p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1561,7 +1578,7 @@ export JAVA_HOME PATH CLASSPATH
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">358</span>
+                    <span class="site-state-item-count">360</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1967,7 +1984,9 @@ export JAVA_HOME PATH CLASSPATH
                     
                       
                     
-                    <span class="site-state-item-count">182</span>
+                      
+                    
+                    <span class="site-state-item-count">183</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -2086,7 +2105,7 @@ export JAVA_HOME PATH CLASSPATH
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2007 – <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; 2007 – <span itemprop="copyrightYear">2021</span>
   <span class="with-love" id="animate">
     <i class="fa fa-heart"></i>
   </span>
@@ -2098,7 +2117,7 @@ export JAVA_HOME PATH CLASSPATH
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">519k</span>
+    <span title="站点总字数">522k</span>
   
 
   
@@ -2107,7 +2126,7 @@ export JAVA_HOME PATH CLASSPATH
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">7:52</span>
+    <span title="站点阅读时长">7:55</span>
   
 </div>
 
@@ -2209,7 +2228,7 @@ export JAVA_HOME PATH CLASSPATH
 
 
   
-  <script src="//cdn.staticfile.org/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/jquery/2.1.3/jquery.min.js"></script>
 
   
   <script src="//cdn.staticfile.org/fastclick/1.0.6/fastclick.min.js"></script>

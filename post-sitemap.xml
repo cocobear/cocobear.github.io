@@ -8,6 +8,22 @@
     </url>
 
     <url>
+        <loc>http://cocobear.github.io/2021/01/08/magic-keyboard-2/</loc>
+        <lastmod>2021-01-09T15:14:49.342Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/2020/01/03/inputmethod-in-macos/</loc>
+        <lastmod>2021-01-09T14:18:16.982Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://cocobear.github.io/2019/12/02/DeskMini-310-hackintosh/</loc>
         <lastmod>2019-12-28T07:22:26.385Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -64,7 +80,7 @@
     </url>
 
     <url>
-        <loc>http://cocobear.github.io/2008/09/09/wordpress-change-any-user-passwd/</loc>
+        <loc>http://cocobear.github.io/2008/10/24/wordpress-plugins-simple-tags/</loc>
         <lastmod>2019-12-28T05:56:28.495Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -72,7 +88,7 @@
     </url>
 
     <url>
-        <loc>http://cocobear.github.io/2008/10/24/wordpress-plugins-simple-tags/</loc>
+        <loc>http://cocobear.github.io/2008/09/09/wordpress-change-any-user-passwd/</loc>
         <lastmod>2019-12-28T05:56:28.495Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -96,14 +112,6 @@
     </url>
 
     <url>
-        <loc>http://cocobear.github.io/2009/02/06/working-more-productively-with-bash/</loc>
-        <lastmod>2019-12-28T05:56:28.495Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>http://cocobear.github.io/2007/04/16/working-with-ie/</loc>
         <lastmod>2019-12-28T05:56:28.495Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -112,7 +120,7 @@
     </url>
 
     <url>
-        <loc>http://cocobear.github.io/2009/03/31/write-a-counter-with-python-and-lua/</loc>
+        <loc>http://cocobear.github.io/2009/02/06/working-more-productively-with-bash/</loc>
         <lastmod>2019-12-28T05:56:28.495Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -121,6 +129,14 @@
 
     <url>
         <loc>http://cocobear.github.io/2008/12/03/write-fetion-with-python-pyfetion/</loc>
+        <lastmod>2019-12-28T05:56:28.495Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/2009/03/31/write-a-counter-with-python-and-lua/</loc>
         <lastmod>2019-12-28T05:56:28.495Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -152,14 +168,6 @@
     </url>
 
     <url>
-        <loc>http://cocobear.github.io/2010/01/31/war-of-internet-addiction/</loc>
-        <lastmod>2019-12-28T05:56:28.494Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>http://cocobear.github.io/2009/08/25/web-front-dev/</loc>
         <lastmod>2019-12-28T05:56:28.494Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -168,15 +176,7 @@
     </url>
 
     <url>
-        <loc>http://cocobear.github.io/2007/04/15/webftp/</loc>
-        <lastmod>2019-12-28T05:56:28.494Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://cocobear.github.io/2007/06/22/wordpress-add-commentor-ip/</loc>
+        <loc>http://cocobear.github.io/2010/01/31/war-of-internet-addiction/</loc>
         <lastmod>2019-12-28T05:56:28.494Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -192,7 +192,23 @@
     </url>
 
     <url>
+        <loc>http://cocobear.github.io/2007/04/15/webftp/</loc>
+        <lastmod>2019-12-28T05:56:28.494Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://cocobear.github.io/2008/05/16/where-to-go-when-earthquake/</loc>
+        <lastmod>2019-12-28T05:56:28.494Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/2007/06/22/wordpress-add-commentor-ip/</loc>
         <lastmod>2019-12-28T05:56:28.494Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -208,14 +224,6 @@
     </url>
 
     <url>
-        <loc>http://cocobear.github.io/2009/03/16/use-sendmail-and-dovecot-in-company/</loc>
-        <lastmod>2019-12-28T05:56:28.493Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>http://cocobear.github.io/2009/03/19/use-python-qq-write-a-tool/</loc>
         <lastmod>2019-12-28T05:56:28.493Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -224,7 +232,15 @@
     </url>
 
     <url>
-        <loc>http://cocobear.github.io/2007/10/12/use-vim-cscope-read-code/</loc>
+        <loc>http://cocobear.github.io/2009/03/16/use-sendmail-and-dovecot-in-company/</loc>
+        <lastmod>2019-12-28T05:56:28.493Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/2007/11/27/using-bitmap-font-in-sdl-1/</loc>
         <lastmod>2019-12-28T05:56:28.493Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -240,7 +256,7 @@
     </url>
 
     <url>
-        <loc>http://cocobear.github.io/2007/11/30/using-bitmap-font-in-sdl-2/</loc>
+        <loc>http://cocobear.github.io/2007/10/12/use-vim-cscope-read-code/</loc>
         <lastmod>2019-12-28T05:56:28.493Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -248,7 +264,7 @@
     </url>
 
     <url>
-        <loc>http://cocobear.github.io/2007/11/27/using-bitmap-font-in-sdl-1/</loc>
+        <loc>http://cocobear.github.io/2007/11/30/using-bitmap-font-in-sdl-2/</loc>
         <lastmod>2019-12-28T05:56:28.493Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -312,6 +328,14 @@
     </url>
 
     <url>
+        <loc>http://cocobear.github.io/2007/10/16/use-amarok-listen-music/</loc>
+        <lastmod>2019-12-28T05:56:28.492Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://cocobear.github.io/2007/04/06/use-awk-to-remove-line-number/</loc>
         <lastmod>2019-12-28T05:56:28.492Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -321,14 +345,6 @@
 
     <url>
         <loc>http://cocobear.github.io/2009/06/17/use-openssl-in-php/</loc>
-        <lastmod>2019-12-28T05:56:28.492Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://cocobear.github.io/2007/10/16/use-amarok-listen-music/</loc>
         <lastmod>2019-12-28T05:56:28.492Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -392,14 +408,6 @@
     </url>
 
     <url>
-        <loc>http://cocobear.github.io/2009/12/15/update-cang2html/</loc>
-        <lastmod>2019-12-28T05:56:28.491Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>http://cocobear.github.io/2007/05/12/update-adsl-script/</loc>
         <lastmod>2019-12-28T05:56:28.491Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -408,7 +416,7 @@
     </url>
 
     <url>
-        <loc>http://cocobear.github.io/2010/09/16/update-pyfetion-2/</loc>
+        <loc>http://cocobear.github.io/2009/12/15/update-cang2html/</loc>
         <lastmod>2019-12-28T05:56:28.491Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -417,6 +425,14 @@
 
     <url>
         <loc>http://cocobear.github.io/2018/12/28/update-hexo-next/</loc>
+        <lastmod>2019-12-28T05:56:28.491Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/2010/09/16/update-pyfetion-2/</loc>
         <lastmod>2019-12-28T05:56:28.491Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -440,7 +456,7 @@
     </url>
 
     <url>
-        <loc>http://cocobear.github.io/2007/04/06/tips-linux/</loc>
+        <loc>http://cocobear.github.io/2007/06/30/this-days/</loc>
         <lastmod>2019-12-28T05:56:28.490Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -456,7 +472,23 @@
     </url>
 
     <url>
+        <loc>http://cocobear.github.io/2007/04/06/tips-linux/</loc>
+        <lastmod>2019-12-28T05:56:28.490Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://cocobear.github.io/2007/05/23/today/</loc>
+        <lastmod>2019-12-28T05:56:28.490Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/2007/10/09/tips-of-macros-in-c/</loc>
         <lastmod>2019-12-28T05:56:28.490Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -473,22 +505,6 @@
 
     <url>
         <loc>http://cocobear.github.io/2008/08/11/tool-of-python-url-encode/</loc>
-        <lastmod>2019-12-28T05:56:28.490Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://cocobear.github.io/2007/06/30/this-days/</loc>
-        <lastmod>2019-12-28T05:56:28.490Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://cocobear.github.io/2007/10/09/tips-of-macros-in-c/</loc>
         <lastmod>2019-12-28T05:56:28.490Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -544,7 +560,7 @@
     </url>
 
     <url>
-        <loc>http://cocobear.github.io/2007/04/07/table-in-html/</loc>
+        <loc>http://cocobear.github.io/2007/04/06/switch-between-console-and-x-window/</loc>
         <lastmod>2019-12-28T05:56:28.489Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -552,7 +568,7 @@
     </url>
 
     <url>
-        <loc>http://cocobear.github.io/2007/04/06/switch-between-console-and-x-window/</loc>
+        <loc>http://cocobear.github.io/2007/04/07/table-in-html/</loc>
         <lastmod>2019-12-28T05:56:28.489Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -608,7 +624,23 @@
     </url>
 
     <url>
+        <loc>http://cocobear.github.io/2007/04/06/startx-problems/</loc>
+        <lastmod>2019-12-28T05:56:28.488Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://cocobear.github.io/2008/04/10/stomachache-again/</loc>
+        <lastmod>2019-12-28T05:56:28.488Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/2008/11/01/stop-at-bios-logo-by-mp3/</loc>
         <lastmod>2019-12-28T05:56:28.488Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -632,22 +664,6 @@
     </url>
 
     <url>
-        <loc>http://cocobear.github.io/2007/04/06/startx-problems/</loc>
-        <lastmod>2019-12-28T05:56:28.488Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://cocobear.github.io/2008/11/01/stop-at-bios-logo-by-mp3/</loc>
-        <lastmod>2019-12-28T05:56:28.488Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>http://cocobear.github.io/2007/04/06/some-docs-of-linux-programming/</loc>
         <lastmod>2019-12-28T05:56:28.487Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -656,7 +672,7 @@
     </url>
 
     <url>
-        <loc>http://cocobear.github.io/2007/09/14/some-saying/</loc>
+        <loc>http://cocobear.github.io/2007/04/11/some-tips-of-learning-linux/</loc>
         <lastmod>2019-12-28T05:56:28.487Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -664,7 +680,7 @@
     </url>
 
     <url>
-        <loc>http://cocobear.github.io/2007/04/11/some-tips-of-learning-linux/</loc>
+        <loc>http://cocobear.github.io/2007/09/14/some-saying/</loc>
         <lastmod>2019-12-28T05:56:28.487Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -952,7 +968,7 @@
     </url>
 
     <url>
-        <loc>http://cocobear.github.io/2007/11/21/python-learning-4/</loc>
+        <loc>http://cocobear.github.io/2007/09/20/python-learning-1/</loc>
         <lastmod>2019-12-28T05:56:28.483Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -968,14 +984,6 @@
     </url>
 
     <url>
-        <loc>http://cocobear.github.io/2008/04/23/python-multi-list/</loc>
-        <lastmod>2019-12-28T05:56:28.483Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>http://cocobear.github.io/2007/09/27/python-learning-3/</loc>
         <lastmod>2019-12-28T05:56:28.483Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -984,7 +992,15 @@
     </url>
 
     <url>
-        <loc>http://cocobear.github.io/2007/09/20/python-learning-1/</loc>
+        <loc>http://cocobear.github.io/2007/11/21/python-learning-4/</loc>
+        <lastmod>2019-12-28T05:56:28.483Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/2008/04/23/python-multi-list/</loc>
         <lastmod>2019-12-28T05:56:28.483Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1072,6 +1088,14 @@
     </url>
 
     <url>
+        <loc>http://cocobear.github.io/2007/05/18/ppp-in-linux/</loc>
+        <lastmod>2019-12-28T05:56:28.481Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://cocobear.github.io/2007/05/13/poor-body-conditioin/</loc>
         <lastmod>2019-12-28T05:56:28.481Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -1096,14 +1120,6 @@
     </url>
 
     <url>
-        <loc>http://cocobear.github.io/2007/05/18/ppp-in-linux/</loc>
-        <lastmod>2019-12-28T05:56:28.481Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>http://cocobear.github.io/2007/10/06/proxy-update/</loc>
         <lastmod>2019-12-28T05:56:28.481Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -1120,7 +1136,7 @@
     </url>
 
     <url>
-        <loc>http://cocobear.github.io/2007/07/05/people-on-job-inteview/</loc>
+        <loc>http://cocobear.github.io/2007/07/01/php-debug/</loc>
         <lastmod>2019-12-28T05:56:28.480Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1128,7 +1144,7 @@
     </url>
 
     <url>
-        <loc>http://cocobear.github.io/2007/07/01/php-debug/</loc>
+        <loc>http://cocobear.github.io/2007/07/05/people-on-job-inteview/</loc>
         <lastmod>2019-12-28T05:56:28.480Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1152,14 +1168,6 @@
     </url>
 
     <url>
-        <loc>http://cocobear.github.io/2007/09/19/php-message-board-update-2/</loc>
-        <lastmod>2019-12-28T05:56:28.480Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>http://cocobear.github.io/2007/08/31/php-message-board-update/</loc>
         <lastmod>2019-12-28T05:56:28.480Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -1168,15 +1176,15 @@
     </url>
 
     <url>
-        <loc>http://cocobear.github.io/2007/12/07/open-proxy/</loc>
-        <lastmod>2019-12-28T05:56:28.479Z</lastmod>
+        <loc>http://cocobear.github.io/2007/09/19/php-message-board-update-2/</loc>
+        <lastmod>2019-12-28T05:56:28.480Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
     </url>
 
     <url>
-        <loc>http://cocobear.github.io/2011/12/10/opencv-try/</loc>
+        <loc>http://cocobear.github.io/2007/12/07/open-proxy/</loc>
         <lastmod>2019-12-28T05:56:28.479Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1193,6 +1201,14 @@
 
     <url>
         <loc>http://cocobear.github.io/2007/04/08/opera-and-fcitx/</loc>
+        <lastmod>2019-12-28T05:56:28.479Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/2011/12/10/opencv-try/</loc>
         <lastmod>2019-12-28T05:56:28.479Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1240,7 +1256,7 @@
     </url>
 
     <url>
-        <loc>http://cocobear.github.io/2009/06/02/multi-thread-and-broken-point-resume-technology/</loc>
+        <loc>http://cocobear.github.io/2008/07/25/my-own-life/</loc>
         <lastmod>2019-12-28T05:56:28.478Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1248,7 +1264,7 @@
     </url>
 
     <url>
-        <loc>http://cocobear.github.io/2007/10/04/myopera-unblocked/</loc>
+        <loc>http://cocobear.github.io/2009/06/02/multi-thread-and-broken-point-resume-technology/</loc>
         <lastmod>2019-12-28T05:56:28.478Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1264,23 +1280,7 @@
     </url>
 
     <url>
-        <loc>http://cocobear.github.io/2007/05/19/norton-and-rising/</loc>
-        <lastmod>2019-12-28T05:56:28.478Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://cocobear.github.io/2008/07/25/my-own-life/</loc>
-        <lastmod>2019-12-28T05:56:28.478Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://cocobear.github.io/2007/06/23/not-all-about-cet4/</loc>
+        <loc>http://cocobear.github.io/2007/10/04/myopera-unblocked/</loc>
         <lastmod>2019-12-28T05:56:28.478Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1296,7 +1296,15 @@
     </url>
 
     <url>
-        <loc>http://cocobear.github.io/2009/02/02/on-line-home/</loc>
+        <loc>http://cocobear.github.io/2007/05/19/norton-and-rising/</loc>
+        <lastmod>2019-12-28T05:56:28.478Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/2007/06/23/not-all-about-cet4/</loc>
         <lastmod>2019-12-28T05:56:28.478Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1312,8 +1320,8 @@
     </url>
 
     <url>
-        <loc>http://cocobear.github.io/2009/10/19/make-x509-cert/</loc>
-        <lastmod>2019-12-28T05:56:28.477Z</lastmod>
+        <loc>http://cocobear.github.io/2009/02/02/on-line-home/</loc>
+        <lastmod>2019-12-28T05:56:28.478Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -1328,7 +1336,7 @@
     </url>
 
     <url>
-        <loc>http://cocobear.github.io/2008/05/19/mess/</loc>
+        <loc>http://cocobear.github.io/2009/10/19/make-x509-cert/</loc>
         <lastmod>2019-12-28T05:56:28.477Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1360,14 +1368,6 @@
     </url>
 
     <url>
-        <loc>http://cocobear.github.io/2007/05/12/modify-index-page/</loc>
-        <lastmod>2019-12-28T05:56:28.477Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>http://cocobear.github.io/2007/04/15/modify-theme-of-blog/</loc>
         <lastmod>2019-12-28T05:56:28.477Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -1376,7 +1376,7 @@
     </url>
 
     <url>
-        <loc>http://cocobear.github.io/2007/04/06/mud-game-xyzx/</loc>
+        <loc>http://cocobear.github.io/2008/05/19/mess/</loc>
         <lastmod>2019-12-28T05:56:28.477Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1392,6 +1392,22 @@
     </url>
 
     <url>
+        <loc>http://cocobear.github.io/2007/05/12/modify-index-page/</loc>
+        <lastmod>2019-12-28T05:56:28.477Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/2007/04/06/mud-game-xyzx/</loc>
+        <lastmod>2019-12-28T05:56:28.477Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://cocobear.github.io/2007/09/13/linuxworld-travel-wangkaiyuan/</loc>
         <lastmod>2019-12-28T05:56:28.476Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -1400,7 +1416,7 @@
     </url>
 
     <url>
-        <loc>http://cocobear.github.io/2007/09/12/linuxworld-travel/</loc>
+        <loc>http://cocobear.github.io/2007/04/06/livetv-in-linux/</loc>
         <lastmod>2019-12-28T05:56:28.476Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1408,7 +1424,7 @@
     </url>
 
     <url>
-        <loc>http://cocobear.github.io/2007/04/06/livetv-in-linux/</loc>
+        <loc>http://cocobear.github.io/2007/09/12/linuxworld-travel/</loc>
         <lastmod>2019-12-28T05:56:28.476Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1480,14 +1496,6 @@
     </url>
 
     <url>
-        <loc>http://cocobear.github.io/2007/04/06/linux-online-station/</loc>
-        <lastmod>2019-12-28T05:56:28.475Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>http://cocobear.github.io/2019/11/18/linux-raid-metadata/</loc>
         <lastmod>2019-12-28T05:56:28.475Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -1496,7 +1504,7 @@
     </url>
 
     <url>
-        <loc>http://cocobear.github.io/2007/09/16/linuxworld-travel-end/</loc>
+        <loc>http://cocobear.github.io/2007/04/06/linux-online-station/</loc>
         <lastmod>2019-12-28T05:56:28.475Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1505,6 +1513,14 @@
 
     <url>
         <loc>http://cocobear.github.io/2007/09/12/linuxworld-travel-conference/</loc>
+        <lastmod>2019-12-28T05:56:28.475Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/2007/09/16/linuxworld-travel-end/</loc>
         <lastmod>2019-12-28T05:56:28.475Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1568,7 +1584,7 @@
     </url>
 
     <url>
-        <loc>http://cocobear.github.io/2012/03/11/kindle-touch-begin/</loc>
+        <loc>http://cocobear.github.io/2007/06/16/jwind-a-tool-post-automatic/</loc>
         <lastmod>2019-12-28T05:56:28.474Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1576,7 +1592,7 @@
     </url>
 
     <url>
-        <loc>http://cocobear.github.io/2007/06/16/jwind-a-tool-post-automatic/</loc>
+        <loc>http://cocobear.github.io/2012/03/11/kindle-touch-begin/</loc>
         <lastmod>2019-12-28T05:56:28.474Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1632,14 +1648,6 @@
     </url>
 
     <url>
-        <loc>http://cocobear.github.io/2007/04/06/install-gmplayer-from-sourcecode-on-fedora5/</loc>
-        <lastmod>2019-12-28T05:56:28.473Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>http://cocobear.github.io/2008/03/26/im-back/</loc>
         <lastmod>2019-12-28T05:56:28.473Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -1649,6 +1657,14 @@
 
     <url>
         <loc>http://cocobear.github.io/2007/12/03/install-fedora8-from-disk/</loc>
+        <lastmod>2019-12-28T05:56:28.473Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/2007/04/06/install-gmplayer-from-sourcecode-on-fedora5/</loc>
         <lastmod>2019-12-28T05:56:28.473Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1696,7 +1712,7 @@
     </url>
 
     <url>
-        <loc>http://cocobear.github.io/2007/04/28/gomoku-in-php-lover/</loc>
+        <loc>http://cocobear.github.io/2007/04/26/gomoku-in-php-3/</loc>
         <lastmod>2019-12-28T05:56:28.472Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1704,7 +1720,7 @@
     </url>
 
     <url>
-        <loc>http://cocobear.github.io/2007/04/26/gomoku-in-php-3/</loc>
+        <loc>http://cocobear.github.io/2007/04/28/gomoku-in-php-lover/</loc>
         <lastmod>2019-12-28T05:56:28.472Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1720,7 +1736,7 @@
     </url>
 
     <url>
-        <loc>http://cocobear.github.io/2009/08/04/google-map/</loc>
+        <loc>http://cocobear.github.io/2007/07/04/hotlinking/</loc>
         <lastmod>2019-12-28T05:56:28.472Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1736,7 +1752,7 @@
     </url>
 
     <url>
-        <loc>http://cocobear.github.io/2007/11/30/hoodwinked-by-a-company/</loc>
+        <loc>http://cocobear.github.io/2009/08/04/google-map/</loc>
         <lastmod>2019-12-28T05:56:28.472Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1744,7 +1760,7 @@
     </url>
 
     <url>
-        <loc>http://cocobear.github.io/2007/07/04/hotlinking/</loc>
+        <loc>http://cocobear.github.io/2007/11/30/hoodwinked-by-a-company/</loc>
         <lastmod>2019-12-28T05:56:28.472Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1784,7 +1800,7 @@
     </url>
 
     <url>
-        <loc>http://cocobear.github.io/2007/05/18/find-a-bug/</loc>
+        <loc>http://cocobear.github.io/2007/04/06/find-gnome-which-delete-by-mistake/</loc>
         <lastmod>2019-12-28T05:56:28.471Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1792,7 +1808,7 @@
     </url>
 
     <url>
-        <loc>http://cocobear.github.io/2007/04/06/find-gnome-which-delete-by-mistake/</loc>
+        <loc>http://cocobear.github.io/2007/05/18/find-a-bug/</loc>
         <lastmod>2019-12-28T05:56:28.471Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1824,7 +1840,7 @@
     </url>
 
     <url>
-        <loc>http://cocobear.github.io/2007/06/07/fedora-7-config/</loc>
+        <loc>http://cocobear.github.io/2007/06/03/fedora-7-install/</loc>
         <lastmod>2019-12-28T05:56:28.470Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1832,7 +1848,7 @@
     </url>
 
     <url>
-        <loc>http://cocobear.github.io/2007/06/03/fedora-7-install/</loc>
+        <loc>http://cocobear.github.io/2007/06/07/fedora-7-config/</loc>
         <lastmod>2019-12-28T05:56:28.470Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1864,14 +1880,6 @@
     </url>
 
     <url>
-        <loc>http://cocobear.github.io/2007/07/25/fedora-mysql-error/</loc>
-        <lastmod>2019-12-28T05:56:28.470Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>http://cocobear.github.io/2007/06/02/fedora-core-7-experience/</loc>
         <lastmod>2019-12-28T05:56:28.470Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -1880,7 +1888,7 @@
     </url>
 
     <url>
-        <loc>http://cocobear.github.io/2008/05/22/fedora9-gcc43/</loc>
+        <loc>http://cocobear.github.io/2007/07/25/fedora-mysql-error/</loc>
         <lastmod>2019-12-28T05:56:28.470Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1889,6 +1897,14 @@
 
     <url>
         <loc>http://cocobear.github.io/2008/05/30/fedora9-ati/</loc>
+        <lastmod>2019-12-28T05:56:28.470Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/2008/05/22/fedora9-gcc43/</loc>
         <lastmod>2019-12-28T05:56:28.470Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1912,23 +1928,7 @@
     </url>
 
     <url>
-        <loc>http://cocobear.github.io/2008/05/06/ext2-source-code-analysis-3-2/</loc>
-        <lastmod>2019-12-28T05:56:28.469Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>http://cocobear.github.io/2008/05/05/ext2-source-code-analysis-1/</loc>
-        <lastmod>2019-12-28T05:56:28.469Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://cocobear.github.io/2008/05/26/ext2intro/</loc>
         <lastmod>2019-12-28T05:56:28.469Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1944,7 +1944,7 @@
     </url>
 
     <url>
-        <loc>http://cocobear.github.io/2007/04/06/extensions-to-the-c-language-family-translation/</loc>
+        <loc>http://cocobear.github.io/2008/05/06/ext2-source-code-analysis-3-2/</loc>
         <lastmod>2019-12-28T05:56:28.469Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1953,6 +1953,22 @@
 
     <url>
         <loc>http://cocobear.github.io/2008/04/26/ext2-to-ext3/</loc>
+        <lastmod>2019-12-28T05:56:28.469Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/2008/05/26/ext2intro/</loc>
+        <lastmod>2019-12-28T05:56:28.469Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/2007/04/06/extensions-to-the-c-language-family-translation/</loc>
         <lastmod>2019-12-28T05:56:28.469Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1992,7 +2008,7 @@
     </url>
 
     <url>
-        <loc>http://cocobear.github.io/2007/06/09/eject-dvd-java/</loc>
+        <loc>http://cocobear.github.io/2007/12/21/erorr-of-shell-script/</loc>
         <lastmod>2019-12-28T05:56:28.468Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -2000,7 +2016,7 @@
     </url>
 
     <url>
-        <loc>http://cocobear.github.io/2007/12/21/erorr-of-shell-script/</loc>
+        <loc>http://cocobear.github.io/2007/06/09/eject-dvd-java/</loc>
         <lastmod>2019-12-28T05:56:28.468Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -2064,7 +2080,7 @@
     </url>
 
     <url>
-        <loc>http://cocobear.github.io/2007/04/26/difference-between-php-and-c/</loc>
+        <loc>http://cocobear.github.io/2013/06/26/django-note/</loc>
         <lastmod>2019-12-28T05:56:28.467Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -2072,7 +2088,15 @@
     </url>
 
     <url>
-        <loc>http://cocobear.github.io/2013/06/26/django-note/</loc>
+        <loc>http://cocobear.github.io/2007/06/18/domain-rules/</loc>
+        <lastmod>2019-12-28T05:56:28.467Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/2007/04/26/difference-between-php-and-c/</loc>
         <lastmod>2019-12-28T05:56:28.467Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -2089,14 +2113,6 @@
 
     <url>
         <loc>http://cocobear.github.io/2007/10/21/dousnake-with-sdl/</loc>
-        <lastmod>2019-12-28T05:56:28.467Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://cocobear.github.io/2007/06/18/domain-rules/</loc>
         <lastmod>2019-12-28T05:56:28.467Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -2128,6 +2144,14 @@
     </url>
 
     <url>
+        <loc>http://cocobear.github.io/2009/03/19/culture-a-habit-in-a-month/</loc>
+        <lastmod>2019-12-28T05:56:28.466Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://cocobear.github.io/2010/06/26/cube/</loc>
         <lastmod>2019-12-28T05:56:28.466Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -2137,14 +2161,6 @@
 
     <url>
         <loc>http://cocobear.github.io/2009/02/01/data-of-e680-native-db-1/</loc>
-        <lastmod>2019-12-28T05:56:28.466Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://cocobear.github.io/2009/03/19/culture-a-habit-in-a-month/</loc>
         <lastmod>2019-12-28T05:56:28.466Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -2216,14 +2232,6 @@
     </url>
 
     <url>
-        <loc>http://cocobear.github.io/2009/02/07/complie-libev/</loc>
-        <lastmod>2019-12-28T05:56:28.465Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>http://cocobear.github.io/2008/12/18/complie-sdcv-on-amd64/</loc>
         <lastmod>2019-12-28T05:56:28.465Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -2240,7 +2248,7 @@
     </url>
 
     <url>
-        <loc>http://cocobear.github.io/2008/10/10/configure-error-cpp-fails-sanity-check/</loc>
+        <loc>http://cocobear.github.io/2009/02/07/complie-libev/</loc>
         <lastmod>2019-12-28T05:56:28.465Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -2256,6 +2264,14 @@
     </url>
 
     <url>
+        <loc>http://cocobear.github.io/2008/10/10/configure-error-cpp-fails-sanity-check/</loc>
+        <lastmod>2019-12-28T05:56:28.465Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://cocobear.github.io/2007/06/10/conservative/</loc>
         <lastmod>2019-12-28T05:56:28.465Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -2264,7 +2280,7 @@
     </url>
 
     <url>
-        <loc>http://cocobear.github.io/2007/05/21/china-blog/</loc>
+        <loc>http://cocobear.github.io/2007/04/26/cmb-credit-card/</loc>
         <lastmod>2019-12-28T05:56:28.464Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -2280,7 +2296,7 @@
     </url>
 
     <url>
-        <loc>http://cocobear.github.io/2007/06/10/cnc-script-update/</loc>
+        <loc>http://cocobear.github.io/2007/05/21/china-blog/</loc>
         <lastmod>2019-12-28T05:56:28.464Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -2296,15 +2312,7 @@
     </url>
 
     <url>
-        <loc>http://cocobear.github.io/2007/05/15/cocobear-google/</loc>
-        <lastmod>2019-12-28T05:56:28.464Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://cocobear.github.io/2007/04/26/cmb-credit-card/</loc>
+        <loc>http://cocobear.github.io/2007/06/10/cnc-script-update/</loc>
         <lastmod>2019-12-28T05:56:28.464Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -2313,6 +2321,14 @@
 
     <url>
         <loc>http://cocobear.github.io/2008/04/29/code-of-python/</loc>
+        <lastmod>2019-12-28T05:56:28.464Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/2007/05/15/cocobear-google/</loc>
         <lastmod>2019-12-28T05:56:28.464Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -2336,7 +2352,7 @@
     </url>
 
     <url>
-        <loc>http://cocobear.github.io/2008/07/04/can-not-use-mail-in-fedora/</loc>
+        <loc>http://cocobear.github.io/2010/04/20/cell-phone-had-been-stolen/</loc>
         <lastmod>2019-12-28T05:56:28.463Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -2344,7 +2360,7 @@
     </url>
 
     <url>
-        <loc>http://cocobear.github.io/2010/04/20/cell-phone-had-been-stolen/</loc>
+        <loc>http://cocobear.github.io/2008/07/04/can-not-use-mail-in-fedora/</loc>
         <lastmod>2019-12-28T05:56:28.463Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -2392,7 +2408,7 @@
     </url>
 
     <url>
-        <loc>http://cocobear.github.io/2007/09/22/change-phone-nokia-1116/</loc>
+        <loc>http://cocobear.github.io/2007/12/06/chaos-1/</loc>
         <lastmod>2019-12-28T05:56:28.463Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -2408,16 +2424,8 @@
     </url>
 
     <url>
-        <loc>http://cocobear.github.io/2007/12/06/chaos-1/</loc>
+        <loc>http://cocobear.github.io/2007/09/22/change-phone-nokia-1116/</loc>
         <lastmod>2019-12-28T05:56:28.463Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://cocobear.github.io/2007/04/06/blackjack-in-c/</loc>
-        <lastmod>2019-12-28T05:56:28.462Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -2448,7 +2456,7 @@
     </url>
 
     <url>
-        <loc>http://cocobear.github.io/2008/05/07/bother/</loc>
+        <loc>http://cocobear.github.io/2007/04/06/bug-a-domain/</loc>
         <lastmod>2019-12-28T05:56:28.462Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -2456,7 +2464,15 @@
     </url>
 
     <url>
-        <loc>http://cocobear.github.io/2007/04/06/bug-a-domain/</loc>
+        <loc>http://cocobear.github.io/2007/04/06/blackjack-in-c/</loc>
+        <lastmod>2019-12-28T05:56:28.462Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/2008/01/13/bug-in-message-board/</loc>
         <lastmod>2019-12-28T05:56:28.462Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -2472,7 +2488,7 @@
     </url>
 
     <url>
-        <loc>http://cocobear.github.io/2008/01/13/bug-in-message-board/</loc>
+        <loc>http://cocobear.github.io/2008/05/07/bother/</loc>
         <lastmod>2019-12-28T05:56:28.462Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -2528,7 +2544,7 @@
     </url>
 
     <url>
-        <loc>http://cocobear.github.io/2007/04/06/bash-script-of-claw/</loc>
+        <loc>http://cocobear.github.io/2007/04/06/baidu-cang-is-ok/</loc>
         <lastmod>2019-12-28T05:56:28.461Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -2536,7 +2552,7 @@
     </url>
 
     <url>
-        <loc>http://cocobear.github.io/2007/09/04/begin-sdl/</loc>
+        <loc>http://cocobear.github.io/2007/04/06/bash-script-of-claw/</loc>
         <lastmod>2019-12-28T05:56:28.461Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -2560,7 +2576,7 @@
     </url>
 
     <url>
-        <loc>http://cocobear.github.io/2007/04/06/baidu-cang-is-ok/</loc>
+        <loc>http://cocobear.github.io/2007/09/04/begin-sdl/</loc>
         <lastmod>2019-12-28T05:56:28.461Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -2592,7 +2608,7 @@
     </url>
 
     <url>
-        <loc>http://cocobear.github.io/2007/10/29/back-from-beijin-1/</loc>
+        <loc>http://cocobear.github.io/2007/10/29/back-from-beijin-2/</loc>
         <lastmod>2019-12-28T05:56:28.460Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -2600,7 +2616,7 @@
     </url>
 
     <url>
-        <loc>http://cocobear.github.io/2007/10/29/back-from-beijin-2/</loc>
+        <loc>http://cocobear.github.io/2007/10/29/back-from-beijin-1/</loc>
         <lastmod>2019-12-28T05:56:28.460Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -2672,7 +2688,7 @@
     </url>
 
     <url>
-        <loc>http://cocobear.github.io/2007/04/11/about-bashrc/</loc>
+        <loc>http://cocobear.github.io/2009/05/15/about-cryptographic-algorithm/</loc>
         <lastmod>2019-12-28T05:56:28.458Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -2680,7 +2696,7 @@
     </url>
 
     <url>
-        <loc>http://cocobear.github.io/2009/05/15/about-cryptographic-algorithm/</loc>
+        <loc>http://cocobear.github.io/2007/04/11/about-bashrc/</loc>
         <lastmod>2019-12-28T05:56:28.458Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -2736,7 +2752,7 @@
     </url>
 
     <url>
-        <loc>http://cocobear.github.io/2007/07/12/2007-house-ad/</loc>
+        <loc>http://cocobear.github.io/2008/01/03/2008-begin/</loc>
         <lastmod>2019-12-28T05:56:28.457Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -2744,7 +2760,7 @@
     </url>
 
     <url>
-        <loc>http://cocobear.github.io/2008/01/03/2008-begin/</loc>
+        <loc>http://cocobear.github.io/2007/07/12/2007-house-ad/</loc>
         <lastmod>2019-12-28T05:56:28.457Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -2784,7 +2800,7 @@
     </url>
 
     <url>
-        <loc>http://cocobear.github.io/2007/09/04/a-small-dream/</loc>
+        <loc>http://cocobear.github.io/2007/06/06/about-ad/</loc>
         <lastmod>2019-12-28T05:56:28.457Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -2792,7 +2808,7 @@
     </url>
 
     <url>
-        <loc>http://cocobear.github.io/2007/06/06/about-ad/</loc>
+        <loc>http://cocobear.github.io/2007/09/04/a-small-dream/</loc>
         <lastmod>2019-12-28T05:56:28.457Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -2802,14 +2818,6 @@
     <url>
         <loc>http://cocobear.github.io/2010/07/17/about-ark/</loc>
         <lastmod>2019-12-28T05:56:28.457Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://cocobear.github.io/2008/07/15/03-issues-shell/</loc>
-        <lastmod>2019-12-28T05:56:28.456Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -2832,7 +2840,7 @@
     </url>
 
     <url>
-        <loc>http://cocobear.github.io/2008/07/18/05-issues-shell/</loc>
+        <loc>http://cocobear.github.io/2008/07/15/03-issues-shell/</loc>
         <lastmod>2019-12-28T05:56:28.456Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -2841,6 +2849,14 @@
 
     <url>
         <loc>http://cocobear.github.io/2008/07/16/04-issues-shell/</loc>
+        <lastmod>2019-12-28T05:56:28.456Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://cocobear.github.io/2008/07/18/05-issues-shell/</loc>
         <lastmod>2019-12-28T05:56:28.456Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>

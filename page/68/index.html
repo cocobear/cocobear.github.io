@@ -310,7 +310,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">182</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">183</span></a>
 
   </li>
         
@@ -348,7 +348,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">358</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">360</span></a>
 
   </li>
 
@@ -413,6 +413,441 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2007/04/06/first-bash-script-claw/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="cocobear">
+      <meta itemprop="description" content="爱折腾的技术宅一枚">
+      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="可可熊D窝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2007/04/06/first-bash-script-claw/" class="post-title-link" itemprop="url">第一个bash脚本[提取网页中的特定资源]</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2007-04-06 19:17:51" itemprop="dateCreated datePublished" datetime="2007-04-06T19:17:51+08:00">2007-04-06</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/编程相关/" itemprop="url" rel="index"><span itemprop="name">编程相关</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2007/04/06/first-bash-script-claw/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2007/04/06/first-bash-script-claw/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数：</span>
+                
+                <span title="字数">1.3k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读 &asymp;</span>
+                
+                <span title="阅读">1 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Saturday, 23. December 2006, 09:10:52</p>
+<p>RT</p>
+<p>应该算是第一个比较有意义的bash脚本<img src="/community/graphics/smilies/bigsmile.gif" alt=":D"> ，可以提取网页中的资源，类似于flashget等工具中的”下载全部链接”，只是偶的脚本只是把网页中的资源地址保存在一个文件里面，然后可以使用wget -i filename来下载。</p>
+<pre><code>#!/bin/bash
+#Write for downing special type of file in website.
+#Author:cocobear
+#E-mail:cocobearc@gmail.com
+if [ $# -eq 0 ];
+then
+        echo &quot;Usage:$0 filename&quot; 
+        exit 1
+fi
+#Can&apos;t write as &quot;filename = aaa&quot;,there is no blank around &apos;=&apos;
+#filename=aaaa
+mp3=.mp3
+filename=&quot;$1$mp3&quot;
+awk &apos;
+BEGIN { FS = &quot;\&quot;&quot; }
+{
+for (n=1;n&gt;NF;n++)
+if (($n ~ /^http:/) &amp;&amp; ($n ~ /\.mp3$/))
+        {print $n}
+
+}&apos; $1 &lt;  $filename
+</code></pre><p>需要改进之处:添加选择下载文件类型，自动使用wget开始下载</p>
+<p>顺便在这里写个笔记：</p>
+<p>合并字符串： </p>
+<pre><code>var=&quot;$var1$var2&quot;
+</code></pre><p>变量赋值： </p>
+<pre><code>var=something
+</code></pre><p>这里的=两边不可以有空格，以前写C的时候习惯两边写空格，结果在这里不行<img src="/community/graphics/smilies/tongue.gif" alt="p:"></p>
+<p>vim中导出语法高亮的文件：</p>
+<p>vim中导出语法高亮的文件： </p>
+<pre><code>:runtime! syntax/2html.vim
+</code></pre><p>在命令行中输入以上内容 </p>
+<pre><code>它本身并不是语法文件，只是一个把当前窗口转换成 HTML 的脚本。Vim 打开一个新窗口，在那里它构造 HTML 文件
+</code></pre><h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#2495" title="2007-11-28 19:02:44">sk</a>:</strong> [sk@localhost Desktop]$ ./gett.sh gog awk: ‘ awk: ^ invalid char ‘�’ in expression ./gett.sh: line 15: unexpected EOF while looking for matching `”‘ ./gett.sh: line 22: syntax error: unexpected end of file [sk@localhost Desktop]$ 我怎么运行不了，正在解决，指点一下</p>
+<p><strong><a href="#2496" title="2007-11-28 19:12:40">sk</a>:</strong> 搞定了，里面有一些引号是在中文下的，改成英文下就可以了</p>
+<p><strong><a href="#2501" title="2007-11-28 23:13:05">cocobear</a>:</strong> 呵呵，不好意思，没有提供一个txt的文件下载，确实直接粘贴在博客里会有很多问题:-(</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2007/04/06/examing/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="cocobear">
+      <meta itemprop="description" content="爱折腾的技术宅一枚">
+      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="可可熊D窝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2007/04/06/examing/" class="post-title-link" itemprop="url">考试了</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2007-04-06 19:17:49" itemprop="dateCreated datePublished" datetime="2007-04-06T19:17:49+08:00">2007-04-06</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/" itemprop="url" rel="index"><span itemprop="name">Life</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2007/04/06/examing/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2007/04/06/examing/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数：</span>
+                
+                <span title="字数">216</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读 &asymp;</span>
+                
+                <span title="阅读">1 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Saturday, 23. December 2006, 07:06:41</p>
+<p>四级改新题型了，竟然是这样的BT，三十分钟写作文，浪费时间，我以前都是十分钟来写的，结果现在没时间做第二卷的题了，词汇题就没有做，听力也比较烂，过不过又是一个未知数了，不会又像上次一样差一点吧。</p>
+<p>郁闷，中国的考试就这样BT，越改越BT。</p>
+<p>不管了，还是静下心来复习吧，不能再挂了，总不能上四年大学连毕业证也拿不到吧！</p>
+<p>四级是不是真的那么重要！</p>
+<p>生不逢时啊~</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
     
       
 
@@ -1061,409 +1496,6 @@ Password:1000du
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2007/04/06/rule-of-wolf/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="cocobear">
-      <meta itemprop="description" content="爱折腾的技术宅一枚">
-      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="可可熊D窝">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2007/04/06/rule-of-wolf/" class="post-title-link" itemprop="url">狼性法则</a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2007-04-06 19:17:41" itemprop="dateCreated datePublished" datetime="2007-04-06T19:17:41+08:00">2007-04-06</time>
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/" itemprop="url" rel="index"><span itemprop="name">Life</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2007/04/06/rule-of-wolf/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2007/04/06/rule-of-wolf/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-symbolscount">
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数：</span>
-                
-                <span title="字数">251</span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读 &asymp;</span>
-                
-                <span title="阅读">1 分钟</span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Thursday, 14. December 2006, 07:38:09</p>
-<p>今天在同学宿舍看到一本书：《狼性法则》，是一本关于职场生存之道的书，摘录其中的一些片段<br>，用于自勉吧。</p>
-<p>一扇门关上，另一扇门会打开。没有过不去的坎，除非你自己不愿去。面对挫折，只是沮丧地呆在屋子里，便会有禁锢的感觉，自然不到新的出路。不妨离开屋子，享受一下新鲜的空气、阳光，你的情绪豁然开朗，精神为之振奋，对走出困境，你将会有积极的想法，果敢行动。人，只有在良好的心境中才能更好的发挥自己的才智。</p>
-<p>（未完待续，不定时添加。）</p>
-<p><img src="http://files.myopera.com/cocobear/blog/wolf.jpg" alt></p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2007/04/06/extensions-to-the-c-language-family-translation/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="cocobear">
-      <meta itemprop="description" content="爱折腾的技术宅一枚">
-      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="可可熊D窝">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2007/04/06/extensions-to-the-c-language-family-translation/" class="post-title-link" itemprop="url">Extensions to the C Language Family(C语言家族扩展) 翻译</a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2007-04-06 19:17:40" itemprop="dateCreated datePublished" datetime="2007-04-06T19:17:40+08:00">2007-04-06</time>
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/编程相关/" itemprop="url" rel="index"><span itemprop="name">编程相关</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2007/04/06/extensions-to-the-c-language-family-translation/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2007/04/06/extensions-to-the-c-language-family-translation/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-symbolscount">
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数：</span>
-                
-                <span title="字数">368</span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读 &asymp;</span>
-                
-                <span title="阅读">1 分钟</span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>gcc-3.1.1的C语言扩展**</p>
-<p>原文地址：<br><a href="http://gcc.gnu.org/onlinedocs/gcc-3.1.1/gcc/index.html#toc_C%20Extensions" target="_blank" rel="noopener">http://gcc.gnu.org/onlinedocs/gcc-3.1.1/gcc/index.html#toc_C%20Extensions</a></p>
-<p>花了挺长时间来翻译的这个，其中也学到了不少东西。似乎是最后两节没有翻译，因为原来的文档是老师给的，没有仔细与gnu网站上的内容对照。刚开始还准备翻译最新的4.1.1，但是最后章节里的东西太多了，有点吓人，就没有去做，<img src="/community/graphics/smilies/bigsmile.gif" alt=":D"> 还是老版本的精炼！</p>
-<p>blog内访问：<br><a href="http://cocobear.github.io/code/html/gcc.html">C语言家族扩展</a><br>kerneltravel访问：<br><a href="http://www.kerneltravel.net/newbie/gcc_man.html" target="_blank" rel="noopener">C语言家族扩展</a></p>
-<p>翻译人员<br>5.1–5.6林峰<br>5.7–5.20董溥<br>5.21–5.26王聪<br>5.27–5.34刘洋<br>5.35–5.43贾孟树</p>
-<hr>
-<p>可以使用右键保存</p>
-<p>不怎么写html代码，结果标签没用好，导致如果改名就不能正确使用前面的书签，现在已经修正！</p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1513,7 +1545,7 @@ Password:1000du
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">358</span>
+                    <span class="site-state-item-count">360</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1919,7 +1951,9 @@ Password:1000du
                     
                       
                     
-                    <span class="site-state-item-count">182</span>
+                      
+                    
+                    <span class="site-state-item-count">183</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -2038,7 +2072,7 @@ Password:1000du
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2007 – <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; 2007 – <span itemprop="copyrightYear">2021</span>
   <span class="with-love" id="animate">
     <i class="fa fa-heart"></i>
   </span>
@@ -2050,7 +2084,7 @@ Password:1000du
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">519k</span>
+    <span title="站点总字数">522k</span>
   
 
   
@@ -2059,7 +2093,7 @@ Password:1000du
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">7:52</span>
+    <span title="站点阅读时长">7:55</span>
   
 </div>
 
@@ -2161,7 +2195,7 @@ Password:1000du
 
 
   
-  <script src="//cdn.staticfile.org/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/jquery/2.1.3/jquery.min.js"></script>
 
   
   <script src="//cdn.staticfile.org/fastclick/1.0.6/fastclick.min.js"></script>

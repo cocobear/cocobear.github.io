@@ -310,7 +310,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">182</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">183</span></a>
 
   </li>
         
@@ -348,7 +348,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">358</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">360</span></a>
 
   </li>
 
@@ -413,6 +413,419 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2007/05/19/web-proxy/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="cocobear">
+      <meta itemprop="description" content="爱折腾的技术宅一枚">
+      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="可可熊D窝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2007/05/19/web-proxy/" class="post-title-link" itemprop="url">在线代理（网页代理）</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2007-05-19 20:11:42" itemprop="dateCreated datePublished" datetime="2007-05-19T20:11:42+08:00">2007-05-19</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/互联网/" itemprop="url" rel="index"><span itemprop="name">互联网</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2007/05/19/web-proxy/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2007/05/19/web-proxy/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数：</span>
+                
+                <span title="字数">995</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读 &asymp;</span>
+                
+                <span title="阅读">1 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>以前上网的时候如果要用到代理，总是会去一些像代理中国这样专门发布代理的网站去找代理，然后在浏览器里修改通过代理访问，不过大部分时候要不是找不到合适能用的代理，要不就太慢，总觉得不方便，而且使用代理的时候访问本来不需要通过代理访问的网站也使用了代理，这样使得访问这些网站速度也变得奇慢，这一点让许多人都很头疼。</p>
+<p>最近一段时间发些了好些在线代理网站，这样就可以通过这些网站输入我需要通过代理访问的网址，就不会影响到访问其它网站的速度了。不过还有一个问题就是，一般这种在线代理网站广告很多，而且速度也不是很理想，要找到一个比较好一点的也很困难。昨天在<a href="http://www.avivas.cn" target="_blank" rel="noopener">Avivas</a>的<a href="http://www.avivas.cn/article.asp?id=172" target="_blank" rel="noopener">一篇文章</a>中看到了一个叫<a href="http://whitefyre.com/poxy/" target="_blank" rel="noopener">PHProxy</a>的PHP程序，于是在我这个服务器上试了一下，没想到速度超快。</p>
+<p>现在我的网站上已经使用了这套程序，如果大家有需要可以通过下面的地址来使用这个在线代理，挺好用的，可以收藏起来，用来访问维基百科这类比较有用的网站。</p>
+<pre><code>[](http://cocobear.github.io/proxy)在线代理
+[](http://cocobear.github.io/gfw)网页代理
+</code></pre><p>我把界面汉化了一下，方便一些网友看起来比较舒服些，大家可以在下面的地址下载:</p>
+<p><a href="http://cocobear.github.io/download/phproxy.tar">PHProxy中文版</a></p>
+<p>这里有一个需要说明的，这个程序使用的条件是所在的服务器可以访问那些被封的网站，因为我的服务器在美国，所以可以访问被大陆和谐掉的网站，如果你的服务器也在国内的话就不能使用了。</p>
+<p>BTY：opera的blog被封这段时间也可以用上面的代理来访问，而且速度很快的！</p>
+<h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#192" title="2007-05-20 15:51:05">cocobear</a>:</strong> <strong>TO:Amankwah</strong>怎么不可能发新贴呢？ 有什么理由呢？</p>
+<p><strong><a href="#193" title="2007-05-20 14:21:18">草儿</a>:</strong> <strong>我天朝网络的代表GFW不愧是垃圾中的战斗机,败类中的VIP!</strong> 我在某站中看到的一个网友评论，说到 不错</p>
+<p><strong><a href="#194" title="2007-05-20 11:58:11">windflush</a>:</strong> 明显可以嘛!你自己没认真看!</p>
+<p><strong><a href="#195" title="2007-05-20 11:30:12">Amankwah</a>:</strong> 而且用在线代理不能发新帖子？？</p>
+<p><strong><a href="#196" title="2007-05-20 09:02:00">Amankwah</a>:</strong> 似乎，我曾经用porxycn上的一个在线代理访问过一下我的博客，很快，那个proxy也被GFW了…………</p>
+<p><strong><a href="#197" title="2007-05-19 21:24:29">草儿</a>:</strong> 呵呵 内测的时候已经体验了，加到收藏夹了，现在这个MS正式版啊，都发布出来了 PS：你上面放出那两个——在线代理和网页代理有什么区别么？我看了一下，好像二者一模一样啊</p>
+<p><strong><a href="#198" title="2007-05-19 20:26:34">windflush</a>:</strong> 这下刘洋同学可以更新一下他的博客了</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2007/05/18/51cn/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="cocobear">
+      <meta itemprop="description" content="爱折腾的技术宅一枚">
+      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="可可熊D窝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2007/05/18/51cn/" class="post-title-link" itemprop="url">51.cn个人主页登陆</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2007-05-18 17:40:11" itemprop="dateCreated datePublished" datetime="2007-05-18T17:40:11+08:00">2007-05-18</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/互联网/" itemprop="url" rel="index"><span itemprop="name">互联网</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2007/05/18/51cn/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2007/05/18/51cn/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数：</span>
+                
+                <span title="字数">483</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读 &asymp;</span>
+                
+                <span title="阅读">1 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>看到”<strong>51.cn个人主页登陆</strong>“这个标题你可能会觉得有点纳闷，我第一次在<a href="http://www.avivas.cn/article.asp?id=166" target="_blank" rel="noopener">Aviva博客</a>里看到这个也觉得很是奇怪。仔细看完才明白这只是利用搜索引擎玩的一个小把戏。</p>
+<p>如果经常用搜索引擎的话，就会注意到当你搜索完一个关键词后，搜索引擎的页面下方会有一些相关搜索的关键词，而大多数的人会点下面的相关搜索，我就经常会使用的。</p>
+<p>下面我们来说一下”<strong>51.cn个人主页登陆</strong>“,这个关键词，首先我们需要肯定一点，”<strong>个人主页</strong>“这个词每天百度搜索量是很惊人的，你搜索完这个关键词在页面的下部有个:相关搜索，里面有关”<strong>51.cn个人主页登陆</strong>“，的相关关键词有好多，这下你应该明白了吧，这就是避免太热门的关键词，但因为与热门关键词联系比较紧密，所以如果把这个关键词做好仍然可以获得很大流量，而类似<strong>51.cn个人主页登陆</strong>这样的关键词做起来就比较容易了。</p>
+<p>呵呵，有空我也研究一下这东西，挺好玩的！</p>
+<h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#189" title="2007-05-18 23:28:12">草儿</a>:</strong> 那我是不是要弄个草儿个人主页申请？ 嘎嘎</p>
+<p><strong><a href="#190" title="2007-05-18 23:40:07">cocobear</a>:</strong> <strong>TO:草儿</strong> 你理解错误了，好好把我上面给出的链接看看。</p>
+<p><strong><a href="#191" title="2007-05-19 21:28:13">草儿</a>:</strong> 看来我得等我的草儿成为热门关键词才行啊 等待……</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
     
       
 
@@ -1102,422 +1515,6 @@ PERSIST=no
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2007/05/15/cocobear-google/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="cocobear">
-      <meta itemprop="description" content="爱折腾的技术宅一枚">
-      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="可可熊D窝">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2007/05/15/cocobear-google/" class="post-title-link" itemprop="url">可可熊 百度 cocobear Google</a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2007-05-15 19:49:38" itemprop="dateCreated datePublished" datetime="2007-05-15T19:49:38+08:00">2007-05-15</time>
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/互联网/" itemprop="url" rel="index"><span itemprop="name">互联网</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2007/05/15/cocobear-google/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2007/05/15/cocobear-google/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-symbolscount">
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数：</span>
-                
-                <span title="字数">1k</span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读 &asymp;</span>
-                
-                <span title="阅读">1 分钟</span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>今天看了一下统计，有从百度来的关键词为”可可”的搜索，于是顺便在百度里搜索了一下”可可熊“，结果我现在使用的这个域名的首页排第一，高兴哦，以前百度搜索可可熊的时候前几个总是什么”韩版浅蓝卷绒可可熊“，”AINI白色可可熊 最大号80cm“……这类网页，现在终于成了我的个人主页了！</p>
-<p>然后我又在百度搜索了一下”cocobear”,结果是my.opera.com/cocobear这个博客排第一，我目前使用的这个排第二。</p>
-<p>接下来是Google，竟然让我大失所望，使用关键词”可可熊“，我的这个域名竟然排到了第二页，第一个又是那些词”情侣熊毛绒玩具“……而我以前在opera的blog排第二。看来Google的这个排名应该和pr值有关，我这个域名pr为0,而以前opera的blog 　PR值都为4了。</p>
-<p>使用关键词”cocobear”，结果和百度一样。</p>
-<p>看来得提高pr值了！</p>
-<h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#171" title="2007-05-15 23:25:08">草儿</a>:</strong> 好像我的迅雷博客都比这个强 汗……</p>
-<p><strong><a href="#172" title="2007-05-15 23:21:33">草儿</a>:</strong> 我发现从一开始我搜到的就是在那个三杯水上建的一个页面 郁闷啊～</p>
-<p><strong><a href="#173" title="2007-05-15 20:41:42">windflush</a>:</strong> 我发现只要我来了，我都是沙发，可惜我不怎么喜欢做沙发，本来打算继续潜着，不过在百度和google里头搜了一下windflush，发现百度搜出来的windflush全部都是我自己（自己的博客，他人网站上的链接或者是回帖）。而google我只看了第一页，好像也全都是我自己，看来我起的这个名字比较特殊，连百度和google都直接fflush出来了，不用等，呵呵。</p>
-<p><strong><a href="#174" title="2007-05-15 20:59:35">cocobear</a>:</strong> <strong>TO：windflush</strong> 你一般用哪个中文的网名，试试那个。 谁让你整天没事就泡我的博客呢？以后沙发都归你了，给你个最佳沙发奖！</p>
-<p><strong><a href="#175" title="2007-05-15 21:51:07">windflush</a>:</strong> 中文网名？没用过阿，基本都是随时换的，还没定下来呢。哎，我真的不想坐沙发，可是明显我又要做了。 罪过罪过！</p>
-<p><strong><a href="#176" title="2007-05-16 11:47:35">cocobear</a>:</strong> <strong>TO:草儿</strong> 迅雷的博客，因为用迅雷的人搜索的多，再加上你的一些日志都是一些热门的影视当然比这个强了，如果想做好博客，建议你去一个地方看看： <a href="http://blogunion.org" target="_blank" rel="noopener">博客联盟</a> 那上面有一些好的技巧，教你如何做好一个博客！不过得认真的去做，不是很容易的。</p>
-<p><strong><a href="#177" title="2007-05-16 13:46:18">草儿</a>:</strong> 嗯，看看去 以后多学习了</p>
-<p><strong><a href="#178" title="2007-05-18 13:42:22">cocobear</a>:</strong> <strong>TO:Amankwah</strong> 看来你的中文名什么时间要排到第一页就可以了哦，不过我觉得你很少用那个中文名的。</p>
-<p><strong><a href="#179" title="2007-05-18 07:59:19">Amankwah</a>:</strong> 我的opera博客在Google上第一，baidu到了第二页了～ 我的中文网名你搜搜吧，还魂僵尸，哈哈</p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2007/05/15/opera-blog-have-been-blocked/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="cocobear">
-      <meta itemprop="description" content="爱折腾的技术宅一枚">
-      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="可可熊D窝">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2007/05/15/opera-blog-have-been-blocked/" class="post-title-link" itemprop="url">现在已经肯定opera的blog被封</a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2007-05-15 15:24:38" itemprop="dateCreated datePublished" datetime="2007-05-15T15:24:38+08:00">2007-05-15</time>
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/互联网/" itemprop="url" rel="index"><span itemprop="name">互联网</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2007/05/15/opera-blog-have-been-blocked/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2007/05/15/opera-blog-have-been-blocked/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-symbolscount">
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数：</span>
-                
-                <span title="字数">1k</span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读 &asymp;</span>
-                
-                <span title="阅读">1 分钟</span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>从前几天<a href="http://cocobear.github.io/?p=93">opera的blog无法正常访问</a>到今天，已经有一周的时间，刚开始opera官方发布的消息似乎是遇到了技术上的问题，我没有看到这样的页面，是听同学说的，但现在看来不是这样的，opera的blog已经被中国大陆的GFW封了，我不太清楚以前opera的blog有没有被封过，根据eric在我上篇文章中的<a href="http://cocobear.github.io/?p=93#comment-230">留言</a>，以及最近几天我的测试，这次是彻底的被封了，我在dreamhost的主机上使用w3m可以正常访问，通过在线代理网站也可以访问。</p>
-<p>看来这次借扫黄打非的名义又和谐了不少网站，前一段时间的Bluehost就被和谐掉了，哪天不会我的Dreamhost也被和谐掉吧？</p>
-<h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#161" title="2007-05-15 15:54:40">windflush</a>:</strong> 唉，我难得头回写个博客，就这样被封了，伤心啊。</p>
-<p><strong><a href="#162" title="2007-05-15 15:57:34">cocobear</a>:</strong> <strong>TO:windflush</strong> 别伤心，再弄一个吧，没办法，也不知道opera官方有没有什么对策？ 我现在担心什么时候Dreamhost被和谐了啊！那可就太可怕了！</p>
-<p><strong><a href="#163" title="2007-05-15 17:09:19">Hanvord</a>:</strong> 有这样的页面,提示如下: We’ll be back shortly The Opera Community is currently experiencing technical difficulties. We apologise for the downtime and aim to be up and running again as soon as possible.</p>
-<p><strong><a href="#164" title="2007-05-15 19:02:10">windflush</a>:</strong> 前一段时间是这样的，这两天已经变成 ERROR The requested URL could not be retrieved While trying to retrieve the URL: <a href="http://my.opera.com/" target="_blank" rel="noopener">http://my.opera.com/</a></p>
-<p><strong><a href="#165" title="2007-05-15 19:09:59">cocobear</a>:</strong> <strong>TO:Hanvord</strong> 嗯，前一段时间是这样的，这几天好像没有这样的提示了。 <strong>TO:windflush</strong> 这就是被和谐了，访问的请求全部被重置。</p>
-<p><strong><a href="#166" title="2007-05-15 19:16:41">草儿</a>:</strong> 真怕有天登录自己博客时也收到这样的提示 真有点像清末闭关啊</p>
-<p><strong><a href="#167" title="2007-05-15 19:17:44">windflush</a>:</strong> 蛮形象的比喻</p>
-<p><strong><a href="#168" title="2007-05-18 07:55:03">Amankwah</a>:</strong> 我可怜的blog，我这么遵纪守法的良民都遭受了这样的待遇啊～</p>
-<p><strong><a href="#169" title="2007-05-22 22:32:43">dangerlake</a>:</strong> 没有天理……极度鄙视GFW</p>
-<p><strong><a href="#170" title="2007-05-22 22:47:35">cocobear</a>:</strong> <strong>TO:dangerlake</strong> 你现在只能用代理了，可以试下我那个在线代理，我给opera blog官方发过邮件的，但是没有得到答复。</p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1567,7 +1564,7 @@ PERSIST=no
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">358</span>
+                    <span class="site-state-item-count">360</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1973,7 +1970,9 @@ PERSIST=no
                     
                       
                     
-                    <span class="site-state-item-count">182</span>
+                      
+                    
+                    <span class="site-state-item-count">183</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -2092,7 +2091,7 @@ PERSIST=no
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2007 – <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; 2007 – <span itemprop="copyrightYear">2021</span>
   <span class="with-love" id="animate">
     <i class="fa fa-heart"></i>
   </span>
@@ -2104,7 +2103,7 @@ PERSIST=no
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">519k</span>
+    <span title="站点总字数">522k</span>
   
 
   
@@ -2113,7 +2112,7 @@ PERSIST=no
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">7:52</span>
+    <span title="站点阅读时长">7:55</span>
   
 </div>
 
@@ -2215,7 +2214,7 @@ PERSIST=no
 
 
   
-  <script src="//cdn.staticfile.org/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/jquery/2.1.3/jquery.min.js"></script>
 
   
   <script src="//cdn.staticfile.org/fastclick/1.0.6/fastclick.min.js"></script>

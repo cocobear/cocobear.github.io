@@ -310,7 +310,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">182</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">183</span></a>
 
   </li>
         
@@ -348,7 +348,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">358</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">360</span></a>
 
   </li>
 
@@ -413,6 +413,422 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2008/12/18/complie-sdcv-on-amd64/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="cocobear">
+      <meta itemprop="description" content="爱折腾的技术宅一枚">
+      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="可可熊D窝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2008/12/18/complie-sdcv-on-amd64/" class="post-title-link" itemprop="url">sdcv在amd64上编译问题</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2008-12-18 13:13:27" itemprop="dateCreated datePublished" datetime="2008-12-18T13:13:27+08:00">2008-12-18</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/编程相关/" itemprop="url" rel="index"><span itemprop="name">编程相关</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2008/12/18/complie-sdcv-on-amd64/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2008/12/18/complie-sdcv-on-amd64/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数：</span>
+                
+                <span title="字数">711</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读 &asymp;</span>
+                
+                <span title="阅读">1 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>sdcv是stardict的命令行替代，打算用stardict的字典，所以看看如何从字典中取词，sdcv比较小巧，拿来看挺合适，不过在我机子上编译出现了点问题：</p>
+<pre><code>&gt; lib.cpp:516: error: no matching function for call to ‘min(long unsigned int, guint32&amp;)’
+</code></pre><p>解决办法：</p>
+<pre><code>-fread(wordentry_buf, std::min(sizeof(wordentry_buf), page_size), 1, idxfile); &gt; 
+    +fread(wordentry_buf,std::min(sizeof(wordentry_buf),(size_t)page_size),1,idxfile);
+</code></pre><p>——————————————–split—————————————<br>听说WordPress2.7在后台的UI上变化不小，今天试着升级上来，发现果然是完全改变了以前的UI，大量使用了JS，感觉还不错:-)</p>
+<p>好久没有Opera了，因为又出现了无法输入的现象，只好去用了Firefox一段时间，今天换了下Ibus输入法，发现可以在Opera里面使用，赶快换回Opera，firefox的速度还是与Opera无法相比的。对了Ibus这个输入法也不错。</p>
+<h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#4691" title="2008-12-18 19:02:34">草儿</a>:</strong> 哈哈，现在的后台是不是比以前好用的多~ ibus默认应该不能在opera里使用吧，我当初可是修改了参数才能用的。</p>
+<p><strong><a href="#4699" title="2008-12-19 09:29:15">可可熊</a>:</strong> 2.7后台做得确实好啊，很从人性化的设计，很方便，赞一个。</p>
+<p><strong><a href="#4696" title="2008-12-18 23:43:18">luguo</a>:</strong> 看来我又该升级wordpress了～～哈哈～</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2008/12/17/add-schedule-sms-for-pyfetion/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="cocobear">
+      <meta itemprop="description" content="爱折腾的技术宅一枚">
+      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="可可熊D窝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2008/12/17/add-schedule-sms-for-pyfetion/" class="post-title-link" itemprop="url">给PyFetion添加了定时发短信的功能</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2008-12-17 17:35:16" itemprop="dateCreated datePublished" datetime="2008-12-17T17:35:16+08:00">2008-12-17</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/编程相关/" itemprop="url" rel="index"><span itemprop="name">编程相关</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2008/12/17/add-schedule-sms-for-pyfetion/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2008/12/17/add-schedule-sms-for-pyfetion/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数：</span>
+                
+                <span title="字数">1.1k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读 &asymp;</span>
+                
+                <span title="阅读">1 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>其实这个标题可以更“标题党”一些，因为俺发现了一个飞信的小秘密:-)，所以标题就可以来个“中国移动飞信惊天大秘密”，或者“中国移动飞信惊人漏洞”:-)</p>
+<p>扯完了，说下正经的，本来我还想着使用Linux下的crond与PyFetion来实现定时发送送短信的功能，结果飞信本身就有这样的功能（我原本以为飞信客户端的定时短信功能是客户端完成的），飞信可以向服务器提供定时短信的请求，在客户端里可以设置发送的时间，例如：2008-12-17 08:45，最小间隔为5分钟，只能精确到多少分。如果成功的话会返回一个id,相当于一个任务的编号，在客户端里随时可以查看目前所有的定时任务，也可以向服务器请求删除某个任务，这时就得用到id了。</p>
+<p>现在该说那个秘密了，因为客户端里对定时发送时间的控制是本地程序来实现的，所以在我的PyFetion里面就不会有这个限制了，就可以以2008-12-17 08:45:35.<strong>929</strong> 这样的时间格式来定时发短信，看到后面的毫秒了吗？我可以在一秒钟内每隔一毫秒添加一个定时短信的任务，也就是理论上可以以定时的方式给某一手机以1000条/s的速度发送短信，呵呵，不知道谁的手机比较强大一些，俺来试一试:-)</p>
+<h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#5625" title="2009-03-31 10:33:53">可可熊</a>:</strong> 呵呵，做过实验，大量发是不行的，不过倒是可以不受客户端定时短信只能是每隔5分钟设置一次的限制。</p>
+<p><strong><a href="#4692" title="2008-12-18 19:04:58">草儿</a>:</strong> 靠，你的手机不是挺好的么，拿自己的测试就行了。</p>
+<p><strong><a href="#4688" title="2008-12-18 08:58:24">非金属</a>:</strong> 你想搞撒么,要干点有意义的事嘛,哈哈~~</p>
+<p><strong><a href="#4690" title="2008-12-18 09:15:21">luguo</a>:</strong> 移动又傻了？</p>
+<p><strong><a href="#4712" title="2008-12-21 23:40:31">Amankwah</a>:</strong> 黑盒分析飞信的协议？</p>
+<p><strong><a href="#4730" title="2008-12-27 21:05:16">Greco</a>:</strong> 不可能给自己手机发送那么多短信的，移动网关有短时间屏蔽功能的。 你的pyfetion 可以发给我吗？我想看看</p>
+<p><strong><a href="#4731" title="2008-12-28 01:20:20">la.onger</a>:</strong> 您好，我最近正在尝试用python开发一个和飞信有关的应用。看到您的pyfetion，就您目前实现的功能来说，对我有极大的帮助，我已经给您发了邮件，希望您能给我一份，十分感谢</p>
+<p><strong><a href="#4721" title="2008-12-26 10:53:31">kongove</a>:</strong> 用飞信号，可以发送。</p>
+<p><strong><a href="#4720" title="2008-12-26 10:38:09">kongove</a>:</strong> 我从这里<a href="http://blog.solrex.cn/articles/diy-free-weather-forecast-sms.html" target="_blank" rel="noopener">http://blog.solrex.cn/articles/diy-free-weather-forecast-sms.html</a> 下载编译的sendmsg，可以登录，但发送不了消息～</p>
+<p><strong><a href="#5616" title="2009-03-30 00:02:17">abc</a>:</strong> 实验结果如何？ 这种功能，服务器一定会做校验的。</p>
+<p><strong><a href="#5617" title="2009-03-30 00:03:39">nickcheng</a>:</strong> 呵呵, 飞信服务器端的程序员可不是吃白饭的……</p>
+<p><strong><a href="#6590" title="2009-10-12 14:15:37">苍天的泪</a>:</strong> 参数传错了。给别人发用这个“tel: 13888888888”格式就可以发了</p>
+<p><strong><a href="#6589" title="2009-10-12 13:41:40">苍天的泪</a>:</strong> 你好，我用你的模块为什么只能给自己发啊？ 给其他人发无论是手机号还是飞信号都不行。</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
     
       
 
@@ -1030,439 +1446,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2008/12/10/begin-to-use-wiki/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="cocobear">
-      <meta itemprop="description" content="爱折腾的技术宅一枚">
-      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="可可熊D窝">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2008/12/10/begin-to-use-wiki/" class="post-title-link" itemprop="url">启用wiki</a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2008-12-10 12:21:18" itemprop="dateCreated datePublished" datetime="2008-12-10T12:21:18+08:00">2008-12-10</time>
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/互联网/" itemprop="url" rel="index"><span itemprop="name">互联网</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2008/12/10/begin-to-use-wiki/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2008/12/10/begin-to-use-wiki/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-symbolscount">
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数：</span>
-                
-                <span title="字数">295</span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读 &asymp;</span>
-                
-                <span title="阅读">1 分钟</span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Wiki是一种很好的知识管理方式，Wiki是相对于博客的一种很好的补充。维基百科用的是MediaWiki程序，我前段时间也试了试，感觉挺不错，可惜我需要隐藏一些页面，MediaWiki不太方便做到，于是换到了<a href="http://www.dokuwiki.org/dokuwiki" target="_blank" rel="noopener">DokuWiki</a>，和MediaWiki很类似的一个Wiki程序，也是基于PHP，只是不需要数据库，语法也与MediaWiki相当类似，试着用了用，感觉不错，挺合适个人使用的一套Wiki程序。<br><a href="http://cocobear.github.io/wiki/"><br><strong>访问我的Wiki</strong></a></p>
-<h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#4668" title="2008-12-12 12:37:04">草儿</a>:</strong> 太空了，我看你什么时候能添加点内容。</p>
-<p><strong><a href="#4664" title="2008-12-10 19:51:36">Amankwah</a>:</strong> Wiki～不错～</p>
-<p><strong><a href="#4679" title="2008-12-13 21:28:39">kongove</a>:</strong> 不在首页添加个链接？</p>
-<p><strong><a href="#4683" title="2008-12-15 09:59:59">可可熊</a>:</strong> 有时间再整整首页:-)</p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2008/12/04/want-a-new-linux-distribute/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="cocobear">
-      <meta itemprop="description" content="爱折腾的技术宅一枚">
-      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="可可熊D窝">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2008/12/04/want-a-new-linux-distribute/" class="post-title-link" itemprop="url">想换一个Linux发行版</a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2008-12-04 10:01:38" itemprop="dateCreated datePublished" datetime="2008-12-04T10:01:38+08:00">2008-12-04</time>
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2008/12/04/want-a-new-linux-distribute/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2008/12/04/want-a-new-linux-distribute/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-symbolscount">
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数：</span>
-                
-                <span title="字数">2.5k</span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读 &asymp;</span>
-                
-                <span title="阅读">2 分钟</span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>用了Fedora也有不少时间了，总的感觉还不错，但是我想要一个可以掌握在手里的系统，比较干净一些，不想有一些我从来用不到的东西，比如Java，我很讨厌系统里面有这些个东西，Fedora安装下来有不少没用的东西，即使使用很小的安装也得占大概2G的空间。</p>
-<p>我希望的这个发型版：</p>
-<ul>
-<li>比较干净（没用的东西尽量少，需要的时候才安装）</li>
-<li>定制性比较强，安装软件比较容易（但也不可以因为我想听个歌而让我折腾半天的时间去装个播放器，也不可以让我花大量时间去折腾显卡配置等系统问题，我需要专注做事情，而不是折腾系统，系统只是个工具）</li>
-<li>很方便使用X，我大部分时间还是需要X的；</li>
-<li>比较适合做开发，比如Python，SDL，OpenGL，wxPython……</li>
-<li>速度比较快，Fedora开机的时候会加载很多没用的东西，当然这些可以自己手动去掉，俺还是不喜欢；</li>
-<li>升级不能太频繁，Fedora从5开始用，现在都10了，才两年多的时间，太快了，虽然系统确实一直在进步，或者至少可以平滑的升级，Fedora在这方面做的不好；</li>
-<li>稳定性比较好，说实话用这么长时间Fedora，还是有不少时间莫名的死掉；<br>暂时就想到这么多，最近把大部份的Linux发型版介绍都看了看，目前觉得以下几个比较合适的我需要： </li>
-</ul>
-<p>ArchLinux<br>Slackware<br>Gentoo</p>
-<p>现在还拿不定主意，路过的给个选择，或者还有别的发型版更合适我？</p>
-<h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#4693" title="2008-12-18 21:44:18">vvoody</a>:</strong> 选好了吗？~~</p>
-<p><strong><a href="#4659" title="2008-12-07 10:27:00">c</a>:</strong> slackware不错,应该符合你口味</p>
-<p><strong><a href="#4660" title="2008-12-08 12:34:28">Amankwah</a>:</strong> 我是因为学校宿舍的网络问题，又换回Ubuntu的，毕竟Ubuntu在国内的源要好一点，我当时用Gentoo的时候，它用的应该是sync和rsync的源，貌似我见到的都在国外，原来在宿舍的网络情况你也知道，所以我就回Ubuntu了。 btw: 你的标题 s/发型版/发行版/</p>
-<p><strong><a href="#4642" title="2008-12-04 12:06:09">dream</a>:</strong> 高度关注此篇 :) 还有一个CRUX，肯定看看</p>
-<p><strong><a href="#4643" title="2008-12-04 12:54:55">Amankwah</a>:</strong> Gentoo吧，我弄过，很符合要求，就是第一次编译可能比较需要时间，但是eports包管理还是非常方便的。 我看到你文章的前半部分就想推荐Gentoo了</p>
-<p><strong><a href="#4644" title="2008-12-04 13:04:32">可可熊</a>:</strong> gentoo比如我要做SDL开发，会不会要花很长的时间来做准备呢？ 老大为什么又换Ubuntu不用gentoo了？</p>
-<p><strong><a href="#4645" title="2008-12-04 14:14:08">Solrex Yang</a>:</strong> Gentoo 的编译应该还不是很容易的 如果去掉升级不要太频繁，Ubuntu 还是比较适合的 至少我已经用将近三年了，无论开发还是别的，都应该能满足要求</p>
-<p><strong><a href="#4646" title="2008-12-04 15:19:25">草儿</a>:</strong> 嫌升级频繁你不升就行了嘛 你对比着看下得了，我就不发表意见了。前两天看见Fedora还有个精简版~</p>
-<p><strong><a href="#4647" title="2008-12-04 20:16:29">luguo</a>:</strong> 自己做一个发行版吧～～～～不是很难～～ 有兴趣可以找我，我有的是时间～～</p>
-<p><strong><a href="#4648" title="2008-12-04 23:04:27">小强</a>:</strong> 推荐debian，虽然debian本身很大（4张dvd）但是安装模式很多，可以从最小的开始一点点的增加，个人认为正好满足你的需要。最重要的，debian升级不频繁，这么多年了，好像才到5。</p>
-<p><strong><a href="#4651" title="2008-12-05 13:51:45">kongove</a>:</strong> 我刚虚拟机装了个Fedora10把x-window、kde等都删光还有2.1G，不开发库比较全。 许振文现在用Dabin，听说默认不装x-window、桌面应用程序，比较干净。虽然Dabin升级慢，但可以通过相对稳定的test版体验新功能。</p>
-<p><strong><a href="#4652" title="2008-12-05 16:29:19">可可熊</a>:</strong> 是Debian。</p>
-<p><strong><a href="#4747" title="2008-12-31 13:09:50">残剑饮血</a>:</strong> 本人打算至之死地而后生,LFS…..</p>
-<p><strong><a href="#4748" title="2008-12-31 13:44:40">可可熊</a>:</strong> LFS除非你打算全身心的投入到折腾你的系统上去，或者打算做自己的发行版。</p>
-<p><strong><a href="#4759" title="2008-12-31 20:48:07">taurusivy</a>:</strong> 推荐ubuntu，日常使用了2年，很方便，在我的破本上没有死过一次。我做仿真测试和跑算法都一点没问题。朋友推荐了arch但是一直没时间尝试。看来只能2009了:p</p>
-<p><strong><a href="#5540" title="2009-03-20 18:58:05">xiws</a>:</strong> archlinux吧</p>
-<p><strong><a href="#5072" title="2009-02-09 17:23:25">kermit.mei</a>:</strong> 推荐gNewSense，安装很小，由于它的目的是剔除Kernele中的非自由软件，所以你说的很多东西 都没有加进来，而且，源基于是ubuntu的，很方便，速度也很快。这样的话安装软件比较方便。 就是源是基于ubuntu8.04的，所以有些软件比较老，比如Pidgin中还有个中文输入的bug，不过 可以自己编译个别软件。 Gentoo也很好，就是配置比较麻烦，不知中国内地的源如何。</p>
-<p><strong><a href="#5458" title="2009-03-12 22:59:23">lendy</a>:</strong> 其实Archlinux，我觉得蛮合适的。很方便。对于开发来说 ，也是提供了许多比较好的工具。 比如，ABS</p>
-<p><strong><a href="#6165" title="2009-06-22 23:22:02">NONE_NONE</a>:</strong> gentoo, 定制性是很强的, 就是什么都要自己编译, 也不算麻烦,己个命令 slackware 这个很方便, 但问题是要装什么就是全手动了, 但是这个系统有种很干净的感觉 archLinux 这个我以及也之用过一次, 就是装到gnome就删了, 没什么能告诉你的</p>
-<p><strong><a href="#7219" title="2010-01-27 18:00:56">yarco</a>:</strong> sabayon: 一个基于gentoo的发行版. 意大利人搞的, 还不错</p>
-<p><strong><a href="#7185" title="2010-01-20 20:54:16">aegiryy</a>:</strong> debian</p>
-<p><strong><a href="#6824" title="2009-12-13 00:55:15">brooklyn</a>:</strong> 我正在同时用archlinux和gentoo。 我的要求跟楼主几乎一样，所以那几个发行版我都用过。 本来用slackware挺好的，但是slackware没有源，每次安装新的软件包都要自己下载源代码并且自己编译打包。基于它的zenwalk挺不错的。 archlinux启动速度很快，定制性比较高，稍微熟悉linux的人很容易上手。还有很好的AUR支持，流行的软件包都能下载到。不过缺点是升级频率比较高。没有版本的区别，但是长时间不升级，容易出毛病。 gentoo在我看来是最强的，但是需要一定的时间来熟悉和定制。定制好后用起来也是非常方便，基本上不需要升级。</p>
-<p><strong><a href="#7683" title="2010-03-24 14:01:15">分秒必争</a>:</strong> 一直在线Ubuntu。普通版，半年升级一次，长期支持的版本2年一次，应该比较符合你</p>
-<p><strong><a href="#10803" title="2011-08-20 20:42:34">ipeter</a>:</strong> ArchLinux和Debian都不错，Gentoo装的过程太折腾了。</p>
-<p><strong><a href="#11520" title="2011-11-01 20:50:22">自由的角马</a>:</strong> 你的列表中选择gentoo吧。 要稳定来debian</p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1512,7 +1495,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">358</span>
+                    <span class="site-state-item-count">360</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1918,7 +1901,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">182</span>
+                      
+                    
+                    <span class="site-state-item-count">183</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -2037,7 +2022,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2007 – <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; 2007 – <span itemprop="copyrightYear">2021</span>
   <span class="with-love" id="animate">
     <i class="fa fa-heart"></i>
   </span>
@@ -2049,7 +2034,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">519k</span>
+    <span title="站点总字数">522k</span>
   
 
   
@@ -2058,7 +2043,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">7:52</span>
+    <span title="站点阅读时长">7:55</span>
   
 </div>
 
@@ -2160,7 +2145,7 @@
 
 
   
-  <script src="//cdn.staticfile.org/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/jquery/2.1.3/jquery.min.js"></script>
 
   
   <script src="//cdn.staticfile.org/fastclick/1.0.6/fastclick.min.js"></script>

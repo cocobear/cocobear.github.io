@@ -310,7 +310,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">182</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">183</span></a>
 
   </li>
         
@@ -348,7 +348,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">358</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">360</span></a>
 
   </li>
 
@@ -413,6 +413,471 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2009/01/13/data-of-e680-native-db/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="cocobear">
+      <meta itemprop="description" content="爱折腾的技术宅一枚">
+      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="可可熊D窝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2009/01/13/data-of-e680-native-db/" class="post-title-link" itemprop="url">读取E680(i,g)的native.db文件</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2009-01-13 16:51:35" itemprop="dateCreated datePublished" datetime="2009-01-13T16:51:35+08:00">2009-01-13</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/" itemprop="url" rel="index"><span itemprop="name">Life</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2009/01/13/data-of-e680-native-db/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2009/01/13/data-of-e680-native-db/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数：</span>
+                
+                <span title="字数">2.4k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读 &asymp;</span>
+                
+                <span title="阅读">2 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>E680手机使用了<a href="http://www.oracle.com/technology/documentation/berkeley-db/db/index.html" target="_blank" rel="noopener">Berkeley DB</a>，关于这个数据库的一些信息可以看我给的链接。</p>
+<p>很早以前就有打算要写个Python读取native.db（不知道这个的请<a href="http://www.google.com" target="_blank" rel="noopener">G</a>之）中联系人，短信的程序，不过没能成功，这两天又接触到了<a href="http://docs.python.org/library/bsddb.html" target="_blank" rel="noopener">bsddb</a>，于是今天分析了下这个native.db，没想到原来挺简单的。Berkeley DB本来就是一个很简单的数据库，只是在E680中系统把多个数据库同时存放在了一个文件中native.db，所以不可以直接使用bsddb.btopen来直接打开这个文件。由于Berkeley DB中只是一种类似Python中dict的数据库（key=value）所以要存放手机联系人（有很多字段，如地址，电话…），就需要使用多个数据库，然后每个数据库使用索引来与其它数据库建立联系。按照一般的想法应该是多个数据库的key是作为索引，然后value分别存放各种信息，但E680中的native.db恰好相反。</p>
+<p>其实这样的结构也是很简单的，但是我在写代码的时候遇到一个问题，从某个数据库中读取一个key，然后使用bsddb中的get方法去取这个key对应的value，结果确是None，以前好像就是卡在了这一块，似乎与这个value的值有关系，这个value是二进制数据：“&lt; x03x00x00”，不理解为什么这里不直接用整数作为索引而用这么奇怪的数据，或者这里是某种编码？</p>
+<p>先不理这个，不管这个value是什么，使用sorted把每个数据库按照其value排序,下面是所有代码:</p>
+<p>读取E680联系人:</p>
+<pre><code>#!/usr/bin/env python
+# -*- coding=utf-8 -*-
+#Using GPL v2
+#Author: cocobear.cn@gmail.com
+
+&quot;&quot;&quot;
+获取数据库名:
+db = bsddb.db.DB()
+db.open(&apos;native.db&apos;,bsddb.db.DB_UNKNOWN,bsddb.db.DB_RDONLY)
+db.keys()
+&quot;&quot;&quot;
+
+import bsddb
+
+db_file = &apos;native.db&apos;    
+databases = [(&apos;姓名&apos;,&apos;780_contact_table.first name&apos;),(&apos;手机1&apos;,&apos;780_contact_table.mobile1&apos;),(&apos;手机2&apos;,&apos;780_contact_table.mobile2&apos;),(&apos;家庭1&apos;,&apos;780_contact_table.home1&apos;),(&apos;家庭2&apos;,&apos;780_contact_table.home2&apos;),(&apos;工作1&apos;,&apos;780_contact_table.work1&apos;),(&apos;工作1&apos;,&apos;780_contact_table.work1&apos;),]
+databases = [(&apos;姓名&apos;,&apos;780_contact_table.first name&apos;),(&apos;手机1&apos;,&apos;780_contact_table.mobile1&apos;)]
+out = []
+
+for database in databases:
+    #进行单文件多数据库操作 需要每次新建一个环境
+    #因此下面这行在for循环里
+    db =bsddb.db.DB()
+    db.open(db_file,database[1],bsddb.db.DB_UNKNOWN,bsddb.db.DB_RDONLY)
+    #每次读一个数据库
+    #原本数据库中的value是系统的id key是具体有意义的内容
+    #下面这行把db.items()得到的list进行反转 为以后有序输出
+    out.append(sorted(db.items(),key=lambda (k,v): (v,k)))
+    db.close()
+
+#格式化输出
+for i in databases:
+    print i[0]+&quot;:&quot;,
+print
+
+for i in range(len(out[0])):
+    for j in range(len(out)):
+        #如果输出内容属于电话号码需要反转
+        #根据databases中各位置含义来来判断
+        if j in [1,2,3,4,5,6]:
+            print out[j][i][0].decode(&apos;utf16&apos;)[::-1],
+        else:
+            #非ascii字符使用utf16进行解码
+            print out[j][i][0].decode(&apos;utf16&apos;),
+    print
+</code></pre><p>不到50行就搞定了:-)</p>
+<h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#4855" title="2009-01-14 14:23:14">草儿</a>:</strong> 楼上在那个那个什么啊，那个了半天还不知道是啥呢…… coco，啥时候咱换HTC的吧~</p>
+<p><strong><a href="#4857" title="2009-01-15 00:44:53">1069</a>:</strong> 我开始用HTC的了，wm的用起来顺手，呵呵。</p>
+<p><strong><a href="#4849" title="2009-01-13 23:08:24">Amankwah</a>:</strong> 我还是不知道～发现智能手机，目前还是Symbian最哪个啥，接下来是WM，Linux还不够哪个啥啊～还需要努力啊～</p>
+<p><strong><a href="#4848" title="2009-01-13 18:15:34">wind</a>:</strong> 我貌似还没用写过一个和我的手机有关的手机程序，呵呵</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2008/12/31/review-the-year-of-2008/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="cocobear">
+      <meta itemprop="description" content="爱折腾的技术宅一枚">
+      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="可可熊D窝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2008/12/31/review-the-year-of-2008/" class="post-title-link" itemprop="url">2008年回顾</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2008-12-31 15:57:14" itemprop="dateCreated datePublished" datetime="2008-12-31T15:57:14+08:00">2008-12-31</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/" itemprop="url" rel="index"><span itemprop="name">Life</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2008/12/31/review-the-year-of-2008/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2008/12/31/review-the-year-of-2008/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数：</span>
+                
+                <span title="字数">1.1k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读 &asymp;</span>
+                
+                <span title="阅读">1 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>还清晰的记得去年写<a href="http://cocobear.github.io/2007/12/31/review-of-the-year-2007/">这篇文章</a>的情景，然而又一篇同样的总结又要被敲出来了。</p>
+<p>不过没什么好说的了，今年净是些不愉快的事，所以就都让它过去吧，不提了。不过至少我现在可以自己养活自己不用和家里要钱了，算是一点进步，鼓励一下。</p>
+<p>俺八六年出生，已经不小了（去年也是这句），虽然今年遇到的事比较多，但还是挺了下来，最难的时刻（也许还有更难的时候）也过去了，以后会越来越好的，今天看到一篇文章说”信仰使人更有自制力“，挺有道理的，不过俺这个年龄才开始培养这个是不有点难了:-)   还有也不知道该信佛呢还是信上帝:-)</p>
+<p>昨天冯小刚在他女儿18岁成人礼上说了这些一句话：“学着面对一切真实，接受一些不完美，承担一些责任，自己做一些决定，孩子们，十八岁的你们，是时候了。”  可能我成熟的比较慢吧，不过总要经历过一些事才会懂得。</p>
+<p>上班这几个月做的东西比较杂，下班后前段时间连电脑也没，让俺无聊了三个多月，买了电脑后不能上网也很郁闷，想折腾东西没网实在很痛苦的，而且屋子里没有暖气只能躺在被窝里，所以电脑大部分时间是看看电影。这种状态很不好啊。</p>
+<p>08年有很多事都没有想到，也没有过心理准备，所以就这样混混沌沌的过了下来，不管怎么样得失之间方显人生色彩。</p>
+<p>爱情，越来越不懂了，不知道为什么，不管是不是欺骗，就当一切只是一场梦而已。俺现在单身，呼唤一个像《再说一次我爱你》中蔡卓妍扮演的那样一个女孩，俺喜欢那样的，性格以及外貌。</p>
+<p>工作，刚开始能养活自己就行了，是否有利于发展，是否满意，是否合适都不重要，过了明年7月再说吧。就目前来说还行吧，至少不用打卡，不用加班，不用害怕迟到。</p>
+<p>生活，自己会做饭了，周末的时候自己弄个菠菜烩豆腐，挺好吃的。</p>
+<h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#4775" title="2009-01-03 00:09:32">Amankwah</a>:</strong> 一切都会好起来的～</p>
+<p><strong><a href="#4778" title="2009-01-03 23:40:45">蓝星</a>:</strong> 从python-cn一转转到老兄的窝窝里来了，不知老兄在哪里？如果在广州的话，咱们可以多交流交流。</p>
+<p><strong><a href="#4787" title="2009-01-05 23:53:34">wind</a>:</strong> 哦，忘了说，这个主题的上下一篇的连接放的太下面了！！我找半天才找到</p>
+<p><strong><a href="#4786" title="2009-01-05 23:50:04">wind</a>:</strong> 哎，都总结，我都不知道总结什么了</p>
+<p><strong><a href="#4783" title="2009-01-05 12:07:18">可可熊</a>:</strong> 给俺发邮件了吧？呵呵，俺在西安。</p>
+<p><strong><a href="#4773" title="2009-01-02 22:42:13">kongove</a>:</strong> 新年快乐！ 祝你工作顺利，事事顺心吧！</p>
+<p><strong><a href="#4755" title="2008-12-31 16:38:42">Wendy</a>:</strong> 坐个沙发先。 祝09年好运！ 呵呵。</p>
+<p><strong><a href="#4760" title="2008-12-31 21:09:02">dream</a>:</strong> 加油!!!</p>
+<p><strong><a href="#4768" title="2009-01-01 17:02:39">草儿</a>:</strong> 你真努力，趁着要放假了赶出来三篇文章。 要不你来我这里吧，我有个3M的ADSL，但是没有电脑，你来的话免费给你用。 PS：09年要找个媳妇儿。</p>
+<p><strong><a href="#4798" title="2009-01-09 21:56:03">crazyfranc</a>:</strong> 居然都有回顾……</p>
+<p><strong><a href="#4801" title="2009-01-10 18:47:54">hongfu</a>:</strong> 工作半年了，都有了一些感慨，大家一起勉励，工作中有很多困难，大家都是那样，我已经有超过2次给自己说，再坚持一下吧，就会过去的，终于也就过去了，大家共勉！</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
     
       
 
@@ -1114,422 +1579,6 @@ s = &quot;2008-12-31 02:39:00.&quot;
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2008/12/18/complie-sdcv-on-amd64/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="cocobear">
-      <meta itemprop="description" content="爱折腾的技术宅一枚">
-      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="可可熊D窝">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2008/12/18/complie-sdcv-on-amd64/" class="post-title-link" itemprop="url">sdcv在amd64上编译问题</a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2008-12-18 13:13:27" itemprop="dateCreated datePublished" datetime="2008-12-18T13:13:27+08:00">2008-12-18</time>
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/编程相关/" itemprop="url" rel="index"><span itemprop="name">编程相关</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2008/12/18/complie-sdcv-on-amd64/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2008/12/18/complie-sdcv-on-amd64/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-symbolscount">
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数：</span>
-                
-                <span title="字数">711</span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读 &asymp;</span>
-                
-                <span title="阅读">1 分钟</span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>sdcv是stardict的命令行替代，打算用stardict的字典，所以看看如何从字典中取词，sdcv比较小巧，拿来看挺合适，不过在我机子上编译出现了点问题：</p>
-<pre><code>&gt; lib.cpp:516: error: no matching function for call to ‘min(long unsigned int, guint32&amp;)’
-</code></pre><p>解决办法：</p>
-<pre><code>-fread(wordentry_buf, std::min(sizeof(wordentry_buf), page_size), 1, idxfile); &gt; 
-    +fread(wordentry_buf,std::min(sizeof(wordentry_buf),(size_t)page_size),1,idxfile);
-</code></pre><p>——————————————–split—————————————<br>听说WordPress2.7在后台的UI上变化不小，今天试着升级上来，发现果然是完全改变了以前的UI，大量使用了JS，感觉还不错:-)</p>
-<p>好久没有Opera了，因为又出现了无法输入的现象，只好去用了Firefox一段时间，今天换了下Ibus输入法，发现可以在Opera里面使用，赶快换回Opera，firefox的速度还是与Opera无法相比的。对了Ibus这个输入法也不错。</p>
-<h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#4691" title="2008-12-18 19:02:34">草儿</a>:</strong> 哈哈，现在的后台是不是比以前好用的多~ ibus默认应该不能在opera里使用吧，我当初可是修改了参数才能用的。</p>
-<p><strong><a href="#4699" title="2008-12-19 09:29:15">可可熊</a>:</strong> 2.7后台做得确实好啊，很从人性化的设计，很方便，赞一个。</p>
-<p><strong><a href="#4696" title="2008-12-18 23:43:18">luguo</a>:</strong> 看来我又该升级wordpress了～～哈哈～</p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2008/12/17/add-schedule-sms-for-pyfetion/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="cocobear">
-      <meta itemprop="description" content="爱折腾的技术宅一枚">
-      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="可可熊D窝">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2008/12/17/add-schedule-sms-for-pyfetion/" class="post-title-link" itemprop="url">给PyFetion添加了定时发短信的功能</a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2008-12-17 17:35:16" itemprop="dateCreated datePublished" datetime="2008-12-17T17:35:16+08:00">2008-12-17</time>
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/编程相关/" itemprop="url" rel="index"><span itemprop="name">编程相关</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2008/12/17/add-schedule-sms-for-pyfetion/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2008/12/17/add-schedule-sms-for-pyfetion/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-symbolscount">
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数：</span>
-                
-                <span title="字数">1.1k</span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读 &asymp;</span>
-                
-                <span title="阅读">1 分钟</span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>其实这个标题可以更“标题党”一些，因为俺发现了一个飞信的小秘密:-)，所以标题就可以来个“中国移动飞信惊天大秘密”，或者“中国移动飞信惊人漏洞”:-)</p>
-<p>扯完了，说下正经的，本来我还想着使用Linux下的crond与PyFetion来实现定时发送送短信的功能，结果飞信本身就有这样的功能（我原本以为飞信客户端的定时短信功能是客户端完成的），飞信可以向服务器提供定时短信的请求，在客户端里可以设置发送的时间，例如：2008-12-17 08:45，最小间隔为5分钟，只能精确到多少分。如果成功的话会返回一个id,相当于一个任务的编号，在客户端里随时可以查看目前所有的定时任务，也可以向服务器请求删除某个任务，这时就得用到id了。</p>
-<p>现在该说那个秘密了，因为客户端里对定时发送时间的控制是本地程序来实现的，所以在我的PyFetion里面就不会有这个限制了，就可以以2008-12-17 08:45:35.<strong>929</strong> 这样的时间格式来定时发短信，看到后面的毫秒了吗？我可以在一秒钟内每隔一毫秒添加一个定时短信的任务，也就是理论上可以以定时的方式给某一手机以1000条/s的速度发送短信，呵呵，不知道谁的手机比较强大一些，俺来试一试:-)</p>
-<h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#5625" title="2009-03-31 10:33:53">可可熊</a>:</strong> 呵呵，做过实验，大量发是不行的，不过倒是可以不受客户端定时短信只能是每隔5分钟设置一次的限制。</p>
-<p><strong><a href="#4692" title="2008-12-18 19:04:58">草儿</a>:</strong> 靠，你的手机不是挺好的么，拿自己的测试就行了。</p>
-<p><strong><a href="#4688" title="2008-12-18 08:58:24">非金属</a>:</strong> 你想搞撒么,要干点有意义的事嘛,哈哈~~</p>
-<p><strong><a href="#4690" title="2008-12-18 09:15:21">luguo</a>:</strong> 移动又傻了？</p>
-<p><strong><a href="#4712" title="2008-12-21 23:40:31">Amankwah</a>:</strong> 黑盒分析飞信的协议？</p>
-<p><strong><a href="#4730" title="2008-12-27 21:05:16">Greco</a>:</strong> 不可能给自己手机发送那么多短信的，移动网关有短时间屏蔽功能的。 你的pyfetion 可以发给我吗？我想看看</p>
-<p><strong><a href="#4731" title="2008-12-28 01:20:20">la.onger</a>:</strong> 您好，我最近正在尝试用python开发一个和飞信有关的应用。看到您的pyfetion，就您目前实现的功能来说，对我有极大的帮助，我已经给您发了邮件，希望您能给我一份，十分感谢</p>
-<p><strong><a href="#4721" title="2008-12-26 10:53:31">kongove</a>:</strong> 用飞信号，可以发送。</p>
-<p><strong><a href="#4720" title="2008-12-26 10:38:09">kongove</a>:</strong> 我从这里<a href="http://blog.solrex.cn/articles/diy-free-weather-forecast-sms.html" target="_blank" rel="noopener">http://blog.solrex.cn/articles/diy-free-weather-forecast-sms.html</a> 下载编译的sendmsg，可以登录，但发送不了消息～</p>
-<p><strong><a href="#5616" title="2009-03-30 00:02:17">abc</a>:</strong> 实验结果如何？ 这种功能，服务器一定会做校验的。</p>
-<p><strong><a href="#5617" title="2009-03-30 00:03:39">nickcheng</a>:</strong> 呵呵, 飞信服务器端的程序员可不是吃白饭的……</p>
-<p><strong><a href="#6590" title="2009-10-12 14:15:37">苍天的泪</a>:</strong> 参数传错了。给别人发用这个“tel: 13888888888”格式就可以发了</p>
-<p><strong><a href="#6589" title="2009-10-12 13:41:40">苍天的泪</a>:</strong> 你好，我用你的模块为什么只能给自己发啊？ 给其他人发无论是手机号还是飞信号都不行。</p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1579,7 +1628,7 @@ s = &quot;2008-12-31 02:39:00.&quot;
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">358</span>
+                    <span class="site-state-item-count">360</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1985,7 +2034,9 @@ s = &quot;2008-12-31 02:39:00.&quot;
                     
                       
                     
-                    <span class="site-state-item-count">182</span>
+                      
+                    
+                    <span class="site-state-item-count">183</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -2104,7 +2155,7 @@ s = &quot;2008-12-31 02:39:00.&quot;
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2007 – <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; 2007 – <span itemprop="copyrightYear">2021</span>
   <span class="with-love" id="animate">
     <i class="fa fa-heart"></i>
   </span>
@@ -2116,7 +2167,7 @@ s = &quot;2008-12-31 02:39:00.&quot;
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">519k</span>
+    <span title="站点总字数">522k</span>
   
 
   
@@ -2125,7 +2176,7 @@ s = &quot;2008-12-31 02:39:00.&quot;
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">7:52</span>
+    <span title="站点阅读时长">7:55</span>
   
 </div>
 
@@ -2227,7 +2278,7 @@ s = &quot;2008-12-31 02:39:00.&quot;
 
 
   
-  <script src="//cdn.staticfile.org/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/jquery/2.1.3/jquery.min.js"></script>
 
   
   <script src="//cdn.staticfile.org/fastclick/1.0.6/fastclick.min.js"></script>

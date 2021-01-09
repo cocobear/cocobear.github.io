@@ -310,7 +310,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">182</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">183</span></a>
 
   </li>
         
@@ -348,7 +348,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">358</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">360</span></a>
 
   </li>
 
@@ -413,6 +413,409 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2008/05/19/vim-sdcv/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="cocobear">
+      <meta itemprop="description" content="爱折腾的技术宅一枚">
+      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="可可熊D窝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2008/05/19/vim-sdcv/" class="post-title-link" itemprop="url">vim中使用sdcv(stardict CLI版)</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2008-05-19 15:31:36" itemprop="dateCreated datePublished" datetime="2008-05-19T15:31:36+08:00">2008-05-19</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2008/05/19/vim-sdcv/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2008/05/19/vim-sdcv/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数：</span>
+                
+                <span title="字数">887</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读 &asymp;</span>
+                
+                <span title="阅读">1 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><a href="http://my.opera.com/yunt/blog/show.dml/304842" target="_blank" rel="noopener">这里</a>介绍的vim中使用辞典查词的方法不错，利用了vim的一些特性，这样平时使用vim的时候就可以手不离键盘要完成查词了。</p>
+<p>sdvc是命令行版的Stardict,可以在这里<a href="http://sourceforge.net/projects/sdcv" target="_blank" rel="noopener">下载</a>，目前最新的版本是0.4.2，不过在ADM64平台下编译会出错，我在网上找到了一个<a href="http://patches.ubuntu.com/by-release/debian/s/sdcv/sdcv_0.4.2-2.2.patch" target="_blank" rel="noopener">补丁</a>，不过这个补丁是针对debain用户的，有些用不上，那些找不到文件的patch就可以直接忽略掉。</p>
+<p>如果在gvim中使用则在~/.gvimrc中添加：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">function  Mybln() </span><br><span class="line">     let  expl=system(&apos;sdcv  -n  &apos;  . </span><br><span class="line">           \  v:beval_text  . </span><br><span class="line">           \  &apos;|fmt  -cstw  40&apos;) </span><br><span class="line">     return  expl </span><br><span class="line">   endfunction </span><br><span class="line"></span><br><span class="line">   set  bexpr=Mybln() </span><br><span class="line">   set  beval</span><br></pre></td></tr></table></figure></p>
+<p>如果直接在vim中使用，则在~/.vimrc中添加：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">function!  Mydict() </span><br><span class="line">   let  expl=system(&apos;sdcv  -n  &apos;  . </span><br><span class="line">         \   expand(&quot;&lt;cword&gt;&quot;)) </span><br><span class="line">   windo  if </span><br><span class="line">         \  expand(&quot;%&quot;)==&quot;diCt-tmp&quot;  | </span><br><span class="line">         \  q!|endif </span><br><span class="line">   25vsp  diCt-tmp </span><br><span class="line">   setlocal  buftype=nofile  bufhidden=hide  noswapfile </span><br><span class="line">   1s/^/\=expl/ </span><br><span class="line">   1 </span><br><span class="line">endfunction </span><br><span class="line">nmap  F  :call  Mydict()&lt;cr&gt;</span><br></pre></td></tr></table></figure></p>
+<p>gvim中鼠标移动到单词上就可以得到翻译，在vim中光标移动到单词上，使用shift＋f可以新分割出来一个窗口显示单词的翻译。</p>
+<p>原文请使用梯子访问。</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2008/05/19/fedora9-vmware/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="cocobear">
+      <meta itemprop="description" content="爱折腾的技术宅一枚">
+      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="可可熊D窝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2008/05/19/fedora9-vmware/" class="post-title-link" itemprop="url">Fedora9安装vmware</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2008-05-19 09:32:25" itemprop="dateCreated datePublished" datetime="2008-05-19T09:32:25+08:00">2008-05-19</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2008/05/19/fedora9-vmware/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2008/05/19/fedora9-vmware/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数：</span>
+                
+                <span title="字数">776</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读 &asymp;</span>
+                
+                <span title="阅读">1 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>刚开始公司的机子上没办法装Fedora8，只好用vmware在XP下装了个Fedora8，现在F9出来了，在本机装了一个，以后就可以不用进XP了，不过F9似乎有些不太稳定，听说vmware也有linux版的,找了一个新6.0.3.build.80004版本的vmware，没想到安装时又出问题了，似乎又是因为内核版本过高的原因。</p>
+<p><a href="http://bbs.archlinux.org/viewtopic.php?id=47704" target="_blank" rel="noopener">这里</a>有一个解决方案，有人根据最新的内核写的vmware的补丁。</p>
+<p>首先下载：<br><a href="http://blender6xx.ic.cz/pub/vmware/vmblock.patch" target="_blank" rel="noopener">http://blender6xx.ic.cz/pub/vmware/vmblock.patch</a><br><a href="http://blender6xx.ic.cz/pub/vmware/vmmon.patch" target="_blank" rel="noopener">http://blender6xx.ic.cz/pub/vmware/vmmon.patch</a><br><a href="http://blender6xx.ic.cz/pub/vmware/vmnet.patch" target="_blank" rel="noopener">http://blender6xx.ic.cz/pub/vmware/vmnet.patch</a><br>这几个补丁，然后安装使用vmware-install.pl 开始安装vmware，当编译出错时把这几个补丁打上去，需要打补丁的文件在：/usr/lib/vmware/modules/source/ ，有几个tar的包，先解压了，然后进入解压后的目录, 用<br>patch -Np1 &lt; modulename.patch 打好补丁，然后再把打好补丁的包再打包一次。</p>
+<p>完成后使用 vmware-config.pl 继续安装，中间可能会缺少一些库，如:<br>libX11.so.6<br>libXtst.so.6<br>libXext.so.6<br>libXrender.so.1<br>libz.so.1<br>都可以在rpmfind.net里找到。</p>
+<p>接下来一切都会顺利进行。把windows下的Fedora8拷过来直接就可以运行了，呵呵。</p>
+<h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#3207" title="2008-05-19 11:56:06">Amankwah</a>:</strong> 可以考虑用VBOX，听说挺不错的？</p>
+<p><strong><a href="#3262" title="2008-05-24 10:14:26">kongove</a>:</strong> 相当不错，听梅延涛分析什么无缝接入、内存释放、共享文件…… 我感觉用着确实很方便。</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
     
       
 
@@ -1039,487 +1442,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2008/05/10/python-and-other/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="cocobear">
-      <meta itemprop="description" content="爱折腾的技术宅一枚">
-      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="可可熊D窝">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2008/05/10/python-and-other/" class="post-title-link" itemprop="url">前几天写了写Python</a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2008-05-10 10:23:10" itemprop="dateCreated datePublished" datetime="2008-05-10T10:23:10+08:00">2008-05-10</time>
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/编程相关/" itemprop="url" rel="index"><span itemprop="name">编程相关</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2008/05/10/python-and-other/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2008/05/10/python-and-other/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-symbolscount">
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数：</span>
-                
-                <span title="字数">2.9k</span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读 &asymp;</span>
-                
-                <span title="阅读">3 分钟</span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <pre><code>#!/usr/bin/env python
-
-import sys
-import os
-import re
-
-TEST = &quot;test&quot;
-def find_dir(original_dir,l):
-        while True:
-                for f in os.listdir(original_dir):
-                        #print f,
-                        f = original_dir+&quot;/&quot;+f
-                        if os.path.isdir(f):
-                                l.append(f)
-                                find_dir(f,l)
-                return 
-
-def file_copy(original_dir,num):
-        global TEST
-        while num:
-                test_dir = TEST+str(num)
-                for f in os.listdir(original_dir):
-                        #print f,
-                        f = original_dir+&quot;/&quot;+f
-                        if os.path.isfile(f):
-                                print &quot;cp&quot;,f,re.sub(original_dir,test_dir,f)
-                l = []
-                find_dir(original_dir,l)
-                for i in l:
-                        for j in os.listdir(i):
-                                j = i+&quot;/&quot;+j
-                                if os.path.isfile(j):
-                                        print &quot;cp&quot;,j,re.sub(original_dir,test_dir,j)
-                num-=1
-                print 
-
-def dir_copy(original_dir,num):
-        global TEST
-        while num:
-                print &quot;mkdir&quot;,
-                test_dir = TEST+str(num)
-                l = []
-                find_dir(original_dir,l)
-                for i in l:
-                        print test_dir,re.sub(original_dir,test_dir,i),
-
-                num-=1
-                print
-        return
-
-def main(argv=None):
-        if argv is None:
-                argv = sys.argv
-        if len(sys.argv) != 2:
-                return(usage())
-        num = 5
-        print &quot;echo \&quot;Starting create directories\&quot;&quot;
-        print &quot;date +%T.%N&quot;
-        dir_copy(argv[1],num)
-        print &quot;echo \&quot;Starting copy files\&quot;&quot;
-        print &quot;date +%T.%N&quot;
-        file_copy(argv[1],num)
-        print &quot;echo \&quot;Recursive directory stats\&quot;&quot;
-        print &quot;find . -print -exec ls -l {} \\;&quot;
-        print &quot;du -s *&quot;
-        print &quot;date +%T.%N&quot;
-
-        print &quot;echo \&quot;Scanning each file\&quot;&quot;
-        print &quot;find . -exec grep kangaroo {} \\;&quot;
-        print &quot;find . -exec wc {} \\;&quot;
-        print &quot;date +%T.%N&quot;
-
-def usage():
-        print &quot;\n%s [Your File name]\n&quot; % sys.argv[0]
-        return 1
-
-if __name__ == &quot;__main__&quot;:
-        sys.exit(main())
-</code></pre><p>帮小林子写的测试文件系统性能的，递归目标目录，进行文件复制操作，这个脚本只是为了生成相应的shell脚本。</p>
-<p>还有一个公司用的脚本，就不贴了。<br>前天在公司写程序，用C语言，发现手生的很，觉得要是用python写的话几行就搞定的，C得写半天，郁闷啊，俺被python给害了……</p>
-<p>昨天在公司装了个ubuntu8.04，二十分钟就装好了，等F9出来后再装个F9，^_^</p>
-<p>BTW：scim-python这个输入法不错，无论你用拼音还是五笔都是一个不错的选择。</p>
-<h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#3159" title="2008-05-10 20:06:08">crazyfranc</a>:</strong> 你们公司是搞python的？</p>
-<p><strong><a href="#3160" title="2008-05-10 21:26:20">luguo</a>:</strong> 咋用python去生成bash脚本而不是去直接写呢？</p>
-<p><strong><a href="#3173" title="2008-05-14 18:37:01">cocobear</a>:</strong> python写顺手了，感觉shell在许多地方比较“怪异”，呵。</p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2008/05/07/bother/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="cocobear">
-      <meta itemprop="description" content="爱折腾的技术宅一枚">
-      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="可可熊D窝">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2008/05/07/bother/" class="post-title-link" itemprop="url">烦……</a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2008-05-07 22:36:13" itemprop="dateCreated datePublished" datetime="2008-05-07T22:36:13+08:00">2008-05-07</time>
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/" itemprop="url" rel="index"><span itemprop="name">Life</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2008/05/07/bother/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2008/05/07/bother/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-symbolscount">
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数：</span>
-                
-                <span title="字数">261</span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读 &asymp;</span>
-                
-                <span title="阅读">1 分钟</span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>本来好好的心情，又被补考的事给弄得烦起来了，看书是一点心思也没有，怎么办，谁能教教我，天气预报明天会很冷，谁来预报一下我能毕业不，为什么中国的大学只能教一群傻B出来</p>
-<p>烦……</p>
-<h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#3155" title="2008-05-08 11:54:04">cocobear</a>:</strong> 复习……</p>
-<p><strong><a href="#3156" title="2008-05-08 12:26:43">luguo</a>:</strong> 别烦！！ 在钟国，你过不过完全不是能力的问题，没有能力的只要遵循了所谓的规则一样过！！有能力的不遵循规则肯定过不了！！ 这就是体制化！！！！</p>
-<p><strong><a href="#3157" title="2008-05-08 13:18:55">crazyfranc</a>:</strong> YOU\\ YOU</p>
-<p><strong><a href="#3152" title="2008-05-07 22:47:27">Amankwah</a>:</strong> 不用烦~这样不是连你自己都骂了~什么课程，复习时 要帮忙的话，尽管跟兄弟们说啊~</p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1569,7 +1491,7 @@ if __name__ == &quot;__main__&quot;:
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">358</span>
+                    <span class="site-state-item-count">360</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1975,7 +1897,9 @@ if __name__ == &quot;__main__&quot;:
                     
                       
                     
-                    <span class="site-state-item-count">182</span>
+                      
+                    
+                    <span class="site-state-item-count">183</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -2094,7 +2018,7 @@ if __name__ == &quot;__main__&quot;:
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2007 – <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; 2007 – <span itemprop="copyrightYear">2021</span>
   <span class="with-love" id="animate">
     <i class="fa fa-heart"></i>
   </span>
@@ -2106,7 +2030,7 @@ if __name__ == &quot;__main__&quot;:
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">519k</span>
+    <span title="站点总字数">522k</span>
   
 
   
@@ -2115,7 +2039,7 @@ if __name__ == &quot;__main__&quot;:
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">7:52</span>
+    <span title="站点阅读时长">7:55</span>
   
 </div>
 
@@ -2217,7 +2141,7 @@ if __name__ == &quot;__main__&quot;:
 
 
   
-  <script src="//cdn.staticfile.org/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/jquery/2.1.3/jquery.min.js"></script>
 
   
   <script src="//cdn.staticfile.org/fastclick/1.0.6/fastclick.min.js"></script>

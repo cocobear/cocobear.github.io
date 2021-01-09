@@ -310,7 +310,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">182</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">183</span></a>
 
   </li>
         
@@ -348,7 +348,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">358</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">360</span></a>
 
   </li>
 
@@ -413,6 +413,421 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2007/09/23/python-learning-2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="cocobear">
+      <meta itemprop="description" content="爱折腾的技术宅一枚">
+      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="可可熊D窝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2007/09/23/python-learning-2/" class="post-title-link" itemprop="url">Python学习笔记二</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2007-09-23 22:44:43" itemprop="dateCreated datePublished" datetime="2007-09-23T22:44:43+08:00">2007-09-23</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/编程相关/" itemprop="url" rel="index"><span itemprop="name">编程相关</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2007/09/23/python-learning-2/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2007/09/23/python-learning-2/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数：</span>
+                
+                <span title="字数">800</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读 &asymp;</span>
+                
+                <span title="阅读">1 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><strong>关于命名的习惯</strong>：</p>
+<p>以“<em>”开头的变量不会被import导入。<br>以“<strong>”开头，且以“</strong>”结尾的变量为系统定义的变量，对解释器来说具有特殊的含义。<br>以“__”开头的变量只能在所定义的类当中使用。<br>“</em>”在交互模式时保存了最后一个表达式的值。</p>
+<p><strong>使用连接要比使用extend方法慢</strong><br>    &gt;&gt;&gt; L = L + [5, 6]         # Concatenate: slower<br>    &gt;&gt;&gt; L<br>    [1, 2, 3, 4, 5, 6]<br>    &gt;&gt;&gt; L.extend([7, 8])       # Faster, but in-place<br>    &gt;&gt;&gt; L<br>    [1, 2, 3, 4, 5, 6, 7, 8]</p>
+<p><strong>引用与拷贝：</strong><br>    &gt;&gt;&gt; L = [1, 2, 3]<br>    &gt;&gt;&gt; M = [‘X’, L, ‘Y’]  #这是对L的引用</p>
+<pre><code>&gt;&gt;&gt; L = [1, 2, 3]
+&gt;&gt;&gt; M = [&apos;X&apos;, L[:], &apos;Y&apos;]  #这是对L的一个拷贝
+</code></pre><p><strong>对变量使用乘号</strong><br>    &gt;&gt;&gt; L = [4, 5, 6]<br>    &gt;&gt;&gt; X = L <em> 4           # Like [4, 5, 6] + [4, 5, 6] + …<br>    &gt;&gt;&gt; Y = [L] </em> 4         # [L] + [L] + … = [L, L,…]</p>
+<p>如果此时使用下面的语句则会影响Y，而对X则不会产生影响。<br>    &gt;&gt;&gt; L[1] = 0</p>
+<h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#1790" title="2007-09-24 18:55:04">Amankwah</a>:</strong> 嗯，python就是把一些不成文的规矩都成文了～</p>
+<p><strong><a href="#1791" title="2007-09-24 19:03:46">luguo</a>:</strong> 楼上，什么”不成文的规定”？</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2007/09/22/change-phone-nokia-1116/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="cocobear">
+      <meta itemprop="description" content="爱折腾的技术宅一枚">
+      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="可可熊D窝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2007/09/22/change-phone-nokia-1116/" class="post-title-link" itemprop="url">换手机了［诺基亚1116］</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2007-09-22 18:15:35" itemprop="dateCreated datePublished" datetime="2007-09-22T18:15:35+08:00">2007-09-22</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/" itemprop="url" rel="index"><span itemprop="name">Life</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2007/09/22/change-phone-nokia-1116/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2007/09/22/change-phone-nokia-1116/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数：</span>
+                
+                <span title="字数">649</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读 &asymp;</span>
+                
+                <span title="阅读">1 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>以前那个索爱J200c实在是用不了了，打电话别人基本都听不到我在说什么，按键也不灵了，电池只能用一天左右……</p>
+<p>前两天在网上搜了一下低端手机的评测，感觉诺基亚的1116评价挺好的，价格便宜、待机时间长、通话质量好，更重要的是几乎没有什么缺点，点评的人都对这款手机很高的评价，应该是低端机里一款不错的选择。</p>
+<p>正好今天一同学找俺去陪她买电脑，于是一大早便去赛格电脑城了。给她配的机子才3700都用着双核、液晶屏了，要是两年前……</p>
+<p>本来在网上查的是赛博有那款1116价格也不错，配电脑时听那里的伙计说赛格负一层也有手机卖场，就趁着他们装机时下去买手机去了。那里的手机还挺便宜的，1116只花了280块钱，顺便又买了块电池（25RMB ｜800mA），挺划算的吧。</p>
+<p><img src="https://asset-1258390188.cos.ap-shanghai.myqcloud.com09/nokia1116.bmp" alt="俺的新手机](https://asset-1258390188.cos.ap-shanghai.myqcloud.com/nokia1116.jpg)" title="俺的新手机"></p>
+<h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#1802" title="2007-09-25 11:01:17">wind</a>:</strong> 终于换手机 终于可以听见你说话了</p>
+<p><strong><a href="#1775" title="2007-09-22 22:53:04">草儿</a>:</strong> 听你这么说，我都想换电脑了~</p>
+<p><strong><a href="#1776" title="2007-09-22 23:40:51">kongove</a>:</strong> 诺基亚的质量确实不错···</p>
+<p><strong><a href="#1772" title="2007-09-22 19:09:12">luguo</a>:</strong> 中移动的广告也顺便打上了啊～～</p>
+<p><strong><a href="#1773" title="2007-09-22 21:48:44">cocobear</a>:</strong> 都没注意到，打就打了吧:-)</p>
+<p><strong><a href="#1793" title="2007-09-24 19:52:44">crazyfranc</a>:</strong> 我还是喜欢nokia1100,那是我第一个手机,经典啊.</p>
+<p><strong><a href="#1789" title="2007-09-24 18:52:23">Amankwah</a>:</strong> 索爱不行，让你给摔烂了～ 你终于觉悟了～欢迎加入更换手机一族～</p>
+<p><strong><a href="#1778" title="2007-09-24 08:43:45">cnenc</a>:</strong> 诺基亚的质量确实不错··· -—————————— 摔不烂的手机…</p>
+<p><strong><a href="#1780" title="2007-09-24 10:37:00">cocobear</a>:</strong> 我以前那个手机都让我摔了不下十次了！</p>
+<p><strong><a href="#3098" title="2008-04-14 11:56:04">乌鸦和瓶子</a>:</strong> 我有一个康佳的手机想换一个诺基亚的手机，只要能接电话发短信就行，就是听筒要好</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
     
       
 
@@ -1047,416 +1462,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2007/09/16/linuxworld-travel-though/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="cocobear">
-      <meta itemprop="description" content="爱折腾的技术宅一枚">
-      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="可可熊D窝">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2007/09/16/linuxworld-travel-though/" class="post-title-link" itemprop="url">LinuxWorld之行--感悟</a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2007-09-16 23:42:13" itemprop="dateCreated datePublished" datetime="2007-09-16T23:42:13+08:00">2007-09-16</time>
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/" itemprop="url" rel="index"><span itemprop="name">Life</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2007/09/16/linuxworld-travel-though/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2007/09/16/linuxworld-travel-though/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-symbolscount">
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数：</span>
-                
-                <span title="字数">967</span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读 &asymp;</span>
-                
-                <span title="阅读">1 分钟</span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>第一份工作：<br>我原本的想法是第一份工作无所谓找什么样的，只要有份事做，与软件开发相关，工资不要太低就可以了，没想过其它方面。不过听Alex说毕业后第一份工作非常重要，在很大程度上会影响一个人今后的工作习惯，因为在学校与工作时的环境完全是不一样的。第一份工作的环境、公司文化对一个人的塑造是很明显的，如果第一份工作没有任何的技术含量，你每天都十分忙却不能学习新的知识，增长自己的能力，那么这份工作无疑是很失败的，几年后也许你就被淘汰了。看来找工作的时候更应该注重的是公司文化，是否有学习的机会，能否提升自己的能力。</p>
-<p>工作热情：<br>Intel的Kent提到了他们公司在招聘的时评判一个人最重要的一点就是工作热情，由其是做GNU/Linux的，工作热情更重要，还好如果我可以到他们公司的话热情一定是足够的:-) 这里想要说的是对自由软件有热情并不难，但是如果能保持这份热情十年或者更久就不是那么容易了，希望喜欢自由软件的朋友们可以相互勉励，共进同乐。</p>
-<p>沉淀：<br>做技术需要有相当一段时间的积累，这也是许多大学生毕业后觉得自己什么也不会的原因（当然也有可能是他根本什么也没有去学），因为技术这个东西不是那么容易就全部掌握的，而做软件更是如此，没有一定时间的积累确实会觉得自己什么也不懂。许多人在学校的时候可能成长的比较慢，不过刚毕业后的几年的工作中，如果能有良好的学习环境将会得到很快的提高，只有经过这些沉淀你的技术才会上升到一个档次。coly在谈话中多次提到了这沉淀这个词，希望我们不能急躁，好好的的沉淀自己。确实很有道理，滴水穿石啊！</p>
-<p>LinuxWorld系列文章就结束了，不过沉淀才刚刚开始……</p>
-<h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#1718" title="2007-09-17 13:55:55">luguo</a>:</strong> 评论也to be continued。。。</p>
-<p><strong><a href="#1722" title="2007-09-17 21:55:31">wind</a>:</strong> 不知道有没有人能从我身上看到热情</p>
-<p><strong><a href="#1723" title="2007-09-17 22:40:27">kongove</a>:</strong> 才刚沉淀.. 去看看我的php主页。刚做得，感觉css很好用</p>
-<p><strong><a href="#1724" title="2007-09-17 22:58:02">cocobear</a>:</strong> 网页编程很麻烦。</p>
-<p><strong><a href="#1725" title="2007-09-17 22:58:27">cocobear</a>:</strong> TO：WIND 从你身上看到3+1很累！！！</p>
-<p><strong><a href="#1742" title="2007-09-19 09:09:55">Shawn the R0ck</a>:</strong> cool~以后有机会我也会去LinuxWorld</p>
-<p><strong><a href="#1743" title="2007-09-19 10:58:54">crazyfranc</a>:</strong> To wind:从你身上看出来这阵”风”很冷! To cocobear:有时感觉自己长进很慢确实很急,不过看了你的这篇博客知道了要沉淀的.</p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2007/09/16/linuxworld-travel-end/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="cocobear">
-      <meta itemprop="description" content="爱折腾的技术宅一枚">
-      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="可可熊D窝">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2007/09/16/linuxworld-travel-end/" class="post-title-link" itemprop="url">LinuxWorld之行--大会结束</a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2007-09-16 20:15:23" itemprop="dateCreated datePublished" datetime="2007-09-16T20:15:23+08:00">2007-09-16</time>
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/" itemprop="url" rel="index"><span itemprop="name">Life</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2007/09/16/linuxworld-travel-end/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2007/09/16/linuxworld-travel-end/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-symbolscount">
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数：</span>
-                
-                <span title="字数">811</span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读 &asymp;</span>
-                
-                <span title="阅读">1 分钟</span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>第三日，也就是9月8日，我们仍然是一大早就去了国际饭店，可惜我和林峰，刘洋没有领到午餐卷。一大早的演讲没有什么特别值得观注的，第一位是倪光南院士，他提到了为了推广GNU/Linux桌面系统所做的一个举措，RP Linux，主要思想就是由一个大型的组织来开发RP Linux，它的定位为一个公共的GNU/Linux平台，然后所有的GNU/Linux的开发都在这个平台之上进行，而这个RP Linux为非盈利行机构。给我的感觉就是在Linux Kernel之上再做一个中间件，来支持不同的发型版之间的兼容问题，不过目前我在网上基本找不到相关的一些信息，而且这个做法的可行性也值得怀疑。</p>
-<p>接下来的演讲就再没什么值得回忆的了。午饭时我们找不到吃饭的地方，就在国际饭店对面的麦当劳吃了些东西，我买了22块钱的套餐，吃完后一点感觉也没有，而且那汉堡一点也不好吃，还不如吃个肉夹馍，竟然还卖十几块钱。还是昨天的盒饭比较好，有点怀念。</p>
-<p>下午是用户专场，分了三个会场，我不怎么想去看了，和林峰，刘洋去西单的图书大厦逛了一圈，而王聪则和吴峰光在会场里呆着。没想到北京图书大厦简直比菜市场的人还多，几乎都挤不进去了，让我兴趣全失，一点图书馆的气氛也没有。</p>
-<p>从图书馆挤出来后又去天安门逛了一会儿，也没有什么感觉，没有电视里看的好，小了许多，也旧了许多。很快就7点多了，坐地铁去了北京西站，感觉也不太好，人太多了，而且那个车厢气味也不太好……总之最后一天过得挺差的。</p>
-<p>回去的时候坐的是T46，只在石家庄停了一站，然后就到了西安。</p>
-<h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#1716" title="2007-09-17 13:44:54">cocobear</a>:</strong> 反正人那么多就不爽的很。</p>
-<p><strong><a href="#1719" title="2007-09-17 13:56:44">luguo</a>:</strong> 我到现在还不是rp linux到底是干嘛的～～</p>
-<p><strong><a href="#1715" title="2007-09-17 10:33:32">crazyfranc</a>:</strong> 那是图书大厦不是图书馆。</p>
-<p><strong><a href="#1720" title="2007-09-17 14:13:24">cocobear</a>:</strong> 我的感觉就像是java虚拟机一样，为了可移植做的一个平台。而RP Linux为了各版本的GNU/Linux做一个公共平台。</p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1506,7 +1511,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">358</span>
+                    <span class="site-state-item-count">360</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1912,7 +1917,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">182</span>
+                      
+                    
+                    <span class="site-state-item-count">183</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -2031,7 +2038,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2007 – <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; 2007 – <span itemprop="copyrightYear">2021</span>
   <span class="with-love" id="animate">
     <i class="fa fa-heart"></i>
   </span>
@@ -2043,7 +2050,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">519k</span>
+    <span title="站点总字数">522k</span>
   
 
   
@@ -2052,7 +2059,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">7:52</span>
+    <span title="站点阅读时长">7:55</span>
   
 </div>
 
@@ -2154,7 +2161,7 @@
 
 
   
-  <script src="//cdn.staticfile.org/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/jquery/2.1.3/jquery.min.js"></script>
 
   
   <script src="//cdn.staticfile.org/fastclick/1.0.6/fastclick.min.js"></script>

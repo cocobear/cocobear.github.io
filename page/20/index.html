@@ -310,7 +310,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">182</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">183</span></a>
 
   </li>
         
@@ -348,7 +348,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">358</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">360</span></a>
 
   </li>
 
@@ -413,6 +413,416 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2008/11/11/grub-no-stage1-exists/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="cocobear">
+      <meta itemprop="description" content="爱折腾的技术宅一枚">
+      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="可可熊D窝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2008/11/11/grub-no-stage1-exists/" class="post-title-link" itemprop="url">GRUB问题</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2008-11-11 10:39:04" itemprop="dateCreated datePublished" datetime="2008-11-11T10:39:04+08:00">2008-11-11</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2008/11/11/grub-no-stage1-exists/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2008/11/11/grub-no-stage1-exists/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数：</span>
+                
+                <span title="字数">688</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读 &asymp;</span>
+                
+                <span title="阅读">1 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>昨天在机子上试着装了下RHEL 5.2（在新的分区安装sda3），重新安装了GRUB（安装到了MBR），结果机子上原来的Fedora 9（在sda4分区上）不能启动了，GRUB会提示错误：<br>     setup (hd0,3)&gt;<br>     Checking if “/boot/grub/stage1” exists… no&gt;<br>     Checking if “/grub/stage1” exists… no</p>
+<p>最后在RHEL 5.2中我把原来Fedora 9分区下/boot/grub/中的所有文件拷到了RHEL 5.2中的/boot/grub/，结果就正常了。不太理解为什么重新安装了GRUB，就无法引导原来的Fedora 9了。</p>
+<h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#4605" title="2008-11-11 11:48:10">dream</a>:</strong> 你可能需要先指定root, 比如root (hd0,3),然后再用setup (hd0) 来安装。或者直接 用grub-install 来安装？</p>
+<p><strong><a href="#4606" title="2008-11-11 12:16:50">可可熊</a>:</strong> root指定了。 grub-install需要进入系统安装，在grub引导菜单中没办法安装。</p>
+<p><strong><a href="#4607" title="2008-11-11 17:17:54">草儿</a>:</strong> 你装那么多干嘛？</p>
+<p><strong><a href="#4608" title="2008-11-11 17:18:13">草儿</a>:</strong> 哦，忘说了，节日快乐，哈哈~</p>
+<p><strong><a href="#4609" title="2008-11-11 23:21:12">Amankwah</a>:</strong> 是grub搜索stage文件和配置文件的默认位置改变了吧～</p>
+<p><strong><a href="#4610" title="2008-11-12 21:19:17">kongove</a>:</strong> 那应该是装系统的时候配置的Grub，或者你自己安装Grub没有成功～</p>
+<p><strong><a href="#4611" title="2008-11-12 21:20:25">kongove</a>:</strong> 还有你的主题很漂亮～ 在firefox下右边的最新留言显示重叠.</p>
+<p><strong><a href="#4613" title="2008-11-16 16:27:31">兰灯</a>:</strong> 我来回访，打个招呼。呵呵</p>
+<p><strong><a href="#4614" title="2008-11-17 13:40:33">ninesuns</a>:</strong> 我猜是因为你用的是扩展分区，而安装rhel后分区表有变化，导致不再是sda4了。</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2008/11/06/change-theme-for-blog/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="cocobear">
+      <meta itemprop="description" content="爱折腾的技术宅一枚">
+      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="可可熊D窝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2008/11/06/change-theme-for-blog/" class="post-title-link" itemprop="url">博客换了个主题</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2008-11-06 12:27:32" itemprop="dateCreated datePublished" datetime="2008-11-06T12:27:32+08:00">2008-11-06</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/" itemprop="url" rel="index"><span itemprop="name">Life</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2008/11/06/change-theme-for-blog/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2008/11/06/change-theme-for-blog/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数：</span>
+                
+                <span title="字数">797</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读 &asymp;</span>
+                
+                <span title="阅读">1 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>前天上网的时候无意中搜到一个<a href="http://www.leninlee.cn/" target="_blank" rel="noopener">博客</a>，发现那个主题挺不错，很简洁，很符合俺的胃口，于是昨天花了一天的时间去修改这个主题，把它改成了黑色的，其它细节地方也修改了一下，目前的感觉还不错，我测试了Firefox,Opera,IE,基本都没问题，只有IE里面留言时那个”电邮”那一栏的颜色有问题，实在是搞不明白，不管了，还是推荐大家使用Opera/Firefox浏览。</p>
+<p>有什么好的建议欢迎提出来，俺再改改。好久没动CSS这东西了，发现改这个东西好痛苦，不仅要考虑显示器的分辨率，还要考虑不同的浏览器，太麻烦了！！</p>
+<p>俺博客的新口号：<br><strong>K.I.S.S</strong> Keep It Simple, Stupid.</p>
+<p>——————–简单的分隔线———————————————–<br>记个通过使用dreamhost作为加密代理的方法:<br>首先使用ssh连接dreamhost主机：<br>ssh -CND 9999 <a href="mailto:cocobear@cocobear.github.io">cocobear@cocobear.github.io</a><br>然后在浏览器里设置使用sock5代理，填入127.0.0.0 ,9999。<br>这样所有的HTTP请求都经过ssh加密了，不怕GFW了，不过速度同时也慢下来了。<br>详细的内容见<a href="http://lifehacker.com/software/ssh/geek-to-live--encrypt-your-web-browsing-session-with-an-ssh-socks-proxy-237227.php" target="_blank" rel="noopener">这里</a></p>
+<h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#4585" title="2008-11-06 20:12:12">Amankwah</a>:</strong> 感觉字现在有点小，看着费劲的很。</p>
+<p><strong><a href="#4586" title="2008-11-07 08:27:44">草儿</a>:</strong> 我现在用的IE6，你那个电邮很正常啊。 字太小了，可能和你的黑色背景有关，你还是调大点吧。 PS：那个代理方法不错，也可以设置全局代理了。</p>
+<p><strong><a href="#4587" title="2008-11-07 10:56:57">可可熊</a>:</strong> web programming sucks threads sucks 呵呵。 上面的图片有什么问题呢？ 都说字小啊。</p>
+<p><strong><a href="#4584" title="2008-11-06 19:03:53">luguo</a>:</strong> 右上角的图片似乎有问题，在ff里～～ BTW: 那就是为什么web programming sucks. :D</p>
+<p><strong><a href="#4604" title="2008-11-11 11:38:21">kongove</a>:</strong> 刚刚看到你的新主题，吓我一跳，我还以为进错了～～ 节日快乐～祝愿老大们早日摆脱单身～有机会一定要喝你们的喜酒;-)</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
     
       
 
@@ -1024,484 +1434,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2008/10/16/e680-gprs-linux/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="cocobear">
-      <meta itemprop="description" content="爱折腾的技术宅一枚">
-      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="可可熊D窝">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2008/10/16/e680-gprs-linux/" class="post-title-link" itemprop="url">Fedora 9 通过E680G/I手机实现GPRS上网</a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2008-10-16 10:43:06" itemprop="dateCreated datePublished" datetime="2008-10-16T10:43:06+08:00">2008-10-16</time>
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2008/10/16/e680-gprs-linux/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2008/10/16/e680-gprs-linux/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-symbolscount">
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数：</span>
-                
-                <span title="字数">3.8k</span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读 &asymp;</span>
-                
-                <span title="阅读">3 分钟</span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><strong>电脑通过E680G/I手机实现GPRS上网</strong></p>
-<p>E680是一款摩托的Linux系统手机，在Windows下可以通过自带的MPT工具包实现与电脑连接的GPRS上网，在Linux下也是比较方便的，以前我也用过，只是没记下来，今天再用的时候还得看别人写的文章，还是自己记一下。</p>
-<p>我用的是Fedora 9，一般的Linux系统都应该可以，大同小异。首先是手机端设置连接模式为调制解调器(Modem)，通过数据线连接到电脑后(也可以用蓝牙，我这里没有环境)，Fedora 9会识别到有新的调制解调器：</p>
-<p><a href="#"> 发现新硬件: </a></p>
-<pre><code>usb 4-3: new full speed USB device using ohci_hcd and address 2
-usb 4-3: configuration #1 chosen from 1 choice
-usb 4-3: New USB device found, idVendor=22b8, idProduct=3802
-usb 4-3: New USB device strings: Mfr=1, Product=2, SerialNumber=0
-usb 4-3: Product: Motorola USB Modem
-usb 4-3: Manufacturer: Motorola
-cdc_acm 4-3:1.0: ttyACM0: USB ACM device
-usbcore: registered new interface driver cdc_acm
-drivers/usb/class/cdc-acm.c: v0.25:USB Abstract Control Model driver for USB modems and ISDN adapters
-</code></pre><p>它对应的设备就是/dev/ttyACM0。接下来用wvdial这个拨号工具，如果没有这个包的话请自行安装，wvdial有一个配置文件/etc/wvdial.conf,(使用root进行下面的操作)编辑这个文件,：</p>
-<p><a href="#"> 添加以下内容:</a></p>
-<pre><code>[Dialer Defaults]
-Init1 = at+cgdcont=1,&quot;ip&quot;,&quot;cmnet&quot;
-Phone = *99***1#
-Modem = /dev/ttyACM0
-Username = &quot;cmnet&quot;
-Password = &quot;cmnet&quot;
-Carrier Check = no
-Baud = 460800
-Auto DNS = on
-</code></pre><p>如果已经有Dialer Defaults这一块则覆盖之。这里要注意使用的是cmnet，最好是手机包月不分cmnet和cmwap那种的，不然收费是很贵的。修改完该文件后还需要对/etc/ppp/options文件进行修改，添加一行：<br>:192.168.0.254<br>这个修改比较奇怪，E680系列的Linux手机都需要这样:-(，不然用wvdial拨号时会在/var/log/messages中产生下面的错误：</p>
-<p><a href="#"> 错误信息：</a></p>
-<pre><code>Oct 16 09:56:25 cocobear pppd[18141]: pppd 2.4.4 started by root, uid 0
-Oct 16 09:56:25 cocobear pppd[18141]: Using interface ppp0
-Oct 16 09:56:25 cocobear pppd[18141]: Connect: ppp0 &lt; --&gt; /dev/ttyACM0
-Oct 16 09:56:36 cocobear pppd[18141]: Remote message: Welcome to Motorola A760 Software Modem!
-Oct 16 09:56:36 cocobear pppd[18141]: PAP authentication succeeded
-Oct 16 09:56:44 cocobear pppd[18141]: LCP terminated by peer (^@^@^@^@^@^@)
-Oct 16 09:56:44 cocobear pppd[18141]: Modem hangup
-Oct 16 09:56:44 cocobear pppd[18141]: Connection terminated.
-Oct 16 09:56:44 cocobear pppd[18141]: Exit.
-</code></pre><p>修改完这个文件后就可以开始拨号了，直接使用wvdial命令:</p>
-<p><a href="#"> 拨号信息：</a></p>
-<pre><code>[root@cocobear cocobear]# vim /etc/wvdial.conf 
-[root@cocobear cocobear]# vim /etc/ppp/options 
-[root@cocobear cocobear]# wvdial
---&gt; WvDial: Internet dialer version 1.60
---&gt; Cannot get information for serial port.
---&gt; Initializing modem.
---&gt; Sending: at+cgdcont=1,&quot;ip&quot;,&quot;cmnet&quot;
-OK
---&gt; Modem initialized.
---&gt; Sending: ATDT*99***1#
---&gt; Waiting for carrier.
-CONNECT
---&gt; Carrier detected.  Waiting for prompt.
-~[7f]}#@!}!}!} }&lt; }!}$}%\}&quot;}&amp;} } } } }#}$@#}%}&amp;j}?} } }&apos;}&quot;}(}&quot;?}3~
---&gt; PPP negotiation detected.
---&gt; Starting pppd at Thu Oct 16 09:58:41 2008
---&gt; Pid of pppd: 18959
---&gt; Using interface ppp0
---&gt; local  IP address 10.182.237.127
---&gt; remote IP address 192.168.0.254
---&gt; primary   DNS address 211.137.130.3
---&gt; secondary DNS address 211.137.130.19
-</code></pre><p>从上面的信息中可以看出我们成功的拨号上网了，不过这时候我们还需要手动把192.168.0.254添加为默认路由:</p>
-<pre><code>route add default gw 192.168.0.254
-</code></pre><p>ping一个google：</p>
-<p><a href="#"> Ping结果：</a></p>
-<p>&lt;<br>    [cocobear@cocobear ~]$ ping <a href="http://www.g.cn" target="_blank" rel="noopener">www.g.cn</a><br>    PING g.cn (203.208.33.100) 56(84) bytes of data.<br>    64 bytes from 203.208.33.100: icmp_seq=2 ttl=242 time=709 ms<br>    64 bytes from 203.208.33.100: icmp_seq=4 ttl=242 time=1359 ms<br>    64 bytes from 203.208.33.100: icmp_seq=5 ttl=242 time=1159 ms<br>    64 bytes from 203.208.33.100: icmp_seq=6 ttl=242 time=1021 ms<br>    64 bytes from 203.208.33.100: icmp_seq=7 ttl=242 time=617 ms<br>    ^C<br>    — g.cn ping statistics —<br>    8 packets transmitted, 5 received, 37% packet loss, time 13411ms<br>    rtt min/avg/max/mdev = 617.708/973.500/1359.063/276.410 ms, pipe 2</p>
-<p>好大的延时，还有丢包，没办法了中国移动的GPRS就这样了，EDGE在西安只有部分地区覆盖了，而且E680手机是不支持的！</p>
-<p>终于上来了，搬到新租的房子后还没拉网线，只能先这样了。</p>
-<p>羡慕王聪同学的3G上网啊＠_＠</p>
-<h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#4509" title="2008-10-20 08:53:51">草儿</a>:</strong> 想得美，还包吃包住包上网呢，我还没那个标准呢！ 我给你提供上网环境，其他自备 :-)</p>
-<p><strong><a href="#4483" title="2008-10-16 20:14:13">Amankwah</a>:</strong> 不错，不错～多大流量？</p>
-<p><strong><a href="#4479" title="2008-10-16 14:51:37">草儿</a>:</strong> F9不是带有移动拨号管理么，怎么还下了个包？ PS:用联通CDMA吧，哈哈。要不去我们省，大部分地区包括农村都有EDGE网的。</p>
-<p><strong><a href="#4480" title="2008-10-16 15:40:56">可可熊</a>:</strong> 命令行方便，没另外下包。 去你们省给我包吃包住包上网就行！</p>
-<p><strong><a href="#4481" title="2008-10-16 16:53:18">luguo</a>:</strong> 你的速度如何？ 这里的gprs暴贵！手机上网只能用3G～～</p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2008/10/15/buy-a-computer/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="cocobear">
-      <meta itemprop="description" content="爱折腾的技术宅一枚">
-      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="可可熊D窝">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2008/10/15/buy-a-computer/" class="post-title-link" itemprop="url">攒了台机器</a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2008-10-15 09:23:16" itemprop="dateCreated datePublished" datetime="2008-10-15T09:23:16+08:00">2008-10-15</time>
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/" itemprop="url" rel="index"><span itemprop="name">Life</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2008/10/15/buy-a-computer/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2008/10/15/buy-a-computer/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-symbolscount">
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数：</span>
-                
-                <span title="字数">441</span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读 &asymp;</span>
-                
-                <span title="阅读">1 分钟</span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <pre><code>Intel 奔腾双核 E2180（盒）440
-微星 G31M3-F                390
-宇瞻 2GB DDR2 800         170
-希捷 160G 7200.10 8M     290
-先锋 DVR-116CH             190
-优派 VA1616w                699
-金河田 飓风8198              260
-双飞燕                   60
-</code></pre><p>送个摄像头,一共花了2490.</p>
-<h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#4519" title="2008-10-21 19:07:46">ninesuns</a>:</strong> 我出售2手电脑。。。哈哈</p>
-<p><strong><a href="#4477" title="2008-10-16 10:41:15">可可熊</a>:</strong> 这可是俺精打细算买的超级“低端机”啊！！</p>
-<p><strong><a href="#4568" title="2008-10-30 21:38:33">草儿</a>:</strong> 我的办公室电脑也下来了，Dell 360 。比你的稍微好点。</p>
-<p><strong><a href="#4468" title="2008-10-15 11:34:58">草儿</a>:</strong> 我晕~ 有钱人</p>
-<p><strong><a href="#4469" title="2008-10-15 14:49:51">kongove</a>:</strong> 这下DP可以好好发挥一下了~~ 不过我现在到想要台 laptop</p>
-<p><strong><a href="#4471" title="2008-10-15 16:09:33">luguo</a>:</strong> 忒便宜了～～比这里的多数EeePC还便宜～～！</p>
-<p><strong><a href="#4472" title="2008-10-15 18:22:47">Amankwah</a>:</strong> 呵呵，DP开始置产业了～ 恭喜恭喜</p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1551,7 +1483,7 @@ CONNECT
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">358</span>
+                    <span class="site-state-item-count">360</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1957,7 +1889,9 @@ CONNECT
                     
                       
                     
-                    <span class="site-state-item-count">182</span>
+                      
+                    
+                    <span class="site-state-item-count">183</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -2076,7 +2010,7 @@ CONNECT
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2007 – <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; 2007 – <span itemprop="copyrightYear">2021</span>
   <span class="with-love" id="animate">
     <i class="fa fa-heart"></i>
   </span>
@@ -2088,7 +2022,7 @@ CONNECT
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">519k</span>
+    <span title="站点总字数">522k</span>
   
 
   
@@ -2097,7 +2031,7 @@ CONNECT
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">7:52</span>
+    <span title="站点阅读时长">7:55</span>
   
 </div>
 
@@ -2199,7 +2133,7 @@ CONNECT
 
 
   
-  <script src="//cdn.staticfile.org/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/jquery/2.1.3/jquery.min.js"></script>
 
   
   <script src="//cdn.staticfile.org/fastclick/1.0.6/fastclick.min.js"></script>

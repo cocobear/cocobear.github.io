@@ -310,7 +310,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">182</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">183</span></a>
 
   </li>
         
@@ -348,7 +348,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">358</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">360</span></a>
 
   </li>
 
@@ -413,6 +413,425 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2008/08/29/serial-problem/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="cocobear">
+      <meta itemprop="description" content="爱折腾的技术宅一枚">
+      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="可可熊D窝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2008/08/29/serial-problem/" class="post-title-link" itemprop="url">关于串口互联的问题</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2008-08-29 14:53:55" itemprop="dateCreated datePublished" datetime="2008-08-29T14:53:55+08:00">2008-08-29</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/编程相关/" itemprop="url" rel="index"><span itemprop="name">编程相关</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2008/08/29/serial-problem/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2008/08/29/serial-problem/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数：</span>
+                
+                <span title="字数">963</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读 &asymp;</span>
+                
+                <span title="阅读">1 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>先来段插曲：</p>
+<p>Python中有pyserial这个模块可以进行串口操作，今天试一下但发现写个最简单的脚本也出错：</p>
+<pre><code>import serial
+
+serial = serial.Serial()
+serial.port = 1
+serial.timeout = 1
+
+serial.read(1)
+</code></pre><p>运行的结果是:<br>serial = serial.Serial()<br>AttributeError: ‘module’ object has no attribute ‘Serial’<br>仔细看了看serial库中确实有Serial这个类， 但为什么会出现这样的问题，想了半天没明白，最后google得到结论，问题是“我的文件名是serial.py”，贴出老外的解释：<br>     Because  “import  serial”  imports  whatever  thing  it  finds  named  serial,   &gt;<br>     and  it’s  not  finding  PySerial  because  you  have  a  module  named   &gt;<br>     serial.py.  &gt;<br>      -bob<a href="http://mail.python.org/pipermail/pythonmac-sig/2005-September/015000.html" target="_blank" rel="noopener">来自</a></p>
+<p>这次记下了，再不会犯这样的错误了。</p>
+<p>搜pyserial相关资料的时候发现英文的很少，搜到不少cz（捷克）域名的文章，还有些de（德国）的，看不懂啊，现在发现英文资料真好，看着真舒服。（可惜那个Nginx是俄国人写的，又是一堆俄文，唉……）</p>
+<p>好了，插曲结束，说下正题，本来是想实现个工具可以把机器上两个串口联起来，可以省去用线把两个串口联起来，但经过试验，又仔细想了想，发现这个想法是不可能的，因为程序对串口进行操作的话必须进行打开操作，而应用程序会先打开串口，所以就无法得到串口发出的数据，即使通过钩子技术获得数据，但也不能向这个串口发送数据，所以原理上应该是无法实现的。</p>
+<h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#4130" title="2008-08-31 15:52:53">dream</a>:</strong> 哈哈，谢谢，谢谢，咱们俩的问题如出一辄，我的问题是文件的名字取成了unittest.py</p>
+<p><strong><a href="#4120" title="2008-08-29 20:48:06">Amankwah</a>:</strong> 以后技术资料只写中文的，让外国人也郁闷~ 现在工控机通信几乎以串口为主，我整爽了~</p>
+<p><strong><a href="#4118" title="2008-08-29 16:33:22">luguo</a>:</strong> Python还能进行这么底层的操作～！强悍～～</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2008/08/21/cocal-wxpython/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="cocobear">
+      <meta itemprop="description" content="爱折腾的技术宅一枚">
+      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="可可熊D窝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2008/08/21/cocal-wxpython/" class="post-title-link" itemprop="url">wxPython写的一计算器</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2008-08-21 11:11:47" itemprop="dateCreated datePublished" datetime="2008-08-21T11:11:47+08:00">2008-08-21</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/编程相关/" itemprop="url" rel="index"><span itemprop="name">编程相关</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2008/08/21/cocal-wxpython/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2008/08/21/cocal-wxpython/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数：</span>
+                
+                <span title="字数">574</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读 &asymp;</span>
+                
+                <span title="阅读">1 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>wxPython写了个计算器，练习wxPython界面布局，功能很强大，支持无限数位的运算，呵呵:-)<br>wxPython写界面挺顺手的，另外推荐一个不错的wxPython的教程：<br><a href="http://www.zetcode.com/wxpython" target="_blank" rel="noopener">http://www.zetcode.com/wxpython</a></p>
+<p><img src="https://asset-1258390188.cos.ap-shanghai.myqcloud.com08/cocal.png" alt="CoCal ](https://asset-1258390188.cos.ap-shanghai.myqcloud.com/cocal.png &quot;cocal&quot;)"></p>
+<p><a href="http://cocobear.github.io/code/CoCal.py">代码下载</a></p>
+<h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#4065" title="2008-08-21 16:35:17">luguo</a>:</strong> 哎，俺一直不怎么喜欢图形界面的编程～～</p>
+<p><strong><a href="#4067" title="2008-08-21 21:01:35">Amankwah</a>:</strong> 楼上，我现在就专整图形界面编程~~汗~</p>
+<p><strong><a href="#4105" title="2008-08-27 08:59:43">cocobear</a>:</strong> win下也能用；一个跨平台的GUI库。Linux下使用GTK实现，WIN下似乎是使用MFC实现。</p>
+<p><strong><a href="#4099" title="2008-08-26 17:11:00">草儿</a>:</strong> 楼上的楼上，相对来说俺们还是用图形界面比较顺手。汗……</p>
+<p><strong><a href="#4100" title="2008-08-26 19:59:32">crazyfranc</a>:</strong> 呵呵，wxpython？莫非是win下的? 改天玩玩。</p>
+<p><strong><a href="#4172" title="2008-09-08 19:14:39">sk</a>:</strong> 我前段时间也在学python,不过wxpython没配成功，apt-get不行，在官网下的包，装了以后不成功，指点一下啊</p>
+<p><strong><a href="#4175" title="2008-09-09 08:46:43">cocobear</a>:</strong> 我用的是fedora，自己yum安装就行了。按官方的做法再仔细做一下，看下是什么错误。</p>
+<p><strong><a href="#9070" title="2010-12-10 15:44:47">ld</a>:</strong> 在windows试了一下，点击数字时会报错，弹出一个对话框，标题是stdout/stderr 内容是[‘’, ‘’]</p>
+<p><strong><a href="#9088" title="2010-12-13 09:22:34">cocobear</a>:</strong> 把PRINT语句注释掉吧 还有别的办法不记得了</p>
+<p><strong><a href="#9071" title="2010-12-10 16:01:05">ld</a>:</strong> 看错了，怎么把那个stdout/stderr 的框去了呢，谢谢</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
     
       
 
@@ -1183,488 +1602,6 @@ if __name__ == &quot;__main__&quot;:
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2008/08/14/learning-crontab/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="cocobear">
-      <meta itemprop="description" content="爱折腾的技术宅一枚">
-      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="可可熊D窝">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2008/08/14/learning-crontab/" class="post-title-link" itemprop="url">crontab使用[转载]</a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2008-08-14 15:02:36" itemprop="dateCreated datePublished" datetime="2008-08-14T15:02:36+08:00">2008-08-14</time>
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2008/08/14/learning-crontab/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2008/08/14/learning-crontab/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-symbolscount">
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数：</span>
-                
-                <span title="字数">1.9k</span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读 &asymp;</span>
-                
-                <span title="阅读">2 分钟</span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>名称 : crontab<br>使用权限 : 所有使用者<br>使用方式 :<br>crontab file [-u user]-用指定的文件替代目前的crontab。<br>crontab-[-u user]-用标准输入替代目前的crontab.<br>crontab-1[user]-列出用户目前的crontab.<br>crontab-e[user]-编辑用户目前的crontab.<br>crontab-d[user]-删除用户目前的crontab.<br>crontab-c dir- 指定crontab的目录。<br>crontab文件的格式：M H D m d cmd. </p>
-<p>M: 分钟（0-59）。<br>H：小时（0-23）。<br>D：天（1-31）。<br>m: 月（1-12）。<br>d: 一星期内的天（0~6，0为星期天）。<br>cmd要运行的程序，程序被送入sh执行，这个shell只有USER,HOME,SHELL这三个环境变量<br>说明 :<br>crontab 是用来让使用者在固定时间或固定间隔执行程序之用，换句话说，也就是类似使用者的时程表。-u user 是指设定指定 user 的时程表，这个前提是你必须要有其权限(比如说是 root)才能够指定他人的时程表。如果不使用 -u user 的话，就是表示设定自己的时程表。 </p>
-<p>参数 :<br>crontab -e : 执行文字编辑器来设定时程表，内定的文字编辑器是 VI，如果你想用别的文字编辑器，则请先设定 VISUAL 环境变数来指定使用那个文字编辑器(比如说 setenv VISUAL joe)<br>crontab -r : 删除目前的时程表<br>crontab -l : 列出目前的时程表<br>crontab file [-u user]-用指定的文件替代目前的crontab。<br>时程表的格式如下 :<br>f1 f2 f3 f4 f5 program<br>其中 f1 是表示分钟，f2 表示小时，f3 表示一个月份中的第几日，f4 表示月份，f5 表示一个星期中的第几天。program 表示要执行的程序。<br>当 f1 为 <em> 时表示每分钟都要执行 program，f2 为 </em> 时表示每小时都要执行程序，其馀类推<br>当 f1 为 a-b 时表示从第 a 分钟到第 b 分钟这段时间内要执行，f2 为 a-b 时表示从第 a 到第 b 小时都要执行，其馀类推<br>当 f1 为 <em>/n 时表示每 n 分钟个时间间隔执行一次，f2 为 </em>/n 表示每 n 小时个时间间隔执行一次，其馀类推<br>当 f1 为 a, b, c,… 时表示第 a, b, c,… 分钟要执行，f2 为 a, b, c,… 时表示第 a, b, c…个小时要执行，其馀类推<br>使用者也可以将所有的设定先存放在档案 file 中，用 crontab file 的方式来设定时程表。 </p>
-<p>例子 : </p>
-<p>#每天早上7点执行一次 /bin/ls :<br>0 7 <em> </em> <em> /bin/ls<br>在 12 月内, 每天的早上 6 点到 12 点中，每隔3个小时执行一次 /usr/bin/backup :<br>0 6-12/3 </em> 12 <em> /usr/bin/backup<br>周一到周五每天下午 5:00 寄一封信给 <a href="mailto:alex@domain.name" target="_blank" rel="noopener">alex@domain.name</a> :<br>0 17 </em> <em> 1-5 mail -s “hi” <a href="mailto:alex@domain.name" target="_blank" rel="noopener">alex@domain.name</a> &lt; /tmp/maildata<br>每月每天的午夜 0 点 20 分, 2 点 20 分, 4 点 20 分….执行 echo “haha”<br>20 0-23/2 </em> <em> </em> echo “haha”<br>注意 :<br>当程序在你所指定的时间执行后，系统会寄一封信给你，显示该程序执行的内容，若是你不希望收到这样的信，请在每一行空一格之后加上 &gt; /dev/null 2&gt;&amp;1 即可</p>
-<p>例子2 :</p>
-<p>#每天早上6点10分<br>10 6 <em> </em> * date </p>
-<p>#每两个小时<br>0 <em>/2 </em> <em> </em> date </p>
-<p>#晚上11点到早上8点之间每两个小时，早上8点<br>0 23-7/2，8 <em> </em> * date </p>
-<p>#每个月的4号和每个礼拜的礼拜一到礼拜三的早上11点<br>0 11 4 * mon-wed date </p>
-<p>#1月份日早上4点<br>0 4 1 jan * date<br>范例<br>$crontab -l 列出用户目前的crontab.</p>
-<p>来自：<a href="http://h1yn.itpub.net/post/2084/222108" target="_blank" rel="noopener">http://h1yn.itpub.net/post/2084/222108</a></p>
-<h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#4036" title="2008-08-14 16:41:52">luguo</a>:</strong> 哎，连dp都开始转载了。。。</p>
-<p><strong><a href="#4037" title="2008-08-14 20:34:54">Amankwah</a>:</strong> 哈哈~顶楼上~</p>
-<p><strong><a href="#4853" title="2009-01-14 12:01:38">anoum</a>:</strong> ubuntu 10下面 丢给crontab 一个任务 是python的脚本，换壁纸，可是没有定时执行。 能给个实例不？</p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2008/08/11/tool-of-python-url-encode/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="cocobear">
-      <meta itemprop="description" content="爱折腾的技术宅一枚">
-      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="可可熊D窝">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2008/08/11/tool-of-python-url-encode/" class="post-title-link" itemprop="url">再发个Python的小脚本</a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2008-08-11 16:42:12" itemprop="dateCreated datePublished" datetime="2008-08-11T16:42:12+08:00">2008-08-11</time>
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/编程相关/" itemprop="url" rel="index"><span itemprop="name">编程相关</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2008/08/11/tool-of-python-url-encode/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2008/08/11/tool-of-python-url-encode/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-symbolscount">
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数：</span>
-                
-                <span title="字数">2.7k</span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读 &asymp;</span>
-                
-                <span title="阅读">2 分钟</span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>很多时候我们会遇到类似这样的字符串“%E5%8F%AF%E5%8F%AF%E7%86%8A”，如果你稍有经验就应该知道这是URL编码的汉字.</p>
-<p>URL编码的产生是因为在URL只有少量的字符可以被使用:<br>“…Only alphanumerics [0-9a-zA-Z], the special characters “$-_.+!*’(),” [not including the quotes - ed], and reserved characters used for their reserved purposes may be used unencoded within a URL.”</p>
-<p><a href="http://www.blooberry.com/indexdot/html/topics/urlencoding.htm" target="_blank" rel="noopener">这里</a>有一篇介绍URL编码的文章。</p>
-<p>为了方便把“%E5%8F%AF%E5%8F%AF%E7%86%8A”这样的字符串转换为我们可读字符串，我写了这个小工具；同时可以做反向的转换。例如把”可可熊”转换为“%E5%8F%AF%E5%8F%AF%E7%86%8A”。</p>
-<p>做个示例,使用该程序在命令行下获取“\”的URL编码：<br>[cocobear@cocobear sn]$ ./url2read.py -r “”‘\’””<br>GBK:<br>%5C<br>UTF8:<br>%5C</p>
-<p>注意这里由于存在shell的解释，需要这样把“\”围起来。</p>
-<p>这个脚本可以很好的在Linux与Windows下使用，贴代码：</p>
-<pre><code>#!/usr/bin/env python
-#coding: utf-8 
-#author:        cocobear
-#version:       0.1
-
-import urllib
-import sys,getopt,re
-__doc__ = &quot;&quot;&quot;Usage:
-            ./url2read.py -h
-            ./url2read.py -r ftp://cocobear.github.io/中国
-            ./url2read.py http://cocobear.github.io/%E4%B8%AD%E5%9B%BD
-        &quot;&quot;&quot;
-
-def url2read(s):
-
-    s = urllib.unquote(s)
-    try: 
-            s = s.decode(&apos;utf-8&apos;)
-    except UnicodeDecodeError:
-            s = s.decode(&apos;gbk&apos;)
-    finally:
-            print s.encode(sys.stdin.encoding)
-
-def read2url(s):
-    head = &apos;&apos;
-    g = re.search(&apos;^(http|ftp://)(.*)&apos;,s)
-    if g:
-        head = g.group(1)
-        s = g.group(2)
-    gbk = urllib.quote(s.decode(sys.stdin.encoding).encode(&apos;gbk&apos;))
-
-    utf8 = urllib.quote(s.decode(sys.stdin.encoding).encode(&apos;utf-8&apos;))
-    if gbk == utf8:
-        print head+gbk
-        return 0
-    else:
-        print &quot;UTF8:\n&quot;+head+utf8
-        print &quot;GBK:\n&quot;+head+gbk
-        return 0
-
-def main(argv=None):
-    f = False
-    if len(sys.argv) &lt; 2:
-        print __doc__
-        return 1
-    try:
-        opts,args = getopt.getopt(sys.argv[1:],&quot;h,r&quot;,[&quot;help&quot;,&quot;reverse&quot;])
-    except getopt.error,msg:
-        print msg
-        print __doc__
-        return 1
-    for o,a in opts:
-        if o in (&quot;-h&quot;,&quot;--help&quot;):
-            print __doc__
-            return 0
-        if o in (&quot;-r&quot;,&quot;--reverse&quot;):
-            f = True
-    for arg in args: 
-        if f:
-            return read2url(arg)
-        else:
-            return url2read(arg)
-
-if __name__ == &quot;__main__&quot;:
-    sys.exit(main())
-</code></pre><p><a href="http://cocobear.github.io/code/url2read.py">代码下载</a></p>
-<h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#4029" title="2008-08-11 17:37:00">luguo</a>:</strong> 恩，这个简单易懂～</p>
-<p><strong><a href="#4032" title="2008-08-11 20:27:37">Amankwah</a>:</strong> 这个不错~</p>
-<p><strong><a href="#4234" title="2008-09-14 21:03:36">shuge.lee</a>:</strong> yuki@yukilib /home/share/code/python_note $ ./url2read.py <a href="http://www.shuge.org/中文" target="_blank" rel="noopener">http://www.shuge.org/中文</a> File “./url2read.py”, line 12 SyntaxError: Non-ASCII character ‘\xe4’ in file ./url2read.py on line 13, but no encoding declared; see <a href="http://www.python.org/peps/pep-0263.html" target="_blank" rel="noopener">http://www.python.org/peps/pep-0263.html</a> for details yuki@yukilib /home/share/code/python_note $ 怎么回事？</p>
-<p><strong><a href="#4244" title="2008-09-16 11:28:01">可可熊</a>:</strong> 使用参数-r，需要反转。</p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1714,7 +1651,7 @@ if __name__ == &quot;__main__&quot;:
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">358</span>
+                    <span class="site-state-item-count">360</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -2120,7 +2057,9 @@ if __name__ == &quot;__main__&quot;:
                     
                       
                     
-                    <span class="site-state-item-count">182</span>
+                      
+                    
+                    <span class="site-state-item-count">183</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -2239,7 +2178,7 @@ if __name__ == &quot;__main__&quot;:
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2007 – <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; 2007 – <span itemprop="copyrightYear">2021</span>
   <span class="with-love" id="animate">
     <i class="fa fa-heart"></i>
   </span>
@@ -2251,7 +2190,7 @@ if __name__ == &quot;__main__&quot;:
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">519k</span>
+    <span title="站点总字数">522k</span>
   
 
   
@@ -2260,7 +2199,7 @@ if __name__ == &quot;__main__&quot;:
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">7:52</span>
+    <span title="站点阅读时长">7:55</span>
   
 </div>
 
@@ -2362,7 +2301,7 @@ if __name__ == &quot;__main__&quot;:
 
 
   
-  <script src="//cdn.staticfile.org/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/jquery/2.1.3/jquery.min.js"></script>
 
   
   <script src="//cdn.staticfile.org/fastclick/1.0.6/fastclick.min.js"></script>

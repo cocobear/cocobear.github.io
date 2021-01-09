@@ -310,7 +310,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">182</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">183</span></a>
 
   </li>
         
@@ -348,7 +348,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">358</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">360</span></a>
 
   </li>
 
@@ -413,6 +413,473 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2007/11/05/simple-sort-implement/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="cocobear">
+      <meta itemprop="description" content="爱折腾的技术宅一枚">
+      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="可可熊D窝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2007/11/05/simple-sort-implement/" class="post-title-link" itemprop="url">几种简单的排序实现</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2007-11-05 19:24:36" itemprop="dateCreated datePublished" datetime="2007-11-05T19:24:36+08:00">2007-11-05</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/编程相关/" itemprop="url" rel="index"><span itemprop="name">编程相关</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2007/11/05/simple-sort-implement/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2007/11/05/simple-sort-implement/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数：</span>
+                
+                <span title="字数">1.6k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读 &asymp;</span>
+                
+                <span title="阅读">1 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>选择排序：<br>每次找出最小的放在最前面；</p>
+<p>插入排序：<br>每次循环把后面第一个元素插入到前面适当位置(玩扑克牌的插法)；</p>
+<p>冒泡排序：<br>比较相邻元素，大的放在右边；</p>
+<pre><code>[cocobear@cocobear Temp]$ ./a.out 
+排序前：83 86 77 15 93 35 86 92 49 21 
+请选择排序方式：
+(1)选择排序
+(2)插入排序
+(3)冒泡排序
+:1
+选择排序:
+第1次排序结果:15 86 77 83 93 35 86 92 49 21 
+第2次排序结果:15 21 77 83 93 35 86 92 49 86 
+第3次排序结果:15 21 35 83 93 77 86 92 49 86 
+第4次排序结果:15 21 35 49 93 77 86 92 83 86 
+第5次排序结果:15 21 35 49 77 93 86 92 83 86 
+第6次排序结果:15 21 35 49 77 83 86 92 93 86 
+第7次排序结果:15 21 35 49 77 83 86 92 93 86 
+第8次排序结果:15 21 35 49 77 83 86 86 93 92 
+第9次排序结果:15 21 35 49 77 83 86 86 92 93 
+[cocobear@cocobear Temp]$ ./a.out 
+排序前：83 86 77 15 93 35 86 92 49 21 
+请选择排序方式：
+(1)选择排序
+(2)插入排序
+(3)冒泡排序
+:2
+插入排序:
+第1次排序结果:83 86 77 15 93 35 86 92 49 21 
+第2次排序结果:77 83 86 15 93 35 86 92 49 21 
+第3次排序结果:15 77 83 86 93 35 86 92 49 21 
+第4次排序结果:15 77 83 86 93 35 86 92 49 21 
+第5次排序结果:15 35 77 83 86 93 86 92 49 21 
+第6次排序结果:15 35 77 83 86 86 93 92 49 21 
+第7次排序结果:15 35 77 83 86 86 92 93 49 21 
+第8次排序结果:15 35 49 77 83 86 86 92 93 21 
+第9次排序结果:15 21 35 49 77 83 86 86 92 93 
+[cocobear@cocobear Temp]$ ./a.out 
+排序前：83 86 77 15 93 35 86 92 49 21 
+请选择排序方式：
+(1)选择排序
+(2)插入排序
+(3)冒泡排序
+:3
+冒泡排序:
+第1次排序结果:83 77 15 86 35 86 92 49 21 93 
+第2次排序结果:77 15 83 35 86 86 49 21 92 93 
+第3次排序结果:15 77 35 83 86 49 21 86 92 93 
+第4次排序结果:15 35 77 83 49 21 86 86 92 93 
+第5次排序结果:15 35 77 49 21 83 86 86 92 93 
+第6次排序结果:15 35 49 21 77 83 86 86 92 93 
+第7次排序结果:15 35 21 49 77 83 86 86 92 93 
+第8次排序结果:15 21 35 49 77 83 86 86 92 93 
+第9次排序结果:15 21 35 49 77 83 86 86 92 93 
+</code></pre><p><a href="http://cocobear.github.io/code/html/simple_sort.html">查看源码</a><br><a href="http://cocobear.github.io/code/simple_sort.c">下载源码</a></p>
+<h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#2267" title="2007-11-06 11:32:33">cocobear</a>:</strong> 老大把下面几个写完吧。</p>
+<p><strong><a href="#2260" title="2007-11-05 20:30:21">luguo</a>:</strong> 这三个可都是O(n^2)的排序～～！</p>
+<p><strong><a href="#2262" title="2007-11-05 22:38:15">Amankwah</a>:</strong> 就选择，插入和冒泡？</p>
+<p><strong><a href="#2358" title="2007-11-13 22:30:07">crazyfranc</a>:</strong> 兄弟，你有什么需要帮忙的尽管说，咱们争取要周日完成。</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2007/11/04/filename-upper-lower/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="cocobear">
+      <meta itemprop="description" content="爱折腾的技术宅一枚">
+      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="可可熊D窝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2007/11/04/filename-upper-lower/" class="post-title-link" itemprop="url">目录下文件名大小写转换</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2007-11-04 22:35:37" itemprop="dateCreated datePublished" datetime="2007-11-04T22:35:37+08:00">2007-11-04</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/编程相关/" itemprop="url" rel="index"><span itemprop="name">编程相关</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2007/11/04/filename-upper-lower/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2007/11/04/filename-upper-lower/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数：</span>
+                
+                <span title="字数">915</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读 &asymp;</span>
+                
+                <span title="阅读">1 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <pre><code>for f in *;do 
+mv $f `echo $f |tr &quot;[A-Z]&quot; &quot;[a-z]&quot;` 
+done
+</code></pre><p>上面这个脚本可以处理大多数情况，但是当文件名中有空格时该脚本就无效了。</p>
+<p>经过尝试下面这段脚本可以解决上面的问题：</p>
+<pre><code>[cocobear@cocobear 1027]$ cat re.sh 
+mv &quot;$1&quot; &quot;`echo $1 | tr &apos;[A-Z]&apos; &apos;[a-z]&apos;`&quot;
+[cocobear@cocobear 1027]$ find ./ -type f -exec ./re.sh &apos;{}&apos; \;
+</code></pre><p>再想一想其实最前面的代码也一样能解决问题，也是需要在mv的两个参数的变量名上加上双引号：</p>
+<pre><code>for f in *;do 
+mv &quot;$f&quot; &quot;`echo $f |tr &quot;[A-Z]&quot; &quot;[a-z]&quot;`&quot; 
+done
+</code></pre><p>我刚开始改的时候只对<code>echo $f | tr &quot;[A-Z]&quot; &quot;[a-z]&quot;</code>用了双引号，结果出现下面的错误：</p>
+<pre><code>mv: 目标 “dscn6208 [1600x1200].jpg” 不是目录 
+</code></pre><p>解释：<br>shell传递参数默认是按照空格来区分的，因此当文件名里有空格时传递参数的过程中就会被认为是传递了两个参数，这样如果$f没有使用双引号的话”dscn6208 [1600x1200].jpg”就会被认为两个文件，相当于：<br>mv dscn6208 [1600x1200].jpg “dscn6208 [1600x1200].jpg”<br>mv会认为第三个参数是文件夹，所以会提示目标“dscn6208 [1600x1200].jpg”不是目录。</p>
+<h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#2244" title="2007-11-05 09:48:47">wind</a>:</strong> 写得很清楚，就是代码用的颜色太难色看了，还不如用普通的红色。</p>
+<p><strong><a href="#2247" title="2007-11-05 12:05:43">cocobear</a>:</strong> 改了个颜色，怎么样？</p>
+<p><strong><a href="#2259" title="2007-11-05 20:29:13">luguo</a>:</strong> 恩，总结得好。 网上其它那些处理文件名空格的方法就显得过于复杂了～～</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
     
       
 
@@ -1045,424 +1512,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2007/10/29/back-from-beijin-2/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="cocobear">
-      <meta itemprop="description" content="爱折腾的技术宅一枚">
-      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="可可熊D窝">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2007/10/29/back-from-beijin-2/" class="post-title-link" itemprop="url">俺又从伟大的首都回来了-续</a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2007-10-29 23:12:04" itemprop="dateCreated datePublished" datetime="2007-10-29T23:12:04+08:00">2007-10-29</time>
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/" itemprop="url" rel="index"><span itemprop="name">Life</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2007/10/29/back-from-beijin-2/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2007/10/29/back-from-beijin-2/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-symbolscount">
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数：</span>
-                
-                <span title="字数">1.2k</span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读 &asymp;</span>
-                
-                <span title="阅读">1 分钟</span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>第二天早上还正睡得好着呢，就被一阵电话铃给吵醒了，本来以为是老大打得还准备埋怨两句，没想到是王老师打的:-)</p>
-<p>出去吃了个早点，就去了决赛地点，已经有好多参赛的小组来了，都是很年轻的小伙，还看到了嘉宾名单里有徐继哲，呵呵，又一次要见到他了，还有宫敏，程勇（做jfox的)，苏哲（google的人，做scim的，不过因为临时有时没能到场)。</p>
-<p>没想到的是最后进入决赛的9支队伍除了我们和东软的一队，其它的都是中科院各所的研究生，他们的项目里有两个我比较感兴趣，都是python做的，一个是搜索引擎，另一个是多媒体编辑器，不过多媒体编辑器不太完整，只实现了播放的功能因此最后和我们一样只取得了优秀奖。</p>
-<p>值得一提的是东软那组做的东西，具有很浓重的商业气味，就连PPT感觉都很专业，很明显是受过专业的、有实际项目经验的老师培养，东西也具有一定的实际意义：可定制企业管理内核。</p>
-<p>比赛的结果并不重要，我们也没有专门为这个比赛去准备，因此项目的技术含量和别人显然不在一个档次，因此没有好的名次是很明显的，不过论开发模式，我们应该算是最纯粹、最全面的开源软件开发模式。而且有些项目甚至只有Windows平台上的东西，让我不爽的很！</p>
-<p>评奖完毕后徐继哲又和我们聊了一会儿，宫敏知道我们是西安来的也过来凑热闹一块儿聊了一会儿。然后就一起合了影后，他们便离开了。</p>
-<p>由于前一天找了两个多小时没找到清华正门，吃完饭后我们继续去寻找清华正门，没想到离我们住得地方那么近，昨天绕了一个大圈。又逛了逛清华，看了看以前的旧门，就坐公交去北京西站了。</p>
-<p>BWT：俺和那个做多媒体的研究生聊了一会儿，他说到北京现在博士学（和海归硕士）历才给解决户口问题，因此他毕业都不打算留北京了。后来又听除哲继说他目前还没有北京的户口，真是太和谐了啊，以后北京全住博士！！</p>
-<h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#2285" title="2007-11-07 10:13:23">匿名</a>:</strong> 好啊~ 用gtalk吧，我以前没用过，现在学习一下。 我有gmail： <a href="mailto:aaron792@gmail.com" target="_blank" rel="noopener">aaron792@gmail.com</a></p>
-<p><strong><a href="#2239" title="2007-11-04 20:53:09">kongove</a>:</strong> 好久没进来了（其实也只有几天） 谢谢老大们给我们带路，我们会好好努力的。。。</p>
-<p><strong><a href="#2164" title="2007-10-31 13:02:14">luguo</a>:</strong> 恩，政策好～～！</p>
-<p><strong><a href="#2266" title="2007-11-06 10:13:00">匿名</a>:</strong> 大家可以在qq上交流。 我的qq：175468139</p>
-<p><strong><a href="#2268" title="2007-11-06 11:33:47">cocobear</a>:</strong> 楼上的有邮件地址没？我在Linux下使用QQ不太方便，一般习惯用gtalk，或者邮件。</p>
-<p><strong><a href="#2257" title="2007-11-05 18:55:26">cocobear</a>:</strong> TO:楼上的 其实我也感觉到了这次比赛确实不是很“开源”的，不过技术方面别人确实做的好一些:-) ，这一些值得我们去学习。 不知道你是哪位？</p>
-<p><strong><a href="#2838" title="2008-01-02 13:45:37">dream</a>:</strong> 我在北京，以后有机会到北京，找我玩啊～～ PS，你感觉宫敏怎么样？</p>
-<p><strong><a href="#2844" title="2008-01-02 22:19:47">cocobear</a>:</strong> 呵呵，我寒假的时候去北京。 说实话我对宫敏不太了解，仅仅知道他把第一份自己软件库背回中国:-) 从不过从当天的谈话中感觉还是挺亲合的一个人。</p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2007/10/29/back-from-beijin-1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="cocobear">
-      <meta itemprop="description" content="爱折腾的技术宅一枚">
-      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="可可熊D窝">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2007/10/29/back-from-beijin-1/" class="post-title-link" itemprop="url">俺又从伟大的首都回来了</a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2007-10-29 22:03:46" itemprop="dateCreated datePublished" datetime="2007-10-29T22:03:46+08:00">2007-10-29</time>
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/" itemprop="url" rel="index"><span itemprop="name">Life</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2007/10/29/back-from-beijin-1/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2007/10/29/back-from-beijin-1/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-symbolscount">
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数：</span>
-                
-                <span title="字数">1.2k</span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读 &asymp;</span>
-                
-                <span title="阅读">1 分钟</span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>9月份刚去北京参加了LinuxWorld2007，没想到这个月末又要去一次北京。因为上学期小组做的项目(XYLFTP)参加了第二届中科院开源软件大赛,而且有幸进了决赛。</p>
-<p>其实那会儿做项目的时主要是为了在一块学习、交流，而且可以感受一下按照软件工程标准来开发软件的整个流程。不过前几天很意外的接到了我们的项目进入决赛的通知，在人家的要求下补了测试文档，简单的准备了一下，就起程去北京了。(虽然大赛组织者不给报销费用，不过学校还是给报销了)</p>
-<p>本来还想能买个卧铺，没想到老大已经买好了硬座，有点不爽，因为25号晚上走，26号住一天，27早上参加比赛，晚上就又得坐车回来，感觉太累了。不过还好火车上人不太多，聊天聊了好几个小时然后和林同学靠着睡了一会儿就到了北京，感觉比回家的时候坐那火车人舒服多了。</p>
-<p>到了北京后和第一次来时感觉一样，还是分不清东南西北，哪儿也找不到，只是北京西站看着比较眼熟而已。花了一个多小时坐公交到了中关村，又花了半个多小时的时间去找中科学的研究生院，最后还是别人接的我们几个。</p>
-<p>比较有意思的是我们被安排到的中科院研究生院招待所，是个地下招待所，不过不是大家想像的那种很阴暗很差的地下室，貌似是防空专用的，入口的门就有三层，每层都是十几厘米厚的铅门（老大是这样说的，我敲了一下那门，还以为是石头的呢:-) ）。进了房间以后觉得挺不错，很干净也很安静，只是手机没信号了！！于是手机干脆就关机了。</p>
-<p>放下行李后就开始加班了，这里不得不说下老大了，本来测试计划说好是你写的，最后还是我写了，虽然这个PPT说好是我做的，但大家都已经弄好了大概的条目，让你增加一些具体描述（谁让老大文采好呢），老大还是等到了北京才弄！还是我开的头，貌似老大适合做皇帝–小玄子，去，把那个诏书给朕写了！</p>
-<p>下午东西都准备好后在王老师的建议下去了清华大学，我们几个人都不来过清华，从西南门进去后就一直东闯西撞，一直走了两个多小时才又从另一个门出去，我们都以为才走了清华的一小部分，其实我们把整个清华都转了一圈了！！（看来清华也不是很大么）清华的家属区那块完全是农村的样子，就差养几头猪了，我们刚进去还以为走错地儿了。</p>
-<p>晚上回招待所时我都饿得快走不动了（主要是前一天没吃饭，就吃了两包方便面，到了北京第一顿又吃了面），在饭馆狠吃了一顿，王老师请的俺们，呵呵。</p>
-<p>回去后和小林子在一块住一间房子，本来还想看会儿电视，聊一会儿再睡，没想到刚躺在哪儿就睡着了，太累了！</p>
-<h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#2162" title="2007-10-31 12:51:30">Amankwah</a>:</strong> 唉，其实我的水平就那样，不是不想做，而是做不出～</p>
-<p><strong><a href="#2163" title="2007-10-31 12:59:47">luguo</a>:</strong> 老大那个拖拉啊～～！不去中兴待上十年是改不了了！！！！</p>
-<p><strong><a href="#2369" title="2007-11-15 21:48:59">breeze</a>:</strong> 10月27日，中国科学院“第二届开源软件大赛”决赛暨闭幕式在研究生院中关村园区举行。“</p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1512,7 +1561,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">358</span>
+                    <span class="site-state-item-count">360</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1918,7 +1967,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">182</span>
+                      
+                    
+                    <span class="site-state-item-count">183</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -2037,7 +2088,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2007 – <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; 2007 – <span itemprop="copyrightYear">2021</span>
   <span class="with-love" id="animate">
     <i class="fa fa-heart"></i>
   </span>
@@ -2049,7 +2100,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">519k</span>
+    <span title="站点总字数">522k</span>
   
 
   
@@ -2058,7 +2109,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">7:52</span>
+    <span title="站点阅读时长">7:55</span>
   
 </div>
 
@@ -2160,7 +2211,7 @@
 
 
   
-  <script src="//cdn.staticfile.org/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/jquery/2.1.3/jquery.min.js"></script>
 
   
   <script src="//cdn.staticfile.org/fastclick/1.0.6/fastclick.min.js"></script>

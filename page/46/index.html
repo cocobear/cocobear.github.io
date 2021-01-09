@@ -310,7 +310,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">182</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">183</span></a>
 
   </li>
         
@@ -348,7 +348,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">358</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">360</span></a>
 
   </li>
 
@@ -413,6 +413,416 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2007/09/04/begin-sdl/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="cocobear">
+      <meta itemprop="description" content="爱折腾的技术宅一枚">
+      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="可可熊D窝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2007/09/04/begin-sdl/" class="post-title-link" itemprop="url">SDL初窥</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2007-09-04 13:03:57" itemprop="dateCreated datePublished" datetime="2007-09-04T13:03:57+08:00">2007-09-04</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/编程相关/" itemprop="url" rel="index"><span itemprop="name">编程相关</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2007/09/04/begin-sdl/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2007/09/04/begin-sdl/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数：</span>
+                
+                <span title="字数">758</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读 &asymp;</span>
+                
+                <span title="阅读">1 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>这几天的时间读了Programming Linux Game这本书，作者是John R. Hall,作为一本入门级的Linux游戏编程读物，这本书讲得确实不错，从游戏分类，游戏的解剖，到Linux下开发工具介绍，开发库的介绍，以及一个完整的游戏开发实例，让读者可以快速的进入Linux游戏开发中去。本书重点介绍了SDL这个跨平台的开发库，而我看这本书也是由于喜欢SDL。不像其它GTK，QT等开发库，SDL给我的感觉入手非常容易，这个感觉也可能是我比较熟悉DOS下的图象处理，而SDL开发方式与DOS下游戏开发方式非常相似，同时SDL给人整体的框架非常清楚，让人很容易理解。</p>
+<p>PLG这本书中的例子Penguin Warrior虽然很完整，不过我觉得作者似乎是为了介绍OpenAL,sndfile库而在例子中加入了这些东西，我觉得这个完全可以用SDL的库完成。当然这仅仅是我目前的感觉，我也没有亲自去做过例子，过一段时间我会自己做一个小游戏来测试是否可以只用SDL的库完成PLG书上那个例子。</p>
+<p>貌似SDL在X中使用全屏有bug,在我使用的F7中，如果设置了全屏方式，X就会重启。</p>
+<h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#1617" title="2007-09-08 14:17:41">cocobear</a>:</strong> 目前大四，在西安邮电学院上学。 你对SDL很了解吗？希望可以交流一下。</p>
+<p><strong><a href="#1581" title="2007-09-04 18:58:14">Amankwah</a>:</strong> 娃真的正儿八经研究起SDL来了？？</p>
+<p><strong><a href="#1584" title="2007-09-04 23:11:53">luguo</a>:</strong> 不错，继续～！</p>
+<p><strong><a href="#1603" title="2007-09-06 13:05:16">komac</a>:</strong> 我在邮件列表上看到你的讨论题目了。不晓得你现在是大几？在哪里上学？</p>
+<p><strong><a href="#2909" title="2008-02-09 11:35:13">Jesse</a>:</strong> “貌似SDL在X中使用全屏有bug,在我使用的F7中，如果设置了全屏方式，X就会重启。” 这是因为书里的例子在输出信息时，都用了printf(), 所以会让X出错误，我运行第一个例子时也给搞重启了。 用fprintf(stderr, …)就行了。</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2007/09/04/a-small-dream/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="cocobear">
+      <meta itemprop="description" content="爱折腾的技术宅一枚">
+      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="可可熊D窝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2007/09/04/a-small-dream/" class="post-title-link" itemprop="url">小小的理想</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2007-09-04 12:33:21" itemprop="dateCreated datePublished" datetime="2007-09-04T12:33:21+08:00">2007-09-04</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/" itemprop="url" rel="index"><span itemprop="name">Life</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2007/09/04/a-small-dream/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2007/09/04/a-small-dream/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数：</span>
+                
+                <span title="字数">566</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读 &asymp;</span>
+                
+                <span title="阅读">1 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>星星同学曾经说过“人要是没有了理想，和咸鱼还有什么区别”，确实是这样啊，我差一点就成了咸鱼了，幸亏还有着那么一点点的希望，逐渐有了小小的理想：</p>
+<p><strong>和一个喜欢的人在一块，写自己喜欢的代码，读自己喜欢的书，生活能如此，足矣。</strong></p>
+<p>不知道有没有人看过＜海贼王＞，日本动画片，N长的那种，现在出到了322集，貌似还有N百集要出。围绕着整部动画片最重要的一点就是一个人的理想，每个人生存下来的唯一理由就是追求自己的理想，为了理想即使死掉也值得。看来我那小小的理想是微不足道的，用不着拼着性命，也用不着多么艰苦的奋斗。</p>
+<p>为了小小的理想，尽量“低调”地活着。</p>
+<h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#1577" title="2007-09-04 13:00:01">wind</a>:</strong> 日本动画就这样，多看几部你就没感觉了。</p>
+<p><strong><a href="#1578" title="2007-09-04 14:08:04">crazyfranc</a>:</strong> 感觉你绝非一条咸鱼，这几天怎么都在谈理想，莫非大四！</p>
+<p><strong><a href="#1579" title="2007-09-04 15:56:58">飞鱼</a>:</strong> 做自己喜欢做的事情</p>
+<p><strong><a href="#1580" title="2007-09-04 18:56:57">Amankwah</a>:</strong> 传说中的大四综合症，貌似是从我传染开的？</p>
+<p><strong><a href="#1582" title="2007-09-04 21:43:48">草儿</a>:</strong> 连就连，你我相约定百年。谁若九十七岁死，奈何桥上等三年。</p>
+<p><strong><a href="#1583" title="2007-09-04 22:14:55">cocobear</a>:</strong> 草儿同学的连就连是什么意思啊。 回Amankwah 我可不是被你传染的。</p>
+<p><strong><a href="#1585" title="2007-09-05 01:34:39">草儿</a>:</strong> 那是一个故事， <a href="http://www.hao150.cn/blog/?p=156" target="_blank" rel="noopener">http://www.hao150.cn/blog/?p=156</a> 连就连，你我相约定百年，谁若九十七岁死，奈何桥上等三年。</p>
+<p><strong><a href="#1592" title="2007-09-05 20:50:30">kongove</a>:</strong> 为理想而奋斗，为自己而活着.</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
     
       
 
@@ -1065,422 +1475,6 @@ Your site found in Google: [URL=http://google.com/search?q=kbp]position672[/URL]
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2007/08/01/php-message-board-problem/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="cocobear">
-      <meta itemprop="description" content="爱折腾的技术宅一枚">
-      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="可可熊D窝">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2007/08/01/php-message-board-problem/" class="post-title-link" itemprop="url">留言板的问题</a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2007-08-01 20:36:48" itemprop="dateCreated datePublished" datetime="2007-08-01T20:36:48+08:00">2007-08-01</time>
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/编程相关/" itemprop="url" rel="index"><span itemprop="name">编程相关</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2007/08/01/php-message-board-problem/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2007/08/01/php-message-board-problem/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-symbolscount">
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数：</span>
-                
-                <span title="字数">489</span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读 &asymp;</span>
-                
-                <span title="阅读">1 分钟</span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>一直在Linux下的代码,测试也只能用Opera和Firefox,没想到IE下边表格的分隔线竟然全都没有了,真郁闷啊,实在不想再去修改了,也真不知道还能怎么样,难道改代码的时候要把IE,Opera,Firefox都打开吗?真无耐,看来浏览器之间的差异真是每个Web程序人的心头病啊,想一想自己辛辛苦苦在一个浏览器下设计好的界面,在另一个浏览器里却变得面目全非是什么感觉!</p>
-<p>不知道有没有人有解决方案?</p>
-<p>留言板用到了头像,想找一套很特别的头像,正在努力当中,争取今天弄出来.</p>
-<p>顺便说下代码中我没记得加版权,这里申明遵循GPLv2.</p>
-<h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#1396" title="2007-08-07 10:56:43">acstar</a>:</strong> IE就是一半文盲</p>
-<p><strong><a href="#1481" title="2007-08-20 15:14:08">kongove</a>:</strong> 前几天我也遇到了这个问题。 暂时性IE里没什么问题。</p>
-<p><strong><a href="#1369" title="2007-08-04 12:07:40">crazyfranc</a>:</strong> 怎么才能解决 看来浏览器之间的差异呢？学校的查分只能用IE！</p>
-<p><strong><a href="#1359" title="2007-08-01 21:31:54">Amankwah</a>:</strong> 嗯，不错！</p>
-<p><strong><a href="#1360" title="2007-08-02 01:12:32">草儿</a>:</strong> 赞一个先 现在的头像有点大，和整体不是很搭配，建议缩小到40%左右试一下</p>
-<p><strong><a href="#1520" title="2007-08-27 11:16:24">cocobear</a>:</strong> 不知道哪里的广告代码编辑的时候给弄进去了</p>
-<p><strong><a href="#1519" title="2007-08-27 10:54:48">luguo</a>:</strong> cocobear兄惊现江湖？怎么突然多了个广告？～</p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2007/07/31/php-message-board-done/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="cocobear">
-      <meta itemprop="description" content="爱折腾的技术宅一枚">
-      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="可可熊D窝">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2007/07/31/php-message-board-done/" class="post-title-link" itemprop="url">历时5天的php+mysql留言板完成</a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2007-07-31 23:53:23" itemprop="dateCreated datePublished" datetime="2007-07-31T23:53:23+08:00">2007-07-31</time>
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/编程相关/" itemprop="url" rel="index"><span itemprop="name">编程相关</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2007/07/31/php-message-board-done/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2007/07/31/php-message-board-done/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-symbolscount">
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数：</span>
-                
-                <span title="字数">886</span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读 &asymp;</span>
-                
-                <span title="阅读">1 分钟</span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>先做个介绍，开发环境是apache2.2.4+php5.2.2+F7+vim7.0+opera9.1，代码统计：<br>    [cocobear@cocobear guest]$ wc <em>.php config/</em>.php<br>       98   219  2947 admin.php<br>      202   548  6099 index.php<br>       83   243  3908 install.php<br>      122   278  3737 write.php<br>       34    63   823 config/config-sample.php<br>        8    26   429 config/footer.php<br>      178   283  2696 config/header.php<br>      725  1660 20639 总计</p>
-<p>一共725行，不是很多，不过功能还算完善的，主要特点有：</p>
-<ul>
-<li>可以实现从网页安装</li>
-<li>支持管理员回复留言</li>
-<li>支持管理员删除留言</li>
-<li>分页功能完整，可自定义每页显示留言数</li>
-<li>界面简洁.在Opera9.1,Firefox2.0下显示基本完全一致</li>
-</ul>
-<p>主要的功能全部实现了，可以满足一般用户的需求，不过还是有很多地方需要完善的，比如对留言内容的检查，简单的检查打算用JS完成，以后可能会加上关键词过滤，IP过滤以防止垃圾留言。为了使界面在Opera与Firefox全都能正常显示，花了一整天的时间，浏览器之间的差异真让人郁闷，IE还没去试，不管它了。</p>
-<p>大家可以在这里试用<a href="http://cocobear.github.io/guest/">可可熊的留言板</a><br><a href="http://cocobear.github.io/code/tar/guest.tar.gz">源代码下载</a></p>
-<p>原始的用户名为:cocobear  密码:ffffff<br>如果需要修改用户名在config.php(安装完成后)或者config-sample.php(未安装时)，修改相应的admin_name值，修改密码请在admin_pass后输入你想使用的密码的md5值，可以在<a href="http://www.cmd5.com/" target="_blank" rel="noopener">这里</a>计算md5值。</p>
-<h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#1380" title="2007-08-04 19:31:17">windflush</a>:</strong> 表示一下支持。</p>
-<p><strong><a href="#1489" title="2007-08-22 12:42:32">kongove</a>:</strong> 那个不能下载呀.</p>
-<p><strong><a href="#1521" title="2007-08-27 11:16:52">cocobear</a>:</strong> 已经修正了下载地址，感谢kongove.</p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1530,7 +1524,7 @@ Your site found in Google: [URL=http://google.com/search?q=kbp]position672[/URL]
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">358</span>
+                    <span class="site-state-item-count">360</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1936,7 +1930,9 @@ Your site found in Google: [URL=http://google.com/search?q=kbp]position672[/URL]
                     
                       
                     
-                    <span class="site-state-item-count">182</span>
+                      
+                    
+                    <span class="site-state-item-count">183</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -2055,7 +2051,7 @@ Your site found in Google: [URL=http://google.com/search?q=kbp]position672[/URL]
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2007 – <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; 2007 – <span itemprop="copyrightYear">2021</span>
   <span class="with-love" id="animate">
     <i class="fa fa-heart"></i>
   </span>
@@ -2067,7 +2063,7 @@ Your site found in Google: [URL=http://google.com/search?q=kbp]position672[/URL]
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">519k</span>
+    <span title="站点总字数">522k</span>
   
 
   
@@ -2076,7 +2072,7 @@ Your site found in Google: [URL=http://google.com/search?q=kbp]position672[/URL]
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">7:52</span>
+    <span title="站点阅读时长">7:55</span>
   
 </div>
 
@@ -2178,7 +2174,7 @@ Your site found in Google: [URL=http://google.com/search?q=kbp]position672[/URL]
 
 
   
-  <script src="//cdn.staticfile.org/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/jquery/2.1.3/jquery.min.js"></script>
 
   
   <script src="//cdn.staticfile.org/fastclick/1.0.6/fastclick.min.js"></script>

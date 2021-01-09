@@ -310,7 +310,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">182</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">183</span></a>
 
   </li>
         
@@ -348,7 +348,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">358</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">360</span></a>
 
   </li>
 
@@ -413,6 +413,449 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2007/06/09/eject-dvd-java/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="cocobear">
+      <meta itemprop="description" content="爱折腾的技术宅一枚">
+      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="可可熊D窝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2007/06/09/eject-dvd-java/" class="post-title-link" itemprop="url">Linux下的光驱开关[java]</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2007-06-09 14:05:08" itemprop="dateCreated datePublished" datetime="2007-06-09T14:05:08+08:00">2007-06-09</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/编程相关/" itemprop="url" rel="index"><span itemprop="name">编程相关</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2007/06/09/eject-dvd-java/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2007/06/09/eject-dvd-java/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数：</span>
+                
+                <span title="字数">331</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读 &asymp;</span>
+                
+                <span title="阅读">1 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>用java写的一个光驱开关小程序，实现其实使用的是eject这个程序，主要做了个图形界面，有关eject的使用请参考man手册。</p>
+<p>eject实现的原理其实也挺简单的，主要用到的ioctl这个函数，有兴趣可以看一下相关函数的说明，这个函数我还不是很了解。</p>
+<p><a href="http://cocobear.github.io/code/html/opencd.html">查看代码</a><br><a href="http://cocobear.github.io/code/OpenCD.java">下载代码</a></p>
+<p>UPDATE1：</p>
+<ul>
+<li>更新了源代码，修改了运行后在某些时候不能正常显示界面的问题（是因为setVisible位置不正确，应该在所有控件添加后使用）</li>
+<li>修改邮箱地址，以前那个竟然写错了！<h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2></li>
+</ul>
+<p><strong><a href="#317" title="2007-06-10 23:37:17">草儿</a>:</strong> 好像BUG还不断出现，测试效果不是很好</p>
+<p><strong><a href="#319" title="2007-06-11 00:15:36">cocobear</a>:</strong> <strong>TO:草儿</strong></p>
+<p>什么样的问题？</p>
+<p><strong><a href="#333" title="2007-06-11 18:46:11">cocobear</a>:</strong> <strong>TO:草儿</strong> 我不清楚这是为什么，好像我也遇到过。</p>
+<p><strong><a href="#327" title="2007-06-11 17:58:09">草儿</a>:</strong> 反映太慢 假死</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2007/06/07/fedora-7-config/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="cocobear">
+      <meta itemprop="description" content="爱折腾的技术宅一枚">
+      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="可可熊D窝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2007/06/07/fedora-7-config/" class="post-title-link" itemprop="url">F7安装后的配置</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2007-06-07 02:00:09" itemprop="dateCreated datePublished" datetime="2007-06-07T02:00:09+08:00">2007-06-07</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2007/06/07/fedora-7-config/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2007/06/07/fedora-7-config/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数：</span>
+                
+                <span title="字数">2.2k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读 &asymp;</span>
+                
+                <span title="阅读">2 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>3j001-qxcpos-f2ney640-1-f2nffdow-38<br>不知道大家安装完后做的第一件事是什么，我做的第一件事是调整scim的激活热键，因为打算搜索个东西，结果发现没办法用快捷键把scim调出来，于是在“scim设置”－－“全局设置”中添加“开关键”，设置为ctrl+space。顺便删除一些没用的输入法、语言。</p>
+<p>如果你不喜欢scim，想要安装fcitx，那么首先要做的是</p>
+<p>rpm -qa | grep scim</p>
+<p>然后删除scim相关的软件包，kill掉所有的scim进程，</p>
+<p>killall -o scim*</p>
+<p>接下来就可以安装fcitx了，你可以选择源码编译，也可以直接使用二进制包，我使用的是二进制包，但是安装后无法激活，找了些相关的文章，但仍然没有成功，就没再继续研究下去，直接用scim了，反正以前不用scim是因为它有些bug，但是F7里暂时没发现，就将就着用；而且正好使用scim不用担心和opera有冲突了。</p>
+<p>第二件事就是源加livna、freshrpms的yum源：</p>
+<p>rpm -ivh <a href="http://rpm.livna.org/livna-release-7.rpm" target="_blank" rel="noopener">http://rpm.livna.org/livna-release-7.rpm</a></p>
+<p>rpm -ivh <a href="http://ftp.freshrpms.net/pub/freshrpms/fedora/linux/7/freshrpms-release/freshrpms-release-1.1-1.fc.noarch.rpm" target="_blank" rel="noopener">http://ftp.freshrpms.net/pub/freshrpms/fedora/linux/7/freshrpms-release/freshrpms-release-1.1-1.fc.noarch.rpm</a></p>
+<p>或者你可以使用fedora-cn的镜像源：</p>
+<p>rpm -ivh <a href="ftp://ftp.fedora.cn/pub/fedora-cn/linux/7/i386/fedora-cn-release-7-2.y0.noarch.rpm" target="_blank" rel="noopener">ftp://ftp.fedora.cn/pub/fedora-cn/linux/7/i386/fedora-cn-release-7-2.y0.noarch.rpm</a></p>
+<p>因为我装许多软件都使用的是yum，所以刚装完系统就把这些源设置好。</p>
+<p>接着安装必备的软件：</p>
+<p>浏览器是必不可少的，当然F7已经自带有firefox2.0，不过我还是喜欢opera，所以从我以前的软件备份里找到opera，使用rpm包安装。上面的几个源里似乎没有opera，所以如果要安装opera的话可以去<a href="http://www.opera.com" target="_blank" rel="noopener">opera官方</a>下载。</p>
+<p>yum install chmsee    //chm阅读器也是不可缺少的</p>
+<p>yum install bluefish    //一个不错的web编辑器，不过我目前似乎更习惯使用vim</p>
+<p>yum install xmms xmms-mp3 xmms-wma</p>
+<p>这个不用说了吧，要注意的是后面两个必须装的，不然无法播放歌曲。</p>
+<p>这里顺便提一点，F7中的xmms菜单已经可以完美显示中文了，歌曲列表只要你在“首选项”－－“字体”中选择合适的中文字体就可以了。</p>
+<p>yum install mplayer mplayer-gui mplayer-fonts mplayerplug</p>
+<p>建议上面几个都装上，尤其是最后一个可以使firefox在线播放百度的mp3，还有其它一些在线视频。</p>
+<p>yum install stardict</p>
+<p>星际译王，也少不了的，不过词典似乎无法安装，我是直接使用以前的软件备份中的rpm包安装的，可以在<a href="http://stardict.sourceforge.net" target="_blank" rel="noopener">星际译王主页</a>去下载。</p>
+<p>yum install rar        //不可缺少的一个。</p>
+<p>yum install gvim    //似乎安装的时候没有这个</p>
+<p>yum install eva        //如果你觉得QQ对你来说还是必须的话。</p>
+<p>到此为止，该装的软件应该装完了，接着应该对系统进行一些配置、优化。有关F7启动项目的优化可以参考下面的文章：</p>
+<p><a href="http://www.linuxsir.org/bbs/showthread.php?t=304624" target="_blank" rel="noopener">http://www.linuxsir.org/bbs/showthread.php?t=304624</a></p>
+<p>或者参考我以前写的<a href="http://cocobear.github.io/?p=89">加快Linux的启动速度</a>一文。</p>
+<p>关于字体我觉得F7已经做得非常好了，可以不做任何修改，可能只有在opera下面字体不是很好，可以通过安装新的字体来解决。笔记本推荐使用雅黑字体。</p>
+<p>F7默认的主题、图标都挺不错的，如果你想继续美化的话可以去<a href="http://www.gnome-look.org" target="_blank" rel="noopener">FOR GNOME</a>或者<a href="http://www.kde-look.org" target="_blank" rel="noopener">FOR KDE</a>看看。</p>
+<h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#318" title="2007-06-11 00:15:20">cocobear</a>:</strong> <strong>TO：草儿</strong> 我这里好着了啊，是不是你少了源。 或者你可以直接去livna下。 那个我看过，仍然不行。</p>
+<p><strong><a href="#326" title="2007-06-11 17:56:34">草儿</a>:</strong> <strong>Re:cocobear</strong> 那个livna的源我装了，可能是插件名打错了，等下我直接去看看</p>
+<p><strong><a href="#316" title="2007-06-10 23:31:28">草儿</a>:</strong> 那个mplayer在线播放插件安装时应用 yum install mplayer mplayerplug-in， 照你所说的yum install mplayerplug会出现找不到提示的 opera里实现在线播放的可以参照一下： <a href="http://zh.gentoo-wiki.com/HOWTO_Make_mplayerplug-in_work_with_Opera" target="_blank" rel="noopener">http://zh.gentoo-wiki.com/HOWTO_Make_mplayerplug-in_work_with_Opera</a> 我没试，有时间的话可以试一下</p>
+<p><strong><a href="#2006" title="2007-10-17 07:13:23">DDR物语</a>:</strong> 有linux下的rm或rmvb播放器吗？</p>
+<p><strong><a href="#2007" title="2007-10-17 07:14:09">DDR物语</a>:</strong> 我新装的F7播放不了rm或rmvb 提示没有安装相应的插件</p>
+<p><strong><a href="#2008" title="2007-10-17 12:15:10">cocobear</a>:</strong> 可以看我写的Mplayer的安装，要从官方下一个解码器包。</p>
+<p><strong><a href="#1971" title="2007-10-13 23:37:47">DDR物语</a>:</strong> 呵呵……谢谢学长啊！节省了我很多时间啊！</p>
+<p><strong><a href="#1954" title="2007-10-12 03:34:26">komac</a>:</strong> 我喜欢用ubuntu。不过FC系列以前一直用。后来发现ubuntu的apt机制真的很不错，我是个懒人，就此就蜗居在ubuntu的屋檐下再也不想换了。</p>
+<p><strong><a href="#1976" title="2007-10-14 20:22:45">cocobear</a>:</strong> 呵呵，也方便我忘了去查阅，两全其美:-) 俺记性不太好。</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
     
       
 
@@ -1031,428 +1474,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2007/06/02/fedora-core-7-experience/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="cocobear">
-      <meta itemprop="description" content="爱折腾的技术宅一枚">
-      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="可可熊D窝">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2007/06/02/fedora-core-7-experience/" class="post-title-link" itemprop="url">Fedora core 7体验</a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2007-06-02 01:35:21" itemprop="dateCreated datePublished" datetime="2007-06-02T01:35:21+08:00">2007-06-02</time>
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2007/06/02/fedora-core-7-experience/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2007/06/02/fedora-core-7-experience/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-symbolscount">
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数：</span>
-                
-                <span title="字数">1.1k</span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读 &asymp;</span>
-                
-                <span title="阅读">1 分钟</span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>本来Fedora core 7应该计划是在5月24的时候发布，但不知道为什么延迟了，所以最近没有关注，今天听说Fedora core 7正式发布了，正好我新买的硬盘可以去体验一下。</p>
-<p>于是去Fedora的官方下载光盘镜像，但是找了半天没有找到CD版的ISO，只有DVD版和LIVE CD，没办法只能先下个LIVE CD。用的是BT二十多分钟下完后在同学的机子上刻了一下。</p>
-<p>开机，从光盘启动，出现下面的菜单：</p>
-<p>Run from image</p>
-<p>Run from RAM-requires 1GB+</p>
-<p>Verify and run from image</p>
-<p>选择了第一个， 启动的速度倒还行，不过所有服务启动后，该图形界面启动的时候就卡在那里不动了，一直是黑屏，郁闷，半天的功夫白费了。</p>
-<p>后来在同学的机子上试了一下，没有任何问题，图形界面比以前的版本都漂亮了许多，从光盘启动的速度也挺快。</p>
-<p><img src="http://fedoraproject.org/images/screenshots/login-screen.jpg" alt><br>难道我还只能回到Fedora core 5 中吗？</p>
-<p>5a1ec029</p>
-<h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#275" title="2007-06-02 05:30:21">Amankwah</a>:</strong> 完全有可能**，你的机器那个配置，最好还是不要随便用太新的软件。</p>
-<p><strong><a href="#276" title="2007-06-02 10:05:46">kongove</a>:</strong> 现在实验室这边用Ubuntu7.04 在装软件时也出现了一些问题,而且都是在执行什么脚本是出错卡住了.</p>
-<p><strong><a href="#277" title="2007-06-02 10:09:00">kongove</a>:</strong> 很不好意思评论完了才看到你的截图,很漂亮,有一种冲动,想体验一下.</p>
-<p><strong><a href="#278" title="2007-06-02 10:09:57">kongove</a>:</strong> 很不好意思评论完了才看到你的截图,很漂亮,有一种冲动,想体验一下. 因为我的Ubuntu有个缺点是显示效果没有Fedira好.</p>
-<p><strong><a href="#279" title="2007-06-02 10:26:37">windflush</a>:</strong> <strong>TO KONGOVE</strong> 你还真不是一般的粗心阿，连Fedora都大错了。 界面很是漂亮，我昨天在COCOBEAR宿舍见了我都在想我也装一个。 呵呵</p>
-<p><strong><a href="#280" title="2007-06-02 10:28:01">windflush</a>:</strong> 靠，我也打错了，居然打成“大错了”。 汗颜阿。</p>
-<p><strong><a href="#281" title="2007-06-03 00:22:32">wangcong</a>:</strong> 恩～～有倒向我们fc这边的意思了～～</p>
-<p><strong><a href="#282" title="2007-06-03 00:46:00">草儿</a>:</strong> 恩，装上了，感觉比FC6快的多</p>
-<p><strong><a href="#283" title="2007-06-03 11:09:02">crazyfranc</a>:</strong> To everyone: 其实ubuntu图形界面也能做的不比fc7差。要不是我这配置我早就……</p>
-<p><strong><a href="#284" title="2007-06-03 12:42:53">windflush</a>:</strong> 又一个Ubuntu的传教士。 刚刚看着amankwah拿着Ubuntu7.04的盘去鼓动人家重装系统去了。</p>
-<p><strong><a href="#1733" title="2007-09-18 13:41:59">pcca</a>:</strong> 使用过的感觉还是FC7比较稳定一点, 至少在live cd启动时, 我还没有见到会卡住的。反到ubuntu 7.05遇到很多机都会卡死在那里。</p>
-<p><strong><a href="#1736" title="2007-09-18 18:35:11">cocobear</a>:</strong> 主要是我的机子太老了。IBM T21</p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2007/05/30/comment-dreamhost/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="cocobear">
-      <meta itemprop="description" content="爱折腾的技术宅一枚">
-      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="可可熊D窝">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2007/05/30/comment-dreamhost/" class="post-title-link" itemprop="url">Dreamhost主机评论</a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2007-05-30 12:09:25" itemprop="dateCreated datePublished" datetime="2007-05-30T12:09:25+08:00">2007-05-30</time>
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/互联网/" itemprop="url" rel="index"><span itemprop="name">互联网</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2007/05/30/comment-dreamhost/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2007/05/30/comment-dreamhost/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-symbolscount">
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数：</span>
-                
-                <span title="字数">2k</span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读 &asymp;</span>
-                
-                <span title="阅读">2 分钟</span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>申明一点，这篇文章不是DH的付费评论，DH也没有付费评论，只是自己使用DH主机一个多月来的感受。</p>
-<p>首先得承认一点，DH的主机的价格是十分诱人的，第一年如果使用优惠码（1G50）可以以最低22.4$ 的价格得到200G空间，2TB流量，无限制域名绑定，无限制数据库，75个FTP帐户。这一点也应该是大多数人选择DH的一个重要原因。虽然说第二年的续费比较其它的美国主机可能稍贵一点，大约贵2美元/月左右，但是如果你做一个计算。假设你打算购买三年的主机，三年DH多付出应该是2×12×3=78$。即使这样算下来也少于第一次购买时的优惠额度，所以说DH的价格是有着绝对的优势。</p>
-<p>其次是空间管理方面，使用DH主机一个多月来我一直通过WEB页面对我购买的空间进行管理 ，觉得DH的管理界面设计的非常不错，而且生效的速度挺快，一般新建一个FTP用户大约2-3分钟的时间就能生效，域绑定也挺快，如果除去域名解析需要花的时间，一般十分钟的时间就可以完全把一个新站建立起来，包括设置数据库这里东西。当然偶尔DH的绑定域名也会出点问题，我就遇到过，几个小时都不能生效，一般情况下我都是联系客服，收到答复后一般很快就能解决，这里有一个需要注意到的地方，因为DH主机在美国，和我们是有时间差的，所以你的问题可能不会被马上解决，所以最好在DH那边是白天的时间发邮件咨询问题。</p>
-<p>这里我不得不提到DH的售后服务，在这一个多月的时间里我也遇到了不少的问题，每次我都是通过管理界面的联系客服，发送邮件给DH的售后服务中心，一般情况下在我发出邮件的第二天就回收到答复，而且每次都给我很好的解决问题，即使有的时候问题其实只是我自己对服务器本身的不了解，但客服仍然能够给我认真的解答，这一点我觉得国内没有几个空间提供商可以做到。有时候甚至我发出邮件5分钟就给我了答复，让我感觉到十分惊讶。更让我 感到欣慰的一点是，有时候问题其实出在我这里，例如上次我空间里有人弄色情网站，结果被GFW掉了IP，在这个服务器上的其它网站也受到了牵连，我给DH发了邮件询问是否可以把 我那个服务器上的其它站点转移一下，因为被大陆给封了，没想到的是DH不仅把我给的几个站帮我转过去，而且帮我检查了是否还有其它站点是否也是在那台服务器上。不得不说DH确实是在为用户着想。这里顺便提一下，我的英文并不是很好，在发邮件的时候表达问题时有时候并不是很准确，但是DH每次都能理解我的需求，而且会使用尽量浅且易懂的英语和我交流，这不仅仅是责任，更是一种对待客户的态度。</p>
-<p>应该有很多人关心DH主机的质量，因为好多人提到了DH主机容易当机。但就我个人使用DH主机这么长时间来这种事从来没有发生过，当然我使用才一个多月时间。就我个人的看法，DH主机的质量还是挺不错的，首先速度方面，我认为是比较理想，我自己在宿舍打开网站的时候可能稍慢一点（不过我觉得这似乎和我们使用网通有关系，感觉每次打开的时候时间都花在了域名解析上。）不过在外面网吧感觉速度还是很快的，基本上不用等待。其次是易用性，这一点我觉得DH表现的非常不错，每一个FTP帐号可以同时是SHELL用户，这样非常方便懂得Linux的一些朋友对自己的网站进行维护。这一点可以参考我写的<a href="http://cocobear.github.io/?p=56">管理服务器的感受</a>。再次有些朋友可能会担心如果自己的站访问量较大会不会有影响，我只能说DH的主机并不适合做大站的，一般最好用来做个人站点，或者一些小型企业的网站（其实小企业的网站网问量很低的，大部小企业做自己的网站只是用来撐个门面），如果你的网站可以达到同时在线1000人，我建议你还是自己购买服务器。当然只做个人站点,200G的空间确实是一种浪费，我一开始的时候 也想到了这一点所以就和同学一块买了空间，同时在淘宝上也开店卖。一般可以几个人一块购买，当然要是人少的话还是比较贵的。大家可以到这里看一下<a href="http://www.1g50.cn" target="_blank" rel="noopener">1G50</a>（呵呵做个广告），顾名思义1G空间50块钱，我觉得这对于个人用户来说挺划算的，因为要涉及到续费的问题，几个人合租人少的时候可能续费就贵了，而且并不能保证所有的人都愿意续费，而我这里提供的就是我自己购买的空间，我已经和几个同学一块用了，当然我是肯定会续费的，所以如果大家在这里购买的话每年只需要固定的50就可以使用1G空间:)</p>
-<p>希望能成为打算购买国外空间的朋友们一个比较详细的参考。</p>
-<h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#271" title="2007-05-30 13:40:32">草儿</a>:</strong> 嗯,嗯 已经转过去了,版权费么,一碗稀饭</p>
-<p><strong><a href="#272" title="2007-05-30 19:52:53">Amankwah</a>:</strong> DH希望不要给功夫网了就行了，其他的没什么要求。</p>
-<p><strong><a href="#273" title="2007-06-04 18:48:21">博客联盟</a>:</strong> 我用过几天的dh，不过我是放在别人的空间里面。 对管理没什么感觉，只是觉得速度飞快，比国内大多数虚拟主机都快，羡慕。</p>
-<p><strong><a href="#274" title="2007-06-04 20:05:04">cocobear</a>:</strong> <strong>TO:博客联盟</strong> 听说在2008年的时候中美之间的宽带会增加好多,那个时候DH速度会不会更快:)</p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1502,7 +1523,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">358</span>
+                    <span class="site-state-item-count">360</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1908,7 +1929,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">182</span>
+                      
+                    
+                    <span class="site-state-item-count">183</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -2027,7 +2050,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2007 – <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; 2007 – <span itemprop="copyrightYear">2021</span>
   <span class="with-love" id="animate">
     <i class="fa fa-heart"></i>
   </span>
@@ -2039,7 +2062,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">519k</span>
+    <span title="站点总字数">522k</span>
   
 
   
@@ -2048,7 +2071,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">7:52</span>
+    <span title="站点阅读时长">7:55</span>
   
 </div>
 
@@ -2150,7 +2173,7 @@
 
 
   
-  <script src="//cdn.staticfile.org/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/jquery/2.1.3/jquery.min.js"></script>
 
   
   <script src="//cdn.staticfile.org/fastclick/1.0.6/fastclick.min.js"></script>

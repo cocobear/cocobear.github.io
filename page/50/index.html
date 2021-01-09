@@ -310,7 +310,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">182</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">183</span></a>
 
   </li>
         
@@ -348,7 +348,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">358</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">360</span></a>
 
   </li>
 
@@ -413,6 +413,456 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2007/06/25/xylftp-v1-release/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="cocobear">
+      <meta itemprop="description" content="爱折腾的技术宅一枚">
+      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="可可熊D窝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2007/06/25/xylftp-v1-release/" class="post-title-link" itemprop="url">xylftp服务器端V1.0发布</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2007-06-25 22:30:35" itemprop="dateCreated datePublished" datetime="2007-06-25T22:30:35+08:00">2007-06-25</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/编程相关/" itemprop="url" rel="index"><span itemprop="name">编程相关</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2007/06/25/xylftp-v1-release/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2007/06/25/xylftp-v1-release/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数：</span>
+                
+                <span title="字数">1.4k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读 &asymp;</span>
+                
+                <span title="阅读">1 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>原引：<a href="http://www.xiyoulinux.cn/blog/?p=14" target="_blank" rel="noopener">http://www.xiyoulinux.cn/blog/?p=14</a></p>
+<pre><code>xylftp服务器端经过了长期测试和修复，现在已经基本完善和稳定。我们宣布正式发布我们的第一个版本供大家使用！&gt; 
+
+a) 下载：&gt; 
+
+xylftp项目的的主页在：&gt; 
+https://sourceforge.net/projects/xylftp&gt; 
+
+xylftp服务器端1.0版本可以在这里下载：&gt; 
+
+[xylftp-server-1.0.tar.gz](http://xiyoulinux.cn/down/xylftp-server-1.0.tar.gz)&gt; 
+
+b) 安装：&gt; 
+
+安装方法：用命令 tar -xvzf xylftp-server-1.0.tar.gz解压，然后进入文件目录&gt; 
+xylftp/server/src/，运行”make install”命令即可完成安装。&gt; 
+
+c) 卸载：&gt; 
+
+卸载方法：进入文件目录 xylftp/client/src/，运行”make uninstall”命令即可完成&gt; 
+软件卸载。&gt; 
+
+d) 开发：&gt; 
+
+xylftp的CVS在：&gt; 
+http://xylftp.cvs.sourceforge.net/&gt; 
+
+截止目前，服务器端C代码总量为2400行。参与服务器端编写的人员有：&gt; 
+
+1.董溥：完成守护进程的建立，socket连接以及写日志，实现主程序的流程。&gt; 
+2.郭拓：完成do_list命令。&gt; 
+3.贾孟树：完成parse_cmd.c,telnet.c，以及do_quit命令，以及测试和维护工作。&gt; 
+4.林峰：完成配置文件的解析，完成do_user,do_pass命令,参与do_syst,do_type,do_noop命令以及测试和维护工作。&gt; 
+5.刘伟：完成do_pwd,do_cdup,do_cwd,do_rnfr,do_rnto,do_port命令。&gt; 
+6.刘洋：完成do_stat，do_mode,do_fail命令,以及测试和维护工作。&gt; 
+7.聂海海：完成do_retr,do_mkd,do_rmd,do_dele命令。&gt; 
+8.王聪：完成do_stru命令,完成Makefile编写,并维护了王老师的三个命令以及整个流程的测试和维护工作。&gt; 
+9.王亚刚老师：完成do_abor,do_stor,do_pasv命令。&gt; 
+
+感谢各位参与！&gt; 
+
+欢迎大家测试使用，并把信息及时反馈给我们！&gt; 
+（错误报告请发送至xiyoulinux@googlegroups.com）
+</code></pre><p>由于个人原因在编码阶段我做了很少的工作，在这里再次对所有的朋友说一声“对不起！”。一个学期了，终于有了结果，象<a href="http://www.amankwahly.cn" target="_blank" rel="noopener">刘洋</a>同学说的“大家通过一起做一个项目，一起风雨走来，一起体味其中的酸甜苦辣”，不管怎么样，终究是走了过来，确实没有什么槛是过不去的！</p>
+<h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#736" title="2007-06-25 22:54:36">Name</a>:</strong> 过程重于结果。辛苦大家了！</p>
+<p><strong><a href="#738" title="2007-06-26 08:59:45">windflush</a>:</strong> 其实你编码阶段做的工作倒是不少，就是测试和维护阶段跑了而已。你看你的贡献还是蛮大的，你完成的编码量也不少哦。</p>
+<p><strong><a href="#739" title="2007-06-26 11:11:44">crazyfranc</a>:</strong> 感觉你做的挺多的，不要想太多了。</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2007/06/25/recommand/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="cocobear">
+      <meta itemprop="description" content="爱折腾的技术宅一枚">
+      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="可可熊D窝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2007/06/25/recommand/" class="post-title-link" itemprop="url">推荐两个地方</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2007-06-25 20:20:34" itemprop="dateCreated datePublished" datetime="2007-06-25T20:20:34+08:00">2007-06-25</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/互联网/" itemprop="url" rel="index"><span itemprop="name">互联网</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2007/06/25/recommand/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2007/06/25/recommand/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数：</span>
+                
+                <span title="字数">820</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读 &asymp;</span>
+                
+                <span title="阅读">1 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ul>
+<li><a href="http://www.google.com/calendar" target="_blank" rel="noopener">Google日历</a><br>首先你要有一个Google的帐户，没有的话先去注册一个，这年头没Google怎么活啊！如果你一天有比较多的事要做，但却有时候容易忘记一些比较重要的事，这个Google日历可能对你十分有用。差点忘了，你还得有个手机。把你需要做的事在Google日历上记录下来，比如你设定每天2：00的时候睡觉（有些人可能太忙都不记得睡觉的时间了，这些人应该注意一下。），在日历中的2：00所在的表格添加“活动”，随便哪天都可以，因为你需要把这个的重复频率设置为每天。</li>
+</ul>
+<p>仅这样是不行的，还要手机验证，设置“活动”通知为SMS，可以参考这篇文章：</p>
+<p><a href="http://www.williamlong.info/archives/935.html" target="_blank" rel="noopener">使用Google日历手机短信进行时间管理</a></p>
+<ul>
+<li><a href="http://neil.fraser.name/software/img2html/" target="_blank" rel="noopener">img2html</a><br>今天在YouTube上看到<a href="http://www.youtube.com/watch?v=NqFOB77jLaE" target="_blank" rel="noopener">一段视频</a>，是一个日本人用手写Html代码画的一个卡通MM，真是不可思议！不过如果要是使用上面这个软件（img2html）完成这个过程就比较容易了，挺有意思的软件，可以把一幅图片转换为Html代码，是用perl写的，大概就是100多行的样子，其实原理也挺简单的，使用GD图像库读取图片，然后扫描每个象素的颜色，分别对应生成的Html代码中的表格单元的颜色，然后对相近颜色使用Html代码中的COLSPAN属性，用来减少生成Html代码的大小。</li>
+</ul>
+<p>我也只是大概浏览了下代码，原理应该和我上面想的差不多，那个使用COLSPAN是作者网站上说的，我也没在代码里面去看，感觉这个实现稍麻烦一些，其它的应该没什么。</p>
+<h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#733" title="2007-06-25 22:28:14">windflush</a>:</strong> quote : 有些人可能太忙都不记得睡觉的时间了，这些人应该注意一下。 我觉得这个指的貌似是你阿。</p>
+<p><strong><a href="#734" title="2007-06-25 22:34:50">cocobear</a>:</strong> 我没有这么忙，我是太闲得慌了！</p>
+<p><strong><a href="#735" title="2007-06-25 22:53:14">草儿</a>:</strong> 那个google日历MS不支持移动，上面的服务商列表里只有中国联通～另外免费业务好像限制挺多的</p>
+<p><strong><a href="#737" title="2007-06-26 01:37:20">cocobear</a>:</strong> TO:草儿 既然我在这里说了,那是肯定支持的. 我觉得现在就挺好用了.已经够我使用了.</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
     
       
 
@@ -1042,429 +1492,6 @@ moderation.php
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2007/06/22/blank/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="cocobear">
-      <meta itemprop="description" content="爱折腾的技术宅一枚">
-      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="可可熊D窝">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2007/06/22/blank/" class="post-title-link" itemprop="url">不知道做什么</a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2007-06-22 19:12:12" itemprop="dateCreated datePublished" datetime="2007-06-22T19:12:12+08:00">2007-06-22</time>
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/" itemprop="url" rel="index"><span itemprop="name">Life</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2007/06/22/blank/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2007/06/22/blank/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-symbolscount">
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数：</span>
-                
-                <span title="字数">602</span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读 &asymp;</span>
-                
-                <span title="阅读">1 分钟</span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>花了四天的时间写完了Jwind,每天大概只睡四五个小时，那种感觉很好，睡醒了就想程序，直到累得要闭上眼的时候再睡下。程序写完了，突然不知道做什么了，找到了82集的贞观长歌，一口气看完（以前看了一半），比起电视里面人的心计、思想，我大概就是一个三岁小孩。</p>
-<p>又不知道做什么了，开始想事情，一个很不好的毛病，但却无法改变。</p>
-<h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#387" title="2007-06-22 22:17:59">Amankwah</a>:</strong> 兄弟，没事回来帮我编程吧，我快疯了</p>
-<p><strong><a href="#390" title="2007-06-22 22:55:15">草儿</a>:</strong> 再看81集三国演义，呵呵</p>
-<p><strong><a href="#394" title="2007-06-22 23:10:35">cocobear</a>:</strong> <strong>TO:Amankwah</strong> 我离开是个好事，现在你们不是做的差不多了吗？ 再说我什么也做不了的，我只能一个人呆着。</p>
-<p><strong><a href="#396" title="2007-06-22 23:12:10">cocobear</a>:</strong> <strong>TO:草儿</strong> 其实我并不想看什么电视剧的，只是一天无所是事。</p>
-<p><strong><a href="#1212" title="2007-07-24 10:01:18">Prawn</a>:</strong> 哎。到真正面对的时候每个人都有每个人的说法，解释，甚至于借口！请别为自己开脱！</p>
-<p><strong><a href="#523" title="2007-06-23 12:52:24">windflush</a>:</strong> 你太不负责任了，害我现在要看你的那部分网络编程，虽然不难，可是真的很麻烦。</p>
-<p><strong><a href="#533" title="2007-06-23 13:16:07">cocobear</a>:</strong> 对不起。</p>
-<p><strong><a href="#853" title="2007-06-29 19:18:09">一个人</a>:</strong> 看到了，感触很大，有点心痛的感觉，好像．．．．．很孤独的感觉，涩涩的．．．．</p>
-<p><strong><a href="#707" title="2007-06-24 13:17:53">cocobear</a>:</strong> <strong>TO:xiaoxia</strong> 我一直喜欢编程,你是?</p>
-<p><strong><a href="#698" title="2007-06-24 11:47:52">xiaoxia</a>:</strong> 你也学编程啊？</p>
-<p><strong><a href="#1228" title="2007-07-24 19:52:04">cocobear</a>:</strong> <strong>TO:Prawn</strong> 确实我很多时候在为自己找借口，我也注意到了，但我这个人，唉…… Prawn是榆林的？</p>
-<p><strong><a href="#2882" title="2008-01-17 17:29:02">Prawn</a>:</strong> 我家不是榆林的..</p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2007/06/22/something-about-heart/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="cocobear">
-      <meta itemprop="description" content="爱折腾的技术宅一枚">
-      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="可可熊D窝">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2007/06/22/something-about-heart/" class="post-title-link" itemprop="url">人在红尘 心在青山</a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2007-06-22 17:14:41" itemprop="dateCreated datePublished" datetime="2007-06-22T17:14:41+08:00">2007-06-22</time>
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/" itemprop="url" rel="index"><span itemprop="name">Life</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2007/06/22/something-about-heart/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2007/06/22/something-about-heart/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-symbolscount">
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数：</span>
-                
-                <span title="字数">1.4k</span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读 &asymp;</span>
-                
-                <span title="阅读">1 分钟</span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>古往今来有多少人为了自己的前程放弃了自己心爱的女人……</p>
-<p>从古至今又有多少人为了自己最爱的女人放弃了前程……</p>
-<p>在这些人里，不乏有帝王与能臣，但是仅仅凭这个就可以认定一个人吗？这两种人哪一种人错了呢？也许会有很多人认为第二种人错了，这也许是 “大丈夫何患无妻”的影响吧。从古至今的教育都是让男人以事业为重，认为女人只是男人功成之后的奖励，直到现在还有很多人抱着这种思想。不过，大概也只有这种人才能成了大事。又扯到了一个问题，“成大事”，“男人天生就要是做大事的”这似乎是大多数人的想法，古代的男人则是考取功名，或者争战沙场，而现代的男人则要有一番自己的事业，说白了就是赚足够让人羡慕的钱。有了钱一切就都有了。</p>
-<p>不过，还好从古至今清心寡欲之人也不少， 不求功名，每天做自己喜欢的事情，闲着的时候陪着自己的家人，简简单单、清清静静的过完一生。这也是我想要的生活。</p>
-<p>一个人一生和自己的妻子（丈夫）在一起的时间是最长的，有些人也许一辈子也不能遇到合适的人，有些人也许遇到了自己却不知道，这两种大概都是天意，但是如果遇到了但没有去珍惜，这大概是人生最大的憾事。</p>
-<p>一个清心寡欲的人一生最在乎的也许就是这件事了吧。</p>
-<h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#384" title="2007-06-22 18:51:56">cocobear</a>:</strong> 在这里放个鸡蛋篮子：</p>
-<p><strong><a href="#386" title="2007-06-22 22:13:59">Amankwah</a>:</strong> 似乎，你有成为温莎公爵的潜质！</p>
-<p><strong><a href="#389" title="2007-06-22 22:54:06">草儿</a>:</strong> 江山美人？ 美人江山？ 其实这跟先有鸡还是先有蛋一样，没有答案的，你说什么就是什么</p>
-<p><strong><a href="#392" title="2007-06-22 23:02:37">Name</a>:</strong> 别联系古代。古代和现代不一样，世道变了！明白？</p>
-<p><strong><a href="#395" title="2007-06-22 23:11:35">Name</a>:</strong> 哎，居然没人回应coco的标题。 我给几个题目： a. 女人 b. 女人啊女人 c. 女人vs江山， d. 爱江山更爱美人 请各位同学踊跃投票，支持你喜欢的答案！短信发送至：移动用户10086，联通用户100XX，小灵通用户XXXXX</p>
-<p><strong><a href="#397" title="2007-06-22 23:15:02">cocobear</a>:</strong> <strong>TO:Name:</strong>没有我觉得合适的 <strong>TO:Amankwah</strong>我没听说过这个人。</p>
-<p><strong><a href="#511" title="2007-06-23 12:29:23">非金属</a>:</strong> 为何良人还不来 哈哈~~,这名字屌不?</p>
-<p><strong><a href="#726" title="2007-06-25 19:56:09">cocobear</a>:</strong> 人在红尘 心在青山 这个题目好，呵呵！</p>
-<p><strong><a href="#725" title="2007-06-25 19:47:03">王飞英</a>:</strong> 萝卜青菜各有所爱 这个题目中不？ 不行你来找 我，再给你起一个，哇哈哈哈^_^…….</p>
-<p><strong><a href="#724" title="2007-06-25 14:28:06">陈文文</a>:</strong> 人在红尘 心在青山</p>
-<p><strong><a href="#906" title="2007-07-04 13:38:53">鱼</a>:</strong> 是你的怎么都是你的，不是你的就算你放弃与不放弃又有什么用！相信自己是没错的！只要你有心，你就有舞台！</p>
-<p><strong><a href="#729" title="2007-06-25 21:14:58">徐静</a>:</strong> 所求。 呵呵清心寡欲和最在乎，好怪啊！ 细想一下，也是；知己难求。</p>
-<p><strong><a href="#717" title="2007-06-24 19:35:27">草儿</a>:</strong> 温莎公爵虽然失去王位，却得到佳人，这种不爱江山爱美人之举，一时成为佳话。而在几十年过后的1996年，英国一些著名新闻媒体曝光了这位爱美人不爱江山的温莎公爵的隐秘旧案。一时闹得沸沸扬扬，并迅速传向世界各地。这些刨根究底的记者称，据可靠档案材料表明，温莎公爵当年辞去王位，并非为了这位美国佳人，实际是因为他与法西斯纳粹早已有频繁秘密来往。在欧洲大陆战云密布，法西斯轴心国向全世界人民磨刀霍霍的当口，这位后来成为反法西斯盟首之一的英国的一国之君却向敌人暗送秋波，这是英国王室无论如何无法接受的大丢其脸的丑闻，英王室只能借口不能接受一个已有婚史的美国夫人作王后为理由，迫使爱德华辞去王位，以掩疮疤。这听起来似乎太过离奇，不幸的是，最近英王室无奈地承认了这段不光彩的历史，遂使传诵了几十年的佳话走了味。</p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1514,7 +1541,7 @@ moderation.php
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">358</span>
+                    <span class="site-state-item-count">360</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1920,7 +1947,9 @@ moderation.php
                     
                       
                     
-                    <span class="site-state-item-count">182</span>
+                      
+                    
+                    <span class="site-state-item-count">183</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -2039,7 +2068,7 @@ moderation.php
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2007 – <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; 2007 – <span itemprop="copyrightYear">2021</span>
   <span class="with-love" id="animate">
     <i class="fa fa-heart"></i>
   </span>
@@ -2051,7 +2080,7 @@ moderation.php
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">519k</span>
+    <span title="站点总字数">522k</span>
   
 
   
@@ -2060,7 +2089,7 @@ moderation.php
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">7:52</span>
+    <span title="站点阅读时长">7:55</span>
   
 </div>
 
@@ -2162,7 +2191,7 @@ moderation.php
 
 
   
-  <script src="//cdn.staticfile.org/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/jquery/2.1.3/jquery.min.js"></script>
 
   
   <script src="//cdn.staticfile.org/fastclick/1.0.6/fastclick.min.js"></script>

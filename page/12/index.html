@@ -310,7 +310,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">182</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">183</span></a>
 
   </li>
         
@@ -348,7 +348,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">358</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">360</span></a>
 
   </li>
 
@@ -413,6 +413,435 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2009/05/04/rewrite-pythunder/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="cocobear">
+      <meta itemprop="description" content="爱折腾的技术宅一枚">
+      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="可可熊D窝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2009/05/04/rewrite-pythunder/" class="post-title-link" itemprop="url">pythunder又写了一遍</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2009-05-04 16:25:31" itemprop="dateCreated datePublished" datetime="2009-05-04T16:25:31+08:00">2009-05-04</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/" itemprop="url" rel="index"><span itemprop="name">Life</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2009/05/04/rewrite-pythunder/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2009/05/04/rewrite-pythunder/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数：</span>
+                
+                <span title="字数">1.3k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读 &asymp;</span>
+                
+                <span title="阅读">1 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>前几天在Python中文件邮件列表里看到讨论<a href="http://groups.google.com/group/python-cn/browse_thread/thread/bed99d33bfd76af9" target="_blank" rel="noopener">使用Python实现迅雷</a>，后来又在Ubuntu论坛看到<a href="http://forum.ubuntu.org.cn/viewtopic.php?f=73&amp;t=195557" target="_blank" rel="noopener">一个贴子</a>，实现了获取迅雷服务器上的侯选资源（不是开源的）。突然就对这个迅雷协议很感兴趣，在<a href="http://hi.baidu.com/vessial/blog/item/eccb62dc844dd1a4cc11662d.html" target="_blank" rel="noopener">别人分析</a>的基础上用Python写了个小工具，与Ubuntu论坛上那个作用是一样的，获取迅雷服务器上的侯选资源。</p>
+<p>迅雷有多个资源服务器，有的资源服务器返回完全一样，有的返回某些一样，这样可以指定多个服务器，获取更多的资源，同时也可以防止某个服务器不能正常响应。</p>
+<p>用webpy写了个演示面面：<br><a href="http://cocobear.github.io/demo/pythunder/?url=http://3.duote.com/xunleidt.exe">http://cocobear.github.io/demo/pythunder/?url=http://3.duote.com/xunleidt.exe</a></p>
+<p>不知道开源了会不会产生麻烦？</p>
+<p>———————————解释下标题——————————<br>前几天拿U盘做产量的时候没把代码备份出来，所以原本已经写好了今天又写了一遍，幸好代码很短:-)</p>
+<h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#5926" title="2009-05-17 16:35:30">zay</a>:</strong> 你发的用不了 不知道是不是没有编译过的问题？</p>
+<p><strong><a href="#5860" title="2009-05-07 07:17:52">kongove</a>:</strong> 给我邮箱发一封，学习一下。 下面我也得深入python了。</p>
+<p><strong><a href="#5852" title="2009-05-06 21:31:00">edikud</a>:</strong> 代码就是看不懂。。。。</p>
+<p><strong><a href="#5853" title="2009-05-06 21:33:29">edikud</a>:</strong> 加了个友情链接</p>
+<p><strong><a href="#5855" title="2009-05-06 21:44:25">可可熊</a>:</strong> 楼上指什么代码看不懂？</p>
+<p><strong><a href="#5856" title="2009-05-06 22:32:05">edikud</a>:</strong> PyFetion。。。</p>
+<p><strong><a href="#5857" title="2009-05-07 00:50:46">草儿</a>:</strong> 可以复制，我刚试了。但有时候似乎不好使。Firefox下可以。 本文来源于可可熊的窝 <a href="http://cocobear.github.io">http://cocobear.github.io</a> , 原文地址： <a href="http://cocobear.github.io/2009/05/04/rewrite-pythunder/">http://cocobear.github.io/2009/05/04/rewrite-pythunder/</a> 靠，我在IE8下复制了一句你就给我自动加了那么多。</p>
+<p><strong><a href="#5870" title="2009-05-07 22:59:18">zay</a>:</strong> bear 我也想要一份……</p>
+<p><strong><a href="#5830" title="2009-05-04 18:39:51">damon</a>:</strong> 又有啥好东西哦！</p>
+<p><strong><a href="#5831" title="2009-05-04 19:05:36">草儿</a>:</strong> 已经有两次同样的错误了，期待你第三次掉进那条河……</p>
+<p><strong><a href="#5832" title="2009-05-04 19:06:30">草儿</a>:</strong> 对了，你的页面内容是不是不能复制？</p>
+<p><strong><a href="#5833" title="2009-05-04 19:34:38">可可熊</a>:</strong> 可以复制，我刚试了。但有时候似乎不好使。Firefox下可以。</p>
+<p><strong><a href="#5886" title="2009-05-11 10:32:55">Kermit</a>:</strong> 排队——我也要一份…… BTW： “不知道开源了会不会产生麻烦？”——我觉得只要你没有反汇编xunlei的代码，只是通过抓包分析得到的的东西，不管开源与否，应该都不会有问题吧。</p>
+<p><strong><a href="#5891" title="2009-05-11 14:50:12">可可熊</a>:</strong> 我指的是公开后用的人多了，很快就会被迅雷封掉。</p>
+<p><strong><a href="#5894" title="2009-05-12 10:03:50">Kermit</a>:</strong> 这个是肯定的喽，没见过哪个不被封的……除了那些封不住的。</p>
+<p><strong><a href="#5896" title="2009-05-12 21:01:23">zay</a>:</strong> bear同学 不知道 你能不能发那个*.pyc的文件给我呢？源代码没有没关系 我想在我的服务器上面使用</p>
+<p><strong><a href="#5916" title="2009-05-15 14:03:12">zay</a>:</strong> <a href="mailto:liangkazhe@gmail.com" target="_blank" rel="noopener">liangkazhe@gmail.com</a> 谢谢你了</p>
+<p><strong><a href="#5866" title="2009-05-07 15:47:47">cocobear</a>:</strong> 还没完善，等整完善了给你。</p>
+<p><strong><a href="#5912" title="2009-05-14 14:47:01">可可熊</a>:</strong> 你的邮箱。</p>
+<p><strong><a href="#5980" title="2009-05-31 18:12:48">ysjdx</a>:</strong> 不知道可不可以把*.pyc文件给我呢？我想用，谢谢了！:)</p>
+<p><strong><a href="#5981" title="2009-05-31 18:13:10">ysjdx</a>:</strong> <a href="mailto:ysjdxcn@gmail.com" target="_blank" rel="noopener">ysjdxcn@gmail.com</a> :)</p>
+<p><strong><a href="#7139" title="2010-01-13 11:43:09">tocer</a>:</strong> 非常感谢。有时候要下载某个失效的链接，非这个东西不可:(</p>
+<p><strong><a href="#6660" title="2009-11-04 11:27:20">tocer</a>:</strong> 能否给我一个，就算pyc也成，我自己拿着玩</p>
+<p><strong><a href="#7193" title="2010-01-22 17:23:49">zidane</a>:</strong> 迅雷真是让人又爱又恨</p>
+<p><strong><a href="#6838" title="2009-12-13 22:41:24">可可熊</a>:</strong> <a href="http://code.google.com/p/pytool/" target="_blank" rel="noopener">http://code.google.com/p/pytool/</a></p>
+<p><strong><a href="#6825" title="2009-12-13 01:00:31">brooklyn</a>:</strong> 同求代码……保证不泄漏出去。</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2009/05/04/summary-of-april/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="cocobear">
+      <meta itemprop="description" content="爱折腾的技术宅一枚">
+      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="可可熊D窝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2009/05/04/summary-of-april/" class="post-title-link" itemprop="url">四月培养习惯总结</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2009-05-04 15:15:26" itemprop="dateCreated datePublished" datetime="2009-05-04T15:15:26+08:00">2009-05-04</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/" itemprop="url" rel="index"><span itemprop="name">Life</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2009/05/04/summary-of-april/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2009/05/04/summary-of-april/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数：</span>
+                
+                <span title="字数">442</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读 &asymp;</span>
+                
+                <span title="阅读">1 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>先说下练字吧，只有一天没有写，去同学那里玩了，没回来，坚持的还算不错，可惜没觉得有什么进步，有时候觉得就根本没效果，所以好几天写的不认真，似乎应该端正下态度了。试着去临贴，不描红了，老爸说钢笔字重要的是字的结构、总局，没必要像写毛笔字一样描红好长时间。<strong>29/30</strong></p>
+<p>7点起床，几乎每个周末都没能按时起来，是不是因该把周末排除啊？很郁闷:-(  <strong>8/30</strong></p>
+<p>12点前睡觉，基本都做到了，没什么说的，想睡太迟也不行，不年轻了，呵呵。  <strong>28/30</strong></p>
+<p>睡前阅读，坚持的不好，只有21天，而且好多时候没看几分钟就睡着了，这个月看完了《明朝的那些事儿》。手机上看书真不爽，不过像这类书去买又有点浪费了:-)   <strong>21/30</strong></p>
+<p>这个月继续巩固吧。</p>
+<h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#5836" title="2009-05-04 20:55:37">wind</a>:</strong> 乖孩子，我都开始考虑向你学习了。 哎，突然想起有句话叫做：你什么都好，就是没意思。 用来形容我们这种人还真适合阿。</p>
+<p><strong><a href="#5838" title="2009-05-04 21:44:01">cocobear</a>:</strong> ！没意思，就没意思了！</p>
+<p><strong><a href="#6756" title="2009-11-27 11:59:16">坚持一件事情</a>:</strong> 哈哈。选择一件事情然后一直坚持下来。这是很不容易的</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
     
       
 
@@ -1079,507 +1508,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2009/03/31/tail-call-optimization-in-python-lua/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="cocobear">
-      <meta itemprop="description" content="爱折腾的技术宅一枚">
-      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="可可熊D窝">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2009/03/31/tail-call-optimization-in-python-lua/" class="post-title-link" itemprop="url">Python与Lua中的尾部调用优化</a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2009-03-31 14:23:12" itemprop="dateCreated datePublished" datetime="2009-03-31T14:23:12+08:00">2009-03-31</time>
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/" itemprop="url" rel="index"><span itemprop="name">Life</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2009/03/31/tail-call-optimization-in-python-lua/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2009/03/31/tail-call-optimization-in-python-lua/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-symbolscount">
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数：</span>
-                
-                <span title="字数">3.5k</span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读 &asymp;</span>
-                
-                <span title="阅读">3 分钟</span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <pre><code>&gt;     function foo (n)
-&gt;&gt;       if n &gt; 0 then return foo(n - 1) end
-&gt;&gt;     end
-&gt; foo(100)
-&gt; foo(1000)
-&gt; foo(10000)
-&gt; foo(100000)
-&gt; foo(1000000)
-</code></pre><p>如果函数最后一句是return g(…)这样的形式，Lua将会把这句解释为goto g(x)，因为这里除了对g函数调用，再没有别的事做，也不需要保存堆栈里调用函数的信息。因此上面即使调用很多次也没有出现堆栈溢出的问题，把上面的代码转换为Python:</p>
-<pre><code>&gt;&gt;&gt; def foo(n):
-...     if n&gt;0: return foo(n-1)
-... 
-&gt;&gt;&gt; foo(100)
-&gt;&gt;&gt; foo(1000)
-...
-  File &quot;&lt;stdin&gt;&quot;, line 2, in foo
-  File &quot;&lt;/stdin&gt;&lt;stdin&gt;&quot;, line 2, in foo
-  File &quot;&lt;/stdin&gt;&lt;stdin&gt;&quot;, line 2, in foo
-RuntimeError: maximum recursion depth exceeded
-</code></pre><p>很快出就现了堆栈溢出的问题，在这里表现为达到了递归调用的最大限制。Python自身没有实现尾部调用优化，不过也可以通过实现一个decorator办法来实现:</p>
-<pre><code>#!/usr/bin/env python2.4
-# This program shows off a python decorator(
-# which implements tail call optimization. It
-# does this by throwing an exception if it is 
-# it&apos;s own grandparent, and catching such 
-# exceptions to recall the stack.
-
-import sys
-
-class TailRecurseException:
-  def __init__(self, args, kwargs):
-    self.args = args
-    self.kwargs = kwargs
-
-def tail_call_optimized(g):
-  &quot;&quot;&quot;
-  This function decorates a function with tail call
-  optimization. It does this by throwing an exception
-  if it is it&apos;s own grandparent, and catching such
-  exceptions to fake the tail call optimization.
-
-  This function fails if the decorated
-  function recurses in a non-tail context.
-  &quot;&quot;&quot;
-  def func(*args, **kwargs):
-    f = sys._getframe()
-    if f.f_back and f.f_back.f_back 
-        and f.f_back.f_back.f_code == f.f_code:
-      raise TailRecurseException(args, kwargs)
-    else:
-      while 1:
-        try:
-          return g(*args, **kwargs)
-        except TailRecurseException, e:
-          args = e.args
-          kwargs = e.kwargs
-  func.__doc__ = g.__doc__
-  return func
-
-@tail_call_optimized
-def factorial(n, acc=1):
-  &quot;calculate a factorial&quot;
-  if n == 0:
-    return acc
-  return factorial(n-1, n*acc)
-
-print factorial(10000)
-# prints a big, big number,
-# but doesn&apos;t hit the recursion limit.
-
-@tail_call_optimized
-def fib(i, current = 0, next = 1):
-  if i == 0:
-    return current
-  else:
-    return fib(i - 1, next, current + next)
-
-print fib(10000)
-# also prints a big number,
-# but doesn&apos;t hit the recursion limit.
-</code></pre><p>代码来自<a href="http://code.activestate.com/recipes/474088/" target="_blank" rel="noopener">http://code.activestate.com/recipes/474088/</a></p>
-<p>在这段代码里tail_call_optimized是一个decorator，在执行factorial函数前，这个decorator先执行，tail_call_optimized中通过sys._getframe()这个方法会返回一个frame对象，包含了堆栈顶部的信息，当发现当前调用是一个递归调用:<br>      if f.f_back and f.f_back.f_back<br>        and f.f_back.f_back.f_code == f.f_code:</p>
-<p>则抛出一个异常，下面的代码则截获异常，继续执行，这样就避免了堆栈的使用，很巧妙的一种方式。</p>
-<p>在python-dev的邮件列表里，有人曾经做过一个Python的尾调用优化的<a href="http://mail.python.org/pipermail/python-dev/2004-July/046150.html" target="_blank" rel="noopener">补丁</a>，不过Guido拒绝了这个补丁:<br>     I’m not interested in adding this to the official Python release.&gt; </p>
-<pre><code>One reason is that if an exception happens in such a tail-recursive&gt; 
-call, the stack trace will be confusing.&gt; 
-
-Another reason is that I don&apos;t think it&apos;s a good idea to try to&gt; 
-encourage a Scheme-ish &quot;solve everything with recursion&quot; programming&gt; 
-style in Python.&gt; 
-
-But feel free to maintain this as an independent modification, a la&gt; 
-Stackless -- I&apos;m sure there are people who would like to try this&gt; 
-out.&gt; 
-
---Guido van Rossum (home page: http://www.python.org/~guido/)
-</code></pre><p></p>
-<h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#5834" title="2009-05-04 20:39:43">shellex</a>:</strong> 唉。真是的。加入尾递归支持又不意味着大家都会do every thing with recursion… 多个选择多好…</p>
-<p><strong><a href="#5835" title="2009-05-04 20:40:03">shellex</a>:</strong> 非得hack下。真是的。</p>
-<p><strong><a href="#6624" title="2009-10-21 09:25:07">xiongharry</a>:</strong> 黑色主题，配深色字体，看起来真累。</p>
-<p><strong><a href="#24622" title="2013-05-17 19:36:03">Louis Vuitton Outlet San Diego California</a>:</strong> Louis Authentic LV Outlet Handbags</p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2009/03/31/write-a-counter-with-python-and-lua/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="cocobear">
-      <meta itemprop="description" content="爱折腾的技术宅一枚">
-      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="可可熊D窝">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2009/03/31/write-a-counter-with-python-and-lua/" class="post-title-link" itemprop="url">Python与Lua分别实现一个计数器</a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2009-03-31 12:47:15" itemprop="dateCreated datePublished" datetime="2009-03-31T12:47:15+08:00">2009-03-31</time>
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/" itemprop="url" rel="index"><span itemprop="name">Life</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2009/03/31/write-a-counter-with-python-and-lua/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2009/03/31/write-a-counter-with-python-and-lua/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-symbolscount">
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数：</span>
-                
-                <span title="字数">1.1k</span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读 &asymp;</span>
-                
-                <span title="阅读">1 分钟</span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">	&gt;   function newCounter ()</span><br><span class="line">	&gt;&gt;     local i = 0</span><br><span class="line">	&gt;&gt;     return function ()   -- anonymous function</span><br><span class="line">	&gt;&gt;              i = i + 1</span><br><span class="line">	&gt;&gt;              return i</span><br><span class="line">	&gt;&gt;            end</span><br><span class="line">	&gt;&gt;   end</span><br><span class="line">	&gt;   </span><br><span class="line">	&gt;   c1 = newCounter()</span><br><span class="line">	&gt; print(c1())</span><br><span class="line">	1</span><br><span class="line">	&gt; print(c1())</span><br><span class="line"></span><br><span class="line">2</span><br></pre></td></tr></table></figure>
-<p>Lua同Python类似，也可以嵌套定义函数，不过Lua嵌套函数可以访问上层闭包函数的局部变量，而在这个内嵌函数中这些变量不是全局变量，也不是局部变量，而是一种upvalue，与C语言中的static修饰的变量类似，所以在这里可以利用这个特性完成这个计数器。</p>
-<p>Python:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">def counter(last=[1]):</span><br><span class="line">...     next = last[0] + 1</span><br><span class="line">...     last[0] = next</span><br><span class="line">...     return next</span><br><span class="line">... </span><br><span class="line">counter()</span><br><span class="line">2</span><br><span class="line">counter()</span><br><span class="line">3</span><br></pre></td></tr></table></figure>
-<p>今天看Lua的时候觉得Python也应该有比较简单的办法写个计数器，找到<a href="http://www.ibm.com/developerworks/library/l-pycon.html" target="_blank" rel="noopener">一篇文章</a>介绍这个小技巧，其中有一句话：</p>
-<pre><code>However, if named parameters are given mutable default values, the parameters can act as persistent memories of previous invocations. Lists, specifically, are handy mutable objects that can conveniently even hold multiple values.
-</code></pre><p>Lua作为一个嵌入式（嵌入到其它语言中）的脚本语言，在很多地方与Python类似，这几天在看Programming in  Lua 。<br>     this is quote text</p>
-<h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#5626" title="2009-03-31 19:25:41">草儿</a>:</strong> 靠，你的文章对我来说越来越深奥了，都快成天书了。</p>
-<p><strong><a href="#6659" title="2009-11-04 11:11:44">tocer</a>:</strong> 用 itertools.count 算不算？ from itertools import count counter = count(1) for i in range(10): print counter.next()</p>
-<p><strong><a href="#6663" title="2009-11-05 14:42:43">cocobear</a>:</strong> 没用过这个库 不错</p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1629,7 +1557,7 @@ out.&gt;
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">358</span>
+                    <span class="site-state-item-count">360</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -2035,7 +1963,9 @@ out.&gt;
                     
                       
                     
-                    <span class="site-state-item-count">182</span>
+                      
+                    
+                    <span class="site-state-item-count">183</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -2154,7 +2084,7 @@ out.&gt;
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2007 – <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; 2007 – <span itemprop="copyrightYear">2021</span>
   <span class="with-love" id="animate">
     <i class="fa fa-heart"></i>
   </span>
@@ -2166,7 +2096,7 @@ out.&gt;
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">519k</span>
+    <span title="站点总字数">522k</span>
   
 
   
@@ -2175,7 +2105,7 @@ out.&gt;
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">7:52</span>
+    <span title="站点阅读时长">7:55</span>
   
 </div>
 
@@ -2277,7 +2207,7 @@ out.&gt;
 
 
   
-  <script src="//cdn.staticfile.org/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/jquery/2.1.3/jquery.min.js"></script>
 
   
   <script src="//cdn.staticfile.org/fastclick/1.0.6/fastclick.min.js"></script>

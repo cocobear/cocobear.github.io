@@ -310,7 +310,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">182</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">183</span></a>
 
   </li>
         
@@ -348,7 +348,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">358</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">360</span></a>
 
   </li>
 
@@ -413,6 +413,442 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2007/11/22/python-learning-5/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="cocobear">
+      <meta itemprop="description" content="爱折腾的技术宅一枚">
+      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="可可熊D窝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2007/11/22/python-learning-5/" class="post-title-link" itemprop="url">Python学习笔记五</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2007-11-22 17:16:34" itemprop="dateCreated datePublished" datetime="2007-11-22T17:16:34+08:00">2007-11-22</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/编程相关/" itemprop="url" rel="index"><span itemprop="name">编程相关</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2007/11/22/python-learning-5/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2007/11/22/python-learning-5/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数：</span>
+                
+                <span title="字数">1.8k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读 &asymp;</span>
+                
+                <span title="阅读">2 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><strong>高效的使用Python:</strong><br>     (Mon,Tue,Wed,Thu,Fri,Sat,Sun) = range(7)<br>    Mon<br>    0<br>     Sun<br>    6<br>比C语言里使用enum来实现要直观、简单多了吧！</p>
+<pre><code> li = [1, 9, 8, 4]
+ [elem*2 for elem in li]      
+[2, 18, 16, 8]
+</code></pre><p>可以从右至左的看这个表达式!</p>
+<pre><code> params = {&quot;server&quot;:&quot;mpilgrim&quot;, &quot;database&quot;:&quot;master&quot;, &quot;uid&quot;:&quot;sa&quot;, &quot;pwd&quot;:&quot;secret&quot;}
+ params.items()
+[(&apos;server&apos;, &apos;mpilgrim&apos;), (&apos;uid&apos;, &apos;sa&apos;), (&apos;database&apos;, &apos;master&apos;), (&apos;pwd&apos;, &apos;secret&apos;)]
+[&quot;%s=%s&quot; % (k, v) for k, v in params.items()] 
+[&apos;server=mpilgrim&apos;, &apos;uid=sa&apos;, &apos;database=master&apos;, &apos;pwd=secret&apos;]
+</code></pre><p>这个例子与上面的例子有点类似，只是更复杂了一些，Dictionary的items操作会返回一个由Tuple组成的List，可从第二、三行代码看出，然后再结合上面例子中给出的方法就可以实现这个快速、简单的解析。<br>Dictionary还有keys,values两个操作，它们都返回一个List。</p>
+<p>def info(object, spacing=10, collapse=1):<br>上面这个函数定义，如果在C++里想在调用info函数时对第一个参数与第三个参数使用给定的值，是无法做到的，而在Python里则可以，比起C++里的重载更灵活！</p>
+<p>info(collapse=15, object=odbchelper)<br>说白了Python里的参数只不过是个Dictionary</p>
+<pre><code>&apos;&apos; and &apos;b&apos;  
+&apos;&apos;
+&apos;a&apos; and &apos;b&apos; and &apos;c&apos;
+&apos;c&apos;
+</code></pre><p>如果某个值为假，则 and 返回第一个假值；<br>所有值都为真，所以 and 返回最后一个真值，’c’。</p>
+<pre><code> &apos;a&apos; or &apos;b&apos;          
+&apos;a&apos;
+ &apos;&apos; or &apos;b&apos;  
+</code></pre><p>如果有一个值为真，or 立刻返回该值；<br>如果所有的值都为假，or 返回最后一个假值。</p>
+<pre><code>a = &quot;first&quot;
+b = &quot;second&quot;
+1 and a or b 
+&apos;first&apos;
+0 and a or b 
+&apos;second&apos;
+</code></pre><p>上面这个例子是不是有点类似C语言中的三元运算呢？</p>
+<h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#2435" title="2007-11-23 13:43:22">luguo</a>:</strong> Python还能写2</p>
+<p><strong><a href="#2436" title="2007-11-23 13:44:29">luguo</a>:</strong> -_-b 怎么小于号后面的都显示不出来？！留言居然不能转换大于小于号～～</p>
+<p><strong><a href="#2439" title="2007-11-23 18:30:39">cocobear</a>:</strong> 应该是被过滤掉了，这种字符比较敏感。</p>
+<p><strong><a href="#2457" title="2007-11-24 18:42:57">Kermit</a>:</strong> # luguo: 于07年11月23日 13点44分 辛苦敲键盘： -_-b 怎么小于号后面的都显示不出来？！留言居然不能转换大于小于号～～ 貌似很多blog都这样，呵呵。用个html的转义字符就行了。 我一般都在openoffice里把blog写好，再调整字体，存到html文件里，然后把源码复制到blog中，这样就可以有彩色的blog了，哈哈</p>
+<p><strong><a href="#2459" title="2007-11-24 21:31:45">Amankwah</a>:</strong> 这样：&gt;？</p>
+<p><strong><a href="#2460" title="2007-11-24 21:48:17">cocobear</a>:</strong> 楼上写blog好麻烦啊。要是我的机子你写个blog得多久啊！</p>
+<p><strong><a href="#4097" title="2008-08-26 13:12:12">vvoody</a>:</strong> 嘿嘿，三元运算不错，谢谢 ;-)</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2007/11/22/sina-and-sxf/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="cocobear">
+      <meta itemprop="description" content="爱折腾的技术宅一枚">
+      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="可可熊D窝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2007/11/22/sina-and-sxf/" class="post-title-link" itemprop="url">深信服&&新浪</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2007-11-22 16:43:24" itemprop="dateCreated datePublished" datetime="2007-11-22T16:43:24+08:00">2007-11-22</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/" itemprop="url" rel="index"><span itemprop="name">Life</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2007/11/22/sina-and-sxf/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2007/11/22/sina-and-sxf/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数：</span>
+                
+                <span title="字数">688</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读 &asymp;</span>
+                
+                <span title="阅读">1 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>写完Web Server的第三天接到了深信服那边打来的电话，他说由于我写的Web Server bug太多，效率不够高，因此这次挑战失败，不能签我。这个结果倒是可以接受，不过没想到他们希望的是一个很完整、高效、并且经过测试的Web Server，而显然我的只能算是个雏形吧。他说我这段时间可能把重心放错了位置，这一点我也从一开始就考虑过的，鱼与熊掌不可兼得，既然没有选择认真去做这个题目，得到这样的结果也只能心安理得的接受。</p>
+<p>第二次被深信服给拒了，没关系了，Web Server我会继续完善、修改，深信服也许还没结束:-)</p>
+<p>在接到深信服电话之前接到了新浪实习的通知，今天通过邮件收到了实习的offer，确定了放寒假会去新浪实习，一个月的时间，职位是开发工程师，和<a href="http://wangcong.org/" target="_blank" rel="noopener">王聪</a>同学一块。</p>
+<p>如果再没什么特别合适的职位就不跑了，可惜FlashGet没去成，那里有个很合适的职位。</p>
+<h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#2433" title="2007-11-23 08:38:57">Amankwah</a>:</strong> 就先去新浪吧，深信服以后也还有机会。先就业，再择业，又没有从一而终的说法～</p>
+<p><strong><a href="#2434" title="2007-11-23 13:40:30">luguo</a>:</strong> 愚以为，新浪比深信服环境要好，你还是好好把握好新浪吧～！</p>
+<p><strong><a href="#2483" title="2007-11-26 14:09:50">草儿</a>:</strong> 不错，实习期后就签了，在新浪也不错，虽说我不怎么使用sina的服务，对sina的印象也不是很好。</p>
+<p><strong><a href="#2484" title="2007-11-26 14:12:02">草儿</a>:</strong> 哦，说错了。 MS我除了刚接触互联网的时候经常去sina看新闻，后来就很少接触sina了，到现在已经有两三年没打开过sina的网页了。</p>
+<p><strong><a href="#2456" title="2007-11-24 18:38:56">Kermit</a>:</strong> 呵呵，不错啊，新浪很好了！ 你们加油，好好干吧！</p>
+<p><strong><a href="#2458" title="2007-11-24 21:30:43">Amankwah</a>:</strong> 才发现你用的是深信服&amp;&amp;新浪，小子人小心不小！ 应该是深信服||新浪吧？</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
     
       
 
@@ -1053,473 +1489,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2007/11/05/simple-sort-implement/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="cocobear">
-      <meta itemprop="description" content="爱折腾的技术宅一枚">
-      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="可可熊D窝">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2007/11/05/simple-sort-implement/" class="post-title-link" itemprop="url">几种简单的排序实现</a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2007-11-05 19:24:36" itemprop="dateCreated datePublished" datetime="2007-11-05T19:24:36+08:00">2007-11-05</time>
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/编程相关/" itemprop="url" rel="index"><span itemprop="name">编程相关</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2007/11/05/simple-sort-implement/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2007/11/05/simple-sort-implement/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-symbolscount">
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数：</span>
-                
-                <span title="字数">1.6k</span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读 &asymp;</span>
-                
-                <span title="阅读">1 分钟</span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>选择排序：<br>每次找出最小的放在最前面；</p>
-<p>插入排序：<br>每次循环把后面第一个元素插入到前面适当位置(玩扑克牌的插法)；</p>
-<p>冒泡排序：<br>比较相邻元素，大的放在右边；</p>
-<pre><code>[cocobear@cocobear Temp]$ ./a.out 
-排序前：83 86 77 15 93 35 86 92 49 21 
-请选择排序方式：
-(1)选择排序
-(2)插入排序
-(3)冒泡排序
-:1
-选择排序:
-第1次排序结果:15 86 77 83 93 35 86 92 49 21 
-第2次排序结果:15 21 77 83 93 35 86 92 49 86 
-第3次排序结果:15 21 35 83 93 77 86 92 49 86 
-第4次排序结果:15 21 35 49 93 77 86 92 83 86 
-第5次排序结果:15 21 35 49 77 93 86 92 83 86 
-第6次排序结果:15 21 35 49 77 83 86 92 93 86 
-第7次排序结果:15 21 35 49 77 83 86 92 93 86 
-第8次排序结果:15 21 35 49 77 83 86 86 93 92 
-第9次排序结果:15 21 35 49 77 83 86 86 92 93 
-[cocobear@cocobear Temp]$ ./a.out 
-排序前：83 86 77 15 93 35 86 92 49 21 
-请选择排序方式：
-(1)选择排序
-(2)插入排序
-(3)冒泡排序
-:2
-插入排序:
-第1次排序结果:83 86 77 15 93 35 86 92 49 21 
-第2次排序结果:77 83 86 15 93 35 86 92 49 21 
-第3次排序结果:15 77 83 86 93 35 86 92 49 21 
-第4次排序结果:15 77 83 86 93 35 86 92 49 21 
-第5次排序结果:15 35 77 83 86 93 86 92 49 21 
-第6次排序结果:15 35 77 83 86 86 93 92 49 21 
-第7次排序结果:15 35 77 83 86 86 92 93 49 21 
-第8次排序结果:15 35 49 77 83 86 86 92 93 21 
-第9次排序结果:15 21 35 49 77 83 86 86 92 93 
-[cocobear@cocobear Temp]$ ./a.out 
-排序前：83 86 77 15 93 35 86 92 49 21 
-请选择排序方式：
-(1)选择排序
-(2)插入排序
-(3)冒泡排序
-:3
-冒泡排序:
-第1次排序结果:83 77 15 86 35 86 92 49 21 93 
-第2次排序结果:77 15 83 35 86 86 49 21 92 93 
-第3次排序结果:15 77 35 83 86 49 21 86 92 93 
-第4次排序结果:15 35 77 83 49 21 86 86 92 93 
-第5次排序结果:15 35 77 49 21 83 86 86 92 93 
-第6次排序结果:15 35 49 21 77 83 86 86 92 93 
-第7次排序结果:15 35 21 49 77 83 86 86 92 93 
-第8次排序结果:15 21 35 49 77 83 86 86 92 93 
-第9次排序结果:15 21 35 49 77 83 86 86 92 93 
-</code></pre><p><a href="http://cocobear.github.io/code/html/simple_sort.html">查看源码</a><br><a href="http://cocobear.github.io/code/simple_sort.c">下载源码</a></p>
-<h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#2267" title="2007-11-06 11:32:33">cocobear</a>:</strong> 老大把下面几个写完吧。</p>
-<p><strong><a href="#2260" title="2007-11-05 20:30:21">luguo</a>:</strong> 这三个可都是O(n^2)的排序～～！</p>
-<p><strong><a href="#2262" title="2007-11-05 22:38:15">Amankwah</a>:</strong> 就选择，插入和冒泡？</p>
-<p><strong><a href="#2358" title="2007-11-13 22:30:07">crazyfranc</a>:</strong> 兄弟，你有什么需要帮忙的尽管说，咱们争取要周日完成。</p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2007/11/04/filename-upper-lower/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="cocobear">
-      <meta itemprop="description" content="爱折腾的技术宅一枚">
-      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="可可熊D窝">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2007/11/04/filename-upper-lower/" class="post-title-link" itemprop="url">目录下文件名大小写转换</a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2007-11-04 22:35:37" itemprop="dateCreated datePublished" datetime="2007-11-04T22:35:37+08:00">2007-11-04</time>
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/编程相关/" itemprop="url" rel="index"><span itemprop="name">编程相关</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2007/11/04/filename-upper-lower/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2007/11/04/filename-upper-lower/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-symbolscount">
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数：</span>
-                
-                <span title="字数">915</span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读 &asymp;</span>
-                
-                <span title="阅读">1 分钟</span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <pre><code>for f in *;do 
-mv $f `echo $f |tr &quot;[A-Z]&quot; &quot;[a-z]&quot;` 
-done
-</code></pre><p>上面这个脚本可以处理大多数情况，但是当文件名中有空格时该脚本就无效了。</p>
-<p>经过尝试下面这段脚本可以解决上面的问题：</p>
-<pre><code>[cocobear@cocobear 1027]$ cat re.sh 
-mv &quot;$1&quot; &quot;`echo $1 | tr &apos;[A-Z]&apos; &apos;[a-z]&apos;`&quot;
-[cocobear@cocobear 1027]$ find ./ -type f -exec ./re.sh &apos;{}&apos; \;
-</code></pre><p>再想一想其实最前面的代码也一样能解决问题，也是需要在mv的两个参数的变量名上加上双引号：</p>
-<pre><code>for f in *;do 
-mv &quot;$f&quot; &quot;`echo $f |tr &quot;[A-Z]&quot; &quot;[a-z]&quot;`&quot; 
-done
-</code></pre><p>我刚开始改的时候只对<code>echo $f | tr &quot;[A-Z]&quot; &quot;[a-z]&quot;</code>用了双引号，结果出现下面的错误：</p>
-<pre><code>mv: 目标 “dscn6208 [1600x1200].jpg” 不是目录 
-</code></pre><p>解释：<br>shell传递参数默认是按照空格来区分的，因此当文件名里有空格时传递参数的过程中就会被认为是传递了两个参数，这样如果$f没有使用双引号的话”dscn6208 [1600x1200].jpg”就会被认为两个文件，相当于：<br>mv dscn6208 [1600x1200].jpg “dscn6208 [1600x1200].jpg”<br>mv会认为第三个参数是文件夹，所以会提示目标“dscn6208 [1600x1200].jpg”不是目录。</p>
-<h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#2244" title="2007-11-05 09:48:47">wind</a>:</strong> 写得很清楚，就是代码用的颜色太难色看了，还不如用普通的红色。</p>
-<p><strong><a href="#2247" title="2007-11-05 12:05:43">cocobear</a>:</strong> 改了个颜色，怎么样？</p>
-<p><strong><a href="#2259" title="2007-11-05 20:29:13">luguo</a>:</strong> 恩，总结得好。 网上其它那些处理文件名空格的方法就显得过于复杂了～～</p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1569,7 +1538,7 @@ done
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">358</span>
+                    <span class="site-state-item-count">360</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1975,7 +1944,9 @@ done
                     
                       
                     
-                    <span class="site-state-item-count">182</span>
+                      
+                    
+                    <span class="site-state-item-count">183</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -2094,7 +2065,7 @@ done
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2007 – <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; 2007 – <span itemprop="copyrightYear">2021</span>
   <span class="with-love" id="animate">
     <i class="fa fa-heart"></i>
   </span>
@@ -2106,7 +2077,7 @@ done
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">519k</span>
+    <span title="站点总字数">522k</span>
   
 
   
@@ -2115,7 +2086,7 @@ done
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">7:52</span>
+    <span title="站点阅读时长">7:55</span>
   
 </div>
 
@@ -2217,7 +2188,7 @@ done
 
 
   
-  <script src="//cdn.staticfile.org/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/jquery/2.1.3/jquery.min.js"></script>
 
   
   <script src="//cdn.staticfile.org/fastclick/1.0.6/fastclick.min.js"></script>

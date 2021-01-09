@@ -310,7 +310,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">182</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">183</span></a>
 
   </li>
         
@@ -348,7 +348,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">358</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">360</span></a>
 
   </li>
 
@@ -413,6 +413,644 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2008/04/29/ext2-source-code-analysis-0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="cocobear">
+      <meta itemprop="description" content="爱折腾的技术宅一枚">
+      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="可可熊D窝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2008/04/29/ext2-source-code-analysis-0/" class="post-title-link" itemprop="url">Ext2文件系统源代码分析(0)</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2008-04-29 22:22:26" itemprop="dateCreated datePublished" datetime="2008-04-29T22:22:26+08:00">2008-04-29</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/编程相关/" itemprop="url" rel="index"><span itemprop="name">编程相关</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2008/04/29/ext2-source-code-analysis-0/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2008/04/29/ext2-source-code-analysis-0/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数：</span>
+                
+                <span title="字数">9k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读 &asymp;</span>
+                
+                <span title="阅读">8 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><strong>Makefile:</strong></p>
+<pre><code>#
+# Makefile for the linux ext2-filesystem routines.
+#
+
+obj-$(CONFIG_EXT2_FS) += ext2.o
+
+ext2-y := balloc.o dir.o file.o fsync.o ialloc.o inode.o \
+          ioctl.o namei.o super.o symlink.o
+
+ext2-$(CONFIG_EXT2_FS_XATTR)     += xattr.o xattr_user.o xattr_trusted.o
+ext2-$(CONFIG_EXT2_FS_POSIX_ACL) += acl.o
+ext2-$(CONFIG_EXT2_FS_SECURITY)  += xattr_security.o
+ext2-$(CONFIG_EXT2_FS_XIP)       += xip.o
+</code></pre><p>obj-$(CONFIG_EXT2_FS)指定编译生成的目标文件，CONFIG_EXT2_FS变量在配置内核时指定，有三个选项：y,m,x分别代表编译，以模块方式编译，不编译。</p>
+<p>ext2-y指定了编译ext2.o时所需要同时编译的其它文件。</p>
+<p>下面四个是ext2文件系统的一些扩展属性，也是在编译内核时配置是否使用。</p>
+<p><strong>ext2.h:</strong></p>
+<pre><code>#include &lt;linux /fs.h&gt;
+#include &lt;/linux&gt;&lt;linux /ext2_fs.h&gt;
+
+/*
+ * ext2 mount options
+ */
+struct ext2_mount_options {
+        unsigned long s_mount_opt;
+        uid_t s_resuid;
+        gid_t s_resgid;
+};
+//这里定义了一个ext2文件系统挂载时所使用的一些选项，uid_t，gid_t在i386上是unsigned int。
+//s_mount_opt：安装选项
+//s_resuid：可以使用保留块的用户id
+//s_resgid：可以使用保留块的用户组id
+
+/*
+ * second extended file system inode data in memory
+ */
+struct ext2_inode_info {
+        __le32  i_data[15];
+        __u32   i_flags;
+        __u32   i_faddr;
+        __u8    i_frag_no;
+        __u8    i_frag_size;
+        __u16   i_state;
+        __u32   i_file_acl;
+        __u32   i_dir_acl;
+        __u32   i_dtime;
+
+        /*
+         * i_block_group is the number of the block group which contains
+         * this file&apos;s inode.  Constant across the lifetime of the inode,
+         * it is ued for making block allocation decisions - we try to
+         * place a file&apos;s data blocks near its inode block, and new inodes
+         * near to their parent directory&apos;s inode.
+         */
+        __u32   i_block_group;
+
+        /* block reservation info */
+        struct ext2_block_alloc_info *i_block_alloc_info;
+
+        __u32   i_dir_start_lookup;
+#ifdef CONFIG_EXT2_FS_XATTR
+        /*
+         * Extended attributes can be read independently of the main file
+         * data. Taking i_mutex even when reading would cause contention
+         * between readers of EAs and writers of regular file data, so
+         * instead we synchronize on xattr_sem when reading or changing
+         * EAs.
+         */
+        struct rw_semaphore xattr_sem;
+#endif
+#ifdef CONFIG_EXT2_FS_POSIX_ACL
+        struct posix_acl        *i_acl;
+        struct posix_acl        *i_default_acl;
+#endif
+        rwlock_t i_meta_lock;
+
+        /*
+         * truncate_mutex is for serialising ext2_truncate() against
+         * ext2_getblock().  It also protects the internals of the inode&apos;s
+         * reservation data structures: ext2_reserve_window and
+         * ext2_reserve_window_node.
+         */
+        struct mutex truncate_mutex;
+        struct inode    vfs_inode;
+        struct list_head i_orphan;      /* unlinked but open inodes */
+};
+
+//ext2_inode_info这个结构体定义了inode在内存中存放的信息。
+//__le32  i_data[15];  __le32是带bitwise属性的unsigned int；数据块指针数组
+//__u32   i_flags;  __u32是unsigned int；文件标志
+//__u32   i_faddr;  fragment地址
+//__u8    i_frag_no;  fragment号
+//__u8    i_frag_size;  fragment大小
+//__u16   i_state;  
+//__u32   i_file_acl;  文件访问控制链表
+//__u32   i_dir_acl;  目录访问控制链表
+//__u32   i_dtime;  文件删除时间 
+//__u32   i_block_group;  inode所在组号
+//struct ext2_block_alloc_info *i_block_alloc_info;  block保留信息
+
+/*
+ * Inode dynamic state flags
+ */
+#define EXT2_STATE_NEW                  0x00000001 /* inode is newly created */
+
+/*
+ * Function prototypes
+ */
+
+/*
+ * Ok, these declarations are also in &lt;/linux&gt;&lt;linux /kernel.h&gt; but none of the
+ * ext2 source programs needs to include it so they are duplicated here.
+ */
+
+static inline struct ext2_inode_info *EXT2_I(struct inode *inode)
+{
+        return container_of(inode, struct ext2_inode_info, vfs_inode);
+}
+//EXT2_I函数利用到了内核中经常使用的一个宏:container_of，它的参数为inode指针，返回一个ext2_inode_info的指针，也就是inode所在结构体的地址。
+//container_of在linux-2.6.24/include/linux/kernel.h里定义为：
+//#define container_of(ptr, type, member) ({                      \
+       const typeof( ((type *)0)-&gt;member ) *__mptr = (ptr);    \
+       (type *)( (char *)__mptr - offsetof(type,member) );})
+
+//这个宏的原理其实很简单就是利用结构体中某个元素的地址减去该元素相对于结构体的偏移量，得到结构体的地址。
+
+//offsetof在linux-2.6.24/include/linux/stddef.h中定义为：
+//#undef offsetof
+//#ifdef __compiler_offsetof
+//#define offsetof(TYPE,MEMBER) __compiler_offsetof(TYPE,MEMBER)
+//#else
+//#define offsetof(TYPE, MEMBER) ((size_t) &amp;((TYPE *)0)-&gt;MEMBER)
+//#endif
+
+//接下来这这些是定义在ext2其它文件中的函数的申明。
+/* balloc.c */
+extern int ext2_bg_has_super(struct super_block *sb, int group);
+extern unsigned long ext2_bg_num_gdb(struct super_block *sb, int group);
+extern ext2_fsblk_t ext2_new_block(struct inode *, unsigned long, int *);
+extern ext2_fsblk_t ext2_new_blocks(struct inode *, unsigned long,
+                                unsigned long *, int *);
+extern void ext2_free_blocks (struct inode *, unsigned long,
+                              unsigned long);
+extern unsigned long ext2_count_free_blocks (struct super_block *);
+extern unsigned long ext2_count_dirs (struct super_block *);
+extern void ext2_check_blocks_bitmap (struct super_block *);
+extern struct ext2_group_desc * ext2_get_group_desc(struct super_block * sb,
+                                                    unsigned int block_group,
+                                                    struct buffer_head ** bh);
+extern void ext2_discard_reservation (struct inode *);
+extern int ext2_should_retry_alloc(struct super_block *sb, int *retries);
+extern void ext2_init_block_alloc_info(struct inode *);
+extern void ext2_rsv_window_add(struct super_block *sb, struct ext2_reserve_window_node *rsv);
+
+/* dir.c */
+extern int ext2_add_link (struct dentry *, struct inode *);
+extern ino_t ext2_inode_by_name(struct inode *, struct dentry *);
+extern int ext2_make_empty(struct inode *, struct inode *);
+extern struct ext2_dir_entry_2 * ext2_find_entry (struct inode *,struct dentry *, struct page **);
+extern int ext2_delete_entry (struct ext2_dir_entry_2 *, struct page *);
+extern int ext2_empty_dir (struct inode *);
+extern struct ext2_dir_entry_2 * ext2_dotdot (struct inode *, struct page **);
+extern void ext2_set_link(struct inode *, struct ext2_dir_entry_2 *, struct page *, struct inode *);
+
+/* fsync.c */
+extern int ext2_sync_file (struct file *, struct dentry *, int);
+
+/* ialloc.c */
+extern struct inode * ext2_new_inode (struct inode *, int);
+extern void ext2_free_inode (struct inode *);
+extern unsigned long ext2_count_free_inodes (struct super_block *);
+extern void ext2_check_inodes_bitmap (struct super_block *);
+extern unsigned long ext2_count_free (struct buffer_head *, unsigned);
+
+/* inode.c */
+extern void ext2_read_inode (struct inode *);
+extern int ext2_write_inode (struct inode *, int);
+extern void ext2_put_inode (struct inode *);
+extern void ext2_delete_inode (struct inode *);
+extern int ext2_sync_inode (struct inode *);
+extern int ext2_get_block(struct inode *, sector_t, struct buffer_head *, int);
+extern void ext2_truncate (struct inode *);
+extern int ext2_setattr (struct dentry *, struct iattr *);
+extern void ext2_set_inode_flags(struct inode *inode);
+extern void ext2_get_inode_flags(struct ext2_inode_info *);
+int __ext2_write_begin(struct file *file, struct address_space *mapping,
+                loff_t pos, unsigned len, unsigned flags,
+                struct page **pagep, void **fsdata);
+
+/* ioctl.c */
+extern int ext2_ioctl (struct inode *, struct file *, unsigned int,
+                       unsigned long);
+extern long ext2_compat_ioctl(struct file *, unsigned int, unsigned long);
+
+/* namei.c */
+struct dentry *ext2_get_parent(struct dentry *child);
+
+/* super.c */
+extern void ext2_error (struct super_block *, const char *, const char *, ...)
+        __attribute__ ((format (printf, 3, 4)));
+extern void ext2_warning (struct super_block *, const char *, const char *, ...)
+        __attribute__ ((format (printf, 3, 4)));
+extern void ext2_update_dynamic_rev (struct super_block *sb);
+extern void ext2_write_super (struct super_block *);
+
+/*
+ * Inodes and files operations
+ */
+
+/* dir.c */
+extern const struct file_operations ext2_dir_operations;
+
+/* file.c */
+extern const struct inode_operations ext2_file_inode_operations;
+extern const struct file_operations ext2_file_operations;
+extern const struct file_operations ext2_xip_file_operations;
+
+/* inode.c */
+extern const struct address_space_operations ext2_aops;
+extern const struct address_space_operations ext2_aops_xip;
+extern const struct address_space_operations ext2_nobh_aops;
+
+/* namei.c */
+extern const struct inode_operations ext2_dir_inode_operations;
+extern const struct inode_operations ext2_special_inode_operations;
+
+/* symlink.c */
+extern const struct inode_operations ext2_fast_symlink_inode_operations;
+extern const struct inode_operations ext2_symlink_inode_operations;
+
+static inline ext2_fsblk_t
+ext2_group_first_block_no(struct super_block *sb, unsigned long group_no)
+{
+        return group_no * (ext2_fsblk_t)EXT2_BLOCKS_PER_GROUP(sb) +
+                le32_to_cpu(EXT2_SB(sb)-&gt;s_es-&gt;s_first_data_block);
+}
+</code></pre>
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2008/04/29/code-of-python/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="cocobear">
+      <meta itemprop="description" content="爱折腾的技术宅一枚">
+      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="可可熊D窝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2008/04/29/code-of-python/" class="post-title-link" itemprop="url">看一段python的代码</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2008-04-29 21:43:38" itemprop="dateCreated datePublished" datetime="2008-04-29T21:43:38+08:00">2008-04-29</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/编程相关/" itemprop="url" rel="index"><span itemprop="name">编程相关</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2008/04/29/code-of-python/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2008/04/29/code-of-python/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数：</span>
+                
+                <span title="字数">435</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读 &asymp;</span>
+                
+                <span title="阅读">1 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <pre><code>def xselections(items, n):
+    if n == 0:
+        yield []
+    else:
+        for i in xrange(len(items)):
+            for ss in xselections(items, n-1):
+                yield [items[i]] + ss
+for l in xselections(xrange(10), 3):
+    print l
+</code></pre><p>上面这段代码实现了从x数中取出y个数的全排列，xselections的实现用到了递归和yield，yield这个语句比较有意思：<br>“yield跟return一样会返回值，但是不一样的是return之后就退出函数了，而yield在丢出一次值给调用者之后还会返回继续运行生成器函数，并随着yield的再次调用丢出随后的生成值”</p>
+<h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#3138" title="2008-04-30 13:05:46">luguo</a>:</strong> 恩，以前见识过yield的威力了～～</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
     
       
 
@@ -1235,494 +1873,6 @@ clean:
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2008/04/24/python-challenge-2/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="cocobear">
-      <meta itemprop="description" content="爱折腾的技术宅一枚">
-      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="可可熊D窝">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2008/04/24/python-challenge-2/" class="post-title-link" itemprop="url">Python-Challenge-2</a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2008-04-24 20:31:26" itemprop="dateCreated datePublished" datetime="2008-04-24T20:31:26+08:00">2008-04-24</time>
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/编程相关/" itemprop="url" rel="index"><span itemprop="name">编程相关</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2008/04/24/python-challenge-2/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2008/04/24/python-challenge-2/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-symbolscount">
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数：</span>
-                
-                <span title="字数">1.3k</span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读 &asymp;</span>
-                
-                <span title="阅读">1 分钟</span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>第五关：<br>不多说什么了，点点图片就可以发现了，直接贴代码上来：</p>
-<pre><code>#!/usr/bin/env python
-
-from urllib import urlopen
-import re
-
-id = 12345
-
-while id:
-        url = &quot;http://www.pythonchallenge.com/pc/def/linkedlist.php?nothing=%s&quot; % id
-        page = urlopen(url)
-        text = page.read()
-        print text
-        id = &apos;&apos;.join(re.findall(&apos;and the next nothing is ([0-9].*)&apos;,text))
-        print id
-</code></pre><p>中间停了一下，出来个提示“Yes. Divide by two and keep going.”，刚开始还以为是分成两组，其实是除以2然后继续，那就手动把上面的id初始化为92118/2=46059。再运行一次程序就得到下一关的地址：peak.html。</p>
-<p>第六关：<br>网页的源码中有一个提示“peak hell sounds familiar ”，我读了半天也没觉得熟悉，后来作了个弊，查了一下Python的函数，发现了pickle这个函数，peak,hell连读一下就是pickle了，这都可以。把网页改为pickle.html，会提示“yes! pickle!”，看来函数是找到了。然后在源代码中找到banner.p，获得这个文件里的内容，看起来乱七八糟的一些东西，其实就是使用pickle生成对象的一个序列，可以直接保存在文件里，关于pickle<a href="http://wiki.renyangok.cn/python-pickle" target="_blank" rel="noopener">这里</a>有一个简单的介绍，我也是现学的，贴代码：</p>
-<pre><code>#!/usr/bin/env python
-
-import pickle
-import sys
-
-f = file(&apos;banner.p&apos;)
-p = pickle.load(f)
-
-print p
-for a in p:
-        for b in a:
-                x,y = b
-                while y:
-                        sys.stdout.write(x)
-                        y=y-1
-        print
-f.close()
-</code></pre><p>从文件中会得到一个很长的list，仔细看看又是由好多个list组成，而这些list中数字之和都为95，根据banner.p这个文件名可以想到这是个字符图片，在上面的程序中我打印出了这个图片（有一点需要注意，你得把终端可显示的字符设置为至少95,不然会提前自动折行，这样就没办法看到这个banner了）：<br>得到下一关地址：channel.html</p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://cocobear.github.io/2008/04/23/python-challenge-1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="cocobear">
-      <meta itemprop="description" content="爱折腾的技术宅一枚">
-      <meta itemprop="image" content="http://ww1.sinaimg.cn/small/72b1593dly1fyhtve330uj20ca0ca78u.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="可可熊D窝">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2008/04/23/python-challenge-1/" class="post-title-link" itemprop="url">Python-Challenge-1</a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2008-04-23 16:55:21" itemprop="dateCreated datePublished" datetime="2008-04-23T16:55:21+08:00">2008-04-23</time>
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/编程相关/" itemprop="url" rel="index"><span itemprop="name">编程相关</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2008/04/23/python-challenge-1/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2008/04/23/python-challenge-1/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-symbolscount">
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数：</span>
-                
-                <span title="字数">2.4k</span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读 &asymp;</span>
-                
-                <span title="阅读">2 分钟</span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><a href="http://www.pythonchallenge.com/pc/def/0.html" target="_blank" rel="noopener">第一关</a>：<br>其实第一次来这里时俺还不理解这个过关游戏，其实就是根据这一关网页上的一些提示来寻找下一关的URL；其中网页的标题往往是一些暗示。<br>由图可知：</p>
-<pre><code>#!/usr/bin/env python
-
-print 2**38
-</code></pre><p>计算出结果”274877906944“，然后修改URL为<a href="http://www.pythonchallenge.com/pc/def/274877906944.html，这就是第二关的地址，我们继续。" target="_blank" rel="noopener">http://www.pythonchallenge.com/pc/def/274877906944.html，这就是第二关的地址，我们继续。</a></p>
-<p><a href="http://www.pythonchallenge.com/pc/def/map.html" target="_blank" rel="noopener">第二关</a>：<br>本来我想得是写程序对字母分别按照ascii值加2然后转换回字母，来查看网页上的那堆”乱码“，以下是比较”难看“的程序：</p>
-<pre><code>#!/usr/bin/env python
-
-str = &quot;g fmnc wms bgblr rpylqjyrc gr zw fylb. rfyrq ufyr amknsrcpq ypc dmp. bmgle gr gl zw fylb gq glcddgagclr ylb rfyr&apos;q ufw rfgq rcvr gq qm jmle. sqgle qrpgle.kyicrpylq() gq pcamkkclbcb. lmu ynnjw ml rfc spj.&quot;
-
-str1 = &quot;&quot;
-for ch in str:
-        if (ord(ch) &gt;= ord(&apos;a&apos;)) and (ord(ch) &lt; = ord(&apos;z&apos;)):
-                str1+=chr((ord(ch)+2-ord(&apos;a&apos;))%26+ord(&apos;a&apos;))
-        else:
-                str1+=ch
-print str1
-</code></pre><p>看到翻译出来的话后俺才知道有个东西叫做maketrans，再看看使用maketrans写的代码吧：</p>
-<pre><code>#!/usr/bin/env python
-
-import string
-
-str = &quot;g fmnc wms bgblr rpylqjyrc gr zw fylb. rfyrq ufyr amknsrcpq ypc dmp. bmgle gr gl zw fylb gq glcddgagclr ylb rfyr&apos;q ufw rfgq rcvr gq qm jmle. sqgle qrpgle.kyicrpylq() gq pcamkkclbcb. lmu ynnjw ml rfc spj.&quot;
-
-print string.translate(str,string.maketrans(&apos;abcdefghijklmnopqrstuvwxyz&apos;,&apos;cdefghijklmnopqrstuvwxyzab&apos;))
-</code></pre><p>现在根据提示在URL中进行这个转换，map.html改为orc.html就好了。</p>
-<p>第三关：<br>根据上面的提示，在网页的源代码中找到一堆字符，源代码中有提示”find rare characters in the mess below“，开始写程序提取出这堆字符中的字母：</p>
-<pre><code>#!/usr/bin/env python
-
-import re
-import string
-
-def find_char():
-        list = []
-        f = file(&apos;mess.txt&apos;)
-        p = re.compile(&apos;[a-z]&apos;)
-        for l in f.readlines():
-                char = p.findall(l)
-                if char != []: list.extend(char)
-        print &apos;&apos;.join(list)
-        f.close()
-find_char()
-</code></pre><p>这里使用了正则表达式来判断字母，那一堆的字符我保存在了mess.txt文件中。运行程序后得到”equality”，把orc.html改为equality.html，得到下一关地址。</p>
-<p>第四关：<br>上面有提示”One small letter, surrounded by EXACTLY three big bodyguards on each of its sides.“，虽然人家在上面对单词”EXACTLY“加粗了，我还是开始没注意到含义是”只有“三个大写字母，写正则表达式时匹配到了一堆东西，后来才想起是”有且只有“三个大写字母，看代码：</p>
-<pre><code>#!/usr/bin/env python
-
-import re
-import string
-
-def find_foo():
-        list = []
-        f = file(&apos;mess1.txt&apos;)
-        p = re.compile(&apos;[^A-Z][A-Z]{3}([a-z])[A-Z]{3}[^A-Z]&apos;)
-        for l in f.readlines():
-                char = p.findall(l)
-                if char != []: list.extend(char)
-        print &apos;&apos;.join(list)
-        f.close()
-find_foo()
-</code></pre><p>运行后会得到linkedlist，得到下一关的地址:-)</p>
-<h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><p><strong><a href="#3120" title="2008-04-23 20:05:11">luguo</a>:</strong> DP加油～～继续～！</p>
-<p><strong><a href="#3123" title="2008-04-23 21:14:43">Amankwah</a>:</strong> 呵呵，加油!</p>
-<p><strong><a href="#4564" title="2008-10-29 01:34:43">Meara</a>:</strong> Well written article.</p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1772,7 +1922,7 @@ find_foo()
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">358</span>
+                    <span class="site-state-item-count">360</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -2178,7 +2328,9 @@ find_foo()
                     
                       
                     
-                    <span class="site-state-item-count">182</span>
+                      
+                    
+                    <span class="site-state-item-count">183</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -2297,7 +2449,7 @@ find_foo()
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2007 – <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; 2007 – <span itemprop="copyrightYear">2021</span>
   <span class="with-love" id="animate">
     <i class="fa fa-heart"></i>
   </span>
@@ -2309,7 +2461,7 @@ find_foo()
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">519k</span>
+    <span title="站点总字数">522k</span>
   
 
   
@@ -2318,7 +2470,7 @@ find_foo()
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">7:52</span>
+    <span title="站点阅读时长">7:55</span>
   
 </div>
 
@@ -2420,7 +2572,7 @@ find_foo()
 
 
   
-  <script src="//cdn.staticfile.org/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/jquery/2.1.3/jquery.min.js"></script>
 
   
   <script src="//cdn.staticfile.org/fastclick/1.0.6/fastclick.min.js"></script>
